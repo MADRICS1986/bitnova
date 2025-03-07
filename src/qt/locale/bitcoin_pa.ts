@@ -58,11 +58,19 @@
         <translation type="unfinished">ਚੁਣੋ </translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">ਇਹ ਭੁਗਤਾਨ ਭੇਜਣ ਲਈ ਤੁਹਾਡੇ ਬਿਟਕੋਇਨ ਪਤੇ ਹਨ। ਸਿੱਕੇ ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਹਮੇਸ਼ਾਂ ਰਕਮ ਅਤੇ ਪ੍ਰਾਪਤ ਕਰਨ ਵਾਲੇ ਪਤੇ ਦੀ ਜਾਂਚ ਕਰੋ।</translation>
     </message>
     <message>
         <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+=======
+        <source>These are your BitNova addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">ਇਹ ਭੁਗਤਾਨ ਭੇਜਣ ਲਈ ਤੁਹਾਡੇ ਬਿਟਕੋਇਨ ਪਤੇ ਹਨ। ਸਿੱਕੇ ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਹਮੇਸ਼ਾਂ ਰਕਮ ਅਤੇ ਪ੍ਰਾਪਤ ਕਰਨ ਵਾਲੇ ਪਤੇ ਦੀ ਜਾਂਚ ਕਰੋ।</translation>
+    </message>
+    <message>
+        <source>These are your BitNova addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ਏਹ ਤੁਹਾਡੇ ਰਕਮ ਪ੍ਰਾਪਤ ਕਰਨ ਵਾਲੇ ਬਿਟਕਾਅਨ ਪਤੇ ਹਨ। ਪ੍ਰਾਪਤੀ ਟੈਬ ਤੇ ਨਵੇਂ ਪਤੇ ਦਰਜ ਕਰਨ ਲਈ "ਨਵਾਂ ਪ੍ਰਾਪਤੀ ਪਤਾ ਦਰਜ ਕਰੋ" ਬਟਨ ਤੇ ਟੈਪ ਕਰੋ। ਜੁੜਨ ਲਈ "ਲੈਗਸੀ" ਪ੍ਰਕਾਰ ਦੇ ਹੀ ਪਤੇ ਦਰਜ ਕੀਤੇ ਜਾਂ ਸਕਦੇ ਹਨ। </translation>
     </message>
@@ -196,7 +204,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinApplication</name>
+=======
+    <name>BitNovaApplication</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>A fatal error occurred. %1 can no longer continue safely and will quit.</source>
         <translation type="unfinished">ਇੱਕ ਘਾਤਕ ਗਲਤੀ ਆਈ ਹੈ। %1ਹੁਣ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਜਾਰੀ ਨਹੀਂ ਰਹਿ ਸਕਦਾ ਹੈ ਅਤੇ ਛੱਡ ਦੇਵੇਗਾ।</translation>
@@ -256,7 +268,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">&amp;ਓਵਰਵਿਊ</translation>
@@ -282,7 +298,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ਬਟੂਆ: </translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Bitcoin address</source>
+=======
+        <source>Send coins to a BitNova address</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">ਬਿਟਕੋਇਨ ਪਤੇ 'ਤੇ ਸਿੱਕੇ ਭੇਜੋ</translation>
     </message>
     <message>
@@ -325,7 +345,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -476,7 +500,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>bitcoin-core</name>
+=======
+    <name>bitnova-core</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>Settings file could not be read</source>
         <translation type="unfinished">ਸੈਟਿੰਗ ਫਾਈਲ ਨੂੰ ਪੜ੍ਹਨ ਵਿੱਚ ਅਸਫਲ</translation>

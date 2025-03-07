@@ -1,5 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
+<<<<<<< HEAD
 // Copyright (c) 2009-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2009-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -504,7 +508,11 @@ const Coin& AccessByTxid(const CCoinsViewCache& cache, const Txid& txid);
 /**
  * This is a minimally invasive approach to shutdown on LevelDB read errors from the
  * chainstate, while keeping user interface out of the common library, which is shared
+<<<<<<< HEAD
  * between bitcoind, and bitcoin-qt and non-server tools.
+=======
+ * between bitnovad, and bitnova-qt and non-server tools.
+>>>>>>> 5360f2baff (Initialized BitNova project)
  *
  * Writes do not need similar protection, as failure to write is handled by the caller.
 */

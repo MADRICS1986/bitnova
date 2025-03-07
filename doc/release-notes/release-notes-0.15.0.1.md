@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Bitcoin Core version *0.15.0.1* is now available from:
 
   <https://bitcoin.org/bin/bitcoin-core-0.15.0.1/>
@@ -5,24 +6,46 @@ Bitcoin Core version *0.15.0.1* is now available from:
 and
 
   <https://bitcoincore.org/bin/bitcoin-core-0.15.0.1/>
+=======
+BitNova Core version *0.15.0.1* is now available from:
+
+  <https://bitnova.org/bin/bitnova-core-0.15.0.1/>
+
+and
+
+  <https://bitnovacore.org/bin/bitnova-core-0.15.0.1/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a minor bug fix for 0.15.0.
 
 Please report bugs using the issue tracker at GitHub:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 How to Upgrade
 ==============
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the 
+<<<<<<< HEAD
 installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
 or `bitcoind`/`bitcoin-qt` (on Linux).
+=======
+installer (on Windows) or just copy over `/Applications/BitNova-Qt` (on Mac)
+or `bitnovad`/`bitnova-qt` (on Linux).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 The first time you run version 0.15.0 or higher, your chainstate database will
 be converted to a new format, which will take anywhere from a few minutes to
@@ -51,10 +74,17 @@ processing the entire blockchain.
 Compatibility
 ==============
 
+<<<<<<< HEAD
 Bitcoin Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.8+, and Windows Vista and later. Windows XP is not supported.
 
 Bitcoin Core should also work on most other Unix-like systems but is not
+=======
+BitNova Core is extensively tested on multiple operating systems using
+the Linux kernel, macOS 10.8+, and Windows Vista and later. Windows XP is not supported.
+
+BitNova Core should also work on most other Unix-like systems but is not
+>>>>>>> 5360f2baff (Initialized BitNova project)
 frequently tested on them.
 
 Notable changes
@@ -84,4 +114,8 @@ Thanks to everyone who directly contributed to this release:
 - Jonas Schnelli
 - Wladimir J. van der Laan
 
+<<<<<<< HEAD
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
+=======
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)

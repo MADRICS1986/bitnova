@@ -1,5 +1,9 @@
 #!/bin/sh
+<<<<<<< HEAD
 # Copyright (c) 2015-2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2015-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -21,7 +25,11 @@ while getopts "?hr" opt; do
       echo "-r      Check that subtree commit is present in repository."
       echo "        To do this check, fetch the subtreed remote first. Example:"
       echo ""
+<<<<<<< HEAD
       echo "            git fetch https://github.com/bitcoin-core/secp256k1.git"
+=======
+      echo "            git fetch https://github.com/bitnova-core/secp256k1.git"
+>>>>>>> 5360f2baff (Initialized BitNova project)
       echo "            test/lint/git-subtree-check.sh -r src/secp256k1"
       exit 1
     ;;

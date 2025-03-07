@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2021-present The Bitcoin Core developers
+=======
+# Copyright (c) 2021-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -8,7 +12,11 @@ Test v2 transport
 import socket
 
 from test_framework.messages import MAGIC_BYTES, NODE_P2P_V2
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
     p2p_port,
@@ -16,7 +24,11 @@ from test_framework.util import (
 )
 
 
+<<<<<<< HEAD
 class V2TransportTest(BitcoinTestFramework):
+=======
+class V2TransportTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 5

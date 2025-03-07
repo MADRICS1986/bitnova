@@ -1,5 +1,9 @@
 // Copyright (c) 2010 Satoshi Nakamoto
+<<<<<<< HEAD
 // Copyright (c) 2009-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2009-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,7 +24,11 @@ enum HTTPStatusCode
     HTTP_SERVICE_UNAVAILABLE   = 503,
 };
 
+<<<<<<< HEAD
 //! Bitcoin RPC error codes
+=======
+//! BitNova RPC error codes
+>>>>>>> 5360f2baff (Initialized BitNova project)
 enum RPCErrorCode
 {
     //! Standard JSON-RPC 2.0 errors
@@ -31,7 +39,11 @@ enum RPCErrorCode
     // It should not be used for application-layer errors.
     RPC_METHOD_NOT_FOUND = -32601,
     RPC_INVALID_PARAMS   = -32602,
+<<<<<<< HEAD
     // RPC_INTERNAL_ERROR should only be used for genuine errors in bitcoind
+=======
+    // RPC_INTERNAL_ERROR should only be used for genuine errors in bitnovad
+>>>>>>> 5360f2baff (Initialized BitNova project)
     // (for example datadir corruption).
     RPC_INTERNAL_ERROR   = -32603,
     RPC_PARSE_ERROR      = -32700,
@@ -55,7 +67,11 @@ enum RPCErrorCode
     RPC_TRANSACTION_REJECTED        = RPC_VERIFY_REJECTED,
 
     //! P2P client errors
+<<<<<<< HEAD
     RPC_CLIENT_NOT_CONNECTED        = -9,  //!< Bitcoin is not connected
+=======
+    RPC_CLIENT_NOT_CONNECTED        = -9,  //!< BitNova is not connected
+>>>>>>> 5360f2baff (Initialized BitNova project)
     RPC_CLIENT_IN_INITIAL_DOWNLOAD  = -10, //!< Still downloading initial blocks
     RPC_CLIENT_NODE_ALREADY_ADDED   = -23, //!< Node is already added
     RPC_CLIENT_NODE_NOT_ADDED       = -24, //!< Node has not been added before

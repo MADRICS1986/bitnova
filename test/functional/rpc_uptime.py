@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2017-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2017-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the RPC call related to the uptime command.
@@ -9,11 +13,19 @@ Test corresponds to code in rpc/server.cpp.
 
 import time
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
 from test_framework.util import assert_raises_rpc_error
 
 
 class UptimeTest(BitcoinTestFramework):
+=======
+from test_framework.test_framework import BitNovaTestFramework
+from test_framework.util import assert_raises_rpc_error
+
+
+class UptimeTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True

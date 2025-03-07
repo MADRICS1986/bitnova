@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +13,11 @@ from enum import Enum
 
 from test_framework.messages import MAGIC_BYTES
 from test_framework.p2p import P2PInterface
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import random_bitflip
 from test_framework.v2_p2p import (
     EncryptedP2PState,
@@ -124,7 +132,11 @@ class MisbehavingV2Peer(P2PInterface):
             super().data_received(t)
 
 
+<<<<<<< HEAD
 class EncryptedP2PMisbehaving(BitcoinTestFramework):
+=======
+class EncryptedP2PMisbehaving(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [["-v2transport=1", "-peertimeout=3"]]

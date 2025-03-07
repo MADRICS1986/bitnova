@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 Bitcoin version 0.7.2 is now available from:
   http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.7.2
+=======
+BitNova version 0.7.2 is now available from:
+  http://sourceforge.net/projects/bitnova/files/BitNova/bitnova-0.7.2
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a bug-fix minor release.
 
 Please report bugs using the issue tracker at github:
+<<<<<<< HEAD
   https://github.com/bitcoin/bitcoin/issues
+=======
+  https://github.com/bitnova/bitnova/issues
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 How to Upgrade
 --------------
@@ -12,7 +21,11 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
+<<<<<<< HEAD
 /Applications/Bitcoin-Qt (on Mac) or bitcoind/bitcoin-qt (on Linux).
+=======
+/Applications/BitNova-Qt (on Mac) or bitnovad/bitnova-qt (on Linux).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 If you were running on Linux with a version that might have been compiled
 with a different version of Berkeley DB (for example, if you were using an
@@ -40,7 +53,11 @@ Bug fixes
   database twice.
 
 * Fix use-after-free problems in initialization and shutdown, the latter of
+<<<<<<< HEAD
   which caused Bitcoin-Qt to crash on Windows when exiting.
+=======
+  which caused BitNova-Qt to crash on Windows when exiting.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 * Correct library linking so building on Windows natively works.
 

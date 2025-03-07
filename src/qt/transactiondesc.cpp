@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <qt/transactiondesc.h>
 
+<<<<<<< HEAD
 #include <qt/bitcoinunits.h>
+=======
+#include <qt/bitnovaunits.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <qt/guiutil.h>
 #include <qt/paymentserver.h>
 #include <qt/transactionrecord.h>
@@ -100,7 +108,11 @@ bool GetPaymentRequestMerchant(const std::string& pr, QString& merchant)
     return false;
 }
 
+<<<<<<< HEAD
 QString TransactionDesc::toHTML(interfaces::Node& node, interfaces::Wallet& wallet, TransactionRecord* rec, BitcoinUnit unit)
+=======
+QString TransactionDesc::toHTML(interfaces::Node& node, interfaces::Wallet& wallet, TransactionRecord* rec, BitNovaUnit unit)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
     int numBlocks;
     interfaces::WalletTxStatus status;
@@ -190,7 +202,11 @@ QString TransactionDesc::toHTML(interfaces::Node& node, interfaces::Wallet& wall
             nUnmatured += wallet.getCredit(txout, ISMINE_ALL);
         strHTML += "<b>" + tr("Credit") + ":</b> ";
         if (status.is_in_main_chain)
+<<<<<<< HEAD
             strHTML += BitcoinUnits::formatHtmlWithUnit(unit, nUnmatured)+ " (" + tr("matures in %n more block(s)", "", status.blocks_to_maturity) + ")";
+=======
+            strHTML += BitNovaUnits::formatHtmlWithUnit(unit, nUnmatured)+ " (" + tr("matures in %n more block(s)", "", status.blocks_to_maturity) + ")";
+>>>>>>> 5360f2baff (Initialized BitNova project)
         else
             strHTML += "(" + tr("not accepted") + ")";
         strHTML += "<br>";
@@ -200,7 +216,11 @@ QString TransactionDesc::toHTML(interfaces::Node& node, interfaces::Wallet& wall
         //
         // Credit
         //
+<<<<<<< HEAD
         strHTML += "<b>" + tr("Credit") + ":</b> " + BitcoinUnits::formatHtmlWithUnit(unit, nNet) + "<br>";
+=======
+        strHTML += "<b>" + tr("Credit") + ":</b> " + BitNovaUnits::formatHtmlWithUnit(unit, nNet) + "<br>";
+>>>>>>> 5360f2baff (Initialized BitNova project)
     }
     else
     {
@@ -252,9 +272,15 @@ QString TransactionDesc::toHTML(interfaces::Node& node, interfaces::Wallet& wall
                     }
                 }
 
+<<<<<<< HEAD
                 strHTML += "<b>" + tr("Debit") + ":</b> " + BitcoinUnits::formatHtmlWithUnit(unit, -txout.nValue) + "<br>";
                 if(toSelf)
                     strHTML += "<b>" + tr("Credit") + ":</b> " + BitcoinUnits::formatHtmlWithUnit(unit, txout.nValue) + "<br>";
+=======
+                strHTML += "<b>" + tr("Debit") + ":</b> " + BitNovaUnits::formatHtmlWithUnit(unit, -txout.nValue) + "<br>";
+                if(toSelf)
+                    strHTML += "<b>" + tr("Credit") + ":</b> " + BitNovaUnits::formatHtmlWithUnit(unit, txout.nValue) + "<br>";
+>>>>>>> 5360f2baff (Initialized BitNova project)
             }
 
             if (fAllToMe)
@@ -262,13 +288,22 @@ QString TransactionDesc::toHTML(interfaces::Node& node, interfaces::Wallet& wall
                 // Payment to self
                 CAmount nChange = wtx.change;
                 CAmount nValue = nCredit - nChange;
+<<<<<<< HEAD
                 strHTML += "<b>" + tr("Total debit") + ":</b> " + BitcoinUnits::formatHtmlWithUnit(unit, -nValue) + "<br>";
                 strHTML += "<b>" + tr("Total credit") + ":</b> " + BitcoinUnits::formatHtmlWithUnit(unit, nValue) + "<br>";
+=======
+                strHTML += "<b>" + tr("Total debit") + ":</b> " + BitNovaUnits::formatHtmlWithUnit(unit, -nValue) + "<br>";
+                strHTML += "<b>" + tr("Total credit") + ":</b> " + BitNovaUnits::formatHtmlWithUnit(unit, nValue) + "<br>";
+>>>>>>> 5360f2baff (Initialized BitNova project)
             }
 
             CAmount nTxFee = nDebit - wtx.tx->GetValueOut();
             if (nTxFee > 0)
+<<<<<<< HEAD
                 strHTML += "<b>" + tr("Transaction fee") + ":</b> " + BitcoinUnits::formatHtmlWithUnit(unit, -nTxFee) + "<br>";
+=======
+                strHTML += "<b>" + tr("Transaction fee") + ":</b> " + BitNovaUnits::formatHtmlWithUnit(unit, -nTxFee) + "<br>";
+>>>>>>> 5360f2baff (Initialized BitNova project)
         }
         else
         {
@@ -278,19 +313,31 @@ QString TransactionDesc::toHTML(interfaces::Node& node, interfaces::Wallet& wall
             auto mine = wtx.txin_is_mine.begin();
             for (const CTxIn& txin : wtx.tx->vin) {
                 if (*(mine++)) {
+<<<<<<< HEAD
                     strHTML += "<b>" + tr("Debit") + ":</b> " + BitcoinUnits::formatHtmlWithUnit(unit, -wallet.getDebit(txin, ISMINE_ALL)) + "<br>";
+=======
+                    strHTML += "<b>" + tr("Debit") + ":</b> " + BitNovaUnits::formatHtmlWithUnit(unit, -wallet.getDebit(txin, ISMINE_ALL)) + "<br>";
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 }
             }
             mine = wtx.txout_is_mine.begin();
             for (const CTxOut& txout : wtx.tx->vout) {
                 if (*(mine++)) {
+<<<<<<< HEAD
                     strHTML += "<b>" + tr("Credit") + ":</b> " + BitcoinUnits::formatHtmlWithUnit(unit, wallet.getCredit(txout, ISMINE_ALL)) + "<br>";
+=======
+                    strHTML += "<b>" + tr("Credit") + ":</b> " + BitNovaUnits::formatHtmlWithUnit(unit, wallet.getCredit(txout, ISMINE_ALL)) + "<br>";
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 }
             }
         }
     }
 
+<<<<<<< HEAD
     strHTML += "<b>" + tr("Net amount") + ":</b> " + BitcoinUnits::formatHtmlWithUnit(unit, nNet, true) + "<br>";
+=======
+    strHTML += "<b>" + tr("Net amount") + ":</b> " + BitNovaUnits::formatHtmlWithUnit(unit, nNet, true) + "<br>";
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     //
     // Message
@@ -305,7 +352,11 @@ QString TransactionDesc::toHTML(interfaces::Node& node, interfaces::Wallet& wall
     strHTML += "<b>" + tr("Transaction virtual size") + ":</b> " + QString::number(GetVirtualTransactionSize(*wtx.tx)) + " bytes<br>";
     strHTML += "<b>" + tr("Output index") + ":</b> " + QString::number(rec->getOutputIndex()) + "<br>";
 
+<<<<<<< HEAD
     // Message from normal bitcoin:URI (bitcoin:123...?message=example)
+=======
+    // Message from normal bitnova:URI (bitnova:123...?message=example)
+>>>>>>> 5360f2baff (Initialized BitNova project)
     for (const std::pair<std::string, std::string>& r : orderForm) {
         if (r.first == "Message")
             strHTML += "<br><b>" + tr("Message") + ":</b><br>" + GUIUtil::HtmlEscape(r.second, true) + "<br>";
@@ -341,10 +392,17 @@ QString TransactionDesc::toHTML(interfaces::Node& node, interfaces::Wallet& wall
         strHTML += "<hr><br>" + tr("Debug information") + "<br><br>";
         for (const CTxIn& txin : wtx.tx->vin)
             if(wallet.txinIsMine(txin))
+<<<<<<< HEAD
                 strHTML += "<b>" + tr("Debit") + ":</b> " + BitcoinUnits::formatHtmlWithUnit(unit, -wallet.getDebit(txin, ISMINE_ALL)) + "<br>";
         for (const CTxOut& txout : wtx.tx->vout)
             if(wallet.txoutIsMine(txout))
                 strHTML += "<b>" + tr("Credit") + ":</b> " + BitcoinUnits::formatHtmlWithUnit(unit, wallet.getCredit(txout, ISMINE_ALL)) + "<br>";
+=======
+                strHTML += "<b>" + tr("Debit") + ":</b> " + BitNovaUnits::formatHtmlWithUnit(unit, -wallet.getDebit(txin, ISMINE_ALL)) + "<br>";
+        for (const CTxOut& txout : wtx.tx->vout)
+            if(wallet.txoutIsMine(txout))
+                strHTML += "<b>" + tr("Credit") + ":</b> " + BitNovaUnits::formatHtmlWithUnit(unit, wallet.getCredit(txout, ISMINE_ALL)) + "<br>";
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         strHTML += "<br><b>" + tr("Transaction") + ":</b><br>";
         strHTML += GUIUtil::HtmlEscape(wtx.tx->ToString(), true);
@@ -368,7 +426,11 @@ QString TransactionDesc::toHTML(interfaces::Node& node, interfaces::Wallet& wall
                             strHTML += GUIUtil::HtmlEscape(name) + " ";
                         strHTML += QString::fromStdString(EncodeDestination(address));
                     }
+<<<<<<< HEAD
                     strHTML = strHTML + " " + tr("Amount") + "=" + BitcoinUnits::formatHtmlWithUnit(unit, vout.nValue);
+=======
+                    strHTML = strHTML + " " + tr("Amount") + "=" + BitNovaUnits::formatHtmlWithUnit(unit, vout.nValue);
+>>>>>>> 5360f2baff (Initialized BitNova project)
                     strHTML = strHTML + " IsMine=" + (wallet.txoutIsMine(vout) & ISMINE_SPENDABLE ? tr("true") : tr("false")) + "</li>";
                     strHTML = strHTML + " IsWatchOnly=" + (wallet.txoutIsMine(vout) & ISMINE_WATCH_ONLY ? tr("true") : tr("false")) + "</li>";
                 }

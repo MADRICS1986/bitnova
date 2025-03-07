@@ -54,11 +54,19 @@
         <translation type="unfinished">چننا</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">یہ آپ کے ادائیگی بھیجنے کے لئے بٹ کوائن ایڈریس ہیں.سکے بھیجنے سے پہلے ہمیشہ رقم اور وصول کنندہ پتہ چیک کریں۔</translation>
     </message>
     <message>
         <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+=======
+        <source>These are your BitNova addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">یہ آپ کے ادائیگی بھیجنے کے لئے بٹ کوائن ایڈریس ہیں.سکے بھیجنے سے پہلے ہمیشہ رقم اور وصول کنندہ پتہ چیک کریں۔</translation>
+    </message>
+    <message>
+        <source>These are your BitNova addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ادائیگیوں کے لئے آپ کے بٹ کوائن ایڈریس ہیں۔ نئے پتے بنانے کے لئے وصول کنندہ ٹیب میں 'نیا وصول کنندہ پتہ بنائیں' بٹن کا استعمال کریں۔دستخط صرف 'میراثی' قسم کے پتے کے ساتھ ہی ممکن ہے۔</translation>
     </message>
@@ -187,7 +195,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">پیچھے</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+=======
+        <source>Remember that encrypting your wallet cannot fully protect your bitnovas from being stolen by malware infecting your computer.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">یاد رکھیں کہ آپ کے پرس کو خفیہ کرنا آپ کے بٹ کوائنز کو میلویئر/چور سے آپ کے کمپیوٹر میں انفیکشن لگانے کے ذریعہ چوری ہونے سے پوری طرح محفوظ نہیں رکھ سکتا ہے۔</translation>
     </message>
     <message>
@@ -259,7 +271,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinApplication</name>
+=======
+    <name>BitNovaApplication</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>Runaway exception</source>
         <translation type="unfinished">بھگوڑے رعایت</translation>
@@ -366,7 +382,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">اور جائزہ</translation>
@@ -429,7 +449,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">پراکسی &lt;b&gt;فعال&lt;/b&gt; ہے:%1</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Bitcoin address</source>
+=======
+        <source>Send coins to a BitNova address</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">بٹ کوائن ایڈریس پر سکے بھیجیں</translation>
     </message>
     <message>
@@ -469,7 +493,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">سائن اور پیغام…</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+=======
+        <source>Sign messages with your BitNova addresses to prove you own them</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">اپنے ویکیپیڈیا پتوں کے ساتھ پیغامات پر دستخط کریں تاکہ آپ ان کے مالک ہوں</translation>
     </message>
     <message>
@@ -477,7 +505,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">پیغام کی توثیق کریں…</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
+=======
+        <source>Verify messages to ensure they were signed with specified BitNova addresses</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">پیغامات کی توثیق کریں تاکہ یہ یقینی بن سکے کہ ان پر بٹ کوائن کے مخصوص پتوں پر دستخط ہوئے ہیں</translation>
     </message>
     <message>
@@ -533,7 +565,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ساتھیوں سے منسلک کرنے</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+=======
+        <source>Request payments (generates QR codes and bitnova: URIs)</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">ادائیگی کی درخواست کریں: ( کوئیک رسپانس ( کیو۔آر ) کوڈ اور بٹ کوائن ( یونیورسل ادائیگیوں کا نظام) کے ذریعے سے</translation>
     </message>
     <message>
@@ -588,7 +624,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">سب سے نیا</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Bitcoin Transaction</source>
+=======
+        <source>Load Partially Signed BitNova Transaction</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">جزوی طور پر دستخط شدہ بٹ کوائن ٹرانزیکشن لوڈ کریں۔</translation>
     </message>
     <message>
@@ -596,7 +636,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">PSBT کو &amp;clipboard سے لوڈ کریں...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Bitcoin Transaction from clipboard</source>
+=======
+        <source>Load Partially Signed BitNova Transaction from clipboard</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">کلپ بورڈ سے جزوی طور پر دستخط شدہ بٹ کوائن ٹرانزیکشن لوڈ کریں۔</translation>
     </message>
     <message>
@@ -616,7 +660,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">اور پتے وصول کرنا</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Open a bitcoin: URI</source>
+=======
+        <source>Open a bitnova: URI</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">بٹ کوائن کا یو۔آر۔آئی۔ کھولیں</translation>
     </message>
     <message>
@@ -654,7 +702,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ایک والیٹ منتقل کریں</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
+=======
+        <source>Show the %1 help message to get a list with possible BitNova command-line options</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">ممکنہ بٹ کوائن کمانڈ لائن اختیارات کے ساتھ فہرست حاصل کرنے کے لیے %1 مدد کا پیغام دکھائیں۔</translation>
     </message>
     <message>
@@ -706,7 +758,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">'%1'کلائنٹ</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -1174,7 +1230,11 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>Intro</name>
     <message>
+<<<<<<< HEAD
         <source>Bitcoin</source>
+=======
+        <source>BitNova</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">بٹ کوائن</translation>
     </message>
     <message numerus="yes">
@@ -1272,11 +1332,19 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">فارم</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
         <translation type="unfinished">ہو سکتا ہے حالیہ لین دین ابھی تک نظر نہ آئے، اور اس وجہ سے آپ کے والیٹ کا بیلنس غلط ہو سکتا ہے۔ یہ معلومات درست ہوں گی جب آپ کے والیٹ نے بٹ کوائن نیٹ ورک کے ساتھ مطابقت پذیری مکمل کر لی ہو، جیسا کہ ذیل میں تفصیل ہے۔</translation>
     </message>
     <message>
         <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+=======
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitnova network, as detailed below.</source>
+        <translation type="unfinished">ہو سکتا ہے حالیہ لین دین ابھی تک نظر نہ آئے، اور اس وجہ سے آپ کے والیٹ کا بیلنس غلط ہو سکتا ہے۔ یہ معلومات درست ہوں گی جب آپ کے والیٹ نے بٹ کوائن نیٹ ورک کے ساتھ مطابقت پذیری مکمل کر لی ہو، جیسا کہ ذیل میں تفصیل ہے۔</translation>
+    </message>
+    <message>
+        <source>Attempting to spend bitnovas that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">ایسے بٹ کوائنز خرچ کرنے کی کوشش کرنا جو ابھی تک ظاہر نہ ہونے والے لین دین سے متاثر ہوں نیٹ ورک کے ذریعے قبول نہیں کیا جائے گا۔</translation>
     </message>
     <message>
@@ -1315,7 +1383,11 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>OpenURIDialog</name>
     <message>
+<<<<<<< HEAD
         <source>Open bitcoin URI</source>
+=======
+        <source>Open bitnova URI</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">بٹ کوائن URI کھولیں۔</translation>
     </message>
     <message>
@@ -1463,7 +1535,11 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">فارم</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
+=======
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitNova network after a connection is established, but this process has not completed yet.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">ظاہر کی گئی معلومات پرانی ہو سکتی ہے۔ کنکشن قائم ہونے کے بعد آپ کا والیٹ خود بخود بٹ کوائن نیٹ ورک کے ساتھ ہم آہنگ ہوجاتا ہے، لیکن یہ عمل ابھی مکمل نہیں ہوا ہے۔</translation>
     </message>
     <message>
@@ -1848,7 +1924,11 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation type="unfinished">اور پیغام</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
+=======
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BitNova network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">ادائیگی کی درخواست کے ساتھ منسلک کرنے کے لیے ایک اختیاری پیغام، جو درخواست کے کھلنے پر ظاہر ہوگا۔ نوٹ: پیغام بٹ کوائن نیٹ ورک پر ادائیگی کے ساتھ نہیں بھیجا جائے گا۔</translation>
     </message>
     <message>
@@ -2151,7 +2231,11 @@ If you are receiving this error you should request the merchant provide a BIP21 
         </translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: Invalid Bitcoin address</source>
+=======
+        <source>Warning: Invalid BitNova address</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">انتباہ: غلط بٹ کوائن ایڈریس</translation>
     </message>
     <message>
@@ -2182,7 +2266,11 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation type="unfinished">پہلے استعمال شدہ پتہ کا انتخاب کریں۔</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Bitcoin address to send the payment to</source>
+=======
+        <source>The BitNova address to send the payment to</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">ادائیگی بھیجنے کے لیے بٹ کوائن کا پتہ</translation>
     </message>
     <message>
@@ -2198,7 +2286,11 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation type="unfinished">منتخب یونٹ میں بھیجی جانے والی رقم</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+=======
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitnovas than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">بھیجی جانے والی رقم سے فیس کاٹی جائے گی۔ وصول کنندہ کو اس سے کم بٹ کوائنز موصول ہوں گے جو آپ رقم کے خانے میں داخل کریں گے۔ اگر متعدد وصول کنندگان کو منتخب کیا جاتا ہے، تو فیس کو برابر تقسیم کیا جاتا ہے۔</translation>
     </message>
     <message>
@@ -2221,7 +2313,11 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation type="unfinished">دستخط - ایک پیغام پر دستخط / تصدیق کریں۔</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Bitcoin address to sign the message with</source>
+=======
+        <source>The BitNova address to sign the message with</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">پیغام پر دستخط کرنے کے لیے بٹ کوائن کا پتہ</translation>
     </message>
     <message>
@@ -2413,7 +2509,11 @@ If you are receiving this error you should request the merchant provide a BIP21 
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>bitcoin-core</name>
+=======
+    <name>bitnova-core</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>Insufficient funds</source>
         <translation type="unfinished">ناکافی فنڈز</translation>

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -335,7 +339,11 @@ QModelIndex AddressTableModel::index(int row, int column, const QModelIndex &par
 void AddressTableModel::updateEntry(const QString &address,
         const QString &label, bool isMine, wallet::AddressPurpose purpose, int status)
 {
+<<<<<<< HEAD
     // Update address book model from Bitcoin core
+=======
+    // Update address book model from BitNova core
+>>>>>>> 5360f2baff (Initialized BitNova project)
     priv->updateEntry(address, label, isMine, purpose, status);
 }
 

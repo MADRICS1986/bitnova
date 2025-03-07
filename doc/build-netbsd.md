@@ -2,7 +2,11 @@
 
 **Updated for NetBSD [10.1](https://netbsd.org/releases/formal-10/NetBSD-10.1.html)**
 
+<<<<<<< HEAD
 This guide describes how to build bitcoind, command-line utilities, and GUI on NetBSD.
+=======
+This guide describes how to build bitnovad, command-line utilities, and GUI on NetBSD.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ## Preparation
 
@@ -33,23 +37,40 @@ cmake -B build
 
 See [dependencies.md](dependencies.md) for a complete overview.
 
+<<<<<<< HEAD
 ### 2. Clone Bitcoin Repo
 
 Clone the Bitcoin Core repository to a directory. All build scripts and commands will run from this directory.
 
 ```bash
 git clone https://github.com/bitcoin/bitcoin.git
+=======
+### 2. Clone BitNova Repo
+
+Clone the BitNova Core repository to a directory. All build scripts and commands will run from this directory.
+
+```bash
+git clone https://github.com/bitnova/bitnova.git
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 
 ### 3. Install Optional Dependencies
 
 #### Wallet Dependencies
 
+<<<<<<< HEAD
 It is not necessary to build wallet functionality to run bitcoind or the GUI.
 
 ###### Descriptor Wallet Support
 
 `sqlite3` is required to enable support for [descriptor wallets](https://github.com/bitcoin/bitcoin/blob/master/doc/descriptors.md).
+=======
+It is not necessary to build wallet functionality to run bitnovad or the GUI.
+
+###### Descriptor Wallet Support
+
+`sqlite3` is required to enable support for [descriptor wallets](https://github.com/bitnova/bitnova/blob/master/doc/descriptors.md).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ```bash
 pkgin install sqlite3
@@ -66,7 +87,11 @@ pkgin install db4
 #### GUI Dependencies
 ###### Qt5
 
+<<<<<<< HEAD
 Bitcoin Core includes a GUI built with the cross-platform Qt Framework. To compile the GUI, we need to install
+=======
+BitNova Core includes a GUI built with the cross-platform Qt Framework. To compile the GUI, we need to install
+>>>>>>> 5360f2baff (Initialized BitNova project)
 the necessary parts of Qt, the libqrencode and pass `-DBUILD_GUI=ON`. Skip if you don't intend to use the GUI.
 
 ```bash
@@ -86,7 +111,11 @@ Otherwise, if you don't need QR encoding support, use the `-DWITH_QRENCODE=OFF` 
 #### Notifications
 ###### ZeroMQ
 
+<<<<<<< HEAD
 Bitcoin Core can provide notifications via ZeroMQ. If the package is installed, support will be compiled in.
+=======
+BitNova Core can provide notifications via ZeroMQ. If the package is installed, support will be compiled in.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```bash
 pkgin zeromq
 ```
@@ -100,11 +129,19 @@ To run the test suite (recommended), you will need to have Python 3 installed:
 pkgin install python310 py310-zmq
 ```
 
+<<<<<<< HEAD
 ## Building Bitcoin Core
 
 ### 1. Configuration
 
 There are many ways to configure Bitcoin Core. Here is an example that
+=======
+## Building BitNova Core
+
+### 1. Configuration
+
+There are many ways to configure BitNova Core. Here is an example that
+>>>>>>> 5360f2baff (Initialized BitNova project)
 explicitly disables the wallet and GUI:
 
 ```bash

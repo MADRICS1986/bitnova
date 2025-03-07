@@ -1,11 +1,20 @@
 {
   "algorithm" : "ECDSA",
+<<<<<<< HEAD
   "schema" : "ecdsa_bitcoin_verify_schema.json",
   "generatorVersion" : "0.9rc5",
   "numberOfTests" : 463,
   "header" : [
     "Test vectors of type EcdsaBitcoinVerify are meant for the verification",
     "of a ECDSA variant used for bitcoin, that add signature non-malleability."
+=======
+  "schema" : "ecdsa_bitnova_verify_schema.json",
+  "generatorVersion" : "0.9rc5",
+  "numberOfTests" : 463,
+  "header" : [
+    "Test vectors of type EcdsaBitNovaVerify are meant for the verification",
+    "of a ECDSA variant used for bitnova, that add signature non-malleability."
+>>>>>>> 5360f2baff (Initialized BitNova project)
   ],
   "notes" : {
     "ArithmeticError" : {
@@ -93,6 +102,7 @@
       "description" : "The test vector contains an r and s that has been modified. By adding or subtracting the order of the group (or other values) the test vector checks whether signature verification verifies the range of r and s.",
       "effect" : "Without further analysis it is unclear if the modification can be used to forge signatures."
     },
+<<<<<<< HEAD
     "SignatureMalleabilityBitcoin" : {
       "bugType" : "SIGNATURE_MALLEABILITY",
       "description" : "\"BitCoins\"-curves are curves where signature malleability can be a serious issue. An implementation should only accept a signature s where s < n/2. If an implementation is not meant for uses cases that require signature malleability then this implemenation should be tested with another set of test vectors.",
@@ -100,6 +110,15 @@
       "links" : [
         "https://en.bitcoin.it/wiki/Transaction_malleability",
         "https://en.bitcoinwiki.org/wiki/Transaction_Malleability"
+=======
+    "SignatureMalleabilityBitNova" : {
+      "bugType" : "SIGNATURE_MALLEABILITY",
+      "description" : "\"BitCoins\"-curves are curves where signature malleability can be a serious issue. An implementation should only accept a signature s where s < n/2. If an implementation is not meant for uses cases that require signature malleability then this implemenation should be tested with another set of test vectors.",
+      "effect" : "In bitnova exchanges, it may be used to make a double deposits or double withdrawals",
+      "links" : [
+        "https://en.bitnova.it/wiki/Transaction_malleability",
+        "https://en.bitnovawiki.org/wiki/Transaction_Malleability"
+>>>>>>> 5360f2baff (Initialized BitNova project)
       ]
     },
     "SmallRandS" : {
@@ -121,7 +140,11 @@
   },
   "testGroups" : [
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -138,7 +161,11 @@
           "tcId" : 1,
           "comment" : "Signature malleability",
           "flags" : [
+<<<<<<< HEAD
             "SignatureMalleabilityBitcoin"
+=======
+            "SignatureMalleabilityBitNova"
+>>>>>>> 5360f2baff (Initialized BitNova project)
           ],
           "msg" : "313233343030",
           "sig" : "3046022100813ef79ccefa9a56f7ba805f0e478584fe5f0dd5f567bc09b5123ccbc9832365022100900e75ad233fcc908509dbff5922647db37c21f4afd3203ae8dc4ae7794b0f87",
@@ -3587,7 +3614,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -3623,7 +3654,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -3649,7 +3684,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -3675,7 +3714,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -3701,7 +3744,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -3728,7 +3775,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -3755,7 +3806,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -3782,7 +3837,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -3809,7 +3868,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -3836,7 +3899,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -3873,7 +3940,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -3899,7 +3970,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -3925,7 +4000,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -3951,7 +4030,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -3977,7 +4060,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4003,7 +4090,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4029,7 +4120,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4055,7 +4150,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4081,7 +4180,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4107,7 +4210,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4133,7 +4240,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4159,7 +4270,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4195,7 +4310,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4222,7 +4341,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4249,7 +4372,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4276,7 +4403,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4303,7 +4434,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4330,7 +4465,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4357,7 +4496,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4384,7 +4527,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4411,7 +4558,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4438,7 +4589,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4465,7 +4620,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4492,7 +4651,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4519,7 +4682,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4546,7 +4713,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4573,7 +4744,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4600,7 +4775,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4627,7 +4806,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4653,7 +4836,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4679,7 +4866,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4705,7 +4896,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4731,7 +4926,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4757,7 +4956,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4783,7 +4986,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4809,7 +5016,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4835,7 +5046,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4861,7 +5076,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4887,7 +5106,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4913,7 +5136,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4939,7 +5166,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4965,7 +5196,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -4991,7 +5226,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5017,7 +5256,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5043,7 +5286,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5069,7 +5316,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5095,7 +5346,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5121,7 +5376,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5147,7 +5406,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5173,7 +5436,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5199,7 +5466,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5225,7 +5496,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5251,7 +5526,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5277,7 +5556,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5303,7 +5586,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5329,7 +5616,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5355,7 +5646,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5381,7 +5676,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5407,7 +5706,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5433,7 +5736,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5459,7 +5766,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5485,7 +5796,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5511,7 +5826,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5537,7 +5856,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5563,7 +5886,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5589,7 +5916,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5615,7 +5946,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5641,7 +5976,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5667,7 +6006,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5693,7 +6036,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5719,7 +6066,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5745,7 +6096,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5771,7 +6126,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5797,7 +6156,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5823,7 +6186,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5849,7 +6216,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5875,7 +6246,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5901,7 +6276,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5927,7 +6306,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5953,7 +6336,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -5989,7 +6376,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -6025,7 +6416,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -6081,7 +6476,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -6127,7 +6526,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -6173,7 +6576,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -6219,7 +6626,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -6265,7 +6676,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",
@@ -6311,7 +6726,11 @@
       ]
     },
     {
+<<<<<<< HEAD
       "type" : "EcdsaBitcoinVerify",
+=======
+      "type" : "EcdsaBitNovaVerify",
+>>>>>>> 5360f2baff (Initialized BitNova project)
       "publicKey" : {
         "type" : "EcPublicKey",
         "curve" : "secp256k1",

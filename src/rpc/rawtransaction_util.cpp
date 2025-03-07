@@ -1,5 +1,9 @@
 // Copyright (c) 2010 Satoshi Nakamoto
+<<<<<<< HEAD
 // Copyright (c) 2009-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2009-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -117,7 +121,11 @@ std::vector<std::pair<CTxDestination, CAmount>> ParseOutputs(const UniValue& out
             CTxDestination destination{DecodeDestination(name_)};
             CAmount amount{AmountFromValue(outputs[name_])};
             if (!IsValidDestination(destination)) {
+<<<<<<< HEAD
                 throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Bitcoin address: ") + name_);
+=======
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid BitNova address: ") + name_);
+>>>>>>> 5360f2baff (Initialized BitNova project)
             }
 
             if (!destinations.insert(destination).second) {

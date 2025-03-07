@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2016-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2016-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test RPC commands for signing messages with private key."""
@@ -7,14 +11,22 @@
 from test_framework.descriptors import (
     descsum_create,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
 )
 
 
+<<<<<<< HEAD
 class SignMessagesWithPrivTest(BitcoinTestFramework):
+=======
+class SignMessagesWithPrivTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

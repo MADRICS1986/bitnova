@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2024 The Bitcoin Core developers
+=======
+# Copyright (c) 2024 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test that descriptor wallets rescan mempool transactions properly when importing."""
@@ -9,13 +13,21 @@ from test_framework.address import (
     ADDRESS_BCRT1_UNSPENDABLE,
 )
 from test_framework.messages import COIN
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import assert_equal
 from test_framework.wallet import MiniWallet
 from test_framework.wallet_util import test_address
 
 
+<<<<<<< HEAD
 class WalletRescanUnconfirmed(BitcoinTestFramework):
+=======
+class WalletRescanUnconfirmed(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser, legacy=False)
 

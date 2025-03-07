@@ -1,6 +1,7 @@
 HEAD
 # BitNova
 
+ HEAD
 Bitcoin Core integration/staging tree
 
 https://bitcoincore.org
@@ -17,20 +18,48 @@ interface, which can be optionally built.
 
 Further information about Bitcoin Core is available in the [doc folder](/doc).
 
+BitNova Core integration/staging tree
+
+https://bitnovacore.org
+
+For an immediately usable, binary version of the BitNova Core software, see
+https://bitnovacore.org/en/download/.
+
+What is BitNova Core?
+---------------------
+
+BitNova Core connects to the BitNova peer-to-peer network to download and fully
+validate blocks and transactions. It also includes a wallet and graphical user
+interface, which can be optionally built.
+
+Further information about BitNova Core is available in the [doc folder](/doc).
+ 5360f2baff (Initialized BitNova project)
+
 License
 -------
 
+ HEAD
 Bitcoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+
+BitNova Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+ 5360f2baff (Initialized BitNova project)
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
 -------------------
 
 The `master` branch is regularly built (see `doc/build-*.md` for instructions) and tested, but it is not guaranteed to be
+ HEAD
 completely stable. [Tags](https://github.com/bitcoin/bitcoin/tags) are created
 regularly from release branches to indicate new official, stable release versions of Bitcoin Core.
 
 The https://github.com/bitcoin-core/gui repository is used exclusively for the
+
+completely stable. [Tags](https://github.com/bitnova/bitnova/tags) are created
+regularly from release branches to indicate new official, stable release versions of BitNova Core.
+
+The https://github.com/bitnova-core/gui repository is used exclusively for the
+ 5360f2baff (Initialized BitNova project)
 development of the GUI. Its master branch is identical in all monotree
 repositories. Release branches and tags do not exist, so please do not fork
 that repository unless it is for development reasons.
@@ -72,7 +101,11 @@ Translations
 ------------
 
 Changes to translations as well as new translations can be submitted to
+ HEAD
 [Bitcoin Core's Transifex page](https://www.transifex.com/bitcoin/bitcoin/).
+
+[BitNova Core's Transifex page](https://www.transifex.com/bitnova/bitnova/).
+ 5360f2baff (Initialized BitNova project)
 
 Translations are periodically pulled from Transifex and merged into the git repository. See the
 [translation process](doc/translation_process.md) for details on how this works.

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2014-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2014-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the RBF code."""
@@ -10,7 +14,11 @@ from test_framework.messages import (
     MAX_BIP125_RBF_SEQUENCE,
     COIN,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
@@ -19,7 +27,11 @@ from test_framework.wallet import MiniWallet
 from test_framework.address import ADDRESS_BCRT1_UNSPENDABLE
 
 MAX_REPLACEMENT_LIMIT = 100
+<<<<<<< HEAD
 class ReplaceByFeeTest(BitcoinTestFramework):
+=======
+class ReplaceByFeeTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser)
 

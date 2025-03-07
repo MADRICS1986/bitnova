@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test initial headers download
@@ -9,7 +13,11 @@ is close to caught up), and that each block announcement results in only one
 additional peer receiving a getheaders message.
 """
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.messages import (
     CInv,
     MSG_BLOCK,
@@ -25,7 +33,11 @@ from test_framework.util import (
 )
 import random
 
+<<<<<<< HEAD
 class HeadersSyncTest(BitcoinTestFramework):
+=======
+class HeadersSyncTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

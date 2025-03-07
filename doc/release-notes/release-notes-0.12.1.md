@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 Bitcoin Core version 0.12.1 is now available from:
 
   <https://bitcoin.org/bin/bitcoin-core-0.12.1/>
+=======
+BitNova Core version 0.12.1 is now available from:
+
+  <https://bitnova.org/bin/bitnova-core-0.12.1/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a new minor version release, including the BIP9, BIP68 and BIP112
 softfork, various bugfixes and updated translations.
 
 Please report bugs using the issue tracker at github:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Upgrading and downgrading
 =========================
@@ -17,8 +27,13 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
+<<<<<<< HEAD
 installer (on Windows) or just copy over /Applications/Bitcoin-Qt (on Mac) or
 bitcoind/bitcoin-qt (on Linux).
+=======
+installer (on Windows) or just copy over /Applications/BitNova-Qt (on Mac) or
+bitnovad/bitnova-qt (on Linux).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Downgrade warning
 -----------------
@@ -27,10 +42,17 @@ Downgrade warning
 
 Because release 0.12.0 and later will obfuscate the chainstate on every
 fresh sync or reindex, the chainstate is not backwards-compatible with
+<<<<<<< HEAD
 pre-0.12 versions of Bitcoin Core or other software.
 
 If you want to downgrade after you have done a reindex with 0.12.0 or later,
 you will need to reindex when you first start Bitcoin Core version 0.11 or
+=======
+pre-0.12 versions of BitNova Core or other software.
+
+If you want to downgrade after you have done a reindex with 0.12.0 or later,
+you will need to reindex when you first start BitNova Core version 0.11 or
+>>>>>>> 5360f2baff (Initialized BitNova project)
 earlier.
 
 Notable changes
@@ -49,6 +71,7 @@ bits together with setting bit 0 to indicate support for this combined
 deployment, shown as "csv" in the `getblockchaininfo` RPC call.
 
 For more information about the soft forking change, please see
+<<<<<<< HEAD
 <https://github.com/bitcoin/bitcoin/pull/7648>
 
 This specific backport pull-request can be viewed at
@@ -58,6 +81,17 @@ This specific backport pull-request can be viewed at
 [BIP68]: https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki
 [BIP112]: https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki
 [BIP113]: https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki
+=======
+<https://github.com/bitnova/bitnova/pull/7648>
+
+This specific backport pull-request can be viewed at
+<https://github.com/bitnova/bitnova/pull/7543>
+
+[BIP9]: https://github.com/bitnova/bips/blob/master/bip-0009.mediawiki
+[BIP68]: https://github.com/bitnova/bips/blob/master/bip-0068.mediawiki
+[BIP112]: https://github.com/bitnova/bips/blob/master/bip-0112.mediawiki
+[BIP113]: https://github.com/bitnova/bips/blob/master/bip-0113.mediawiki
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 BIP68 soft fork to enforce sequence locks for relative locktime
 ---------------------------------------------------------------
@@ -68,27 +102,47 @@ invalid for a defined period of time after confirmation of its corresponding
 outpoint.
 
 For more information about the implementation, see
+<<<<<<< HEAD
 <https://github.com/bitcoin/bitcoin/pull/7184>
+=======
+<https://github.com/bitnova/bitnova/pull/7184>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 BIP112 soft fork to enforce OP_CHECKSEQUENCEVERIFY
 --------------------------------------------------
 
 [BIP112][] redefines the existing OP_NOP3 as OP_CHECKSEQUENCEVERIFY (CSV)
+<<<<<<< HEAD
 for a new opcode in the Bitcoin scripting system that in combination with
+=======
+for a new opcode in the BitNova scripting system that in combination with
+>>>>>>> 5360f2baff (Initialized BitNova project)
 [BIP68][] allows execution pathways of a script to be restricted based
 on the age of the output being spent.
 
 For more information about the implementation, see
+<<<<<<< HEAD
 <https://github.com/bitcoin/bitcoin/pull/7524>
+=======
+<https://github.com/bitnova/bitnova/pull/7524>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 BIP113 locktime enforcement soft fork
 -------------------------------------
 
+<<<<<<< HEAD
 Bitcoin Core 0.11.2 previously introduced mempool-only locktime
 enforcement using GetMedianTimePast(). This release seeks to
 consensus enforce the rule.
 
 Bitcoin transactions currently may specify a locktime indicating when
+=======
+BitNova Core 0.11.2 previously introduced mempool-only locktime
+enforcement using GetMedianTimePast(). This release seeks to
+consensus enforce the rule.
+
+BitNova transactions currently may specify a locktime indicating when
+>>>>>>> 5360f2baff (Initialized BitNova project)
 they may be added to a valid block.  Current consensus rules require
 that blocks have a block header time greater than the locktime specified
 in any transaction in that block.
@@ -132,7 +186,11 @@ locktimes to allow those transactions to be included in mempools at
 approximately the expected time.
 
 For more information about the implementation, see
+<<<<<<< HEAD
 <https://github.com/bitcoin/bitcoin/pull/6566>
+=======
+<https://github.com/bitnova/bitnova/pull/6566>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Miscellaneous
 -------------
@@ -194,5 +252,9 @@ Thanks to everyone who directly contributed to this release:
 - Suhas Daftuar
 - Wladimir J. van der Laan
 
+<<<<<<< HEAD
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
+=======
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 

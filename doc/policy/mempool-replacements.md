@@ -59,6 +59,7 @@ This set of rules is similar but distinct from BIP125.
 ## History
 
 * Opt-in full replace-by-fee (without inherited signaling) honoured in mempool and mining as of
+<<<<<<< HEAD
   **v0.12.0** ([PR 6871](https://github.com/bitcoin/bitcoin/pull/6871)).
 
 * [BIP125](https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki) defined based on
@@ -77,3 +78,23 @@ This set of rules is similar but distinct from BIP125.
 * Full replace-by-fee is the default policy as of **v28.0** ([PR #30493](https://github.com/bitcoin/bitcoin/pull/30493)).
 
 * Signaling for replace-by-fee is no longer required as of [PR 30592](https://github.com/bitcoin/bitcoin/pull/30592).
+=======
+  **v0.12.0** ([PR 6871](https://github.com/bitnova/bitnova/pull/6871)).
+
+* [BIP125](https://github.com/bitnova/bips/blob/master/bip-0125.mediawiki) defined based on
+  BitNova Core implementation.
+
+* The incremental relay feerate used to calculate the required additional fees is distinct from
+  `-minrelaytxfee` and configurable using `-incrementalrelayfee`
+  ([PR #9380](https://github.com/bitnova/bitnova/pull/9380)).
+
+* RBF enabled by default in the wallet GUI as of **v0.18.1** ([PR
+  #11605](https://github.com/bitnova/bitnova/pull/11605)).
+
+* Full replace-by-fee enabled as a configurable mempool policy as of **v24.0** ([PR
+  #25353](https://github.com/bitnova/bitnova/pull/25353)).
+
+* Full replace-by-fee is the default policy as of **v28.0** ([PR #30493](https://github.com/bitnova/bitnova/pull/30493)).
+
+* Signaling for replace-by-fee is no longer required as of [PR 30592](https://github.com/bitnova/bitnova/pull/30592).
+>>>>>>> 5360f2baff (Initialized BitNova project)

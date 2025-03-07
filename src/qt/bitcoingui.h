@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef BITCOIN_QT_BITCOINGUI_H
 #define BITCOIN_QT_BITCOINGUI_H
 
+<<<<<<< HEAD
 #include <bitcoin-build-config.h> // IWYU pragma: keep
 
 #include <qt/bitcoinunits.h>
+=======
+#include <bitnova-build-config.h> // IWYU pragma: keep
+
+#include <qt/bitnovaunits.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <qt/clientmodel.h>
 #include <qt/guiutil.h>
 #include <qt/optionsdialog.h>
@@ -61,18 +71,30 @@ class ClickableProgressBar;
 }
 
 /**
+<<<<<<< HEAD
   Bitcoin GUI main class. This class represents the main window of the Bitcoin UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
 class BitcoinGUI : public QMainWindow
+=======
+  BitNova GUI main class. This class represents the main window of the BitNova UI. It communicates with both the client and
+  wallet models to give the user an up-to-date view of the current core state.
+*/
+class BitNovaGUI : public QMainWindow
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
     Q_OBJECT
 
 public:
     static const std::string DEFAULT_UIPLATFORM;
 
+<<<<<<< HEAD
     explicit BitcoinGUI(interfaces::Node& node, const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent = nullptr);
     ~BitcoinGUI();
+=======
+    explicit BitNovaGUI(interfaces::Node& node, const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent = nullptr);
+    ~BitNovaGUI();
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
@@ -85,7 +107,11 @@ public:
 
 #ifdef ENABLE_WALLET
     /** Set the wallet model.
+<<<<<<< HEAD
         The wallet model represents a bitcoin wallet, and offers access to the list of transactions, address book and sending
+=======
+        The wallet model represents a bitnova wallet, and offers access to the list of transactions, address book and sending
+>>>>>>> 5360f2baff (Initialized BitNova project)
         functionality.
     */
     void addWallet(WalletModel* walletModel);
@@ -265,7 +291,11 @@ public Q_SLOTS:
     bool handlePaymentRequest(const SendCoinsRecipient& recipient);
 
     /** Show incoming transaction notification for new transactions. */
+<<<<<<< HEAD
     void incomingTransaction(const QString& date, BitcoinUnit unit, const CAmount& amount, const QString& type, const QString& address, const QString& label, const QString& walletName);
+=======
+    void incomingTransaction(const QString& date, BitNovaUnit unit, const CAmount& amount, const QString& type, const QString& address, const QString& label, const QString& walletName);
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #endif // ENABLE_WALLET
 
 private:
@@ -288,7 +318,11 @@ public Q_SLOTS:
     void gotoSignMessageTab(QString addr = "");
     /** Show Sign/Verify Message dialog and switch to verify message tab */
     void gotoVerifyMessageTab(QString addr = "");
+<<<<<<< HEAD
     /** Load Partially Signed Bitcoin Transaction from file or clipboard */
+=======
+    /** Load Partially Signed BitNova Transaction from file or clipboard */
+>>>>>>> 5360f2baff (Initialized BitNova project)
     void gotoLoadPSBT(bool from_clipboard = false);
     /** Enable history action when privacy is changed */
     void enableHistoryAction(bool privacy);
@@ -348,7 +382,11 @@ private:
 
 private Q_SLOTS:
     /** When Display Units are changed on OptionsModel it will refresh the display text of the control on the status bar */
+<<<<<<< HEAD
     void updateDisplayUnit(BitcoinUnit newUnits);
+=======
+    void updateDisplayUnit(BitNovaUnit newUnits);
+>>>>>>> 5360f2baff (Initialized BitNova project)
     /** Tells underlying optionsModel to update its current display unit. */
     void onMenuSelection(QAction* action);
 };

@@ -2,7 +2,11 @@
 
 **Updated for OpenBSD [7.6](https://www.openbsd.org/76.html)**
 
+<<<<<<< HEAD
 This guide describes how to build bitcoind, command-line utilities, and GUI on OpenBSD.
+=======
+This guide describes how to build bitnovad, command-line utilities, and GUI on OpenBSD.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ## Preparation
 
@@ -15,17 +19,28 @@ pkg_add git cmake boost libevent
 
 See [dependencies.md](dependencies.md) for a complete overview.
 
+<<<<<<< HEAD
 ### 2. Clone Bitcoin Repo
 Clone the Bitcoin Core repository to a directory. All build scripts and commands will run from this directory.
 ``` bash
 git clone https://github.com/bitcoin/bitcoin.git
+=======
+### 2. Clone BitNova Repo
+Clone the BitNova Core repository to a directory. All build scripts and commands will run from this directory.
+``` bash
+git clone https://github.com/bitnova/bitnova.git
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 
 ### 3. Install Optional Dependencies
 
 #### Wallet Dependencies
 
+<<<<<<< HEAD
 It is not necessary to build wallet functionality to run either `bitcoind` or `bitcoin-qt`.
+=======
+It is not necessary to build wallet functionality to run either `bitnovad` or `bitnova-qt`.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ###### Descriptor Wallet Support
 
@@ -46,7 +61,11 @@ Refer to [depends/README.md](/depends/README.md) for detailed instructions.
 ```bash
 gmake -C depends NO_BOOST=1 NO_LIBEVENT=1 NO_QT=1 NO_SQLITE=1 NO_ZMQ=1 NO_USDT=1
 ...
+<<<<<<< HEAD
 to: /path/to/bitcoin/depends/*-unknown-openbsd*
+=======
+to: /path/to/bitnova/depends/*-unknown-openbsd*
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 
 Then set `BDB_PREFIX`:
@@ -58,7 +77,11 @@ export BDB_PREFIX="[path displayed above]"
 #### GUI Dependencies
 ###### Qt5
 
+<<<<<<< HEAD
 Bitcoin Core includes a GUI built with the cross-platform Qt Framework. To compile the GUI, we need to install
+=======
+BitNova Core includes a GUI built with the cross-platform Qt Framework. To compile the GUI, we need to install
+>>>>>>> 5360f2baff (Initialized BitNova project)
 the necessary parts of Qt, the libqrencode and pass `-DBUILD_GUI=ON`. Skip if you don't intend to use the GUI.
 
 ```bash
@@ -80,7 +103,11 @@ Otherwise, if you don't need QR encoding support, use the `-DWITH_QRENCODE=OFF` 
 #### Notifications
 ###### ZeroMQ
 
+<<<<<<< HEAD
 Bitcoin Core can provide notifications via ZeroMQ. If the package is installed, support will be compiled in.
+=======
+BitNova Core can provide notifications via ZeroMQ. If the package is installed, support will be compiled in.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```bash
 pkg_add zeromq
 ```
@@ -93,11 +120,19 @@ To run the test suite (recommended), you will need to have Python 3 installed:
 pkg_add python py3-zmq  # Select the newest version of the python package if necessary.
 ```
 
+<<<<<<< HEAD
 ## Building Bitcoin Core
 
 ### 1. Configuration
 
 There are many ways to configure Bitcoin Core, here are a few common examples:
+=======
+## Building BitNova Core
+
+### 1. Configuration
+
+There are many ways to configure BitNova Core, here are a few common examples:
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ##### Descriptor Wallet and GUI:
 This enables descriptor wallet support and the GUI, assuming SQLite and Qt 5 are installed.
@@ -133,7 +168,11 @@ data(kbytes)         1572864
 ```
 
 This is, unfortunately, in some cases not enough to compile some `.cpp` files in the project,
+<<<<<<< HEAD
 (see issue [#6658](https://github.com/bitcoin/bitcoin/issues/6658)).
+=======
+(see issue [#6658](https://github.com/bitnova/bitnova/issues/6658)).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 If your user is in the `staff` group the limit can be raised with:
 ```bash
 ulimit -d 3000000

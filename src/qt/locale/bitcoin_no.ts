@@ -55,8 +55,13 @@
         <translation type="unfinished">Velg adressen du vil motta mynter med </translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">Dette er dine Bitcoin adresser for å sende betalinger.Alltid sjekk mengden og mottaker adressen før du sender mynter.  </translation>
+=======
+        <source>These are your BitNova addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Dette er dine BitNova adresser for å sende betalinger.Alltid sjekk mengden og mottaker adressen før du sender mynter.  </translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -124,7 +129,11 @@
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
         <translation type="unfinished">
@@ -133,7 +142,11 @@
         </translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />

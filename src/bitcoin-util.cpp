@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 // Copyright (c) 2009-2022 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+// Copyright (c) 2009-2022 The BitNova Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <arith_uint256.h>
 #include <chain.h>
@@ -28,7 +36,11 @@ static const int CONTINUE_EXECUTION=-1;
 
 const TranslateFn G_TRANSLATION_FUN{nullptr};
 
+<<<<<<< HEAD
 static void SetupBitcoinUtilArgs(ArgsManager &argsman)
+=======
+static void SetupBitNovaUtilArgs(ArgsManager &argsman)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
     SetupHelpOptions(argsman);
 
@@ -43,7 +55,11 @@ static void SetupBitcoinUtilArgs(ArgsManager &argsman)
 // CONTINUE_EXECUTION when it's expected to continue further.
 static int AppInitUtil(ArgsManager& args, int argc, char* argv[])
 {
+<<<<<<< HEAD
     SetupBitcoinUtilArgs(args);
+=======
+    SetupBitNovaUtilArgs(args);
+>>>>>>> 5360f2baff (Initialized BitNova project)
     std::string error;
     if (!args.ParseParameters(argc, argv, error)) {
         tfm::format(std::cerr, "Error parsing command line arguments: %s\n", error);
@@ -52,16 +68,27 @@ static int AppInitUtil(ArgsManager& args, int argc, char* argv[])
 
     if (HelpRequested(args) || args.GetBoolArg("-version", false)) {
         // First part of help message is specific to this utility
+<<<<<<< HEAD
         std::string strUsage = CLIENT_NAME " bitcoin-util utility version " + FormatFullVersion() + "\n";
+=======
+        std::string strUsage = CLIENT_NAME " bitnova-util utility version " + FormatFullVersion() + "\n";
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         if (args.GetBoolArg("-version", false)) {
             strUsage += FormatParagraph(LicenseInfo());
         } else {
             strUsage += "\n"
+<<<<<<< HEAD
                 "The bitcoin-util tool provides bitcoin related functionality that does not rely on the ability to access a running node. Available [commands] are listed below.\n"
                 "\n"
                 "Usage:  bitcoin-util [options] [command]\n"
                 "or:     bitcoin-util [options] grind <hex-block-header>\n";
+=======
+                "The bitnova-util tool provides bitnova related functionality that does not rely on the ability to access a running node. Available [commands] are listed below.\n"
+                "\n"
+                "Usage:  bitnova-util [options] [command]\n"
+                "or:     bitnova-util [options] grind <hex-block-header>\n";
+>>>>>>> 5360f2baff (Initialized BitNova project)
             strUsage += "\n" + args.GetHelpMessage();
         }
 

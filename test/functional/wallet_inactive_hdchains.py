@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2021-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2021-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -8,13 +12,21 @@ Test Inactive HD Chains.
 import shutil
 
 from test_framework.authproxy import JSONRPCException
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.wallet_util import (
     get_generate_key,
 )
 
 
+<<<<<<< HEAD
 class InactiveHDChainsTest(BitcoinTestFramework):
+=======
+class InactiveHDChainsTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser, descriptors=False)
 
@@ -108,7 +120,11 @@ class InactiveHDChainsTest(BitcoinTestFramework):
     def test_without_upgraded_keymeta(self):
         # Test that it is possible to top up inactive hd chains even if there is no key origin
         # in CKeyMetadata. This tests for the segfault reported in
+<<<<<<< HEAD
         # https://github.com/bitcoin/bitcoin/issues/21605
+=======
+        # https://github.com/bitnova/bitnova/issues/21605
+>>>>>>> 5360f2baff (Initialized BitNova project)
         self.log.info("Test that topping up inactive HD chains does not need upgraded key origin")
 
         self.nodes[0].createwallet(wallet_name="keymeta_base", descriptors=False, blank=True)

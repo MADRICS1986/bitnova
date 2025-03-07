@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is a system of building and caching dependencies necessary for building Bitcoin.
+=======
+This is a system of building and caching dependencies necessary for building BitNova.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 There are several features that make it different from most similar systems:
 
 ### It is designed to be builder and host agnostic

@@ -1,5 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
+<<<<<<< HEAD
 // Copyright (c) 2009-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2009-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -264,7 +268,11 @@ public:
      * Thus 0x1234560000 is compact (0x05123456)
      * and  0xc0de000000 is compact (0x0600c0de)
      *
+<<<<<<< HEAD
      * Bitcoin only uses this "compact" format for encoding difficulty
+=======
+     * BitNova only uses this "compact" format for encoding difficulty
+>>>>>>> 5360f2baff (Initialized BitNova project)
      * targets, which are unsigned 256bit quantities.  Thus, all the
      * complexities of the sign bit and using base 256 are probably an
      * implementation accident.

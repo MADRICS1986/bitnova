@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2019-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2019-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test p2p blocksonly mode & block-relay-only connections."""
@@ -8,12 +12,20 @@ import time
 
 from test_framework.messages import msg_tx, msg_inv, CInv, MSG_WTX
 from test_framework.p2p import P2PInterface, P2PTxInvStore
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import assert_equal
 from test_framework.wallet import MiniWallet
 
 
+<<<<<<< HEAD
 class P2PBlocksOnly(BitcoinTestFramework):
+=======
+class P2PBlocksOnly(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [["-blocksonly"]]
@@ -64,10 +76,17 @@ class P2PBlocksOnly(BitcoinTestFramework):
         with self.nodes[0].assert_debug_log(["received getdata"]):
             # Note that normally, first_peer would never send us transactions since we're a blocksonly node.
             # By activating blocksonly, we explicitly tell our peers that they should not send us transactions,
+<<<<<<< HEAD
             # and Bitcoin Core respects that choice and will not send transactions.
             # But if, for some reason, first_peer decides to relay transactions to us anyway, we should relay them to
             # second_peer since we gave relay permission to first_peer.
             # See https://github.com/bitcoin/bitcoin/issues/19943 for details.
+=======
+            # and BitNova Core respects that choice and will not send transactions.
+            # But if, for some reason, first_peer decides to relay transactions to us anyway, we should relay them to
+            # second_peer since we gave relay permission to first_peer.
+            # See https://github.com/bitnova/bitnova/issues/19943 for details.
+>>>>>>> 5360f2baff (Initialized BitNova project)
             first_peer.send_message(msg_tx(tx))
             self.log.info('Check that the peer with relay-permission is still connected after sending the transaction')
             assert_equal(first_peer.is_connected, True)

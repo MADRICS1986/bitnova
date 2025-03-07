@@ -2,7 +2,11 @@
 
 ## Reporting a Vulnerability
 
+<<<<<<< HEAD
 To report security issues send an email to secp256k1-security@bitcoincore.org (not for support).
+=======
+To report security issues send an email to secp256k1-security@bitnovacore.org (not for support).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 The following keys may be used to communicate sensitive information to developers:
 

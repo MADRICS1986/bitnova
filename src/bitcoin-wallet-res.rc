@@ -14,6 +14,7 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
+<<<<<<< HEAD
             VALUE "CompanyName",        "Bitcoin"
             VALUE "FileDescription",    "bitcoin-wallet (CLI tool for " CLIENT_NAME " wallets)"
             VALUE "FileVersion",        CLIENT_VERSION_STRING
@@ -22,6 +23,16 @@ BEGIN
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "bitcoin-wallet.exe"
             VALUE "ProductName",        "bitcoin-wallet"
+=======
+            VALUE "CompanyName",        "BitNova"
+            VALUE "FileDescription",    "bitnova-wallet (CLI tool for " CLIENT_NAME " wallets)"
+            VALUE "FileVersion",        CLIENT_VERSION_STRING
+            VALUE "InternalName",       "bitnova-wallet"
+            VALUE "LegalCopyright",     COPYRIGHT_STR
+            VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
+            VALUE "OriginalFilename",   "bitnova-wallet.exe"
+            VALUE "ProductName",        "bitnova-wallet"
+>>>>>>> 5360f2baff (Initialized BitNova project)
             VALUE "ProductVersion",     CLIENT_VERSION_STRING
         END
     END

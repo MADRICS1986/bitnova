@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2024 The Bitcoin Core developers
+=======
+# Copyright (c) 2024 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -8,7 +12,11 @@ Test P2P behaviour during the handshake phase (VERSION, VERACK messages).
 import itertools
 import time
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.messages import (
     NODE_NETWORK,
     NODE_NETWORK_LIMITED,
@@ -28,7 +36,11 @@ DESIRABLE_SERVICE_FLAGS_FULL = NODE_NETWORK | NODE_WITNESS
 DESIRABLE_SERVICE_FLAGS_PRUNED = NODE_NETWORK_LIMITED | NODE_WITNESS
 
 
+<<<<<<< HEAD
 class P2PHandshakeTest(BitcoinTestFramework):
+=======
+class P2PHandshakeTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
 

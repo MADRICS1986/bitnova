@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2012-2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2012-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 '''
@@ -11,7 +15,11 @@ import operator
 import os
 import sys
 
+<<<<<<< HEAD
 OUT_CPP="qt/bitcoinstrings.cpp"
+=======
+OUT_CPP="qt/bitnovastrings.cpp"
+>>>>>>> 5360f2baff (Initialized BitNova project)
 EMPTY=['""']
 
 def parse_po(text):
@@ -75,11 +83,20 @@ f.write("""
 #define UNUSED
 #endif
 """)
+<<<<<<< HEAD
 f.write('static const char UNUSED *bitcoin_strings[] = {\n')
 f.write('QT_TRANSLATE_NOOP("bitcoin-core", "%s"),\n' % (os.getenv('COPYRIGHT_HOLDERS'),))
 messages.sort(key=operator.itemgetter(0))
 for (msgid, msgstr) in messages:
     if msgid != EMPTY:
         f.write('QT_TRANSLATE_NOOP("bitcoin-core", %s),\n' % ('\n'.join(msgid)))
+=======
+f.write('static const char UNUSED *bitnova_strings[] = {\n')
+f.write('QT_TRANSLATE_NOOP("bitnova-core", "%s"),\n' % (os.getenv('COPYRIGHT_HOLDERS'),))
+messages.sort(key=operator.itemgetter(0))
+for (msgid, msgstr) in messages:
+    if msgid != EMPTY:
+        f.write('QT_TRANSLATE_NOOP("bitnova-core", %s),\n' % ('\n'.join(msgid)))
+>>>>>>> 5360f2baff (Initialized BitNova project)
 f.write('};\n')
 f.close()

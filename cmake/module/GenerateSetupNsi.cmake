@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Copyright (c) 2023-present The Bitcoin Core developers
+=======
+# Copyright (c) 2023-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
@@ -6,6 +10,7 @@ function(generate_setup_nsi)
   set(abs_top_srcdir ${PROJECT_SOURCE_DIR})
   set(abs_top_builddir ${PROJECT_BINARY_DIR})
   set(CLIENT_URL ${PROJECT_HOMEPAGE_URL})
+<<<<<<< HEAD
   set(CLIENT_TARNAME "bitcoin")
   set(BITCOIN_GUI_NAME "bitcoin-qt")
   set(BITCOIN_DAEMON_NAME "bitcoind")
@@ -15,4 +20,15 @@ function(generate_setup_nsi)
   set(BITCOIN_TEST_NAME "test_bitcoin")
   set(EXEEXT ${CMAKE_EXECUTABLE_SUFFIX})
   configure_file(${PROJECT_SOURCE_DIR}/share/setup.nsi.in ${PROJECT_BINARY_DIR}/bitcoin-win64-setup.nsi USE_SOURCE_PERMISSIONS @ONLY)
+=======
+  set(CLIENT_TARNAME "bitnova")
+  set(BITCOIN_GUI_NAME "bitnova-qt")
+  set(BITCOIN_DAEMON_NAME "bitnovad")
+  set(BITCOIN_CLI_NAME "bitnova-cli")
+  set(BITCOIN_TX_NAME "bitnova-tx")
+  set(BITCOIN_WALLET_TOOL_NAME "bitnova-wallet")
+  set(BITCOIN_TEST_NAME "test_bitnova")
+  set(EXEEXT ${CMAKE_EXECUTABLE_SUFFIX})
+  configure_file(${PROJECT_SOURCE_DIR}/share/setup.nsi.in ${PROJECT_BINARY_DIR}/bitnova-win64-setup.nsi USE_SOURCE_PERMISSIONS @ONLY)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 endfunction()

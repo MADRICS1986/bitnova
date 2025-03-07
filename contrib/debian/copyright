@@ -1,4 +1,5 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+<<<<<<< HEAD
 Upstream-Name: Bitcoin
 Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
  irc://#bitcoin-core-dev@libera.chat
@@ -8,6 +9,17 @@ Files: *
 Copyright: 2009-2025, Bitcoin Core Developers
 License: Expat
 Comment: The Bitcoin Core Developers encompasses all contributors to the
+=======
+Upstream-Name: BitNova
+Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
+ irc://#bitnova-core-dev@libera.chat
+Source: https://github.com/bitnova/bitnova
+
+Files: *
+Copyright: 2009-2025, BitNova Core Developers
+License: Expat
+Comment: The BitNova Core Developers encompasses all contributors to the
+>>>>>>> 5360f2baff (Initialized BitNova project)
          project, listed in the release notes or the git log.
 
 Files: debian/*
@@ -67,12 +79,21 @@ Copyright: Stephen Hutchings, Jonas Schnelli
 License: Expat
 Comment: Modifications of Stephen Hutchings' Typicons
 
+<<<<<<< HEAD
 Files: src/qt/res/icons/bitcoin.*
        share/pixmaps/bitcoin*
        src/qt/res/src/bitcoin.svg
 Copyright: Bitboy, Jonas Schnelli
 License: public-domain
 Comment: Site: https://bitcointalk.org/?topic=1756.0
+=======
+Files: src/qt/res/icons/bitnova.*
+       share/pixmaps/bitnova*
+       src/qt/res/src/bitnova.svg
+Copyright: Bitboy, Jonas Schnelli
+License: public-domain
+Comment: Site: https://bitnovatalk.org/?topic=1756.0
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Files: src/qt/res/icons/proxy.png
        src/qt/res/src/proxy.svg

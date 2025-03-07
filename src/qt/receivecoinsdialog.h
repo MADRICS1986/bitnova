@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -26,7 +30,11 @@ QT_BEGIN_NAMESPACE
 class QModelIndex;
 QT_END_NAMESPACE
 
+<<<<<<< HEAD
 /** Dialog for requesting payment of bitcoins */
+=======
+/** Dialog for requesting payment of bitnovas */
+>>>>>>> 5360f2baff (Initialized BitNova project)
 class ReceiveCoinsDialog : public QDialog
 {
     Q_OBJECT

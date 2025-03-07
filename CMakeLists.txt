@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Copyright (c) 2023-present The Bitcoin Core developers
+=======
+# Copyright (c) 2023-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
@@ -22,7 +26,11 @@ endif()
 #=============================
 # Project / Package metadata
 #=============================
+<<<<<<< HEAD
 set(CLIENT_NAME "Bitcoin Core")
+=======
+set(CLIENT_NAME "BitNova Core")
+>>>>>>> 5360f2baff (Initialized BitNova project)
 set(CLIENT_VERSION_MAJOR 28)
 set(CLIENT_VERSION_MINOR 99)
 set(CLIENT_VERSION_BUILD 0)
@@ -46,10 +54,17 @@ set(CMAKE_TRY_COMPILE_PLATFORM_VARIABLES
   CMAKE_CXX_LINK_EXECUTABLE
 )
 
+<<<<<<< HEAD
 project(BitcoinCore
   VERSION ${CLIENT_VERSION_MAJOR}.${CLIENT_VERSION_MINOR}.${CLIENT_VERSION_BUILD}
   DESCRIPTION "Bitcoin client software"
   HOMEPAGE_URL "https://bitcoincore.org/"
+=======
+project(BitNovaCore
+  VERSION ${CLIENT_VERSION_MAJOR}.${CLIENT_VERSION_MINOR}.${CLIENT_VERSION_BUILD}
+  DESCRIPTION "BitNova client software"
+  HOMEPAGE_URL "https://bitnovacore.org/"
+>>>>>>> 5360f2baff (Initialized BitNova project)
   LANGUAGES NONE
 )
 
@@ -60,7 +75,11 @@ endif()
 
 set(COPYRIGHT_HOLDERS "The %s developers")
 set(COPYRIGHT_HOLDERS_FINAL "The ${CLIENT_NAME} developers")
+<<<<<<< HEAD
 set(CLIENT_BUGREPORT "https://github.com/bitcoin/bitcoin/issues")
+=======
+set(CLIENT_BUGREPORT "https://github.com/bitnova/bitnova/issues")
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #=============================
 # Language setup
@@ -90,6 +109,7 @@ endif()
 #=============================
 include(CMakeDependentOption)
 # When adding a new option, end the <help_text> with a full stop for consistency.
+<<<<<<< HEAD
 option(BUILD_DAEMON "Build bitcoind executable." ON)
 option(BUILD_GUI "Build bitcoin-qt executable." OFF)
 option(BUILD_CLI "Build bitcoin-cli executable." ON)
@@ -100,6 +120,18 @@ option(BUILD_UTIL "Build bitcoin-util executable." ${BUILD_TESTS})
 
 option(BUILD_UTIL_CHAINSTATE "Build experimental bitcoin-chainstate executable." OFF)
 option(BUILD_KERNEL_LIB "Build experimental bitcoinkernel library." ${BUILD_UTIL_CHAINSTATE})
+=======
+option(BUILD_DAEMON "Build bitnovad executable." ON)
+option(BUILD_GUI "Build bitnova-qt executable." OFF)
+option(BUILD_CLI "Build bitnova-cli executable." ON)
+
+option(BUILD_TESTS "Build test_bitnova executable." ON)
+option(BUILD_TX "Build bitnova-tx executable." ${BUILD_TESTS})
+option(BUILD_UTIL "Build bitnova-util executable." ${BUILD_TESTS})
+
+option(BUILD_UTIL_CHAINSTATE "Build experimental bitnova-chainstate executable." OFF)
+option(BUILD_KERNEL_LIB "Build experimental bitnovakernel library." ${BUILD_UTIL_CHAINSTATE})
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 option(ENABLE_WALLET "Enable wallet." ON)
 option(WITH_SQLITE "Enable SQLite wallet support." ${ENABLE_WALLET})
@@ -128,7 +160,11 @@ if(WITH_BDB)
     endif()
   endif()
 endif()
+<<<<<<< HEAD
 cmake_dependent_option(BUILD_WALLET_TOOL "Build bitcoin-wallet tool." ${BUILD_TESTS} "ENABLE_WALLET" OFF)
+=======
+cmake_dependent_option(BUILD_WALLET_TOOL "Build bitnova-wallet tool." ${BUILD_TESTS} "ENABLE_WALLET" OFF)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 option(ENABLE_HARDENING "Attempt to harden the resulting executables." ON)
 option(REDUCE_EXPORTS "Attempt to reduce exported symbols in the resulting executables." OFF)
@@ -155,7 +191,11 @@ endif()
 
 cmake_dependent_option(WITH_DBUS "Enable DBus support." ON "CMAKE_SYSTEM_NAME STREQUAL \"Linux\" AND BUILD_GUI" OFF)
 
+<<<<<<< HEAD
 option(WITH_MULTIPROCESS "Build multiprocess bitcoin-node and bitcoin-gui executables in addition to monolithic bitcoind and bitcoin-qt executables. Requires libmultiprocess library. Experimental." OFF)
+=======
+option(WITH_MULTIPROCESS "Build multiprocess bitnova-node and bitnova-gui executables in addition to monolithic bitnovad and bitnova-qt executables. Requires libmultiprocess library. Experimental." OFF)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 if(WITH_MULTIPROCESS)
   find_package(Libmultiprocess REQUIRED COMPONENTS Lib)
   find_package(LibmultiprocessNative REQUIRED COMPONENTS Bin
@@ -163,7 +203,11 @@ if(WITH_MULTIPROCESS)
   )
 endif()
 
+<<<<<<< HEAD
 cmake_dependent_option(BUILD_GUI_TESTS "Build test_bitcoin-qt executable." ON "BUILD_GUI;BUILD_TESTS" OFF)
+=======
+cmake_dependent_option(BUILD_GUI_TESTS "Build test_bitnova-qt executable." ON "BUILD_GUI;BUILD_TESTS" OFF)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 if(BUILD_GUI)
   set(qt_components Core Gui Widgets LinguistTools)
   if(ENABLE_WALLET)
@@ -182,7 +226,11 @@ if(BUILD_GUI)
   unset(qt_components)
 endif()
 
+<<<<<<< HEAD
 option(BUILD_BENCH "Build bench_bitcoin executable." OFF)
+=======
+option(BUILD_BENCH "Build bench_bitnova executable." OFF)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 option(BUILD_FUZZ_BINARY "Build fuzz binary." OFF)
 option(BUILD_FOR_FUZZING "Build for fuzzing. Enabling this will disable all other targets and override BUILD_FUZZ_BINARY." OFF)
 
@@ -314,7 +362,11 @@ if(WIN32)
 
   # Workaround producing large object files, which cannot be handled by the assembler.
   # More likely to happen with no, or lower levels of optimisation.
+<<<<<<< HEAD
   # See discussion in https://github.com/bitcoin/bitcoin/issues/28109.
+=======
+  # See discussion in https://github.com/bitnova/bitnova/issues/28109.
+>>>>>>> 5360f2baff (Initialized BitNova project)
   if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
     try_append_cxx_flags("/bigobj" TARGET core_interface_debug SKIP_LINK)
   else()
@@ -603,8 +655,13 @@ endif()
 #       in the future after reordering Guix script commands to
 #       perform binary checks after the installation step.
 # Relevant discussions:
+<<<<<<< HEAD
 # - https://github.com/hebasto/bitcoin/pull/236#issuecomment-2183120953
 # - https://github.com/bitcoin/bitcoin/pull/30312#issuecomment-2191235833
+=======
+# - https://github.com/hebasto/bitnova/pull/236#issuecomment-2183120953
+# - https://github.com/bitnova/bitnova/pull/30312#issuecomment-2191235833
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # NetBSD always requires runtime paths to be set for executables.
 if(CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
   set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
@@ -632,6 +689,7 @@ message("\n")
 message("Configure summary")
 message("=================")
 message("Executables:")
+<<<<<<< HEAD
 message("  bitcoind ............................ ${BUILD_DAEMON}")
 if(BUILD_DAEMON AND WITH_MULTIPROCESS)
   set(bitcoin_daemon_status ON)
@@ -652,6 +710,28 @@ message("  bitcoin-util ........................ ${BUILD_UTIL}")
 message("  bitcoin-wallet ...................... ${BUILD_WALLET_TOOL}")
 message("  bitcoin-chainstate (experimental) ... ${BUILD_UTIL_CHAINSTATE}")
 message("  libbitcoinkernel (experimental) ..... ${BUILD_KERNEL_LIB}")
+=======
+message("  bitnovad ............................ ${BUILD_DAEMON}")
+if(BUILD_DAEMON AND WITH_MULTIPROCESS)
+  set(bitnova_daemon_status ON)
+else()
+  set(bitnova_daemon_status OFF)
+endif()
+message("  bitnova-node (multiprocess) ......... ${bitnova_daemon_status}")
+message("  bitnova-qt (GUI) .................... ${BUILD_GUI}")
+if(BUILD_GUI AND WITH_MULTIPROCESS)
+  set(bitnova_gui_status ON)
+else()
+  set(bitnova_gui_status OFF)
+endif()
+message("  bitnova-gui (GUI, multiprocess) ..... ${bitnova_gui_status}")
+message("  bitnova-cli ......................... ${BUILD_CLI}")
+message("  bitnova-tx .......................... ${BUILD_TX}")
+message("  bitnova-util ........................ ${BUILD_UTIL}")
+message("  bitnova-wallet ...................... ${BUILD_WALLET_TOOL}")
+message("  bitnova-chainstate (experimental) ... ${BUILD_UTIL_CHAINSTATE}")
+message("  libbitnovakernel (experimental) ..... ${BUILD_KERNEL_LIB}")
+>>>>>>> 5360f2baff (Initialized BitNova project)
 message("Optional features:")
 message("  wallet support ...................... ${ENABLE_WALLET}")
 if(ENABLE_WALLET)
@@ -664,9 +744,15 @@ message("  USDT tracing ........................ ${WITH_USDT}")
 message("  QR code (GUI) ....................... ${WITH_QRENCODE}")
 message("  DBus (GUI, Linux only) .............. ${WITH_DBUS}")
 message("Tests:")
+<<<<<<< HEAD
 message("  test_bitcoin ........................ ${BUILD_TESTS}")
 message("  test_bitcoin-qt ..................... ${BUILD_GUI_TESTS}")
 message("  bench_bitcoin ....................... ${BUILD_BENCH}")
+=======
+message("  test_bitnova ........................ ${BUILD_TESTS}")
+message("  test_bitnova-qt ..................... ${BUILD_GUI_TESTS}")
+message("  bench_bitnova ....................... ${BUILD_BENCH}")
+>>>>>>> 5360f2baff (Initialized BitNova project)
 message("  fuzz binary ......................... ${BUILD_FUZZ_BINARY}")
 message("")
 if(CMAKE_CROSSCOMPILING)

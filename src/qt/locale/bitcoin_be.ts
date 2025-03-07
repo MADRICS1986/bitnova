@@ -58,7 +58,11 @@
         <translation type="unfinished">Выбраць</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+=======
+        <source>These are your BitNova addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Тут знаходзяцца Біткойн-адрасы для высылання плацяжоў. Заўсёды спраўджвайце колькасць і адрас прызначэння перад здзяйсненнем транзакцыі.</translation>
     </message>
     <message>
@@ -265,7 +269,11 @@
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">Агляд</translation>
@@ -299,7 +307,11 @@
         <translation type="unfinished">Паказаць інфармацыю аб Qt</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Bitcoin address</source>
+=======
+        <source>Send coins to a BitNova address</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Даслаць манеты на Біткойн-адрас</translation>
     </message>
     <message>
@@ -323,11 +335,19 @@
         <translation type="unfinished">Зашыфраваць прыватныя ключы, якия належаць вашаму гаманцу</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Bitcoin addresses to prove you own them</source>
         <translation type="unfinished">Падпісаць паведамленне з дапамогай Біткойн-адраса каб даказаць, што яно належыць вам</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
+=======
+        <source>Sign messages with your BitNova addresses to prove you own them</source>
+        <translation type="unfinished">Падпісаць паведамленне з дапамогай Біткойн-адраса каб даказаць, што яно належыць вам</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified BitNova addresses</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Спраўдзіць паведамленне з дапамогай Біткойн-адраса каб даказаць, што яно належыць вам</translation>
     </message>
     <message>
@@ -343,7 +363,11 @@
         <translation type="unfinished">Дапамога</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+=======
+        <source>Request payments (generates QR codes and bitnova: URIs)</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Запатрабаваць плацёж (генеруецца QR-код для біткойн URI)</translation>
     </message>
     <message>
@@ -395,7 +419,11 @@
         <translation type="unfinished">Сінхранізавана</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -593,7 +621,11 @@
 <context>
     <name>Intro</name>
     <message>
+<<<<<<< HEAD
         <source>Bitcoin</source>
+=======
+        <source>BitNova</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Біткойн</translation>
     </message>
     <message numerus="yes">
@@ -1084,7 +1116,11 @@
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>bitcoin-core</name>
+=======
+    <name>bitnova-core</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>Do you want to rebuild the block database now?</source>
         <translation type="unfinished">Ці жадаеце вы перабудаваць зараз базу звестак блокаў?</translation>

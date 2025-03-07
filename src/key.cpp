@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2009-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2009-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Copyright (c) 2017 The Zcash developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -238,7 +242,11 @@ bool CKey::VerifyPubKey(const CPubKey& pubkey) const {
         return false;
     }
     unsigned char rnd[8];
+<<<<<<< HEAD
     std::string str = "Bitcoin key verification\n";
+=======
+    std::string str = "BitNova key verification\n";
+>>>>>>> 5360f2baff (Initialized BitNova project)
     GetRandBytes(rnd);
     uint256 hash{Hash(str, rnd)};
     std::vector<unsigned char> vchSig;

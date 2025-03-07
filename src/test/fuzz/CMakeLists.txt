@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Copyright (c) 2023-present The Bitcoin Core developers
+=======
+# Copyright (c) 2023-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
@@ -128,7 +132,11 @@ add_executable(fuzz
   txrequest.cpp
   # Visual Studio 2022 version 17.12 introduced a bug
   # that causes an internal compiler error.
+<<<<<<< HEAD
   # See: https://github.com/bitcoin/bitcoin/issues/31303
+=======
+  # See: https://github.com/bitnova/bitnova/issues/31303
+>>>>>>> 5360f2baff (Initialized BitNova project)
   $<$<VERSION_LESS:${MSVC_VERSION},1942>:utxo_snapshot.cpp>
   utxo_total_supply.cpp
   validation_load_mempool.cpp
@@ -138,9 +146,15 @@ add_executable(fuzz
 target_link_libraries(fuzz
   core_interface
   test_fuzz
+<<<<<<< HEAD
   bitcoin_cli
   bitcoin_common
   bitcoin_util
+=======
+  bitnova_cli
+  bitnova_common
+  bitnova_util
+>>>>>>> 5360f2baff (Initialized BitNova project)
   minisketch
   leveldb
   univalue

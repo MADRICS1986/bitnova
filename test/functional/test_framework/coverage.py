@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2015-2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2015-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Utilities for doing coverage analysis on the RPC interface.
@@ -80,7 +84,11 @@ def get_filename(dirname, n_node):
 
 def write_all_rpc_commands(dirname: str, node: AuthServiceProxy) -> bool:
     """
+<<<<<<< HEAD
     Write out a list of all RPC functions available in `bitcoin-cli` for
+=======
+    Write out a list of all RPC functions available in `bitnova-cli` for
+>>>>>>> 5360f2baff (Initialized BitNova project)
     coverage comparison. This will only happen once per coverage
     directory.
 

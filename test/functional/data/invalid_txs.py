@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2015-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2015-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -63,7 +67,11 @@ class BadTxTemplate:
     """Allows simple construction of a certain kind of invalid tx. Base class to be subclassed."""
     __metaclass__ = abc.ABCMeta
 
+<<<<<<< HEAD
     # The expected error code given by bitcoind upon submission of the tx.
+=======
+    # The expected error code given by bitnovad upon submission of the tx.
+>>>>>>> 5360f2baff (Initialized BitNova project)
     reject_reason: Optional[str] = ""
 
     # Only specified if it differs from mempool acceptance error.

@@ -49,7 +49,11 @@
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">&amp;Summarium</translation>
@@ -91,8 +95,13 @@
         <translation type="unfinished">Creare novum cassidilium</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Bitcoin address</source>
         <translation type="unfinished">Mitte nummos ad inscriptionem Bitcoin</translation>
+=======
+        <source>Send coins to a BitNova address</source>
+        <translation type="unfinished">Mitte nummos ad inscriptionem BitNova</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -115,12 +124,21 @@
         <translation type="unfinished">Cifra claves privatas quae cassidili tui sunt</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Bitcoin addresses to prove you own them</source>
         <translation type="unfinished">Signa nuntios cum tuis inscriptionibus Bitcoin ut demonstres te eas possidere</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
         <translation type="unfinished">Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus Bitcoin</translation>
+=======
+        <source>Sign messages with your BitNova addresses to prove you own them</source>
+        <translation type="unfinished">Signa nuntios cum tuis inscriptionibus BitNova ut demonstres te eas possidere</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified BitNova addresses</source>
+        <translation type="unfinished">Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus BitNova</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>&amp;File</source>
@@ -178,11 +196,19 @@
         <translation type="unfinished">&amp;Fenestra</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform>%n active connection(s) to Bitcoin network.</numerusform>
             <numerusform>%n active connection(s) to Bitcoin network.</numerusform>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+        <extracomment>A substring of the tooltip.</extracomment>
+        <translation type="unfinished">
+            <numerusform>%n active connection(s) to BitNova network.</numerusform>
+            <numerusform>%n active connection(s) to BitNova network.</numerusform>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         </translation>
     </message>
     </context>
@@ -260,8 +286,13 @@
         <translation type="unfinished">Cassidile</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished">Aperi per se portam clientis Bitcoin in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
+=======
+        <source>Automatically open the BitNova client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="unfinished">Aperi per se portam clientis BitNova in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -336,8 +367,13 @@
         <translation type="unfinished">Schema</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished">Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete Bitcoin postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
+=======
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitNova network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished">Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete BitNova postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Immature:</source>
@@ -358,8 +394,13 @@
 <context>
     <name>PaymentServer</name>
     <message>
+<<<<<<< HEAD
         <source>Cannot start bitcoin: click-to-pay handler</source>
         <translation type="unfinished">Bitcoin incipere non potest: cliccare-ad-pensandum handler</translation>
+=======
+        <source>Cannot start bitnova: click-to-pay handler</source>
+        <translation type="unfinished">BitNova incipere non potest: cliccare-ad-pensandum handler</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>URI handling</source>

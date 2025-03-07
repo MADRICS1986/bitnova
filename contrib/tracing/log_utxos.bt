@@ -6,9 +6,15 @@
 
   bpftrace contrib/tracing/log_utxos.bt
 
+<<<<<<< HEAD
   This script requires a 'bitcoind' binary compiled with eBPF support and the
   'utxocache' tracepoints. By default, it's assumed that 'bitcoind' is
   located in './build/src/bitcoind'. This can be modified in the script below.
+=======
+  This script requires a 'bitnovad' binary compiled with eBPF support and the
+  'utxocache' tracepoints. By default, it's assumed that 'bitnovad' is
+  located in './build/src/bitnovad'. This can be modified in the script below.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
   NOTE: requires bpftrace v0.12.0 or above.
 */
@@ -22,7 +28,11 @@ BEGIN
 /*
   Attaches to the 'utxocache:add' tracepoint and prints additions to the UTXO set cache.
 */
+<<<<<<< HEAD
 usdt:./build/src/bitcoind:utxocache:add
+=======
+usdt:./build/src/bitnovad:utxocache:add
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
   $txid = arg0;
   $index = (uint32)arg1;
@@ -44,7 +54,11 @@ usdt:./build/src/bitcoind:utxocache:add
 /*
   Attaches to the 'utxocache:spent' tracepoint and prints spents from the UTXO set cache.
 */
+<<<<<<< HEAD
 usdt:./build/src/bitcoind:utxocache:spent
+=======
+usdt:./build/src/bitnovad:utxocache:spent
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
   $txid = arg0;
   $index = (uint32)arg1;
@@ -66,7 +80,11 @@ usdt:./build/src/bitcoind:utxocache:spent
 /*
   Attaches to the 'utxocache:uncache' tracepoint and uncache UTXOs from the UTXO set cache.
 */
+<<<<<<< HEAD
 usdt:./build/src/bitcoind:utxocache:uncache
+=======
+usdt:./build/src/bitnovad:utxocache:uncache
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
   $txid = arg0;
   $index = (uint32)arg1;

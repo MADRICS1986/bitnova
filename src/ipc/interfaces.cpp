@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2021-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2021-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -65,10 +69,17 @@ public:
             // Treat "auto" the same as "unix" except don't treat it an as error
             // if the connection is not accepted. Just return null so the caller
             // can work offline without a connection, or spawn a new
+<<<<<<< HEAD
             // bitcoin-node process and connect to it.
             address = "unix";
             try {
                 fd = m_process->connect(gArgs.GetDataDirNet(), "bitcoin-node", address);
+=======
+            // bitnova-node process and connect to it.
+            address = "unix";
+            try {
+                fd = m_process->connect(gArgs.GetDataDirNet(), "bitnova-node", address);
+>>>>>>> 5360f2baff (Initialized BitNova project)
             } catch (const std::system_error& e) {
                 // If connection type is auto and socket path isn't accepting connections, or doesn't exist, catch the error and return null;
                 if (e.code() == std::errc::connection_refused || e.code() == std::errc::no_such_file_or_directory) {
@@ -77,7 +88,11 @@ public:
                 throw;
             }
         } else {
+<<<<<<< HEAD
             fd = m_process->connect(gArgs.GetDataDirNet(), "bitcoin-node", address);
+=======
+            fd = m_process->connect(gArgs.GetDataDirNet(), "bitnova-node", address);
+>>>>>>> 5360f2baff (Initialized BitNova project)
         }
         return m_protocol->connect(fd, m_exe_name);
     }

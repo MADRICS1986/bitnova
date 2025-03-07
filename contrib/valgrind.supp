@@ -2,14 +2,24 @@
 # dependencies that cannot be fixed in-tree.
 #
 # Example use:
+<<<<<<< HEAD
 # $ valgrind --suppressions=contrib/valgrind.supp build/src/test/test_bitcoin
 # $ valgrind --suppressions=contrib/valgrind.supp --leak-check=full \
 #       --show-leak-kinds=all build/src/test/test_bitcoin
+=======
+# $ valgrind --suppressions=contrib/valgrind.supp build/src/test/test_bitnova
+# $ valgrind --suppressions=contrib/valgrind.supp --leak-check=full \
+#       --show-leak-kinds=all build/src/test/test_bitnova
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #
 # To create suppressions for found issues, use the --gen-suppressions=all option:
 # $ valgrind --suppressions=contrib/valgrind.supp --leak-check=full \
 #       --show-leak-kinds=all --gen-suppressions=all --show-reachable=yes \
+<<<<<<< HEAD
 #       --error-limit=no build/src/test/test_bitcoin
+=======
+#       --error-limit=no build/src/test/test_bitnova
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #
 # Note that suppressions may depend on OS and/or library versions.
 # Tested on:

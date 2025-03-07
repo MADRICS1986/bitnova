@@ -455,11 +455,19 @@ node::RejectedTxTodo TxDownloadManagerImpl::MempoolRejectedTx(const CTransaction
         // adding such txids to the reject filter would potentially
         // interfere with relay of valid transactions from peers that
         // do not support wtxid-based relay. See
+<<<<<<< HEAD
         // https://github.com/bitcoin/bitcoin/issues/8279 for details.
         // We can remove this restriction (and always add wtxids to
         // the filter even for witness stripped transactions) once
         // wtxid-based relay is broadly deployed.
         // See also comments in https://github.com/bitcoin/bitcoin/pull/18044#discussion_r443419034
+=======
+        // https://github.com/bitnova/bitnova/issues/8279 for details.
+        // We can remove this restriction (and always add wtxids to
+        // the filter even for witness stripped transactions) once
+        // wtxid-based relay is broadly deployed.
+        // See also comments in https://github.com/bitnova/bitnova/pull/18044#discussion_r443419034
+>>>>>>> 5360f2baff (Initialized BitNova project)
         // for concerns around weakening security of unupgraded nodes
         // if we start doing this too early.
         if (state.GetResult() == TxValidationResult::TX_RECONSIDERABLE) {

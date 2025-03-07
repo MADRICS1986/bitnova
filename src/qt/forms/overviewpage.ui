@@ -73,13 +73,21 @@
                </size>
               </property>
               <property name="toolTip">
+<<<<<<< HEAD
                <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</string>
+=======
+               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the BitNova network after a connection is established, but this process has not completed yet.</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
               </property>
               <property name="text">
                <string/>
               </property>
               <property name="icon">
+<<<<<<< HEAD
                <iconset resource="../bitcoin.qrc">
+=======
+               <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 <normaloff>:/icons/warning</normaloff>
                 <disabledoff>:/icons/warning</disabledoff>:/icons/warning</iconset>
               </property>
@@ -408,13 +416,21 @@
                </size>
               </property>
               <property name="toolTip">
+<<<<<<< HEAD
                <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</string>
+=======
+               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the BitNova network after a connection is established, but this process has not completed yet.</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
               </property>
               <property name="text">
                <string/>
               </property>
               <property name="icon">
+<<<<<<< HEAD
                <iconset resource="../bitcoin.qrc">
+=======
+               <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 <normaloff>:/icons/warning</normaloff>
                 <disabledoff>:/icons/warning</disabledoff>:/icons/warning</iconset>
               </property>

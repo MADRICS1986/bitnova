@@ -1,5 +1,9 @@
 // Copyright (c) 2010 Satoshi Nakamoto
+<<<<<<< HEAD
 // Copyright (c) 2009-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2009-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -18,7 +22,11 @@ enum class JSONRPCVersion {
     V2
 };
 
+<<<<<<< HEAD
 /** JSON-RPC 2.0 request, only used in bitcoin-cli **/
+=======
+/** JSON-RPC 2.0 request, only used in bitnova-cli **/
+>>>>>>> 5360f2baff (Initialized BitNova project)
 UniValue JSONRPCRequestObj(const std::string& strMethod, const UniValue& params, const UniValue& id);
 UniValue JSONRPCReplyObj(UniValue result, UniValue error, std::optional<UniValue> id, JSONRPCVersion jsonrpc_version);
 UniValue JSONRPCError(int code, const std::string& message);

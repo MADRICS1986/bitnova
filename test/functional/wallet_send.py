@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2020-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2020-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the send RPC command."""
@@ -9,7 +13,11 @@ from itertools import product
 
 from test_framework.authproxy import JSONRPCException
 from test_framework.descriptors import descsum_create
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
     assert_fee_amount,
@@ -23,7 +31,11 @@ from test_framework.wallet_util import (
 )
 
 
+<<<<<<< HEAD
 class WalletSendTest(BitcoinTestFramework):
+=======
+class WalletSendTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser)
 
@@ -425,7 +437,11 @@ class WalletSendTest(BitcoinTestFramework):
 
         self.log.info("Manual change address and position...")
         self.test_send(from_wallet=w0, to_wallet=w1, amount=1, change_address="not an address",
+<<<<<<< HEAD
                        expect_error=(-5, "Change address must be a valid bitcoin address"))
+=======
+                       expect_error=(-5, "Change address must be a valid bitnova address"))
+>>>>>>> 5360f2baff (Initialized BitNova project)
         change_address = w0.getnewaddress()
         self.test_send(from_wallet=w0, to_wallet=w1, amount=1, add_to_wallet=False, change_address=change_address)
         assert res["complete"]

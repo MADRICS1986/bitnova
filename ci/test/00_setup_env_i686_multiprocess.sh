@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 #
+<<<<<<< HEAD
 # Copyright (c) 2020-present The Bitcoin Core developers
+=======
+# Copyright (c) 2020-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,4 +24,8 @@ export BITCOIN_CONFIG="\
  -DCMAKE_CXX_COMPILER='clang++;-m32' \
  -DAPPEND_CPPFLAGS='-DBOOST_MULTI_INDEX_ENABLE_SAFE_MODE' \
 "
+<<<<<<< HEAD
 export BITCOIND=bitcoin-node  # Used in functional tests
+=======
+export BITCOIND=bitnova-node  # Used in functional tests
+>>>>>>> 5360f2baff (Initialized BitNova project)

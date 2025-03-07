@@ -1,5 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
+<<<<<<< HEAD
 // Copyright (c) 2009-2023 The Bitcoin Core developers
+=======
+// Copyright (c) 2009-2023 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -23,7 +27,11 @@ static std::string FormatException(const std::exception* pex, std::string_view t
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
+<<<<<<< HEAD
     const char* pszModule = "bitcoin";
+=======
+    const char* pszModule = "bitnova";
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #endif
     if (pex)
         return strprintf(

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 // Copyright (c) 2024 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or https://www.opensource.org/licenses/mit-license.php.
 
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+// Copyright (c) 2024 The BitNova Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or https://www.opensource.org/licenses/mit-license.php.
+
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <common/netif.h>
 

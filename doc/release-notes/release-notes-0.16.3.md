@@ -1,24 +1,43 @@
+<<<<<<< HEAD
 Bitcoin Core version 0.16.3 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.16.3/>
+=======
+BitNova Core version 0.16.3 is now available from:
+
+  <https://bitnovacore.org/bin/bitnova-core-0.16.3/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a new minor version release, with various bugfixes.
 
 Please report bugs using the issue tracker at GitHub:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 How to Upgrade
 ==============
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
+<<<<<<< HEAD
 installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
 or `bitcoind`/`bitcoin-qt` (on Linux).
+=======
+installer (on Windows) or just copy over `/Applications/BitNova-Qt` (on Mac)
+or `bitnovad`/`bitnova-qt` (on Linux).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 The first time you run version 0.15.0 or newer, your chainstate database will be converted to a
 new format, which will take anywhere from a few minutes to half an hour,
@@ -39,10 +58,17 @@ wallets that were created with older versions are not affected by this.
 Compatibility
 ==============
 
+<<<<<<< HEAD
 Bitcoin Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.8+, and Windows Vista and later. Windows XP is not supported.
 
 Bitcoin Core should also work on most other Unix-like systems but is not
+=======
+BitNova Core is extensively tested on multiple operating systems using
+the Linux kernel, macOS 10.8+, and Windows Vista and later. Windows XP is not supported.
+
+BitNova Core should also work on most other Unix-like systems but is not
+>>>>>>> 5360f2baff (Initialized BitNova project)
 frequently tested on them.
 
 Notable changes
@@ -52,7 +78,11 @@ Denial-of-Service vulnerability
 -------------------------------
 
 A denial-of-service vulnerability (CVE-2018-17144) exploitable by miners has
+<<<<<<< HEAD
 been discovered in Bitcoin Core versions 0.14.0 up to 0.16.2. It is recommended
+=======
+been discovered in BitNova Core versions 0.14.0 up to 0.16.2. It is recommended
+>>>>>>> 5360f2baff (Initialized BitNova project)
 to upgrade any of the vulnerable versions to 0.16.3 as soon as possible.
 
 0.16.3 change log
@@ -65,7 +95,11 @@ to upgrade any of the vulnerable versions to 0.16.3 as soon as possible.
 - #13547 `212ef1f` Make `signrawtransaction*` give an error when amount is needed but missing (ajtowns)
 
 ### Miscellaneous
+<<<<<<< HEAD
 - #13655 `1cdbea7` bitcoinconsensus: invalid flags error should be set to `bitcoinconsensus_err` (afk11)
+=======
+- #13655 `1cdbea7` bitnovaconsensus: invalid flags error should be set to `bitnovaconsensus_err` (afk11)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ### Documentation
 - #13844 `11b9dbb` correct the help output for -prune (hebasto)

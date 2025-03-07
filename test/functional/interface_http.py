@@ -1,16 +1,28 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2014-2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2014-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the RPC HTTP basics."""
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import assert_equal, str_to_b64str
 
 import http.client
 import urllib.parse
 
+<<<<<<< HEAD
 class HTTPBasicsTest (BitcoinTestFramework):
+=======
+class HTTPBasicsTest (BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 3
         self.supports_cli = False
@@ -89,7 +101,11 @@ class HTTPBasicsTest (BitcoinTestFramework):
         conn.request('POST', '/', '{"method": "getbestblockhash"}', headers)
         out1 = conn.getresponse().read()
         assert b'"error":null' in out1
+<<<<<<< HEAD
         assert conn.sock is not None  #connection must be closed because bitcoind should use keep-alive by default
+=======
+        assert conn.sock is not None  #connection must be closed because bitnovad should use keep-alive by default
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         # Check excessive request size
         conn = http.client.HTTPConnection(urlNode2.hostname, urlNode2.port)

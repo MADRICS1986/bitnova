@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2009-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2009-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Copyright (c) 2017 The Zcash developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -38,7 +42,11 @@ struct Secp256k1SelfTester
  *
  *  Supported violations include negative integers, excessive padding, garbage
  *  at the end, and overly long length descriptors. This is safe to use in
+<<<<<<< HEAD
  *  Bitcoin because since the activation of BIP66, signatures are verified to be
+=======
+ *  BitNova because since the activation of BIP66, signatures are verified to be
+>>>>>>> 5360f2baff (Initialized BitNova project)
  *  strict DER before being passed to this module, and we know it supports all
  *  violations present in the blockchain before that point.
  */
@@ -286,7 +294,11 @@ bool CPubKey::Verify(const uint256 &hash, const std::vector<unsigned char>& vchS
         return false;
     }
     /* libsecp256k1's ECDSA verification requires lower-S signatures, which have
+<<<<<<< HEAD
      * not historically been enforced in Bitcoin, so normalize them first. */
+=======
+     * not historically been enforced in BitNova, so normalize them first. */
+>>>>>>> 5360f2baff (Initialized BitNova project)
     secp256k1_ecdsa_signature_normalize(secp256k1_context_static, &sig, &sig);
     return secp256k1_ecdsa_verify(secp256k1_context_static, &sig, hash.begin(), &pubkey);
 }

@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2019-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2019-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 import pathlib
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
 
 
@@ -11,13 +16,26 @@ class TestShell:
     """Wrapper Class for BitcoinTestFramework.
 
     The TestShell class extends the BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+
+
+class TestShell:
+    """Wrapper Class for BitNovaTestFramework.
+
+    The TestShell class extends the BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
     rpc & daemon process management functionality to external
     python environments.
 
     It is a singleton class, which ensures that users only
     start a single TestShell at a time."""
 
+<<<<<<< HEAD
     class __TestShell(BitcoinTestFramework):
+=======
+    class __TestShell(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
         def add_options(self, parser):
             self.add_wallet_options(parser)
 
@@ -33,7 +51,11 @@ class TestShell:
                 return
 
             # Num_nodes parameter must be set
+<<<<<<< HEAD
             # by BitcoinTestFramework child class.
+=======
+            # by BitNovaTestFramework child class.
+>>>>>>> 5360f2baff (Initialized BitNova project)
             self.num_nodes = 1
 
             # User parameters override default values.
@@ -70,7 +92,11 @@ class TestShell:
         # This implementation enforces singleton pattern, and will return the
         # previously initialized instance if available
         if not TestShell.instance:
+<<<<<<< HEAD
             # BitcoinTestFramework instances are supposed to be constructed with the path
+=======
+            # BitNovaTestFramework instances are supposed to be constructed with the path
+>>>>>>> 5360f2baff (Initialized BitNova project)
             # of the calling test in order to find shared data like configuration and the
             # cache. Since TestShell is meant for interactive use, there is no concrete
             # test; passing a dummy name is fine though, as only the containing directory

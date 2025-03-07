@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2016-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2016-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test Wallet encryption"""
@@ -8,7 +12,11 @@ import time
 import subprocess
 
 from test_framework.messages import hash256
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_raises_rpc_error,
     assert_equal,
@@ -16,7 +24,11 @@ from test_framework.util import (
 from test_framework.wallet_util import WalletUnlock
 
 
+<<<<<<< HEAD
 class WalletEncryptionTest(BitcoinTestFramework):
+=======
+class WalletEncryptionTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser)
 
@@ -112,7 +124,11 @@ class WalletEncryptionTest(BitcoinTestFramework):
 
             def do_wallet_tool(*args):
                 proc = subprocess.Popen(
+<<<<<<< HEAD
                     [self.options.bitcoinwallet, f"-datadir={self.nodes[0].datadir_path}", f"-chain={self.chain}"] + list(args),
+=======
+                    [self.options.bitnovawallet, f"-datadir={self.nodes[0].datadir_path}", f"-chain={self.chain}"] + list(args),
+>>>>>>> 5360f2baff (Initialized BitNova project)
                     stdin=subprocess.PIPE,
                     stdout=subprocess.PIPE,
                     stderr=subprocess.PIPE,

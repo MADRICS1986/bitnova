@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2018-2022 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -6,11 +7,21 @@
 # Be aware that bitcoind and bitcoin-qt differ in terms of localization: Qt
 # opts in to POSIX localization by running setlocale(LC_ALL, "") on startup,
 # whereas no such call is made in bitcoind.
+=======
+# Copyright (c) 2018-2022 The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+#
+# Be aware that bitnovad and bitnova-qt differ in terms of localization: Qt
+# opts in to POSIX localization by running setlocale(LC_ALL, "") on startup,
+# whereas no such call is made in bitnovad.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #
 # Qt runs setlocale(LC_ALL, "") on initialization. This installs the locale
 # specified by the user's LC_ALL (or LC_*) environment variable as the new
 # C locale.
 #
+<<<<<<< HEAD
 # In contrast, bitcoind does not opt in to localization -- no call to
 # setlocale(LC_ALL, "") is made and the environment variables LC_* are
 # thus ignored.
@@ -22,6 +33,19 @@
 # An example: Assuming the environment variable LC_ALL=de_DE then the
 # call std::to_string(1.23) will return "1.230000" in bitcoind but
 # "1,230000" in bitcoin-qt.
+=======
+# In contrast, bitnovad does not opt in to localization -- no call to
+# setlocale(LC_ALL, "") is made and the environment variables LC_* are
+# thus ignored.
+#
+# This results in situations where bitnovad is guaranteed to be running
+# with the classic locale ("C") whereas the locale of bitnova-qt will vary
+# depending on the user's environment variables.
+#
+# An example: Assuming the environment variable LC_ALL=de_DE then the
+# call std::to_string(1.23) will return "1.230000" in bitnovad but
+# "1,230000" in bitnova-qt.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #
 # From the Qt documentation:
 # "On Unix/Linux Qt is configured to use the system locale settings by default.

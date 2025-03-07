@@ -1,11 +1,20 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <qt/guiutil.h>
 
+<<<<<<< HEAD
 #include <qt/bitcoinaddressvalidator.h>
 #include <qt/bitcoinunits.h>
+=======
+#include <qt/bitnovaaddressvalidator.h>
+#include <qt/bitnovaunits.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <qt/platformstyle.h>
 #include <qt/qvalidatedlineedit.h>
 #include <qt/sendcoinsrecipient.h>
@@ -135,10 +144,17 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
     widget->setFont(fixedPitchFont());
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
+<<<<<<< HEAD
     widget->setPlaceholderText(QObject::tr("Enter a Bitcoin address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
+=======
+    widget->setPlaceholderText(QObject::tr("Enter a BitNova address (e.g. %1)").arg(
+        QString::fromStdString(DummyAddress(Params()))));
+    widget->setValidator(new BitNovaAddressEntryValidator(parent));
+    widget->setCheckValidator(new BitNovaAddressCheckValidator(parent));
+>>>>>>> 5360f2baff (Initialized BitNova project)
 }
 
 void AddButtonShortcut(QAbstractButton* button, const QKeySequence& shortcut)
@@ -146,10 +162,17 @@ void AddButtonShortcut(QAbstractButton* button, const QKeySequence& shortcut)
     QObject::connect(new QShortcut(shortcut, button), &QShortcut::activated, [button]() { button->animateClick(); });
 }
 
+<<<<<<< HEAD
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no bitcoin: URI
     if(!uri.isValid() || uri.scheme() != QString("bitcoin"))
+=======
+bool parseBitNovaURI(const QUrl &uri, SendCoinsRecipient *out)
+{
+    // return if URI is not valid or is no bitnova: URI
+    if(!uri.isValid() || uri.scheme() != QString("bitnova"))
+>>>>>>> 5360f2baff (Initialized BitNova project)
         return false;
 
     SendCoinsRecipient rv;
@@ -185,7 +208,11 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
+<<<<<<< HEAD
                 if (!BitcoinUnits::parse(BitcoinUnit::BTC, i->second, &rv.amount)) {
+=======
+                if (!BitNovaUnits::parse(BitNovaUnit::BTC, i->second, &rv.amount)) {
+>>>>>>> 5360f2baff (Initialized BitNova project)
                     return false;
                 }
             }
@@ -202,6 +229,7 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
+<<<<<<< HEAD
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
     QUrl uriInstance(uri);
@@ -213,11 +241,28 @@ QString formatBitcoinURI(const SendCoinsRecipient &info)
     bool bech_32 = info.address.startsWith(QString::fromStdString(Params().Bech32HRP() + "1"));
 
     QString ret = QString("bitcoin:%1").arg(bech_32 ? info.address.toUpper() : info.address);
+=======
+bool parseBitNovaURI(QString uri, SendCoinsRecipient *out)
+{
+    QUrl uriInstance(uri);
+    return parseBitNovaURI(uriInstance, out);
+}
+
+QString formatBitNovaURI(const SendCoinsRecipient &info)
+{
+    bool bech_32 = info.address.startsWith(QString::fromStdString(Params().Bech32HRP() + "1"));
+
+    QString ret = QString("bitnova:%1").arg(bech_32 ? info.address.toUpper() : info.address);
+>>>>>>> 5360f2baff (Initialized BitNova project)
     int paramCount = 0;
 
     if (info.amount)
     {
+<<<<<<< HEAD
         ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnit::BTC, info.amount, false, BitcoinUnits::SeparatorStyle::NEVER));
+=======
+        ret += QString("?amount=%1").arg(BitNovaUnits::format(BitNovaUnit::BTC, info.amount, false, BitNovaUnits::SeparatorStyle::NEVER));
+>>>>>>> 5360f2baff (Initialized BitNova project)
         paramCount++;
     }
 
@@ -442,7 +487,11 @@ void openDebugLogfile()
         QDesktopServices::openUrl(QUrl::fromLocalFile(PathToQString(pathDebug)));
 }
 
+<<<<<<< HEAD
 bool openBitcoinConf()
+=======
+bool openBitNovaConf()
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
     fs::path pathConfig = gArgs.GetConfigFilePath();
 
@@ -454,7 +503,11 @@ bool openBitcoinConf()
 
     configFile.close();
 
+<<<<<<< HEAD
     /* Open bitcoin.conf with the associated application */
+=======
+    /* Open bitnova.conf with the associated application */
+>>>>>>> 5360f2baff (Initialized BitNova project)
     bool res = QDesktopServices::openUrl(QUrl::fromLocalFile(PathToQString(pathConfig)));
 #ifdef Q_OS_MACOS
     // Workaround for macOS-specific behavior; see #15409.
@@ -518,15 +571,26 @@ fs::path static StartupShortcutPath()
 {
     ChainType chain = gArgs.GetChainType();
     if (chain == ChainType::MAIN)
+<<<<<<< HEAD
         return GetSpecialFolderPath(CSIDL_STARTUP) / "Bitcoin.lnk";
     if (chain == ChainType::TESTNET) // Remove this special case when testnet CBaseChainParams::DataDir() is incremented to "testnet4"
         return GetSpecialFolderPath(CSIDL_STARTUP) / "Bitcoin (testnet).lnk";
     return GetSpecialFolderPath(CSIDL_STARTUP) / fs::u8path(strprintf("Bitcoin (%s).lnk", ChainTypeToString(chain)));
+=======
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "BitNova.lnk";
+    if (chain == ChainType::TESTNET) // Remove this special case when testnet CBaseChainParams::DataDir() is incremented to "testnet4"
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "BitNova (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / fs::u8path(strprintf("BitNova (%s).lnk", ChainTypeToString(chain)));
+>>>>>>> 5360f2baff (Initialized BitNova project)
 }
 
 bool GetStartOnSystemStartup()
 {
+<<<<<<< HEAD
     // check for Bitcoin*.lnk
+=======
+    // check for BitNova*.lnk
+>>>>>>> 5360f2baff (Initialized BitNova project)
     return fs::exists(StartupShortcutPath());
 }
 
@@ -601,8 +665,13 @@ fs::path static GetAutostartFilePath()
 {
     ChainType chain = gArgs.GetChainType();
     if (chain == ChainType::MAIN)
+<<<<<<< HEAD
         return GetAutostartDir() / "bitcoin.desktop";
     return GetAutostartDir() / fs::u8path(strprintf("bitcoin-%s.desktop", ChainTypeToString(chain)));
+=======
+        return GetAutostartDir() / "bitnova.desktop";
+    return GetAutostartDir() / fs::u8path(strprintf("bitnova-%s.desktop", ChainTypeToString(chain)));
+>>>>>>> 5360f2baff (Initialized BitNova project)
 }
 
 bool GetStartOnSystemStartup()
@@ -643,6 +712,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         if (!optionFile.good())
             return false;
         ChainType chain = gArgs.GetChainType();
+<<<<<<< HEAD
         // Write a bitcoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
@@ -650,6 +720,15 @@ bool SetStartOnSystemStartup(bool fAutoStart)
             optionFile << "Name=Bitcoin\n";
         else
             optionFile << strprintf("Name=Bitcoin (%s)\n", ChainTypeToString(chain));
+=======
+        // Write a bitnova.desktop file to the autostart directory:
+        optionFile << "[Desktop Entry]\n";
+        optionFile << "Type=Application\n";
+        if (chain == ChainType::MAIN)
+            optionFile << "Name=BitNova\n";
+        else
+            optionFile << strprintf("Name=BitNova (%s)\n", ChainTypeToString(chain));
+>>>>>>> 5360f2baff (Initialized BitNova project)
         optionFile << "Exec=" << pszExePath << strprintf(" -min -chain=%s\n", ChainTypeToString(chain));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

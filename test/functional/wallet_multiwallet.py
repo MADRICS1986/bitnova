@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2017-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2017-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test multiwallet.
 
+<<<<<<< HEAD
 Verify that a bitcoind node can load multiple wallet files
+=======
+Verify that a bitnovad node can load multiple wallet files
+>>>>>>> 5360f2baff (Initialized BitNova project)
 """
 from decimal import Decimal
 from threading import Thread
@@ -15,7 +23,11 @@ import stat
 
 from test_framework.authproxy import JSONRPCException
 from test_framework.blocktools import COINBASE_MATURITY
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.test_node import ErrorMatch
 from test_framework.util import (
     assert_equal,
@@ -41,7 +53,11 @@ def test_load_unload(node, name):
                 return
 
 
+<<<<<<< HEAD
 class MultiWalletTest(BitcoinTestFramework):
+=======
+class MultiWalletTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2

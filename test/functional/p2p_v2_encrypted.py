@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -13,7 +17,11 @@ from test_framework.p2p import (
     P2PDataStore,
     P2PInterface,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
     assert_greater_than,
@@ -22,7 +30,11 @@ from test_framework.util import (
 from test_framework.crypto.chacha20 import REKEY_INTERVAL
 
 
+<<<<<<< HEAD
 class P2PEncrypted(BitcoinTestFramework):
+=======
+class P2PEncrypted(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 2
         self.extra_args = [["-v2transport=1"], ["-v2transport=1"]]

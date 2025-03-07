@@ -71,7 +71,11 @@
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>&amp;Send</source>
         <translation type="unfinished">موڪليو</translation>
@@ -88,7 +92,11 @@
         </translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -124,7 +132,11 @@
 <context>
     <name>Intro</name>
     <message>
+<<<<<<< HEAD
         <source>Bitcoin</source>
+=======
+        <source>BitNova</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">بٽڪوائن</translation>
     </message>
     <message numerus="yes">

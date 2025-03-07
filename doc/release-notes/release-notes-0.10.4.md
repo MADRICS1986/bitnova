@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 Bitcoin Core version 0.10.4 is now available from:
 
   <https://bitcoin.org/bin/bitcoin-core-0.10.4/>
+=======
+BitNova Core version 0.10.4 is now available from:
+
+  <https://bitnova.org/bin/bitnova-core-0.10.4/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a new minor version release, bringing bug fixes, the BIP65
 (CLTV) consensus change, and relay policy preparation for BIP113. It is
@@ -8,7 +14,11 @@ recommended to upgrade to this version as soon as possible.
 
 Please report bugs using the issue tracker at github:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Upgrading and downgrading
 =========================
@@ -18,15 +28,24 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
+<<<<<<< HEAD
 installer (on Windows) or just copy over /Applications/Bitcoin-Qt (on Mac) or
 bitcoind/bitcoin-qt (on Linux).
+=======
+installer (on Windows) or just copy over /Applications/BitNova-Qt (on Mac) or
+bitnovad/bitnova-qt (on Linux).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Downgrade warning
 ------------------
 
 Because release 0.10.0 and later makes use of headers-first synchronization and
 parallel block download (see further), the block files and databases are not
+<<<<<<< HEAD
 backwards-compatible with pre-0.10 versions of Bitcoin Core or other software:
+=======
+backwards-compatible with pre-0.10 versions of BitNova Core or other software:
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 * Blocks will be stored on disk out of order (in the order they are
 received, really), which makes it incompatible with some tools or
@@ -68,24 +87,41 @@ specified point in the future.
    blocks if they comply with the BIP65 rules for CLTV.
 
 For more information about the soft-forking change, please see
+<<<<<<< HEAD
 <https://github.com/bitcoin/bitcoin/pull/6351>
+=======
+<https://github.com/bitnova/bitnova/pull/6351>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Graphs showing the progress towards block version 4 adoption may be
 found at the URLs below:
 
 - Block versions over the last 50,000 blocks as progress towards BIP65
+<<<<<<< HEAD
   consensus enforcement: <http://bitcoin.sipa.be/ver-50k.png>
 
 - Block versions over the last 2,000 blocks showing the days to the
   earliest possible BIP65 consensus-enforced block: <http://bitcoin.sipa.be/ver-2k.png>
 
 **Notice to miners:** Bitcoin Core’s block templates are now for
+=======
+  consensus enforcement: <http://bitnova.sipa.be/ver-50k.png>
+
+- Block versions over the last 2,000 blocks showing the days to the
+  earliest possible BIP65 consensus-enforced block: <http://bitnova.sipa.be/ver-2k.png>
+
+**Notice to miners:** BitNova Core’s block templates are now for
+>>>>>>> 5360f2baff (Initialized BitNova project)
 version 4 blocks only, and any mining software relying on its
 getblocktemplate must be updated in parallel to use libblkmaker either
 version FIXME or any version from FIXME onward.
 
 - If you are solo mining, this will affect you the moment you upgrade
+<<<<<<< HEAD
   Bitcoin Core, which must be done prior to BIP65 achieving its 951/1001
+=======
+  BitNova Core, which must be done prior to BIP65 achieving its 951/1001
+>>>>>>> 5360f2baff (Initialized BitNova project)
   status.
 
 - If you are mining with the stratum mining protocol: this does not
@@ -95,19 +131,31 @@ version FIXME or any version from FIXME onward.
   will affect you at the pool operator’s discretion, which must be no
   later than BIP65 achieving its 951/1001 status.
 
+<<<<<<< HEAD
 [BIP65]: https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki
+=======
+[BIP65]: https://github.com/bitnova/bips/blob/master/bip-0065.mediawiki
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Windows bug fix for corrupted UTXO database on unclean shutdowns
 ----------------------------------------------------------------
 
 Several Windows users reported that they often need to reindex the
+<<<<<<< HEAD
 entire blockchain after an unclean shutdown of Bitcoin Core on Windows
+=======
+entire blockchain after an unclean shutdown of BitNova Core on Windows
+>>>>>>> 5360f2baff (Initialized BitNova project)
 (or an unclean shutdown of Windows itself). Although unclean shutdowns
 remain unsafe, this release no longer relies on memory-mapped files for
 the UTXO database, which significantly reduced the frequency of unclean
 shutdowns leading to required reindexes during testing.
 
+<<<<<<< HEAD
 For more information, see: <https://github.com/bitcoin/bitcoin/pull/6917>
+=======
+For more information, see: <https://github.com/bitnova/bitnova/pull/6917>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Other fixes for database corruption on Windows are expected in the
 next major release.
@@ -129,8 +177,13 @@ git merge commit are mentioned.
 - #6953 `a2f2fb6` build: disable -Wself-assign
 - #6953 `cf67d8b` Bugfix: Allow mining on top of old tip blocks for testnet (fixes testnet-in-a-box use case)
 - #6953 `b3964e3` Drop "with minimal dependencies" from description
+<<<<<<< HEAD
 - #6953 `43c2789` Split bitcoin-tx into its own package
 - #6953 `dfe0d4d` Include bitcoin-tx binary on Debian/Ubuntu
+=======
+- #6953 `43c2789` Split bitnova-tx into its own package
+- #6953 `dfe0d4d` Include bitnova-tx binary on Debian/Ubuntu
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #6953 `612efe8` [Qt] Raise debug window when requested
 - #6953 `3ad96bd` Fix locking in GetTransaction
 - #6953 `9c81005` Fix spelling of Qt
@@ -169,4 +222,8 @@ Thanks to everyone who directly contributed to this release:
 
 And those who contributed additional code review and/or security research.
 
+<<<<<<< HEAD
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
+=======
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)

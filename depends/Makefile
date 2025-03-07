@@ -44,7 +44,11 @@ NO_USDT ?=
 MULTIPROCESS ?=
 LTO ?=
 NO_HARDEN ?=
+<<<<<<< HEAD
 FALLBACK_DOWNLOAD_PATH ?= https://bitcoincore.org/depends-sources
+=======
+FALLBACK_DOWNLOAD_PATH ?= https://bitnovacore.org/depends-sources
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 C_STANDARD ?= c11
 CXX_STANDARD ?= c++20
@@ -194,7 +198,11 @@ $(host_prefix)/.stamp_$(final_build_id): $(native_packages) $(packages)
 	echo copying packages: $^
 	echo to: $(@D)
 	cd $(@D); $(foreach package,$^, $(build_TAR) xf $($(package)_cached); )
+<<<<<<< HEAD
 	echo To build Bitcoin Core with these packages, pass \'--toolchain $(@D)/toolchain.cmake\' to the first CMake invocation.
+=======
+	echo To build BitNova Core with these packages, pass \'--toolchain $(@D)/toolchain.cmake\' to the first CMake invocation.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 	touch $@
 
 ifeq ($(host),$(build))

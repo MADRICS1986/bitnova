@@ -1,36 +1,60 @@
 0.21.0 Release Notes
 ====================
 
+<<<<<<< HEAD
 Bitcoin Core version 0.21.0 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.21.0/>
+=======
+BitNova Core version 0.21.0 is now available from:
+
+  <https://bitnovacore.org/bin/bitnova-core-0.21.0/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This release includes new features, various bug fixes and performance
 improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 How to Upgrade
 ==============
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
+<<<<<<< HEAD
 installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
 or `bitcoind`/`bitcoin-qt` (on Linux).
 
 Upgrading directly from a version of Bitcoin Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
 wallet versions of Bitcoin Core are generally supported.
+=======
+installer (on Windows) or just copy over `/Applications/BitNova-Qt` (on Mac)
+or `bitnovad`/`bitnova-qt` (on Linux).
+
+Upgrading directly from a version of BitNova Core that has reached its EOL is
+possible, but it might take some time if the data directory needs to be migrated. Old
+wallet versions of BitNova Core are generally supported.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Compatibility
 ==============
 
+<<<<<<< HEAD
 Bitcoin Core is supported and extensively tested on operating systems
 using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  Bitcoin
 Core should also work on most other Unix-like systems but is not as
@@ -39,6 +63,16 @@ unsupported systems.
 
 From Bitcoin Core 0.20.0 onwards, macOS versions earlier than 10.12 are no
 longer supported. Additionally, Bitcoin Core does not yet change appearance
+=======
+BitNova Core is supported and extensively tested on operating systems
+using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  BitNova
+Core should also work on most other Unix-like systems but is not as
+frequently tested on them.  It is not recommended to use BitNova Core on
+unsupported systems.
+
+From BitNova Core 0.20.0 onwards, macOS versions earlier than 10.12 are no
+longer supported. Additionally, BitNova Core does not yet change appearance
+>>>>>>> 5360f2baff (Initialized BitNova project)
 when macOS "dark mode" is activated.
 
 The node's known peers are persisted to disk in a file called `peers.dat`. The
@@ -73,8 +107,13 @@ P2P and network changes
 
 - This release adds support for Tor version 3 hidden services, and rumoring them
   over the network to other peers using
+<<<<<<< HEAD
   [BIP155](https://github.com/bitcoin/bips/blob/master/bip-0155.mediawiki).
   Version 2 hidden services are still fully supported by Bitcoin Core, but the
+=======
+  [BIP155](https://github.com/bitnova/bips/blob/master/bip-0155.mediawiki).
+  Version 2 hidden services are still fully supported by BitNova Core, but the
+>>>>>>> 5360f2baff (Initialized BitNova project)
   Tor network will start
   [deprecating](https://blog.torproject.org/v2-deprecation-timeline) them in the
   coming months. (#19954)
@@ -83,7 +122,11 @@ P2P and network changes
   `-listenonion` configuration parameter will now be created as a Tor v3 service
   instead of Tor v2. The private key that was used for Tor v2 (if any) will be
   left untouched in the `onion_private_key` file in the data directory (see
+<<<<<<< HEAD
   `-datadir`) and can be removed if not needed. Bitcoin Core will no longer
+=======
+  `-datadir`) and can be removed if not needed. BitNova Core will no longer
+>>>>>>> 5360f2baff (Initialized BitNova project)
   attempt to read it. The private key for the Tor v3 service will be saved in a
   file named `onion_v3_private_key`. To use the deprecated Tor v2 service (not
   recommended), the `onion_private_key` can be copied over
@@ -98,12 +141,20 @@ P2P and network changes
   eclipse attack. (#17428)
 
 - This release adds support for serving
+<<<<<<< HEAD
   [BIP157](https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki) compact
+=======
+  [BIP157](https://github.com/bitnova/bips/blob/master/bip-0157.mediawiki) compact
+>>>>>>> 5360f2baff (Initialized BitNova project)
   filters to peers on the network when enabled using
   `-blockfilterindex=1 -peerblockfilters=1`. (#16442)
 
 - This release adds support for signets
+<<<<<<< HEAD
   ([BIP325](https://github.com/bitcoin/bips/blob/master/bip-0325.mediawiki)) in
+=======
+  ([BIP325](https://github.com/bitnova/bips/blob/master/bip-0325.mediawiki)) in
+>>>>>>> 5360f2baff (Initialized BitNova project)
   addition to the existing mainnet, testnet, and regtest networks. Signets are
   centrally-controlled test networks, allowing them to be more predictable
   test environments than the older testnet. One public signet is maintained, and
@@ -111,13 +162,22 @@ P2P and network changes
   (#18267).
 
 - This release implements
+<<<<<<< HEAD
   [BIP339](https://github.com/bitcoin/bips/blob/master/bip-0339.mediawiki)
+=======
+  [BIP339](https://github.com/bitnova/bips/blob/master/bip-0339.mediawiki)
+>>>>>>> 5360f2baff (Initialized BitNova project)
   wtxid relay. When negotiated, transactions are announced using their wtxid
   instead of their txid. (#18044).
 
 - This release implements the proposed Taproot consensus rules
+<<<<<<< HEAD
   ([BIP341](https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki) and
   [BIP342](https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki)),
+=======
+  ([BIP341](https://github.com/bitnova/bips/blob/master/bip-0341.mediawiki) and
+  [BIP342](https://github.com/bitnova/bips/blob/master/bip-0342.mediawiki)),
+>>>>>>> 5360f2baff (Initialized BitNova project)
   without activation on mainnet. Experimentation with Taproot can be done on
   signet, where its rules are already active. (#19553)
 
@@ -231,21 +291,37 @@ Changes to Wallet or GUI related settings can be found in the GUI or Wallet sect
 Tools and Utilities
 -------------------
 
+<<<<<<< HEAD
 - A new `bitcoin-cli -netinfo` command provides a network peer connections
+=======
+- A new `bitnova-cli -netinfo` command provides a network peer connections
+>>>>>>> 5360f2baff (Initialized BitNova project)
   dashboard that displays data from the `getpeerinfo` and `getnetworkinfo` RPCs
   in a human-readable format. An optional integer argument from `0` to `4` may
   be passed to see increasing levels of detail. (#19643)
 
+<<<<<<< HEAD
 - A new `bitcoin-cli -generate` command, equivalent to RPC `generatenewaddress`
+=======
+- A new `bitnova-cli -generate` command, equivalent to RPC `generatenewaddress`
+>>>>>>> 5360f2baff (Initialized BitNova project)
   followed by `generatetoaddress`, can generate blocks for command line testing
   purposes. This is a client-side version of the former `generate` RPC. See the
   help for details. (#19133)
 
+<<<<<<< HEAD
 - The `bitcoin-cli -getinfo` command now displays the wallet name and balance for
   each of the loaded wallets when more than one is loaded (e.g. in multiwallet
   mode) and a wallet is not specified with `-rpcwallet`. (#18594)
 
 - The `connections` field of `bitcoin-cli -getinfo` is now expanded to return a JSON
+=======
+- The `bitnova-cli -getinfo` command now displays the wallet name and balance for
+  each of the loaded wallets when more than one is loaded (e.g. in multiwallet
+  mode) and a wallet is not specified with `-rpcwallet`. (#18594)
+
+- The `connections` field of `bitnova-cli -getinfo` is now expanded to return a JSON
+>>>>>>> 5360f2baff (Initialized BitNova project)
   object with `in`, `out` and `total` numbers of peer connections. It previously
   returned a single integer value for the total number of peer connections. (#19405)
 
@@ -253,7 +329,11 @@ New settings
 ------------
 
 - The `startupnotify` option is used to specify a command to
+<<<<<<< HEAD
   execute when Bitcoin Core has finished with its startup
+=======
+  execute when BitNova Core has finished with its startup
+>>>>>>> 5360f2baff (Initialized BitNova project)
   sequence. (#15367)
 
 Wallet
@@ -279,7 +359,11 @@ Wallet
   empty. Previously it failed. (#17219)
 
 - The `-salvagewallet` startup option has been removed. A new `salvage` command
+<<<<<<< HEAD
   has been added to the `bitcoin-wallet` tool which performs the salvage
+=======
+  has been added to the `bitnova-wallet` tool which performs the salvage
+>>>>>>> 5360f2baff (Initialized BitNova project)
   operations that `-salvagewallet` did. (#18918)
 
 - A new configuration flag `-maxapsfee` has been added, which sets the max
@@ -325,6 +409,7 @@ Wallet
 
 ### Automatic wallet creation removed
 
+<<<<<<< HEAD
 Bitcoin Core will no longer automatically create new wallets on startup. It will
 load existing wallets specified by `-wallet` options on the command line or in
 `bitcoin.conf` or `settings.json` files. And by default it will also load a
@@ -334,13 +419,28 @@ new keys and addresses like previous releases did.
 
 New wallets can be created through the GUI (which has a more prominent create
 wallet option), through the `bitcoin-cli createwallet` or `bitcoin-wallet
+=======
+BitNova Core will no longer automatically create new wallets on startup. It will
+load existing wallets specified by `-wallet` options on the command line or in
+`bitnova.conf` or `settings.json` files. And by default it will also load a
+top-level unnamed ("") wallet. However, if specified wallets don't exist,
+BitNova Core will now just log warnings instead of creating new wallets with
+new keys and addresses like previous releases did.
+
+New wallets can be created through the GUI (which has a more prominent create
+wallet option), through the `bitnova-cli createwallet` or `bitnova-wallet
+>>>>>>> 5360f2baff (Initialized BitNova project)
 create` commands, or the `createwallet` RPC. (#15454, #20186)
 
 ### Experimental Descriptor Wallets
 
 Please note that Descriptor Wallets are still experimental and not all expected functionality
 is available. Additionally there may be some bugs and current functions may change in the future.
+<<<<<<< HEAD
 Bugs and missing functionality can be reported to the [issue tracker](https://github.com/bitcoin/bitcoin/issues).
+=======
+Bugs and missing functionality can be reported to the [issue tracker](https://github.com/bitnova/bitnova/issues).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 0.21 introduces a new type of wallet - Descriptor Wallets. Descriptor Wallets store
 scriptPubKey information using output descriptors. This is in contrast to the Legacy Wallet
@@ -351,9 +451,15 @@ of "mine" for scripts which is simpler and more intuitive than that used by Lega
 Descriptor Wallets also uses different semantics for watch-only things and imports.
 
 As Descriptor Wallets are a new type of wallet, their introduction does not affect existing wallets.
+<<<<<<< HEAD
 Users who already have a Bitcoin Core wallet can continue to use it as they did before without
 any change in behavior. Newly created Legacy Wallets (which remains the default type of wallet) will
 behave as they did in previous versions of Bitcoin Core.
+=======
+Users who already have a BitNova Core wallet can continue to use it as they did before without
+any change in behavior. Newly created Legacy Wallets (which remains the default type of wallet) will
+behave as they did in previous versions of BitNova Core.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 The differences between Descriptor Wallets and Legacy Wallets are largely limited to non user facing
 things. They are intended to behave similarly except for the import/export and watchonly functionality
@@ -448,7 +554,11 @@ descriptors with private keys for now as explained earlier.
 
 #### BIP 44/49/84 Support
 
+<<<<<<< HEAD
 The change to using descriptors changes the default derivation paths used by Bitcoin Core
+=======
+The change to using descriptors changes the default derivation paths used by BitNova Core
+>>>>>>> 5360f2baff (Initialized BitNova project)
 to adhere to BIP 44/49/84. Descriptors with different derivation paths can be imported without
 issue.
 
@@ -492,9 +602,15 @@ GUI changes
 -----------
 
 - Wallets created or loaded in the GUI will now be automatically loaded on
+<<<<<<< HEAD
   startup, so they don't need to be manually reloaded next time Bitcoin Core is
   started. The list of wallets to load on startup is stored in
   `\<datadir\>/settings.json` and augments any command line or `bitcoin.conf`
+=======
+  startup, so they don't need to be manually reloaded next time BitNova Core is
+  started. The list of wallets to load on startup is stored in
+  `\<datadir\>/settings.json` and augments any command line or `bitnova.conf`
+>>>>>>> 5360f2baff (Initialized BitNova project)
   `-wallet=` settings that specify more wallets to load. Wallets that are
   unloaded in the GUI get removed from the settings list so they won't load
   again automatically next startup. (#19754)
@@ -599,7 +715,11 @@ Tests
 - #19044 Add support for getcfilters (jnewbery)
 - #19084 improve code documentation for dns seed behaviour (ajtowns)
 - #19260 disconnect peers that send filterclear + update existing filter msg disconnect logic (gzhao408)
+<<<<<<< HEAD
 - #19284 Add seed.bitcoin.wiz.biz to DNS seeds (wiz)
+=======
+- #19284 Add seed.bitnova.wiz.biz to DNS seeds (wiz)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #19322 split PushInventory() (jnewbery)
 - #19204 Reduce inv traffic during IBD (MarcoFalke)
 - #19470 banlist: log post-swept banlist size at startup (fanquake)
@@ -697,7 +817,11 @@ Tests
 - #20130 Remove db mode string (S3RK)
 - #19077 Add sqlite as an alternative wallet database and use it for new descriptor wallets (achow101)
 - #20125 Expose database format in getwalletinfo (promag)
+<<<<<<< HEAD
 - #20198 Show name, format and if uses descriptors in bitcoin-wallet tool (jonasschnelli)
+=======
+- #20198 Show name, format and if uses descriptors in bitnova-wallet tool (jonasschnelli)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #20216 Fix buffer over-read in SQLite file magic check (theStack)
 - #20186 Make -wallet setting not create wallets (ryanofsky)
 - #20230 Fix bug when just created encrypted wallet cannot get address (hebasto)
@@ -734,7 +858,11 @@ Tests
 - #19282 Rephrase generatetoaddress help, and use `PACKAGE_NAME` (luke-jr)
 - #16377 don't automatically append inputs in walletcreatefundedpsbt (Sjors)
 - #19200 Remove deprecated getaddressinfo fields (jonatack)
+<<<<<<< HEAD
 - #19133 rpc, cli, test: add bitcoin-cli -generate command (jonatack)
+=======
+- #19133 rpc, cli, test: add bitnova-cli -generate command (jonatack)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #19469 Deprecate banscore field in getpeerinfo (jonatack)
 - #16525 Dump transaction version as an unsigned integer in RPC/TxToUniv (TheBlueMatt)
 - #19555 Deduplicate WriteHDKeypath() used in decodepsbt (theStack)
@@ -759,7 +887,11 @@ Tests
 - #19725 Add connection type to getpeerinfo, improve logs (amitiuttarwar)
 - #19969 Send RPC bug fix and touch-ups (Sjors)
 - #18309 zmq: Add support to listen on multiple interfaces (n-thumann)
+<<<<<<< HEAD
 - #20055 Set HTTP Content-Type in bitcoin-cli (laanwj)
+=======
+- #20055 Set HTTP Content-Type in bitnova-cli (laanwj)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #19956 Improve invalid vout value rpc error message (n1rna)
 - #20101 Change no wallet loaded message to be clearer (achow101)
 - #19998 Add `via_tor` to `getpeerinfo` output (hebasto)
@@ -820,7 +952,11 @@ Tests
 - gui#120 Fix multiwallet transaction notifications (promag)
 
 ### Build system
+<<<<<<< HEAD
 - #18504 Drop bitcoin-tx and bitcoin-wallet dependencies on libevent (ryanofsky)
+=======
+- #18504 Drop bitnova-tx and bitnova-wallet dependencies on libevent (ryanofsky)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #18586 Bump gitian descriptors to 0.21 (laanwj)
 - #17595 guix: Enable building for `x86_64-w64-mingw32` target (dongcarl)
 - #17929 add linker optimisation flags to gitian & guix (Linux) (fanquake)
@@ -907,7 +1043,11 @@ Tests
 - #18628 Add various low-level p2p tests (MarcoFalke)
 - #18615 Avoid accessing free'd memory in `validation_chainstatemanager_tests` (MarcoFalke)
 - #18571 fuzz: Disable debug log file (MarcoFalke)
+<<<<<<< HEAD
 - #18653 add coverage for bitcoin-cli -rpcwait (jonatack)
+=======
+- #18653 add coverage for bitnova-cli -rpcwait (jonatack)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #18660 Verify findCommonAncestor always initializes outputs (ryanofsky)
 - #17669 Have coins simulation test also use CCoinsViewDB (jamesob)
 - #18662 Replace gArgs with local argsman in bench (MarcoFalke)
@@ -1132,14 +1272,22 @@ Tests
 - #18709 Note why we can't use `thread_local` with glibc back compat (fanquake)
 - #18410 Improve commenting for coins.cpp|h (jnewbery)
 - #18157 fixing init.md documentation to not require rpcpassword (jkcd)
+<<<<<<< HEAD
 - #18739 Document how to fuzz Bitcoin Core using Honggfuzz (practicalswift)
+=======
+- #18739 Document how to fuzz BitNova Core using Honggfuzz (practicalswift)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #18779 Better explain GNU ld's dislike of ld64's options (fanquake)
 - #18663 Mention build docs in README.md (saahilshangle)
 - #18810 Update rest info on block size and json (chrisabrams)
 - #18939 Add c++17-enable flag to fuzzing instructions (mzumsande)
 - #18957 Add a link from ZMQ doc to ZMQ example in contrib/ (meeDamian)
 - #19058 Drop protobuf stuff (hebasto)
+<<<<<<< HEAD
 - #19061 Add link to Visual Studio build readme (maitrebitcoin)
+=======
+- #19061 Add link to Visual Studio build readme (maitrebitnova)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #19072 Expand section on Getting Started (MarcoFalke)
 - #18968 noban precludes maxuploadtarget disconnects (MarcoFalke)
 - #19005 Add documentation for 'checklevel' argument in 'verifychain' RPC… (kcalvinalvin)
@@ -1161,7 +1309,11 @@ Tests
 - #19765 Fix getmempoolancestors RPC result doc (MarcoFalke)
 - #19786 Remove label from good first issue template (MarcoFalke)
 - #19646 Updated outdated help command for getblocktemplate (jakeleventhal)
+<<<<<<< HEAD
 - #18817 Document differences in bitcoind and bitcoin-qt locale handling (practicalswift)
+=======
+- #18817 Document differences in bitnovad and bitnova-qt locale handling (practicalswift)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #19870 update PyZMQ install instructions, fix `zmq_sub.py` file permissions (jonatack)
 - #19903 Update build-openbsd.md with GUI support (grubles)
 - #19241 help: Generate checkpoint height from chainparams (luke-jr)
@@ -1333,4 +1485,8 @@ Thanks to everyone who directly contributed to this release:
 - Wladimir J. van der Laan
 
 As well as to everyone that helped with translations on
+<<<<<<< HEAD
 [Transifex](https://www.transifex.com/bitcoin/bitcoin/).
+=======
+[Transifex](https://www.transifex.com/bitnova/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)

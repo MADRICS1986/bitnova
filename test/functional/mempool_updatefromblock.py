@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2020-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2020-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test mempool descendants/ancestors information update.
@@ -10,12 +14,20 @@ when transactions have been re-added from a disconnected block to the mempool.
 from math import ceil
 import time
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import assert_equal
 from test_framework.wallet import MiniWallet
 
 
+<<<<<<< HEAD
 class MempoolUpdateFromBlockTest(BitcoinTestFramework):
+=======
+class MempoolUpdateFromBlockTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [['-limitdescendantsize=1000', '-limitancestorsize=1000', '-limitancestorcount=100']]

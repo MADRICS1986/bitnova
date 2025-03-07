@@ -1,17 +1,29 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2024-present The Bitcoin Core developers
+=======
+# Copyright (c) 2024-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 from decimal import Decimal
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import assert_equal, assert_raises_rpc_error
 from test_framework.messages import COIN
 from test_framework.wallet import MiniWallet, MiniWalletMode, getnewdestination
 
 
+<<<<<<< HEAD
 class GetBlocksActivityTest(BitcoinTestFramework):
+=======
+class GetBlocksActivityTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -52,7 +56,11 @@ enum NumConnections {
     CONNECTIONS_ALL  = (CONNECTIONS_IN | CONNECTIONS_OUT),
 };
 
+<<<<<<< HEAD
 /** Model for Bitcoin network client. */
+=======
+/** Model for BitNova network client. */
+>>>>>>> 5360f2baff (Initialized BitNova project)
 class ClientModel : public QObject
 {
     Q_OBJECT

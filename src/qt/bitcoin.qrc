@@ -1,6 +1,10 @@
 <!DOCTYPE RCC><RCC version="1.0">
     <qresource prefix="/icons">
+<<<<<<< HEAD
         <file alias="bitcoin">res/icons/bitcoin.png</file>
+=======
+        <file alias="bitnova">res/icons/bitnova.png</file>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <file alias="address-book">res/icons/address-book.png</file>
         <file alias="send">res/icons/send.png</file>
         <file alias="connect_0">res/icons/connect0.png</file>

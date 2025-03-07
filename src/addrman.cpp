@@ -1,9 +1,17 @@
 // Copyright (c) 2012 Pieter Wuille
+<<<<<<< HEAD
 // Copyright (c) 2012-2022 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+// Copyright (c) 2012-2022 The BitNova Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <addrman.h>
 #include <addrman_impl.h>
@@ -139,12 +147,20 @@ void AddrManImpl::Serialize(Stream& s_) const
      * * format version byte (@see `Format`)
      * * lowest compatible format version byte. This is used to help old software decide
      *   whether to parse the file. For example:
+<<<<<<< HEAD
      *   * Bitcoin Core version N knows how to parse up to format=3. If a new format=4 is
+=======
+     *   * BitNova Core version N knows how to parse up to format=3. If a new format=4 is
+>>>>>>> 5360f2baff (Initialized BitNova project)
      *     introduced in version N+1 that is compatible with format=3 and it is known that
      *     version N will be able to parse it, then version N+1 will write
      *     (format=4, lowest_compatible=3) in the first two bytes of the file, and so
      *     version N will still try to parse it.
+<<<<<<< HEAD
      *   * Bitcoin Core version N+2 introduces a new incompatible format=5. It will write
+=======
+     *   * BitNova Core version N+2 introduces a new incompatible format=5. It will write
+>>>>>>> 5360f2baff (Initialized BitNova project)
      *     (format=5, lowest_compatible=5) and so any versions that do not know how to parse
      *     format=5 will not try to read the file.
      * * nKey

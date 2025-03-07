@@ -40,7 +40,11 @@ git diff -U0 HEAD~1.. | ./contrib/devtools/clang-format-diff.py -p1 -i -v
 copyright\_header.py
 ====================
 
+<<<<<<< HEAD
 Provides utilities for managing copyright headers of `The Bitcoin Core
+=======
+Provides utilities for managing copyright headers of `The BitNova Core
+>>>>>>> 5360f2baff (Initialized BitNova project)
 developers` in repository source files. It has three subcommands:
 
 ```
@@ -59,6 +63,7 @@ Specifying `verbose` will list the full filenames of files of each category.
 
 copyright\_header.py update \<base\_directory\> [verbose]
 ---------------------------------------------------------
+<<<<<<< HEAD
 Updates all the copyright headers of `The Bitcoin Core developers` which were
 changed in a year more recent than is listed. For example:
 ```
@@ -67,23 +72,45 @@ changed in a year more recent than is listed. For example:
 will be updated to:
 ```
 // Copyright (c) <firstYear>-<lastModifiedYear> The Bitcoin Core developers
+=======
+Updates all the copyright headers of `The BitNova Core developers` which were
+changed in a year more recent than is listed. For example:
+```
+// Copyright (c) <firstYear>-<lastYear> The BitNova Core developers
+```
+will be updated to:
+```
+// Copyright (c) <firstYear>-<lastModifiedYear> The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 where `<lastModifiedYear>` is obtained from the `git log` history.
 
 This subcommand also handles copyright headers that have only a single year. In
 those cases:
 ```
+<<<<<<< HEAD
 // Copyright (c) <year> The Bitcoin Core developers
 ```
 will be updated to:
 ```
 // Copyright (c) <year>-<lastModifiedYear> The Bitcoin Core developers
+=======
+// Copyright (c) <year> The BitNova Core developers
+```
+will be updated to:
+```
+// Copyright (c) <year>-<lastModifiedYear> The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 where the update is appropriate.
 
 copyright\_header.py insert \<file\>
 ------------------------------------
+<<<<<<< HEAD
 Inserts a copyright header for `The Bitcoin Core developers` at the top of the
+=======
+Inserts a copyright header for `The BitNova Core developers` at the top of the
+>>>>>>> 5360f2baff (Initialized BitNova project)
 file in either Python or C++ style as determined by the file extension. If the
 file is a Python file and it has  `#!` starting the first line, the header is
 inserted in the line below it.
@@ -93,7 +120,11 @@ The copyright dates will be set to be `<year_introduced>-<current_year>` where
 `<year_introduced>` is equal to `<current_year>`, it will be set as a single
 year rather than two hyphenated years.
 
+<<<<<<< HEAD
 If the file already has a copyright for `The Bitcoin Core developers`, the
+=======
+If the file already has a copyright for `The BitNova Core developers`, the
+>>>>>>> 5360f2baff (Initialized BitNova project)
 script will exit.
 
 gen-manpages.py
@@ -120,11 +151,19 @@ options, as all its configuration is set at the top of the file. It runs many ti
 pypy3 contrib/devtools/headerssync-params.py
 ```
 
+<<<<<<< HEAD
 gen-bitcoin-conf.sh
 ===================
 
 Generates a bitcoin.conf file in `share/examples/` by parsing the output from `bitcoind --help`. This script is run during the
 release process to include a bitcoin.conf with the release binaries and can also be run by users to generate a file locally.
+=======
+gen-bitnova-conf.sh
+===================
+
+Generates a bitnova.conf file in `share/examples/` by parsing the output from `bitnovad --help`. This script is run during the
+release process to include a bitnova.conf with the release binaries and can also be run by users to generate a file locally.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 When generating a file as part of the release process, make sure to commit the changes after running the script.
 
 This script assumes a build directory named `build` as suggested by example build documentation.
@@ -132,7 +171,11 @@ To use it with a different build directory, set `BUILDDIR`.
 For example:
 
 ```bash
+<<<<<<< HEAD
 BUILDDIR=$PWD/my-build-dir contrib/devtools/gen-bitcoin-conf.sh
+=======
+BUILDDIR=$PWD/my-build-dir contrib/devtools/gen-bitnova-conf.sh
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 
 security-check.py
@@ -159,10 +202,17 @@ If no errors occur the return value will be 0 and the output will be empty.
 
 If there are any errors the return value will be 1 and output like this will be printed:
 
+<<<<<<< HEAD
     .../64/test_bitcoin: symbol memcpy from unsupported version GLIBC_2.14
     .../64/test_bitcoin: symbol __fdelt_chk from unsupported version GLIBC_2.15
     .../64/test_bitcoin: symbol std::out_of_range::~out_of_range() from unsupported version GLIBCXX_3.4.15
     .../64/test_bitcoin: symbol _ZNSt8__detail15_List_nod from unsupported version GLIBCXX_3.4.15
+=======
+    .../64/test_bitnova: symbol memcpy from unsupported version GLIBC_2.14
+    .../64/test_bitnova: symbol __fdelt_chk from unsupported version GLIBC_2.15
+    .../64/test_bitnova: symbol std::out_of_range::~out_of_range() from unsupported version GLIBCXX_3.4.15
+    .../64/test_bitnova: symbol _ZNSt8__detail15_List_nod from unsupported version GLIBCXX_3.4.15
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 circular-dependencies.py
 ========================

@@ -1,6 +1,10 @@
 Facilitate guix building with CROSS_LIBRARY_PATH
 
+<<<<<<< HEAD
 See discussion in https://github.com/bitcoin/bitcoin/pull/15277.
+=======
+See discussion in https://github.com/bitnova/bitnova/pull/15277.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 --- a/qtbase/mkspecs/features/toolchain.prf
 +++ b/qtbase/mkspecs/features/toolchain.prf

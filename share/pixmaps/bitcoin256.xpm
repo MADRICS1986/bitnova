@@ -1,5 +1,9 @@
 /* XPM */
+<<<<<<< HEAD
 static char *bitcoin___[] = {
+=======
+static char *bitnova___[] = {
+>>>>>>> 5360f2baff (Initialized BitNova project)
 /* columns rows colors chars-per-pixel */
 "256 256 203 2",
 "   c #BE741B",

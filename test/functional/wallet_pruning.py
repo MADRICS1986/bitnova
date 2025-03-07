@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,7 +15,11 @@ from test_framework.blocktools import (
     create_block
 )
 from test_framework.blocktools import create_coinbase
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 from test_framework.script import (
     CScript,
@@ -19,7 +27,11 @@ from test_framework.script import (
     OP_TRUE,
 )
 
+<<<<<<< HEAD
 class WalletPruningTest(BitcoinTestFramework):
+=======
+class WalletPruningTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser, descriptors=False)
 

@@ -1,12 +1,20 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2014-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2014-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the listreceivedbyaddress, listreceivedbylabel, getreceivedybaddress, and getreceivedbylabel RPCs."""
 from decimal import Decimal
 
 from test_framework.blocktools import COINBASE_MATURITY
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_array_result,
     assert_equal,
@@ -15,7 +23,11 @@ from test_framework.util import (
 from test_framework.wallet_util import test_address
 
 
+<<<<<<< HEAD
 class ReceivedByTest(BitcoinTestFramework):
+=======
+class ReceivedByTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser)
 

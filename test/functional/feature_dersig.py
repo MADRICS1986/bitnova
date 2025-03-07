@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2015-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2015-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test BIP66 (DER SIG).
@@ -14,7 +18,11 @@ from test_framework.blocktools import (
 from test_framework.messages import msg_block
 from test_framework.p2p import P2PInterface
 from test_framework.script import CScript
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
 )
@@ -44,7 +52,11 @@ def unDERify(tx):
 DERSIG_HEIGHT = 102
 
 
+<<<<<<< HEAD
 class BIP66Test(BitcoinTestFramework):
+=======
+class BIP66Test(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         # whitelist peers to speed up tx relay / mempool sync

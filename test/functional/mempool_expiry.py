@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2020-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2020-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Tests that a mempool transaction expires after a given timeout and that its
@@ -16,7 +20,11 @@ from test_framework.messages import (
     COIN,
     DEFAULT_MEMPOOL_EXPIRY_HOURS,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
@@ -26,7 +34,11 @@ from test_framework.wallet import MiniWallet
 CUSTOM_MEMPOOL_EXPIRY = 10  # hours
 
 
+<<<<<<< HEAD
 class MempoolExpiryTest(BitcoinTestFramework):
+=======
+class MempoolExpiryTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
 

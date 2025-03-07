@@ -1,9 +1,17 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
+<<<<<<< HEAD
 // Copyright (c) 2009-2022 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+// Copyright (c) 2009-2022 The BitNova Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <chainparams.h>
 #include <clientversion.h>
@@ -112,7 +120,11 @@ int fork_daemon(bool nochdir, bool noclose, TokenPipeEnd& endpoint)
 static bool ParseArgs(NodeContext& node, int argc, char* argv[])
 {
     ArgsManager& args{*Assert(node.args)};
+<<<<<<< HEAD
     // If Qt is used, parameters/bitcoin.conf are parsed in qt/bitcoin.cpp's main()
+=======
+    // If Qt is used, parameters/bitnova.conf are parsed in qt/bitnova.cpp's main()
+>>>>>>> 5360f2baff (Initialized BitNova project)
     SetupServerArgs(args, node.init->canListenIpc());
     std::string error;
     if (!args.ParseParameters(argc, argv, error)) {
@@ -126,7 +138,11 @@ static bool ParseArgs(NodeContext& node, int argc, char* argv[])
     // Error out when loose non-argument tokens are encountered on command line
     for (int i = 1; i < argc; i++) {
         if (!IsSwitchChar(argv[i][0])) {
+<<<<<<< HEAD
             return InitError(Untranslated(strprintf("Command line contains unexpected token '%s', see bitcoind -h for a list of options.", argv[i])));
+=======
+            return InitError(Untranslated(strprintf("Command line contains unexpected token '%s', see bitnovad -h for a list of options.", argv[i])));
+>>>>>>> 5360f2baff (Initialized BitNova project)
         }
     }
     return true;
@@ -142,12 +158,21 @@ static bool ProcessInitCommands(ArgsManager& args)
             strUsage += FormatParagraph(LicenseInfo());
         } else {
             strUsage += "\n"
+<<<<<<< HEAD
                 "The " CLIENT_NAME " daemon (bitcoind) is a headless program that connects to the Bitcoin network to validate and relay transactions and blocks, as well as relaying addresses.\n\n"
                 "It provides the backbone of the Bitcoin network and its RPC, REST and ZMQ services can provide various transaction, block and address-related services.\n\n"
                 "There is an optional wallet component which provides transaction services.\n\n"
                 "It can be used in a headless environment or as part of a server setup.\n"
                 "\n"
                 "Usage: bitcoind [options]\n"
+=======
+                "The " CLIENT_NAME " daemon (bitnovad) is a headless program that connects to the BitNova network to validate and relay transactions and blocks, as well as relaying addresses.\n\n"
+                "It provides the backbone of the BitNova network and its RPC, REST and ZMQ services can provide various transaction, block and address-related services.\n\n"
+                "There is an optional wallet component which provides transaction services.\n\n"
+                "It can be used in a headless environment or as part of a server setup.\n"
+                "\n"
+                "Usage: bitnovad [options]\n"
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 "\n";
             strUsage += args.GetHelpMessage();
         }
@@ -175,7 +200,11 @@ static bool AppInit(NodeContext& node)
     std::any context{&node};
     try
     {
+<<<<<<< HEAD
         // -server defaults to true for bitcoind but not for the GUI so do this here
+=======
+        // -server defaults to true for bitnovad but not for the GUI so do this here
+>>>>>>> 5360f2baff (Initialized BitNova project)
         args.SoftSetBoolArg("-server", true);
         // Set this early so that parameter interactions go to console
         InitLogging(args);
@@ -268,7 +297,11 @@ MAIN_FUNCTION
 
     SetupEnvironment();
 
+<<<<<<< HEAD
     // Connect bitcoind signal handlers
+=======
+    // Connect bitnovad signal handlers
+>>>>>>> 5360f2baff (Initialized BitNova project)
     noui_connect();
 
     util::ThreadSetInternalName("init");

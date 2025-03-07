@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2018-2022 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test bitcoin-wallet."""
+=======
+# Copyright (c) 2018-2022 The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+"""Test bitnova-wallet."""
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 import os
 import platform
@@ -16,7 +23,11 @@ from collections import OrderedDict
 
 from test_framework.bdb import dump_bdb_kv
 from test_framework.messages import ser_string
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
     assert_greater_than,
@@ -25,7 +36,11 @@ from test_framework.util import (
 from test_framework.wallet import getnewdestination
 
 
+<<<<<<< HEAD
 class ToolWalletTest(BitcoinTestFramework):
+=======
+class ToolWalletTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser)
         parser.add_argument("--bdbro", action="store_true", help="Use the BerkeleyRO internal parser when dumping a Berkeley DB wallet file")
@@ -42,17 +57,28 @@ class ToolWalletTest(BitcoinTestFramework):
         self.skip_if_no_wallet()
         self.skip_if_no_wallet_tool()
 
+<<<<<<< HEAD
     def bitcoin_wallet_process(self, *args):
+=======
+    def bitnova_wallet_process(self, *args):
+>>>>>>> 5360f2baff (Initialized BitNova project)
         default_args = ['-datadir={}'.format(self.nodes[0].datadir_path), '-chain=%s' % self.chain]
         if not self.options.descriptors and 'create' in args:
             default_args.append('-legacy')
         if "dump" in args and self.options.bdbro:
             default_args.append("-withinternalbdb")
 
+<<<<<<< HEAD
         return subprocess.Popen([self.options.bitcoinwallet] + default_args + list(args), stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
     def assert_raises_tool_error(self, error, *args):
         p = self.bitcoin_wallet_process(*args)
+=======
+        return subprocess.Popen([self.options.bitnovawallet] + default_args + list(args), stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+    def assert_raises_tool_error(self, error, *args):
+        p = self.bitnova_wallet_process(*args)
+>>>>>>> 5360f2baff (Initialized BitNova project)
         stdout, stderr = p.communicate()
         assert_equal(stdout, '')
         if isinstance(error, tuple):
@@ -63,7 +89,11 @@ class ToolWalletTest(BitcoinTestFramework):
             assert error in stderr.strip()
 
     def assert_tool_output(self, output, *args):
+<<<<<<< HEAD
         p = self.bitcoin_wallet_process(*args)
+=======
+        p = self.bitnova_wallet_process(*args)
+>>>>>>> 5360f2baff (Initialized BitNova project)
         stdout, stderr = p.communicate()
         assert_equal(stderr, '')
         assert_equal(stdout, output)
@@ -187,7 +217,11 @@ class ToolWalletTest(BitcoinTestFramework):
         self.assert_tool_output(load_output, *args)
         assert (self.nodes[0].wallets_path / wallet_name).is_dir()
 
+<<<<<<< HEAD
         self.assert_tool_output("The dumpfile may contain private keys. To ensure the safety of your Bitcoin, do not share the dumpfile.\n", '-wallet={}'.format(wallet_name), '-dumpfile={}'.format(rt_dumppath), 'dump')
+=======
+        self.assert_tool_output("The dumpfile may contain private keys. To ensure the safety of your BitNova, do not share the dumpfile.\n", '-wallet={}'.format(wallet_name), '-dumpfile={}'.format(rt_dumppath), 'dump')
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         rt_dump_data = self.read_dump(rt_dumppath)
         wallet_dat = self.nodes[0].wallets_path / wallet_name / "wallet.dat"
@@ -199,11 +233,19 @@ class ToolWalletTest(BitcoinTestFramework):
     def test_invalid_tool_commands_and_args(self):
         self.log.info('Testing that various invalid commands raise with specific error messages')
         self.assert_raises_tool_error("Error parsing command line arguments: Invalid command 'foo'", 'foo')
+<<<<<<< HEAD
         # `bitcoin-wallet help` raises an error. Use `bitcoin-wallet -help`.
         self.assert_raises_tool_error("Error parsing command line arguments: Invalid command 'help'", 'help')
         self.assert_raises_tool_error('Error: Additional arguments provided (create). Methods do not take arguments. Please refer to `-help`.', 'info', 'create')
         self.assert_raises_tool_error('Error parsing command line arguments: Invalid parameter -foo', '-foo')
         self.assert_raises_tool_error('No method provided. Run `bitcoin-wallet -help` for valid methods.')
+=======
+        # `bitnova-wallet help` raises an error. Use `bitnova-wallet -help`.
+        self.assert_raises_tool_error("Error parsing command line arguments: Invalid command 'help'", 'help')
+        self.assert_raises_tool_error('Error: Additional arguments provided (create). Methods do not take arguments. Please refer to `-help`.', 'info', 'create')
+        self.assert_raises_tool_error('Error parsing command line arguments: Invalid parameter -foo', '-foo')
+        self.assert_raises_tool_error('No method provided. Run `bitnova-wallet -help` for valid methods.')
+>>>>>>> 5360f2baff (Initialized BitNova project)
         self.assert_raises_tool_error('Wallet name must be provided when creating a new wallet.', 'create')
         locked_dir = self.nodes[0].wallets_path
         error = 'Error initializing wallet database environment "{}"!'.format(locked_dir)
@@ -322,7 +364,11 @@ class ToolWalletTest(BitcoinTestFramework):
         self.log.debug('Wallet file shasum unchanged\n')
 
     def test_salvage(self):
+<<<<<<< HEAD
         # TODO: Check salvage actually salvages and doesn't break things. https://github.com/bitcoin/bitcoin/issues/7463
+=======
+        # TODO: Check salvage actually salvages and doesn't break things. https://github.com/bitnova/bitnova/issues/7463
+>>>>>>> 5360f2baff (Initialized BitNova project)
         self.log.info('Check salvage')
         self.start_node(0)
         self.nodes[0].createwallet("salvage")
@@ -342,7 +388,11 @@ class ToolWalletTest(BitcoinTestFramework):
 
         self.log.info('Checking basic dump')
         wallet_dump = self.nodes[0].datadir_path / "wallet.dump"
+<<<<<<< HEAD
         self.assert_tool_output('The dumpfile may contain private keys. To ensure the safety of your Bitcoin, do not share the dumpfile.\n', '-wallet=todump', '-dumpfile={}'.format(wallet_dump), 'dump')
+=======
+        self.assert_tool_output('The dumpfile may contain private keys. To ensure the safety of your BitNova, do not share the dumpfile.\n', '-wallet=todump', '-dumpfile={}'.format(wallet_dump), 'dump')
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         dump_data = self.read_dump(wallet_dump)
         orig_dump = dump_data.copy()
@@ -374,12 +424,20 @@ class ToolWalletTest(BitcoinTestFramework):
         bad_ver_wallet_dump = self.nodes[0].datadir_path / "wallet-bad_ver1.dump"
         dump_data["BITCOIN_CORE_WALLET_DUMP"] = "0"
         self.write_dump(dump_data, bad_ver_wallet_dump)
+<<<<<<< HEAD
         self.assert_raises_tool_error('Error: Dumpfile version is not supported. This version of bitcoin-wallet only supports version 1 dumpfiles. Got dumpfile with version 0', '-wallet=badload', '-dumpfile={}'.format(bad_ver_wallet_dump), 'createfromdump')
+=======
+        self.assert_raises_tool_error('Error: Dumpfile version is not supported. This version of bitnova-wallet only supports version 1 dumpfiles. Got dumpfile with version 0', '-wallet=badload', '-dumpfile={}'.format(bad_ver_wallet_dump), 'createfromdump')
+>>>>>>> 5360f2baff (Initialized BitNova project)
         assert not (self.nodes[0].wallets_path / "badload").is_dir()
         bad_ver_wallet_dump = self.nodes[0].datadir_path / "wallet-bad_ver2.dump"
         dump_data["BITCOIN_CORE_WALLET_DUMP"] = "2"
         self.write_dump(dump_data, bad_ver_wallet_dump)
+<<<<<<< HEAD
         self.assert_raises_tool_error('Error: Dumpfile version is not supported. This version of bitcoin-wallet only supports version 1 dumpfiles. Got dumpfile with version 2', '-wallet=badload', '-dumpfile={}'.format(bad_ver_wallet_dump), 'createfromdump')
+=======
+        self.assert_raises_tool_error('Error: Dumpfile version is not supported. This version of bitnova-wallet only supports version 1 dumpfiles. Got dumpfile with version 2', '-wallet=badload', '-dumpfile={}'.format(bad_ver_wallet_dump), 'createfromdump')
+>>>>>>> 5360f2baff (Initialized BitNova project)
         assert not (self.nodes[0].wallets_path / "badload").is_dir()
         bad_magic_wallet_dump = self.nodes[0].datadir_path / "wallet-bad_magic.dump"
         del dump_data["BITCOIN_CORE_WALLET_DUMP"]
@@ -476,7 +534,11 @@ class ToolWalletTest(BitcoinTestFramework):
         self.stop_node(0)
 
         wallet_dump = self.nodes[0].datadir_path / "endian.dump"
+<<<<<<< HEAD
         self.assert_tool_output("The dumpfile may contain private keys. To ensure the safety of your Bitcoin, do not share the dumpfile.\n", "-wallet=endian", f"-dumpfile={wallet_dump}", "dump")
+=======
+        self.assert_tool_output("The dumpfile may contain private keys. To ensure the safety of your BitNova, do not share the dumpfile.\n", "-wallet=endian", f"-dumpfile={wallet_dump}", "dump")
+>>>>>>> 5360f2baff (Initialized BitNova project)
         expected_dump = self.read_dump(wallet_dump)
 
         self.do_tool_createfromdump("native_endian", "endian.dump", "bdb")
@@ -515,7 +577,11 @@ class ToolWalletTest(BitcoinTestFramework):
         self.stop_node(0)
 
         wallet_dump = self.nodes[0].datadir_path / "bigrecords.dump"
+<<<<<<< HEAD
         self.assert_tool_output("The dumpfile may contain private keys. To ensure the safety of your Bitcoin, do not share the dumpfile.\n", "-wallet=bigrecords", f"-dumpfile={wallet_dump}", "dump")
+=======
+        self.assert_tool_output("The dumpfile may contain private keys. To ensure the safety of your BitNova, do not share the dumpfile.\n", "-wallet=bigrecords", f"-dumpfile={wallet_dump}", "dump")
+>>>>>>> 5360f2baff (Initialized BitNova project)
         dump = self.read_dump(wallet_dump)
         for k,v in dump.items():
             if tx["hex"] in v:
@@ -536,7 +602,11 @@ class ToolWalletTest(BitcoinTestFramework):
         self.nodes[0].loadwallet("unclean_lsn")
         # Next cause a bunch of writes by filling the keypool
         wallet.keypoolrefill(wallet.getwalletinfo()["keypoolsize"] + 100)
+<<<<<<< HEAD
         # Lastly kill bitcoind so that the LSNs don't get reset
+=======
+        # Lastly kill bitnovad so that the LSNs don't get reset
+>>>>>>> 5360f2baff (Initialized BitNova project)
         self.nodes[0].process.kill()
         self.nodes[0].wait_until_stopped(expected_ret_code=1 if platform.system() == "Windows" else -9)
         assert self.nodes[0].is_node_stopped()
@@ -548,7 +618,11 @@ class ToolWalletTest(BitcoinTestFramework):
         self.start_node(0)
         self.nodes[0].loadwallet("unclean_lsn")
         self.stop_node(0)
+<<<<<<< HEAD
         self.assert_tool_output("The dumpfile may contain private keys. To ensure the safety of your Bitcoin, do not share the dumpfile.\n", "-wallet=unclean_lsn", f"-dumpfile={wallet_dump}", "dump")
+=======
+        self.assert_tool_output("The dumpfile may contain private keys. To ensure the safety of your BitNova, do not share the dumpfile.\n", "-wallet=unclean_lsn", f"-dumpfile={wallet_dump}", "dump")
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     def test_compare_legacy_dump_with_framework_bdb_parser(self):
         self.log.info("Verify that legacy wallet database dump matches the one from the test framework's BDB parser")
@@ -568,7 +642,11 @@ class ToolWalletTest(BitcoinTestFramework):
         self.stop_node(0)
 
         wallet_dumpfile = self.nodes[0].datadir_path / "bdb_ro_test.dump"
+<<<<<<< HEAD
         self.assert_tool_output("The dumpfile may contain private keys. To ensure the safety of your Bitcoin, do not share the dumpfile.\n", "-wallet={}".format(wallet_name), "-dumpfile={}".format(wallet_dumpfile), "dump")
+=======
+        self.assert_tool_output("The dumpfile may contain private keys. To ensure the safety of your BitNova, do not share the dumpfile.\n", "-wallet={}".format(wallet_name), "-dumpfile={}".format(wallet_dumpfile), "dump")
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         expected_dump = self.read_dump(wallet_dumpfile)
         # remove extra entries from wallet tool dump that are not actual key/value pairs from the database

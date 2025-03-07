@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2020-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2020-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -68,6 +72,7 @@ def print_image(img, threshold=128):
             line.append(chr(ch))
         print(''.join(line))
 
+<<<<<<< HEAD
 parser = argparse.ArgumentParser(description='Script to get coins from a faucet.', epilog='You may need to start with double-dash (--) when providing bitcoin-cli arguments.')
 parser.add_argument('-c', '--cmd', dest='cmd', default='bitcoin-cli', help='bitcoin-cli command to use')
 parser.add_argument('-f', '--faucet', dest='faucet', default=DEFAULT_GLOBAL_FAUCET, help='URL of the faucet')
@@ -86,6 +91,26 @@ if args.bitcoin_cli_args == []:
 
 def bitcoin_cli(rpc_command_and_params):
     argv = [args.cmd] + args.bitcoin_cli_args + rpc_command_and_params
+=======
+parser = argparse.ArgumentParser(description='Script to get coins from a faucet.', epilog='You may need to start with double-dash (--) when providing bitnova-cli arguments.')
+parser.add_argument('-c', '--cmd', dest='cmd', default='bitnova-cli', help='bitnova-cli command to use')
+parser.add_argument('-f', '--faucet', dest='faucet', default=DEFAULT_GLOBAL_FAUCET, help='URL of the faucet')
+parser.add_argument('-g', '--captcha', dest='captcha', default=DEFAULT_GLOBAL_CAPTCHA, help='URL of the faucet captcha, or empty if no captcha is needed')
+parser.add_argument('-a', '--addr', dest='addr', default='', help='BitNova address to which the faucet should send')
+parser.add_argument('-p', '--password', dest='password', default='', help='Faucet password, if any')
+parser.add_argument('-n', '--amount', dest='amount', default='0.001', help='Amount to request (0.001-0.1, default is 0.001)')
+parser.add_argument('-i', '--imagemagick', dest='imagemagick', default=CONVERT, help='Path to imagemagick convert utility')
+parser.add_argument('bitnova_cli_args', nargs='*', help='Arguments to pass on to bitnova-cli (default: -signet)')
+
+args = parser.parse_args()
+
+if args.bitnova_cli_args == []:
+    args.bitnova_cli_args = ['-signet']
+
+
+def bitnova_cli(rpc_command_and_params):
+    argv = [args.cmd] + args.bitnova_cli_args + rpc_command_and_params
+>>>>>>> 5360f2baff (Initialized BitNova project)
     try:
         return subprocess.check_output(argv).strip().decode()
     except FileNotFoundError:
@@ -97,7 +122,11 @@ def bitcoin_cli(rpc_command_and_params):
 
 if args.faucet.lower() == DEFAULT_GLOBAL_FAUCET:
     # Get the hash of the block at height 1 of the currently active signet chain
+<<<<<<< HEAD
     curr_signet_hash = bitcoin_cli(['getblockhash', '1'])
+=======
+    curr_signet_hash = bitnova_cli(['getblockhash', '1'])
+>>>>>>> 5360f2baff (Initialized BitNova project)
     if curr_signet_hash != GLOBAL_FIRST_BLOCK_HASH:
         raise SystemExit('The global faucet cannot be used with a custom Signet network. Please use the global signet or setup your custom faucet to use this functionality.\n')
 else:
@@ -107,7 +136,11 @@ else:
 
 if args.addr == '':
     # get address for receiving coins
+<<<<<<< HEAD
     args.addr = bitcoin_cli(['getnewaddress', 'faucet', 'bech32'])
+=======
+    args.addr = bitnova_cli(['getnewaddress', 'faucet', 'bech32'])
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 data = {'address': args.addr, 'password': args.password, 'amount': args.amount}
 

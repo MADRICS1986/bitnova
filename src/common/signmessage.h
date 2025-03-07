@@ -1,5 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
+<<<<<<< HEAD
 // Copyright (c) 2009-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2009-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -47,7 +51,11 @@ enum class SigningResult {
 };
 
 /** Verify a signed message.
+<<<<<<< HEAD
  * @param[in] address Signer's bitcoin address, it must refer to a public key.
+=======
+ * @param[in] address Signer's bitnova address, it must refer to a public key.
+>>>>>>> 5360f2baff (Initialized BitNova project)
  * @param[in] signature The signature in base64 format.
  * @param[in] message The message that was signed.
  * @return result code */

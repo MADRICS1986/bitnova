@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,7 +15,11 @@
 #include <node/psbt.h>
 #include <node/types.h>
 #include <policy/policy.h>
+<<<<<<< HEAD
 #include <qt/bitcoinunits.h>
+=======
+#include <qt/bitnovaunits.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <qt/forms/ui_psbtoperationsdialog.h>
 #include <qt/guiutil.h>
 #include <qt/optionsmodel.h>
@@ -151,7 +159,11 @@ void PSBTOperationsDialog::saveTransaction() {
         }
         CTxDestination address;
         ExtractDestination(out.scriptPubKey, address);
+<<<<<<< HEAD
         QString amount = BitcoinUnits::format(m_client_model->getOptionsModel()->getDisplayUnit(), out.nValue);
+=======
+        QString amount = BitNovaUnits::format(m_client_model->getOptionsModel()->getDisplayUnit(), out.nValue);
+>>>>>>> 5360f2baff (Initialized BitNova project)
         QString address_str = QString::fromStdString(EncodeDestination(address));
         filename_suggestion.append(address_str + "-" + amount);
         first = false;
@@ -185,7 +197,11 @@ QString PSBTOperationsDialog::renderTransaction(const PartiallySignedTransaction
         ExtractDestination(out.scriptPubKey, address);
         totalAmount += out.nValue;
         tx_description.append(bullet_point).append(tr("Sends %1 to %2")
+<<<<<<< HEAD
             .arg(BitcoinUnits::formatWithUnit(BitcoinUnit::BTC, out.nValue))
+=======
+            .arg(BitNovaUnits::formatWithUnit(BitNovaUnit::BTC, out.nValue))
+>>>>>>> 5360f2baff (Initialized BitNova project)
             .arg(QString::fromStdString(EncodeDestination(address))));
         // Check if the address is one of ours
         if (m_wallet_model != nullptr && m_wallet_model->wallet().txoutIsMine(out)) tx_description.append(" (" + tr("own address") + ")");
@@ -199,11 +215,16 @@ QString PSBTOperationsDialog::renderTransaction(const PartiallySignedTransaction
         tx_description.append(tr("Unable to calculate transaction fee or total transaction amount."));
     } else {
         tx_description.append(tr("Pays transaction fee: "));
+<<<<<<< HEAD
         tx_description.append(BitcoinUnits::formatWithUnit(BitcoinUnit::BTC, *analysis.fee));
+=======
+        tx_description.append(BitNovaUnits::formatWithUnit(BitNovaUnit::BTC, *analysis.fee));
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         // add total amount in all subdivision units
         tx_description.append("<hr />");
         QStringList alternativeUnits;
+<<<<<<< HEAD
         for (const BitcoinUnits::Unit u : BitcoinUnits::availableUnits())
         {
             if(u != m_client_model->getOptionsModel()->getDisplayUnit()) {
@@ -212,6 +233,16 @@ QString PSBTOperationsDialog::renderTransaction(const PartiallySignedTransaction
         }
         tx_description.append(QString("<b>%1</b>: <b>%2</b>").arg(tr("Total Amount"))
             .arg(BitcoinUnits::formatHtmlWithUnit(m_client_model->getOptionsModel()->getDisplayUnit(), totalAmount)));
+=======
+        for (const BitNovaUnits::Unit u : BitNovaUnits::availableUnits())
+        {
+            if(u != m_client_model->getOptionsModel()->getDisplayUnit()) {
+                alternativeUnits.append(BitNovaUnits::formatHtmlWithUnit(u, totalAmount));
+            }
+        }
+        tx_description.append(QString("<b>%1</b>: <b>%2</b>").arg(tr("Total Amount"))
+            .arg(BitNovaUnits::formatHtmlWithUnit(m_client_model->getOptionsModel()->getDisplayUnit(), totalAmount)));
+>>>>>>> 5360f2baff (Initialized BitNova project)
         tx_description.append(QString("<br /><span style='font-size:10pt; font-weight:normal;'>(=%1)</span>")
             .arg(alternativeUnits.join(" " + tr("or") + " ")));
     }

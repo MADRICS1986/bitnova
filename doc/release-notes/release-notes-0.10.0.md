@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 Bitcoin Core version 0.10.0 is now available from:
 
   https://bitcoin.org/bin/0.10.0/
+=======
+BitNova Core version 0.10.0 is now available from:
+
+  https://bitnova.org/bin/0.10.0/
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a new major version release, bringing both new features and
 bug fixes.
 
 Please report bugs using the issue tracker at github:
 
+<<<<<<< HEAD
   https://github.com/bitcoin/bitcoin/issues
+=======
+  https://github.com/bitnova/bitnova/issues
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Upgrading and downgrading
 =========================
@@ -17,15 +27,24 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
+<<<<<<< HEAD
 installer (on Windows) or just copy over /Applications/Bitcoin-Qt (on Mac) or
 bitcoind/bitcoin-qt (on Linux).
+=======
+installer (on Windows) or just copy over /Applications/BitNova-Qt (on Mac) or
+bitnovad/bitnova-qt (on Linux).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Downgrading warning
 ---------------------
 
 Because release 0.10.0 makes use of headers-first synchronization and parallel
 block download (see further), the block files and databases are not
+<<<<<<< HEAD
 backwards-compatible with older versions of Bitcoin Core or other software:
+=======
+backwards-compatible with older versions of BitNova Core or other software:
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 * Blocks will be stored on disk out of order (in the order they are
 received, really), which makes it incompatible with some tools or
@@ -50,7 +69,11 @@ Notable changes
 Faster synchronization
 ----------------------
 
+<<<<<<< HEAD
 Bitcoin Core now uses 'headers-first synchronization'. This means that we first
+=======
+BitNova Core now uses 'headers-first synchronization'. This means that we first
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ask peers for block headers (a total of 27 megabytes, as of December 2014) and
 validate those. In a second stage, when the headers have been discovered, we
 download the blocks. However, as we already know about the whole chain in
@@ -172,7 +195,11 @@ improved by making the signatures constant time and deterministic.
 
 This change is a result of switching signing to use libsecp256k1
 instead of OpenSSL. Libsecp256k1 is a cryptographic library
+<<<<<<< HEAD
 optimized for the curve Bitcoin uses which was created by Bitcoin
+=======
+optimized for the curve BitNova uses which was created by BitNova
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Core developer Pieter Wuille.
 
 There exist attacks[1] against most ECC implementations where an
@@ -187,7 +214,11 @@ long time, but this functionality has still not made its
 way into a released version of OpenSSL. Libsecp256k1 achieves
 significantly stronger protection: As far as we're aware this is
 the only deployed implementation of constant time signing for
+<<<<<<< HEAD
 the curve Bitcoin uses and we have reason to believe that
+=======
+the curve BitNova uses and we have reason to believe that
+>>>>>>> 5360f2baff (Initialized BitNova project)
 libsecp256k1 is better tested and more thoroughly reviewed
 than the implementation in OpenSSL.
 
@@ -222,6 +253,7 @@ addresses need to added to the wallet before the payment, though.
 Consensus library
 -----------------
 
+<<<<<<< HEAD
 Starting from 0.10.0, the Bitcoin Core distribution includes a consensus library.
 
 The purpose of this library is to make the verification functionality that is
@@ -237,6 +269,23 @@ In its initial version the API includes two functions:
 - `bitcoinconsensus_verify_script` verifies a script. It returns whether the indicated input of the provided serialized transaction 
 correctly spends the passed scriptPubKey under additional constraints indicated by flags
 - `bitcoinconsensus_version` returns the API version, currently at an experimental `0`
+=======
+Starting from 0.10.0, the BitNova Core distribution includes a consensus library.
+
+The purpose of this library is to make the verification functionality that is
+critical to BitNova's consensus available to other applications, e.g. to language
+bindings such as [python-bitnovalib](https://pypi.python.org/pypi/python-bitnovalib) or
+alternative node implementations.
+
+This library is called `libbitnovaconsensus.so` (or, `.dll` for Windows).
+Its interface is defined in the C header [bitnovaconsensus.h](https://github.com/bitnova/bitnova/blob/0.10/src/script/bitnovaconsensus.h).
+
+In its initial version the API includes two functions:
+
+- `bitnovaconsensus_verify_script` verifies a script. It returns whether the indicated input of the provided serialized transaction 
+correctly spends the passed scriptPubKey under additional constraints indicated by flags
+- `bitnovaconsensus_version` returns the API version, currently at an experimental `0`
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 The functionality is planned to be extended to e.g. UTXO management in upcoming releases, but the interface
 for existing methods should remain stable.
@@ -247,6 +296,7 @@ Standard script rules relaxed for P2SH addresses
 The IsStandard() rules have been almost completely removed for P2SH
 redemption scripts, allowing applications to make use of any valid
 script type, such as "n-of-m OR y", hash-locked oracle addresses, etc.
+<<<<<<< HEAD
 While the Bitcoin protocol has always supported these types of script,
 actually using them on mainnet has been previously inconvenient as
 standard Bitcoin Core nodes wouldn't relay them to miners, nor would
@@ -266,6 +316,27 @@ obtained via "bitcoin-tx --help" Transactions may be created or signed in a
 manner similar to the RPC raw tx API. Transactions may be updated, deleting
 inputs or outputs, or appending new inputs and outputs. Custom scripts may be
 easily composed using a simple text notation, borrowed from the bitcoin test
+=======
+While the BitNova protocol has always supported these types of script,
+actually using them on mainnet has been previously inconvenient as
+standard BitNova Core nodes wouldn't relay them to miners, nor would
+most miners include them in blocks they mined.
+
+bitnova-tx
+----------
+
+It has been observed that many of the RPC functions offered by bitnovad are
+"pure functions", and operate independently of the bitnovad wallet. This
+included many of the RPC "raw transaction" API functions, such as
+createrawtransaction.
+
+bitnova-tx is a newly introduced command line utility designed to enable easy
+manipulation of bitnova transactions. A summary of its operation may be
+obtained via "bitnova-tx --help" Transactions may be created or signed in a
+manner similar to the RPC raw tx API. Transactions may be updated, deleting
+inputs or outputs, or appending new inputs and outputs. Custom scripts may be
+easily composed using a simple text notation, borrowed from the bitnova test
+>>>>>>> 5360f2baff (Initialized BitNova project)
 suite.
 
 This tool may be used for experimenting with new transaction types, signing
@@ -273,16 +344,27 @@ multi-party transactions, and many other uses. Long term, the goal is to
 deprecate and remove "pure function" RPC API calls, as those do not require a
 server round-trip to execute.
 
+<<<<<<< HEAD
 Other utilities "bitcoin-key" and "bitcoin-script" have been proposed, making
+=======
+Other utilities "bitnova-key" and "bitnova-script" have been proposed, making
+>>>>>>> 5360f2baff (Initialized BitNova project)
 key and script operations easily accessible via command line.
 
 Mining and relay policy enhancements
 ------------------------------------
 
+<<<<<<< HEAD
 Bitcoin Core's block templates are now for version 3 blocks only, and any mining
 software relying on its `getblocktemplate` must be updated in parallel to use
 libblkmaker either version 0.4.2 or any version from 0.5.1 onward.
 If you are solo mining, this will affect you the moment you upgrade Bitcoin
+=======
+BitNova Core's block templates are now for version 3 blocks only, and any mining
+software relying on its `getblocktemplate` must be updated in parallel to use
+libblkmaker either version 0.4.2 or any version from 0.5.1 onward.
+If you are solo mining, this will affect you the moment you upgrade BitNova
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Core, which must be done prior to BIP66 achieving its 951/1001 status.
 If you are mining with the stratum mining protocol: this does not affect you.
 If you are mining with the getblocktemplate protocol to a pool: this will affect
@@ -292,10 +374,17 @@ achieving its 951/1001 status.
 The `prioritisetransaction` RPC method has been added to enable miners to
 manipulate the priority of transactions on an individual basis.
 
+<<<<<<< HEAD
 Bitcoin Core now supports BIP 22 long polling, so mining software can be
 notified immediately of new templates rather than having to poll periodically.
 
 Support for BIP 23 block proposals is now available in Bitcoin Core's
+=======
+BitNova Core now supports BIP 22 long polling, so mining software can be
+notified immediately of new templates rather than having to poll periodically.
+
+Support for BIP 23 block proposals is now available in BitNova Core's
+>>>>>>> 5360f2baff (Initialized BitNova project)
 `getblocktemplate` method. This enables miners to check the basic validity of
 their next block before expending work on it, reducing risks of accidental
 hardforks or mining invalid blocks.
@@ -313,9 +402,15 @@ AllowFreeThreshold(), in which case they are relayed subject to the rate limiter
 BIP 66: strict DER encoding for signatures
 ------------------------------------------
 
+<<<<<<< HEAD
 Bitcoin Core 0.10 implements BIP 66, which introduces block version 3, and a new
 consensus rule, which prohibits non-DER signatures. Such transactions have been
 non-standard since Bitcoin v0.8.0 (released in February 2013), but were
+=======
+BitNova Core 0.10 implements BIP 66, which introduces block version 3, and a new
+consensus rule, which prohibits non-DER signatures. Such transactions have been
+non-standard since BitNova v0.8.0 (released in February 2013), but were
+>>>>>>> 5360f2baff (Initialized BitNova project)
 technically still permitted inside blocks.
 
 This change breaks the dependency on OpenSSL's signature parsing, and is
@@ -337,10 +432,17 @@ Detailed release notes follow. This overview includes changes that affect extern
 behavior, not code moves, refactors or string updates.
 
 RPC:
+<<<<<<< HEAD
 - `f923c07` Support IPv6 lookup in bitcoin-cli even when IPv6 only bound on localhost
 - `b641c9c` Fix addnode "onetry": Connect with OpenNetworkConnection
 - `171ca77` estimatefee / estimatepriority RPC methods
 - `b750cf1` Remove cli functionality from bitcoind
+=======
+- `f923c07` Support IPv6 lookup in bitnova-cli even when IPv6 only bound on localhost
+- `b641c9c` Fix addnode "onetry": Connect with OpenNetworkConnection
+- `171ca77` estimatefee / estimatepriority RPC methods
+- `b750cf1` Remove cli functionality from bitnovad
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - `f6984e8` Add "chain" to getmininginfo, improve help in getblockchaininfo
 - `99ddc6c` Add nLocalServices info to RPC getinfo
 - `cf0c47b` Remove getwork() RPC call
@@ -391,7 +493,11 @@ Command-line options:
 - `4278b1d` Clarify error message when invalid -rpcallowip
 - `6b407e4` -datadir is now allowed in config files
 - `bdd5b58` Add option `-sysperms` to disable 077 umask (create new files with system default umask)
+<<<<<<< HEAD
 - `cbe39a3` Add "bitcoin-tx" command line utility and supporting modules
+=======
+- `cbe39a3` Add "bitnova-tx" command line utility and supporting modules
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - `dbca89b` Trigger -alertnotify if network is upgrading without you
 - `ad96e7c` Make -reindex cope with out-of-order blocks
 - `16d5194` Skip reindexed blocks individually
@@ -465,7 +571,11 @@ P2P protocol and network code:
 - `35e408f` Regard connection failures as attempt for addrman
 - `a3a7317` Introduce 10 minute block download timeout
 - `3022e7d` Require sufficent priority for relay of free transactions
+<<<<<<< HEAD
 - `58fda4d` Update seed IPs, based on bitcoin.sipa.be crawler data
+=======
+- `58fda4d` Update seed IPs, based on bitnova.sipa.be crawler data
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - `18021d0` Remove bitnodes.io from dnsseeds.
 
 Validation:
@@ -492,13 +602,21 @@ Build system:
 - `9ce0774` build: Fix windows configure when using --with-qt-libdir
 - `ea96475` build: Add mention of --disable-wallet to bdb48 error messages
 - `1dec09b` depends: add shared dependency builder
+<<<<<<< HEAD
 - `c101c76` build: Add --with-utils (bitcoin-cli and bitcoin-tx, default=yes). Help string consistency tweaks. Target sanity check fix
+=======
+- `c101c76` build: Add --with-utils (bitnova-cli and bitnova-tx, default=yes). Help string consistency tweaks. Target sanity check fix
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - `e432a5f` build: add option for reducing exports (v2)
 - `6134b43` Fixing condition 'sabotaging' MSVC build
 - `af0bd5e` osx: fix signing to make Gatekeeper happy (again)
 - `a7d1f03` build: fix dynamic boost check when --with-boost= is used
 - `d5fd094` build: fix qt test build when libprotobuf is in a non-standard path
+<<<<<<< HEAD
 - `2cf5f16` Add libbitcoinconsensus library
+=======
+- `2cf5f16` Add libbitnovaconsensus library
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - `914868a` build: add a deterministic dmg signer 
 - `2d375fe` depends: bump openssl to 1.0.1k
 - `b7a4ecc` Build: Only check for boost when building code that requires it
@@ -522,7 +640,11 @@ Wallet:
 GUI:
 - `c21c74b` osx: Fix missing dock menu with qt5
 - `b90711c` Fix Transaction details shows wrong To:
+<<<<<<< HEAD
 - `516053c` Make links in 'About Bitcoin Core' clickable
+=======
+- `516053c` Make links in 'About BitNova Core' clickable
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - `bdc83e8` Ensure payment request network matches client network
 - `65f78a1` Add GUI view of peer information
 - `06a91d9` VerifyDB progress reporting
@@ -539,7 +661,11 @@ GUI:
 - `7007402` Implement SI-style (thin space) thoudands separator
 - `91cce17` Use fixed-point arithmetic in amount spinbox
 - `bdba2dd` Remove an obscure option no-one cares about
+<<<<<<< HEAD
 - `bd0aa10` Replace the temporary file hack currently used to change Bitcoin-Qt's dock icon (OS X) with a buffer-based solution
+=======
+- `bd0aa10` Replace the temporary file hack currently used to change BitNova-Qt's dock icon (OS X) with a buffer-based solution
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - `94e1b9e` Re-work overviewpage UI
 - `8bfdc9a` Better looking trayicon
 - `b197bf3` disable tray interactions when client model set to 0
@@ -585,8 +711,13 @@ Tests:
 - `4cac5db` script tests: value with trailing 0x00 is true
 - `89101c6` script test: test case for 5-byte bools
 - `d2d9dc0` script tests: add tests for CHECKMULTISIG limits
+<<<<<<< HEAD
 - `d789386` Add "it works" test for bitcoin-tx
 - `df4d61e` Add bitcoin-tx tests
+=======
+- `d789386` Add "it works" test for bitnova-tx
+- `df4d61e` Add bitnova-tx tests
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - `aa41ac2` Test IsPushOnly() with invalid push
 - `6022b5d` Make `script_{valid,invalid}.json` validation flags configurable
 - `8138cbe` Add automatic script test generation, and actual checksig tests
@@ -598,7 +729,11 @@ Tests:
 - `2b62e17` Clearly separate PUSHDATA and numeric argument MINIMALDATA tests
 - `16d78bd` Add valid invert of invalid every numeric opcode tests
 - `f635269` tests: enable alertnotify test for Windows
+<<<<<<< HEAD
 - `7a41614` tests: allow rpc-tests to get filenames for bitcoind and bitcoin-cli from the environment
+=======
+- `7a41614` tests: allow rpc-tests to get filenames for bitnovad and bitnova-cli from the environment
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - `5122ea7` tests: fix forknotify.py on windows
 - `fa7f8cd` tests: remove old pull-tester scripts
 - `7667850` tests: replace the old (unused since Travis) tests with new rpc test scripts
@@ -624,7 +759,11 @@ Tests:
 Miscellaneous:
 - `122549f` Fix incorrect checkpoint data for testnet3
 - `5bd02cf` Log used config file to debug.log on startup
+<<<<<<< HEAD
 - `68ba85f` Updated Debian example bitcoin.conf with config from wiki + removed some cruft and updated comments
+=======
+- `68ba85f` Updated Debian example bitnova.conf with config from wiki + removed some cruft and updated comments
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - `e5ee8f0` Remove -beta suffix
 - `38405ac` Add comment regarding experimental-use service bits
 - `be873f6` Issue warning if collecting RandSeed data failed
@@ -635,7 +774,11 @@ Miscellaneous:
 - `cd01a5e` Enable paranoid corruption checks in LevelDB >= 1.16
 - `9365937` Add comment about never updating nTimeOffset past 199 samples
 - `403c1bf` contrib: remove getwork-based pyminer (as getwork API call has been removed)
+<<<<<<< HEAD
 - `0c3e101` contrib: Added systemd .service file in order to help distributions integrate bitcoind
+=======
+- `0c3e101` contrib: Added systemd .service file in order to help distributions integrate bitnovad
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - `0a0878d` doc: Add new DNSseed policy
 - `2887bff` Update coding style and add .clang-format
 - `5cbda4f` Changed LevelDB cursors to use scoped pointers to ensure destruction when going out of scope
@@ -758,5 +901,9 @@ Thanks to everyone who contributed to this release:
 - Yoichi Hirai
 - Zak Wilcox
 
+<<<<<<< HEAD
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
+=======
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 

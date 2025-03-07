@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2017-present The Bitcoin Core developers
+=======
+# Copyright (c) 2017-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test various command line arguments and configuration file parameters."""
@@ -12,12 +16,20 @@ import tempfile
 import time
 
 from test_framework.netutil import UNREACHABLE_PROXY_ARG
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.test_node import ErrorMatch
 from test_framework import util
 
 
+<<<<<<< HEAD
 class ConfArgsTest(BitcoinTestFramework):
+=======
+class ConfArgsTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser)
 
@@ -42,7 +54,11 @@ class ConfArgsTest(BitcoinTestFramework):
 
     def test_dir_config(self):
         self.log.info('Error should be emitted if config file is a directory')
+<<<<<<< HEAD
         conf_path = self.nodes[0].datadir_path / 'bitcoin.conf'
+=======
+        conf_path = self.nodes[0].datadir_path / 'bitnova.conf'
+>>>>>>> 5360f2baff (Initialized BitNova project)
         os.rename(conf_path, conf_path.with_suffix('.confbkp'))
         conf_path.mkdir()
         self.stop_node(0)
@@ -66,7 +82,11 @@ class ConfArgsTest(BitcoinTestFramework):
     def test_negated_config(self):
         self.log.info('Disabling configuration via -noconf')
 
+<<<<<<< HEAD
         conf_path = self.nodes[0].datadir_path / 'bitcoin.conf'
+=======
+        conf_path = self.nodes[0].datadir_path / 'bitnova.conf'
+>>>>>>> 5360f2baff (Initialized BitNova project)
         with open(conf_path, encoding='utf-8') as conf:
             settings = [f'-{line.rstrip()}' for line in conf if len(line) > 1 and line[0] != '[']
         os.rename(conf_path, conf_path.with_suffix('.confbkp'))
@@ -81,7 +101,11 @@ class ConfArgsTest(BitcoinTestFramework):
 
         self.log.debug('Verifying that disabling of the config file means garbage inside of it does ' \
             'not prevent the node from starting, and message about existing config file is logged')
+<<<<<<< HEAD
         ignored_file_message = [f'[InitConfig] Data directory "{self.nodes[0].datadir_path}" contains a "bitcoin.conf" file which is explicitly ignored using -noconf.']
+=======
+        ignored_file_message = [f'[InitConfig] Data directory "{self.nodes[0].datadir_path}" contains a "bitnova.conf" file which is explicitly ignored using -noconf.']
+>>>>>>> 5360f2baff (Initialized BitNova project)
         with self.nodes[0].assert_debug_log(timeout=60, expected_msgs=ignored_file_message):
             self.start_node(0, extra_args=settings + ['-noconf'])
         self.stop_node(0)
@@ -97,8 +121,13 @@ class ConfArgsTest(BitcoinTestFramework):
     def test_config_file_parser(self):
         self.log.info('Test config file parser')
 
+<<<<<<< HEAD
         # Check that startup fails if conf= is set in bitcoin.conf or in an included conf file
         bad_conf_file_path = self.nodes[0].datadir_path / "bitcoin_bad.conf"
+=======
+        # Check that startup fails if conf= is set in bitnova.conf or in an included conf file
+        bad_conf_file_path = self.nodes[0].datadir_path / "bitnova_bad.conf"
+>>>>>>> 5360f2baff (Initialized BitNova project)
         util.write_config(bad_conf_file_path, n=0, chain='', extra_config='conf=some.conf\n')
         conf_in_config_file_err = 'Error: Error reading configuration file: conf cannot be set in the configuration file; use includeconf= if you want to include additional config files'
         self.nodes[0].assert_start_raises_init_error(
@@ -106,7 +135,11 @@ class ConfArgsTest(BitcoinTestFramework):
             expected_msg=conf_in_config_file_err,
         )
         inc_conf_file_path = self.nodes[0].datadir_path / 'include.conf'
+<<<<<<< HEAD
         with open(self.nodes[0].datadir_path / 'bitcoin.conf', 'a', encoding='utf-8') as conf:
+=======
+        with open(self.nodes[0].datadir_path / 'bitnova.conf', 'a', encoding='utf-8') as conf:
+>>>>>>> 5360f2baff (Initialized BitNova project)
             conf.write(f'includeconf={inc_conf_file_path}\n')
         with open(inc_conf_file_path, 'w', encoding='utf-8') as conf:
             conf.write('conf=some.conf\n')
@@ -141,7 +174,11 @@ class ConfArgsTest(BitcoinTestFramework):
                 conf.write("wallet=foo\n")
             self.nodes[0].assert_start_raises_init_error(expected_msg=f'Error: Config setting for -wallet only applied on {self.chain} network when in [{self.chain}] section.')
 
+<<<<<<< HEAD
         main_conf_file_path = self.nodes[0].datadir_path / "bitcoin_main.conf"
+=======
+        main_conf_file_path = self.nodes[0].datadir_path / "bitnova_main.conf"
+>>>>>>> 5360f2baff (Initialized BitNova project)
         util.write_config(main_conf_file_path, n=0, chain='', extra_config=f'includeconf={inc_conf_file_path}\n')
         with open(inc_conf_file_path, 'w', encoding='utf-8') as conf:
             conf.write('acceptnonstdtxn=1\n')
@@ -164,7 +201,11 @@ class ConfArgsTest(BitcoinTestFramework):
         self.nodes[0].assert_start_raises_init_error(expected_msg='Error: Error reading configuration file: parse error on line 4, using # in rpcpassword can be ambiguous and should be avoided')
 
         inc_conf_file2_path = self.nodes[0].datadir_path / 'include2.conf'
+<<<<<<< HEAD
         with open(self.nodes[0].datadir_path / 'bitcoin.conf', 'a', encoding='utf-8') as conf:
+=======
+        with open(self.nodes[0].datadir_path / 'bitnova.conf', 'a', encoding='utf-8') as conf:
+>>>>>>> 5360f2baff (Initialized BitNova project)
             conf.write(f'includeconf={inc_conf_file2_path}\n')
 
         with open(inc_conf_file_path, 'w', encoding='utf-8') as conf:
@@ -188,6 +229,7 @@ class ConfArgsTest(BitcoinTestFramework):
         self.log.info('Test that correct configuration path is changed when configuration file changes the datadir')
 
         # Create a temporary directory that will be treated as the default data
+<<<<<<< HEAD
         # directory by bitcoind.
         env, default_datadir = util.get_temp_default_datadir(Path(self.options.tmpdir, "test_config_file_log"))
         default_datadir.mkdir(parents=True)
@@ -197,6 +239,17 @@ class ConfArgsTest(BitcoinTestFramework):
         node = self.nodes[0]
         conf_text = node.bitcoinconf.read_text()
         conf_path = default_datadir / "bitcoin.conf"
+=======
+        # directory by bitnovad.
+        env, default_datadir = util.get_temp_default_datadir(Path(self.options.tmpdir, "test_config_file_log"))
+        default_datadir.mkdir(parents=True)
+
+        # Write a bitnova.conf file in the default data directory containing a
+        # datadir= line pointing at the node datadir.
+        node = self.nodes[0]
+        conf_text = node.bitnovaconf.read_text()
+        conf_path = default_datadir / "bitnova.conf"
+>>>>>>> 5360f2baff (Initialized BitNova project)
         conf_path.write_text(f"datadir={node.datadir_path}\n{conf_text}")
 
         # Drop the node -datadir= argument during this test, because if it is
@@ -206,7 +259,11 @@ class ConfArgsTest(BitcoinTestFramework):
         node.args = [arg for arg in node.args if not arg.startswith("-datadir=")]
 
         # Check that correct configuration file path is actually logged
+<<<<<<< HEAD
         # (conf_path, not node.bitcoinconf)
+=======
+        # (conf_path, not node.bitnovaconf)
+>>>>>>> 5360f2baff (Initialized BitNova project)
         with self.nodes[0].assert_debug_log(expected_msgs=[f"Config file: {conf_path}"]):
             self.start_node(0, ["-allowignoredconf"], env=env)
             self.stop_node(0)
@@ -411,20 +468,34 @@ class ConfArgsTest(BitcoinTestFramework):
         self.stop_node(0)
 
     def test_ignored_conf(self):
+<<<<<<< HEAD
         self.log.info('Test error is triggered when the datadir in use contains a bitcoin.conf file that would be ignored '
+=======
+        self.log.info('Test error is triggered when the datadir in use contains a bitnova.conf file that would be ignored '
+>>>>>>> 5360f2baff (Initialized BitNova project)
                       'because a conflicting -conf file argument is passed.')
         node = self.nodes[0]
         with tempfile.NamedTemporaryFile(dir=self.options.tmpdir, mode="wt", delete=False) as temp_conf:
             temp_conf.write(f"datadir={node.datadir_path}\n")
         node.assert_start_raises_init_error([f"-conf={temp_conf.name}"], re.escape(
+<<<<<<< HEAD
             f'Error: Data directory "{node.datadir_path}" contains a "bitcoin.conf" file which is ignored, because a '
+=======
+            f'Error: Data directory "{node.datadir_path}" contains a "bitnova.conf" file which is ignored, because a '
+>>>>>>> 5360f2baff (Initialized BitNova project)
             f'different configuration file "{temp_conf.name}" from command line argument "-conf={temp_conf.name}" '
             f'is being used instead.') + r"[\s\S]*", match=ErrorMatch.FULL_REGEX)
 
         # Test that passing a redundant -conf command line argument pointing to
+<<<<<<< HEAD
         # the same bitcoin.conf that would be loaded anyway does not trigger an
         # error.
         self.start_node(0, [f'-conf={node.datadir_path}/bitcoin.conf'])
+=======
+        # the same bitnova.conf that would be loaded anyway does not trigger an
+        # error.
+        self.start_node(0, [f'-conf={node.datadir_path}/bitnova.conf'])
+>>>>>>> 5360f2baff (Initialized BitNova project)
         self.stop_node(0)
 
     def test_ignored_default_conf(self):
@@ -433,6 +504,7 @@ class ConfArgsTest(BitcoinTestFramework):
         if platform.system() == "Windows":
             return
 
+<<<<<<< HEAD
         self.log.info('Test error is triggered when bitcoin.conf in the default data directory sets another datadir '
                       'and it contains a different bitcoin.conf file that would be ignored')
 
@@ -447,6 +519,22 @@ class ConfArgsTest(BitcoinTestFramework):
         # bitcoin.conf that would be ignored.
         node = self.nodes[0]
         (default_datadir / "bitcoin.conf").write_text(f"datadir={node.datadir_path}\n")
+=======
+        self.log.info('Test error is triggered when bitnova.conf in the default data directory sets another datadir '
+                      'and it contains a different bitnova.conf file that would be ignored')
+
+        # Create a temporary directory that will be treated as the default data
+        # directory by bitnovad.
+        env, default_datadir = util.get_temp_default_datadir(Path(self.options.tmpdir, "home"))
+        default_datadir.mkdir(parents=True)
+
+        # Write a bitnova.conf file in the default data directory containing a
+        # datadir= line pointing at the node datadir. This will trigger a
+        # startup error because the node datadir contains a different
+        # bitnova.conf that would be ignored.
+        node = self.nodes[0]
+        (default_datadir / "bitnova.conf").write_text(f"datadir={node.datadir_path}\n")
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         # Drop the node -datadir= argument during this test, because if it is
         # specified it would take precedence over the datadir setting in the
@@ -454,14 +542,23 @@ class ConfArgsTest(BitcoinTestFramework):
         node_args = node.args
         node.args = [arg for arg in node.args if not arg.startswith("-datadir=")]
         node.assert_start_raises_init_error([], re.escape(
+<<<<<<< HEAD
             f'Error: Data directory "{node.datadir_path}" contains a "bitcoin.conf" file which is ignored, because a '
             f'different configuration file "{default_datadir}/bitcoin.conf" from data directory "{default_datadir}" '
+=======
+            f'Error: Data directory "{node.datadir_path}" contains a "bitnova.conf" file which is ignored, because a '
+            f'different configuration file "{default_datadir}/bitnova.conf" from data directory "{default_datadir}" '
+>>>>>>> 5360f2baff (Initialized BitNova project)
             f'is being used instead.') + r"[\s\S]*", env=env, match=ErrorMatch.FULL_REGEX)
         node.args = node_args
 
     def test_acceptstalefeeestimates_arg_support(self):
         self.log.info("Test -acceptstalefeeestimates option support")
+<<<<<<< HEAD
         conf_file = self.nodes[0].datadir_path / "bitcoin.conf"
+=======
+        conf_file = self.nodes[0].datadir_path / "bitnova.conf"
+>>>>>>> 5360f2baff (Initialized BitNova project)
         for chain, chain_name in {("main", ""), ("test", "testnet3"), ("signet", "signet"), ("testnet4", "testnet4")}:
             util.write_config(conf_file, n=0, chain=chain_name, extra_config='acceptstalefeeestimates=1\n')
             self.nodes[0].assert_start_raises_init_error(expected_msg=f'Error: acceptstalefeeestimates is not supported on {chain} chain.')
@@ -529,7 +626,11 @@ class ConfArgsTest(BitcoinTestFramework):
         self.nodes[0].assert_start_raises_init_error([f'-datadir={new_data_dir}'], f'Error: Specified data directory "{new_data_dir}" does not exist.')
 
         # Check that using non-existent datadir in conf file fails
+<<<<<<< HEAD
         conf_file = default_data_dir / "bitcoin.conf"
+=======
+        conf_file = default_data_dir / "bitnova.conf"
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         # datadir needs to be set before [chain] section
         with open(conf_file, encoding='utf8') as f:
@@ -541,7 +642,11 @@ class ConfArgsTest(BitcoinTestFramework):
         self.nodes[0].assert_start_raises_init_error([f'-conf={conf_file}'], f'Error: Error reading configuration file: specified data directory "{new_data_dir}" does not exist.')
 
         # Check that an explicitly specified config file that cannot be opened fails
+<<<<<<< HEAD
         none_existent_conf_file = default_data_dir / "none_existent_bitcoin.conf"
+=======
+        none_existent_conf_file = default_data_dir / "none_existent_bitnova.conf"
+>>>>>>> 5360f2baff (Initialized BitNova project)
         self.nodes[0].assert_start_raises_init_error(['-conf=' + f'{none_existent_conf_file}'], 'Error: Error reading configuration file: specified config file "' + f'{none_existent_conf_file}' + '" could not be opened.')
 
         # Create the directory and ensure the config file now works

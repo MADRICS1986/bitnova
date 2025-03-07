@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2021-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2021-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -18,10 +22,17 @@ using node::NodeContext;
 
 namespace init {
 namespace {
+<<<<<<< HEAD
 class BitcoindInit : public interfaces::Init
 {
 public:
     BitcoindInit(NodeContext& node) : m_node(node)
+=======
+class BitNovadInit : public interfaces::Init
+{
+public:
+    BitNovadInit(NodeContext& node) : m_node(node)
+>>>>>>> 5360f2baff (Initialized BitNova project)
     {
         InitContext(m_node);
         m_node.init = this;
@@ -42,6 +53,10 @@ public:
 namespace interfaces {
 std::unique_ptr<Init> MakeNodeInit(NodeContext& node, int argc, char* argv[], int& exit_status)
 {
+<<<<<<< HEAD
     return std::make_unique<init::BitcoindInit>(node);
+=======
+    return std::make_unique<init::BitNovadInit>(node);
+>>>>>>> 5360f2baff (Initialized BitNova project)
 }
 } // namespace interfaces

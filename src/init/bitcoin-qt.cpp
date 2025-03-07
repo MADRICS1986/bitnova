@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2021-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2021-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -16,10 +20,17 @@
 
 namespace init {
 namespace {
+<<<<<<< HEAD
 class BitcoinQtInit : public interfaces::Init
 {
 public:
     BitcoinQtInit()
+=======
+class BitNovaQtInit : public interfaces::Init
+{
+public:
+    BitNovaQtInit()
+>>>>>>> 5360f2baff (Initialized BitNova project)
     {
         InitContext(m_node);
         m_node.init = this;
@@ -40,6 +51,10 @@ public:
 namespace interfaces {
 std::unique_ptr<Init> MakeGuiInit(int argc, char* argv[])
 {
+<<<<<<< HEAD
     return std::make_unique<init::BitcoinQtInit>();
+=======
+    return std::make_unique<init::BitNovaQtInit>();
+>>>>>>> 5360f2baff (Initialized BitNova project)
 }
 } // namespace interfaces

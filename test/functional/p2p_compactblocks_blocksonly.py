@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2021-2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2021-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test that a node in blocksonly mode does not request compact blocks."""
@@ -18,11 +22,19 @@ from test_framework.messages import (
     msg_sendcmpct,
 )
 from test_framework.p2p import P2PInterface
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
 from test_framework.util import assert_equal
 
 
 class P2PCompactBlocksBlocksOnly(BitcoinTestFramework):
+=======
+from test_framework.test_framework import BitNovaTestFramework
+from test_framework.util import assert_equal
+
+
+class P2PCompactBlocksBlocksOnly(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.extra_args = [["-blocksonly"], [], [], []]
         self.num_nodes = 4

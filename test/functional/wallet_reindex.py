@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2023-present The Bitcoin Core developers
+=======
+# Copyright (c) 2023-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://www.opensource.org/licenses/mit-license.php.
 
@@ -8,13 +12,21 @@
 import time
 
 from test_framework.blocktools import COINBASE_MATURITY
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
 )
 BLOCK_TIME = 60 * 10
 
+<<<<<<< HEAD
 class WalletReindexTest(BitcoinTestFramework):
+=======
+class WalletReindexTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser)
 

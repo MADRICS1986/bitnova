@@ -136,7 +136,11 @@ ATTACK_HEADERS = LIMIT_FRACTION * MINCHAINWORK_HEADERS
 
 
 def find_max_headers(when):
+<<<<<<< HEAD
     """Compute the maximum number of headers a valid Bitcoin chain can have at given time."""
+=======
+    """Compute the maximum number of headers a valid BitNova chain can have at given time."""
+>>>>>>> 5360f2baff (Initialized BitNova project)
     # When exploiting the timewarp attack, this can be up to 6 per second since genesis.
     return 6 * ((when - GENESIS_TIME) // timedelta(seconds=1))
 

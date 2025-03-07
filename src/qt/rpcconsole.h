@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef BITCOIN_QT_RPCCONSOLE_H
 #define BITCOIN_QT_RPCCONSOLE_H
 
+<<<<<<< HEAD
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <qt/clientmodel.h>
 #include <qt/guiutil.h>
@@ -37,7 +45,11 @@ class QMenu;
 class QItemSelection;
 QT_END_NAMESPACE
 
+<<<<<<< HEAD
 /** Local Bitcoin RPC console. */
+=======
+/** Local BitNova RPC console. */
+>>>>>>> 5360f2baff (Initialized BitNova project)
 class RPCConsole: public QWidget
 {
     Q_OBJECT

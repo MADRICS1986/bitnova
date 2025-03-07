@@ -1,24 +1,40 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2017-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2017-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test external signer.
 
+<<<<<<< HEAD
 Verify that a bitcoind node can use an external signer command.
+=======
+Verify that a bitnovad node can use an external signer command.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 See also wallet_signer.py for tests that require wallet context.
 """
 import os
 import platform
 import sys
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
 )
 
 
+<<<<<<< HEAD
 class RPCSignerTest(BitcoinTestFramework):
+=======
+class RPCSignerTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def mock_signer_path(self):
         path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'mocks', 'signer.py')
         return sys.executable + " " + path
@@ -46,7 +62,11 @@ class RPCSignerTest(BitcoinTestFramework):
     def run_test(self):
         self.log.debug(f"-signer={self.mock_signer_path()}")
 
+<<<<<<< HEAD
         assert_raises_rpc_error(-1, 'Error: restart bitcoind with -signer=<cmd>',
+=======
+        assert_raises_rpc_error(-1, 'Error: restart bitnovad with -signer=<cmd>',
+>>>>>>> 5360f2baff (Initialized BitNova project)
             self.nodes[0].enumeratesigners
         )
 

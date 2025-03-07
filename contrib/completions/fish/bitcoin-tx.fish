@@ -1,9 +1,17 @@
 # Disable files from being included in completions by default
+<<<<<<< HEAD
 complete --command bitcoin-tx --no-files
 
 # Modified version of __fish_seen_subcommand_from
 # Uses regex to detect cmd= syntax
 function __fish_bitcoin_seen_cmd
+=======
+complete --command bitnova-tx --no-files
+
+# Modified version of __fish_seen_subcommand_from
+# Uses regex to detect cmd= syntax
+function __fish_bitnova_seen_cmd
+>>>>>>> 5360f2baff (Initialized BitNova project)
     set -l cmd (commandline -oc)
     set -e cmd[1]
     for i in $cmd
@@ -17,7 +25,11 @@ function __fish_bitcoin_seen_cmd
 end
 
 # Extract options
+<<<<<<< HEAD
 function __fish_bitcoin_tx_get_options
+=======
+function __fish_bitnova_tx_get_options
+>>>>>>> 5360f2baff (Initialized BitNova project)
     set --local cmd (commandline -oc)[1]
     if string match --quiet --regex -- '^-help$|-\?$' $cmd
         return
@@ -29,7 +41,11 @@ function __fish_bitcoin_tx_get_options
 end
 
 # Extract commands
+<<<<<<< HEAD
 function __fish_bitcoin_tx_get_commands
+=======
+function __fish_bitnova_tx_get_commands
+>>>>>>> 5360f2baff (Initialized BitNova project)
     argparse 'commandsonly' -- $argv
     set --local cmd (commandline -oc)[1]
     set --local commands
@@ -47,19 +63,34 @@ end
 
 # Add options
 complete \
+<<<<<<< HEAD
     --command bitcoin-tx \
     --condition "not __fish_bitcoin_seen_cmd (__fish_bitcoin_tx_get_commands --commandsonly)" \
     --arguments "(__fish_bitcoin_tx_get_options)" \
+=======
+    --command bitnova-tx \
+    --condition "not __fish_bitnova_seen_cmd (__fish_bitnova_tx_get_commands --commandsonly)" \
+    --arguments "(__fish_bitnova_tx_get_options)" \
+>>>>>>> 5360f2baff (Initialized BitNova project)
     --no-files
 
 # Add commands
 complete \
+<<<<<<< HEAD
     --command bitcoin-tx \
     --arguments "(__fish_bitcoin_tx_get_commands)" \
+=======
+    --command bitnova-tx \
+    --arguments "(__fish_bitnova_tx_get_commands)" \
+>>>>>>> 5360f2baff (Initialized BitNova project)
     --no-files
 
 # Add file completions for load and set commands
 complete \
+<<<<<<< HEAD
     --command bitcoin-tx \
+=======
+    --command bitnova-tx \
+>>>>>>> 5360f2baff (Initialized BitNova project)
     --condition 'string match --regex -- "(load|set)=" (commandline -pt)' \
     --force-files

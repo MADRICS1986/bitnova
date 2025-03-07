@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2019-2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2019-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,12 +14,20 @@ import random
 import time
 
 from test_framework.netutil import UNREACHABLE_PROXY_ARG
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ADD_NEXT_SEEDNODE = 10
 
 
+<<<<<<< HEAD
 class P2PSeedNodes(BitcoinTestFramework):
+=======
+class P2PSeedNodes(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         # Specify a non-working proxy to make sure no actual connections to random IPs are attempted.

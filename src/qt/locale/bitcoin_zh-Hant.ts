@@ -58,11 +58,19 @@
         <translation type="unfinished">选择(&amp;H)</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">这些是你的比特币支付地址。在发送之前，一定要核对金额和接收地址。</translation>
     </message>
     <message>
         <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+=======
+        <source>These are your BitNova addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">这些是你的比特币支付地址。在发送之前，一定要核对金额和接收地址。</translation>
+    </message>
+    <message>
+        <source>These are your BitNova addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">這些是您的比特幣接收地址。使用“接收”標籤中的“產生新的接收地址”按鈕產生新的地址。只能使用“傳統”類型的地址進行簽名。</translation>
     </message>
@@ -187,7 +195,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">返回</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+=======
+        <source>Remember that encrypting your wallet cannot fully protect your bitnovas from being stolen by malware infecting your computer.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">請記得, 即使將錢包加密, 也不能完全防止因惡意軟體入侵, 而導致位元幣被偷.</translation>
     </message>
     <message>
@@ -259,7 +271,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinApplication</name>
+=======
+    <name>BitNovaApplication</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>Settings file %1 might be corrupt or invalid.</source>
         <translation type="unfinished">设置文件%1可能已损坏或无效。</translation>
@@ -322,7 +338,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">金额</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Enter a Bitcoin address (e.g. %1)</source>
+=======
+        <source>Enter a BitNova address (e.g. %1)</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">请输入一个比特币地址 (例如 %1)</translation>
     </message>
     <message>
@@ -446,7 +466,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">概况(&amp;O)</translation>
@@ -513,7 +537,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">代理服务器已&lt;b&gt;启用&lt;/b&gt;: %1</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Bitcoin address</source>
+=======
+        <source>Send coins to a BitNova address</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">向一个比特币地址发币</translation>
     </message>
     <message>
@@ -545,7 +573,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">修改密码(&amp;C)</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+=======
+        <source>Sign messages with your BitNova addresses to prove you own them</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">用比特币地址关联的私钥为消息签名，以证明您拥有这个比特币地址</translation>
     </message>
     <message>
@@ -593,8 +625,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">连接到节点...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
         <translation type="unfinished">请求支付 (生成二维码和 bitcoin: URI)</translation>
+=======
+        <source>Request payments (generates QR codes and bitnova: URIs)</source>
+        <translation type="unfinished">请求支付 (生成二维码和 bitnova: URI)</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -647,7 +684,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">已是最新</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Bitcoin Transaction</source>
+=======
+        <source>Load Partially Signed BitNova Transaction</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">加载部分签名比特币交易（PSBT）</translation>
     </message>
     <message>
@@ -655,7 +696,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">從剪貼簿載入PSBT</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Bitcoin Transaction from clipboard</source>
+=======
+        <source>Load Partially Signed BitNova Transaction from clipboard</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">从剪贴板中加载部分签名比特币交易（PSBT）</translation>
     </message>
     <message>
@@ -675,8 +720,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">收款地址(&amp;R)</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Open a bitcoin: URI</source>
         <translation type="unfinished">打开bitcoin:开头的URI</translation>
+=======
+        <source>Open a bitnova: URI</source>
+        <translation type="unfinished">打开bitnova:开头的URI</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Open Wallet</source>
@@ -713,8 +763,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">迁移一个钱包</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
         <translation type="unfinished">显示%1帮助消息以获得可能包含Bitcoin命令行选项的列表</translation>
+=======
+        <source>Show the %1 help message to get a list with possible BitNova command-line options</source>
+        <translation type="unfinished">显示%1帮助消息以获得可能包含BitNova命令行选项的列表</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -773,7 +828,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">显示(&amp;H)</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform> %n 与比特币网络接。</numerusform>
@@ -1296,7 +1355,11 @@ The migration process will create a backup of the wallet before migrating. This 
         </translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>%1 will download and store a copy of the Bitcoin block chain.</source>
+=======
+        <source>%1 will download and store a copy of the BitNova block chain.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">%1 将会下载并存储比特币区块链。</translation>
     </message>
     <message>
@@ -1381,11 +1444,19 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">窗体</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
         <translation type="unfinished">最近的交易可能還看不到，因此錢包餘額可能不正確。在錢包軟體完成跟 bitcoin 網路的同步後，這裡的資訊就會正確。詳情請見下面。</translation>
     </message>
     <message>
         <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+=======
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitnova network, as detailed below.</source>
+        <translation type="unfinished">最近的交易可能還看不到，因此錢包餘額可能不正確。在錢包軟體完成跟 bitnova 網路的同步後，這裡的資訊就會正確。詳情請見下面。</translation>
+    </message>
+    <message>
+        <source>Attempting to spend bitnovas that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">嘗試花費受尚未顯示的交易影響的比特幣將不會被網路接受。</translation>
     </message>
     <message>
@@ -1436,7 +1507,11 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>OpenURIDialog</name>
     <message>
+<<<<<<< HEAD
         <source>Open bitcoin URI</source>
+=======
+        <source>Open bitnova URI</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">打开比特币URI</translation>
     </message>
     <message>
@@ -1600,7 +1675,11 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">外部签名器脚本路径(&amp;E)</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+=======
+        <source>Automatically open the BitNova client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">自动在路由器中为比特币客户端打开端口。只有当您的路由器开启了 UPnP 选项时此功能才会有用。</translation>
     </message>
     <message>
@@ -1608,7 +1687,11 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">使用 &amp;UPnP 映射端口</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Automatically open the Bitcoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+=======
+        <source>Automatically open the BitNova client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">自动在路由器中为比特币客户端打开端口。只有当您的路由器支持 NAT-PMP 功能并开启它，这个功能才会正常工作。外边端口可以是随机的。</translation>
     </message>
     <message>
@@ -1624,8 +1707,13 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">允许传入连接(&amp;G)</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
         <translation type="unfinished">透過 SOCKS5 代理伺服器來連線到 Bitcoin 網路。</translation>
+=======
+        <source>Connect to the BitNova network through a SOCKS5 proxy.</source>
+        <translation type="unfinished">透過 SOCKS5 代理伺服器來連線到 BitNova 網路。</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1704,7 +1792,11 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">是否显示手动选币功能。</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Connect to the Bitcoin network through a separate SOCKS5 proxy for Tor onion services.</source>
+=======
+        <source>Connect to the BitNova network through a separate SOCKS5 proxy for Tor onion services.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">连接比特币网络时专门为Tor onion服务使用另一个 SOCKS5 代理。</translation>
     </message>
     <message>
@@ -1796,8 +1888,13 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">窗体</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished">顯示的資訊可能是過期的。跟 Bitcoin 網路的連線建立後，你的錢包會自動和網路同步，但是這個步驟還沒完成。</translation>
+=======
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitNova network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished">顯示的資訊可能是過期的。跟 BitNova 網路的連線建立後，你的錢包會自動和網路同步，但是這個步驟還沒完成。</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1999,16 +2096,26 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">支付请求出错</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Cannot start bitcoin: click-to-pay handler</source>
         <translation type="unfinished">无法启动 bitcoin: 协议的“一键支付”处理程序</translation>
+=======
+        <source>Cannot start bitnova: click-to-pay handler</source>
+        <translation type="unfinished">无法启动 bitnova: 协议的“一键支付”处理程序</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>URI handling</source>
         <translation type="unfinished">URI 處理</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>'bitcoin://' is not a valid URI. Use 'bitcoin:' instead.</source>
         <translation type="unfinished">字首為 bitcoin:// 不是有效的 URI，請改用 bitcoin: 開頭。</translation>
+=======
+        <source>'bitnova://' is not a valid URI. Use 'bitnova:' instead.</source>
+        <translation type="unfinished">字首為 bitnova:// 不是有效的 URI，請改用 bitnova: 開頭。</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.
@@ -2019,7 +2126,11 @@ If you are receiving this error you should request the merchant provide a BIP21 
 如果您看到了这个错误，您应该要求商家提供兼容BIP21的URI。</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
+=======
+        <source>URI cannot be parsed! This can be caused by an invalid BitNova address or malformed URI parameters.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">无法解析 URI 地址！可能是因为比特币地址无效，或是 URI 参数格式错误。</translation>
     </message>
     <message>
@@ -2615,7 +2726,11 @@ For more information on using this console, type %6.
         <translation type="unfinished">訊息(&amp;M):</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
+=======
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BitNova network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">可在支付请求上备注一条信息，在打开支付请求时可以看到。注意:该消息不是通过比特币网络传送。</translation>
     </message>
     <message>
@@ -2916,7 +3031,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
 注意：由於手續費是按每字節計算的，對於虛擬大小為500字節（半千字節）的交易，手續費率為「每千字節100聰」，最終將只收取50聰的手續費。</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for bitcoin transactions than the network can process.</source>
+=======
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for bitnova transactions than the network can process.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">當交易量小於可用區塊空間時，礦工和節點可能會執行最低手續費率限制。 以這個最低費率來支付手續費也是可以的，但請注意，一旦交易需求超出比特幣網路能處理的限度，你的交易可能永遠無法確認。</translation>
     </message>
     <message>
@@ -3002,7 +3121,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">创建未签名交易(&amp;E)</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Creates a Partially Signed Bitcoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+=======
+        <source>Creates a Partially Signed BitNova Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">创建一个“部分签名比特币交易”（PSBT），以用于诸如离线%1钱包，或是兼容PSBT的硬件钱包这类用途。</translation>
     </message>
     <message>
@@ -3040,7 +3163,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">你可以之後再提高手續費(有 BIP-125 手續費追加的標記)</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Please, review your transaction proposal. This will produce a Partially Signed Bitcoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+=======
+        <source>Please, review your transaction proposal. This will produce a Partially Signed BitNova Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
         <translation type="unfinished">請檢查您的交易提案。這將產生部分簽名的比特幣交易（PSBT），您可以儲存或複製該交易，然後使用簽名。離線%1錢包或與PSBT相容的硬體錢包。</translation>
     </message>
@@ -3054,7 +3181,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">要创建这笔交易吗？</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Bitcoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+=======
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed BitNova Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
         <translation type="unfinished">请务必仔细检查您的交易。你可以创建并发送这笔交易；也可以创建一个“部分签名比特币交易(PSBT)”，它可以被保存下来或被复制出去，然后就可以对它进行签名，比如用离线%1钱包，或是用兼容PSBT的硬件钱包。</translation>
     </message>
@@ -3132,7 +3263,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         </translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: Invalid Bitcoin address</source>
+=======
+        <source>Warning: Invalid BitNova address</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">警告: 比特币地址无效</translation>
     </message>
     <message>
@@ -3171,7 +3306,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">选择以前用过的地址</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Bitcoin address to send the payment to</source>
+=======
+        <source>The BitNova address to send the payment to</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">將支付發送到的比特幣地址給</translation>
     </message>
     <message>
@@ -3187,7 +3326,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">用被选单位表示的待发送金额</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+=======
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitnovas than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">交易费将从发送金额中扣除。接收人收到的比特币将会比您在金额框中输入的更少。如果选中了多个收件人，交易费平分。</translation>
     </message>
     <message>
@@ -3207,8 +3350,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">請輸入這個地址的標籤，來把它加進去已使用過地址清單。</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation type="unfinished">附加在 Bitcoin 付款協議的資源識別碼(URI)中的訊息，會和交易內容一起存起來，給你自己做參考。注意: 這個訊息不會送到 Bitcoin 網路上。</translation>
+=======
+        <source>A message that was attached to the bitnova: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitNova network.</source>
+        <translation type="unfinished">附加在 BitNova 付款協議的資源識別碼(URI)中的訊息，會和交易內容一起存起來，給你自己做參考。注意: 這個訊息不會送到 BitNova 網路上。</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
 </context>
 <context>
@@ -3233,7 +3381,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">簽署訊息(&amp;S)</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Bitcoin address to sign the message with</source>
+=======
+        <source>The BitNova address to sign the message with</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">用来对消息签名的地址</translation>
     </message>
     <message>
@@ -3257,7 +3409,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">複製目前的簽章到系統剪貼簿</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign the message to prove you own this Bitcoin address</source>
+=======
+        <source>Sign the message to prove you own this BitNova address</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">签名消息，以证明这个地址属于您</translation>
     </message>
     <message>
@@ -3281,7 +3437,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">请在下面输入接收者地址、消息（确保换行符、空格符、制表符等完全相同）和签名以验证消息。请仔细核对签名信息，以提防中间人攻击。请注意，这只是证明接收方可以用这个地址签名，它不能证明任何交易的发送人身份！</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Bitcoin address the message was signed with</source>
+=======
+        <source>The BitNova address the message was signed with</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">用来签名消息的地址</translation>
     </message>
     <message>
@@ -3293,7 +3453,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">对消息进行签署得到的签名数据</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
+=======
+        <source>Verify the message to ensure it was signed with the specified BitNova address</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">驗證這個訊息來確定是用指定的比特幣地址簽名的</translation>
     </message>
     <message>
@@ -3945,14 +4109,23 @@ Go to File &gt; Open Wallet to load a wallet.
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>bitcoin-core</name>
+=======
+    <name>bitnova-core</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>The %s developers</source>
         <translation type="unfinished">%s 開發人員</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>%s corrupt. Try using the wallet tool bitcoin-wallet to salvage or restoring a backup.</source>
         <translation type="unfinished">%s損壞。嘗試使用錢包工具bitcoin-wallet挽救或還原備份。</translation>
+=======
+        <source>%s corrupt. Try using the wallet tool bitnova-wallet to salvage or restoring a backup.</source>
+        <translation type="unfinished">%s損壞。嘗試使用錢包工具bitnova-wallet挽救或還原備份。</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>%s failed to validate the -assumeutxo snapshot state. This indicates a hardware problem, or a bug in the software, or a bad software modification that allowed an invalid snapshot to be loaded. As a result of this, the node will shut down and stop using any state that was built on the snapshot, resetting the chain height from %d to %d. On the next restart, the node will resume syncing from %d without using any snapshot data. Please report this incident to %s, including how you obtained the snapshot. The invalid snapshot chainstate will be left on disk in case it is helpful in diagnosing the issue that caused this error.</source>
@@ -4001,8 +4174,13 @@ Go to File &gt; Open Wallet to load a wallet.
 %s。</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Error: Dumpfile version is not supported. This version of bitcoin-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
         <translation type="unfinished">错误: 转储文件版本不被支持。这个版本的 bitcoin-wallet 只支持版本为 1 的转储文件。得到的转储文件版本却是%s</translation>
+=======
+        <source>Error: Dumpfile version is not supported. This version of bitnova-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
+        <translation type="unfinished">错误: 转储文件版本不被支持。这个版本的 bitnova-wallet 只支持版本为 1 的转储文件。得到的转储文件版本却是%s</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Error: Legacy wallets only support the "legacy", "p2sh-segwit", and "bech32" address types</source>

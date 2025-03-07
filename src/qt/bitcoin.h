@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef BITCOIN_QT_BITCOIN_H
 #define BITCOIN_QT_BITCOIN_H
 
+<<<<<<< HEAD
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <interfaces/node.h>
 #include <qt/initexecutor.h>
@@ -16,7 +24,11 @@
 
 #include <QApplication>
 
+<<<<<<< HEAD
 class BitcoinGUI;
+=======
+class BitNovaGUI;
+>>>>>>> 5360f2baff (Initialized BitNova project)
 class ClientModel;
 class NetworkStyle;
 class OptionsModel;
@@ -30,6 +42,7 @@ class Init;
 } // namespace interfaces
 
 
+<<<<<<< HEAD
 /** Main Bitcoin application object */
 class BitcoinApplication: public QApplication
 {
@@ -37,6 +50,15 @@ class BitcoinApplication: public QApplication
 public:
     explicit BitcoinApplication();
     ~BitcoinApplication();
+=======
+/** Main BitNova application object */
+class BitNovaApplication: public QApplication
+{
+    Q_OBJECT
+public:
+    explicit BitNovaApplication();
+    ~BitNovaApplication();
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #ifdef ENABLE_WALLET
     /// Create payment server
@@ -60,7 +82,11 @@ public:
     /// Request core initialization
     void requestInitialize();
 
+<<<<<<< HEAD
     /// Get window identifier of QMainWindow (BitcoinGUI)
+=======
+    /// Get window identifier of QMainWindow (BitNovaGUI)
+>>>>>>> 5360f2baff (Initialized BitNova project)
     WId getMainWinId() const;
 
     /// Setup platform style
@@ -84,7 +110,11 @@ public Q_SLOTS:
 Q_SIGNALS:
     void requestedInitialize();
     void requestedShutdown();
+<<<<<<< HEAD
     void windowShown(BitcoinGUI* window);
+=======
+    void windowShown(BitNovaGUI* window);
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 protected:
     bool event(QEvent* e) override;
@@ -93,7 +123,11 @@ private:
     std::optional<InitExecutor> m_executor;
     OptionsModel* optionsModel{nullptr};
     ClientModel* clientModel{nullptr};
+<<<<<<< HEAD
     BitcoinGUI* window{nullptr};
+=======
+    BitNovaGUI* window{nullptr};
+>>>>>>> 5360f2baff (Initialized BitNova project)
     QTimer* pollShutdownTimer{nullptr};
 #ifdef ENABLE_WALLET
     PaymentServer* paymentServer{nullptr};

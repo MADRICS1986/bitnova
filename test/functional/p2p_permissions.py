@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2015-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2015-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test p2p permission message.
@@ -12,7 +16,11 @@ from test_framework.messages import (
 )
 from test_framework.p2p import P2PDataStore
 from test_framework.test_node import ErrorMatch
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     append_config,
     assert_equal,
@@ -22,7 +30,11 @@ from test_framework.util import (
 from test_framework.wallet import MiniWallet
 
 
+<<<<<<< HEAD
 class P2PPermissionsTests(BitcoinTestFramework):
+=======
+class P2PPermissionsTests(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 2
 

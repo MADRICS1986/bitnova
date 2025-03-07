@@ -5,7 +5,11 @@ BEGIN
   printf("Logging P2P traffic\n")
 }
 
+<<<<<<< HEAD
 usdt:./build/src/bitcoind:net:inbound_message
+=======
+usdt:./build/src/bitnovad:net:inbound_message
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
   $peer_id = (int64) arg0;
   $peer_addr = str(arg1);
@@ -15,7 +19,11 @@ usdt:./build/src/bitcoind:net:inbound_message
   printf("inbound '%s' msg from peer %d (%s, %s) with %d bytes\n", $msg_type, $peer_id, $peer_type, $peer_addr, $msg_len);
 }
 
+<<<<<<< HEAD
 usdt:./build/src/bitcoind:net:outbound_message
+=======
+usdt:./build/src/bitnovad:net:outbound_message
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
   $peer_id = (int64) arg0;
   $peer_addr = str(arg1);

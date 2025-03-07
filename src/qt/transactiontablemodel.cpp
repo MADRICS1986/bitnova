@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <qt/transactiontablemodel.h>
 
 #include <qt/addresstablemodel.h>
+<<<<<<< HEAD
 #include <qt/bitcoinunits.h>
+=======
+#include <qt/bitnovaunits.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <qt/clientmodel.h>
 #include <qt/guiconstants.h>
 #include <qt/guiutil.h>
@@ -231,7 +239,11 @@ public:
         return nullptr;
     }
 
+<<<<<<< HEAD
     QString describe(interfaces::Node& node, interfaces::Wallet& wallet, TransactionRecord* rec, BitcoinUnit unit)
+=======
+    QString describe(interfaces::Node& node, interfaces::Wallet& wallet, TransactionRecord* rec, BitNovaUnit unit)
+>>>>>>> 5360f2baff (Initialized BitNova project)
     {
         return TransactionDesc::toHTML(node, wallet, rec, unit);
     }
@@ -255,7 +267,11 @@ TransactionTableModel::TransactionTableModel(const PlatformStyle *_platformStyle
 {
     subscribeToCoreSignals();
 
+<<<<<<< HEAD
     columns << QString() << QString() << tr("Date") << tr("Type") << tr("Label") << BitcoinUnits::getAmountColumnTitle(walletModel->getOptionsModel()->getDisplayUnit());
+=======
+    columns << QString() << QString() << tr("Date") << tr("Type") << tr("Label") << BitNovaUnits::getAmountColumnTitle(walletModel->getOptionsModel()->getDisplayUnit());
+>>>>>>> 5360f2baff (Initialized BitNova project)
     priv->refreshWallet(walletModel->wallet());
 
     connect(walletModel->getOptionsModel(), &OptionsModel::displayUnitChanged, this, &TransactionTableModel::updateDisplayUnit);
@@ -270,7 +286,11 @@ TransactionTableModel::~TransactionTableModel()
 /** Updates the column title to "Amount (DisplayUnit)" and emits headerDataChanged() signal for table headers to react. */
 void TransactionTableModel::updateAmountColumnTitle()
 {
+<<<<<<< HEAD
     columns[Amount] = BitcoinUnits::getAmountColumnTitle(walletModel->getOptionsModel()->getDisplayUnit());
+=======
+    columns[Amount] = BitNovaUnits::getAmountColumnTitle(walletModel->getOptionsModel()->getDisplayUnit());
+>>>>>>> 5360f2baff (Initialized BitNova project)
     Q_EMIT headerDataChanged(Qt::Horizontal,Amount,Amount);
 }
 
@@ -444,9 +464,15 @@ QVariant TransactionTableModel::addressColor(const TransactionRecord *wtx) const
     return QVariant();
 }
 
+<<<<<<< HEAD
 QString TransactionTableModel::formatTxAmount(const TransactionRecord *wtx, bool showUnconfirmed, BitcoinUnits::SeparatorStyle separators) const
 {
     QString str = BitcoinUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), wtx->credit + wtx->debit, false, separators);
+=======
+QString TransactionTableModel::formatTxAmount(const TransactionRecord *wtx, bool showUnconfirmed, BitNovaUnits::SeparatorStyle separators) const
+{
+    QString str = BitNovaUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), wtx->credit + wtx->debit, false, separators);
+>>>>>>> 5360f2baff (Initialized BitNova project)
     if(showUnconfirmed)
     {
         if(!wtx->status.countsForBalance)
@@ -546,7 +572,11 @@ QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
         case ToAddress:
             return formatTxToAddress(rec, false);
         case Amount:
+<<<<<<< HEAD
             return formatTxAmount(rec, true, BitcoinUnits::SeparatorStyle::ALWAYS);
+=======
+            return formatTxAmount(rec, true, BitNovaUnits::SeparatorStyle::ALWAYS);
+>>>>>>> 5360f2baff (Initialized BitNova project)
         } // no default case, so the compiler can warn about missing cases
         assert(false);
     case Qt::EditRole:
@@ -635,14 +665,22 @@ QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
                 details.append(QString::fromStdString(rec->address));
                 details.append(" ");
             }
+<<<<<<< HEAD
             details.append(formatTxAmount(rec, false, BitcoinUnits::SeparatorStyle::NEVER));
+=======
+            details.append(formatTxAmount(rec, false, BitNovaUnits::SeparatorStyle::NEVER));
+>>>>>>> 5360f2baff (Initialized BitNova project)
             return details;
         }
     case ConfirmedRole:
         return rec->status.status == TransactionStatus::Status::Confirming || rec->status.status == TransactionStatus::Status::Confirmed;
     case FormattedAmountRole:
         // Used for copy/export, so don't include separators
+<<<<<<< HEAD
         return formatTxAmount(rec, false, BitcoinUnits::SeparatorStyle::NEVER);
+=======
+        return formatTxAmount(rec, false, BitNovaUnits::SeparatorStyle::NEVER);
+>>>>>>> 5360f2baff (Initialized BitNova project)
     case StatusRole:
         return rec->status.status;
     }

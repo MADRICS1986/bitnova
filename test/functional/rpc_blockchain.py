@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2014-present The Bitcoin Core developers
+=======
+# Copyright (c) 2014-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test RPCs related to blockchainstate.
@@ -47,7 +51,11 @@ from test_framework.messages import (
 )
 from test_framework.p2p import P2PInterface
 from test_framework.script import hash256, OP_TRUE
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
     assert_greater_than,
@@ -68,7 +76,11 @@ TIME_RANGE_END = TIME_GENESIS_BLOCK + HEIGHT * TIME_RANGE_STEP
 DIFFICULTY_ADJUSTMENT_INTERVAL = 144
 
 
+<<<<<<< HEAD
 class BlockchainTest(BitcoinTestFramework):
+=======
+class BlockchainTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

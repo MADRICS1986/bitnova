@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 // Copyright (c) 2017-2022 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+// Copyright (c) 2017-2022 The BitNova Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <chain.h>
 #include <clientversion.h>
@@ -185,12 +193,20 @@ std::string ShellQuoteIfNeeded(const std::string& s)
 
 std::string HelpExampleCli(const std::string& methodname, const std::string& args)
 {
+<<<<<<< HEAD
     return "> bitcoin-cli " + methodname + " " + args + "\n";
+=======
+    return "> bitnova-cli " + methodname + " " + args + "\n";
+>>>>>>> 5360f2baff (Initialized BitNova project)
 }
 
 std::string HelpExampleCliNamed(const std::string& methodname, const RPCArgList& args)
 {
+<<<<<<< HEAD
     std::string result = "> bitcoin-cli -named " + methodname;
+=======
+    std::string result = "> bitnova-cli -named " + methodname;
+>>>>>>> 5360f2baff (Initialized BitNova project)
     for (const auto& argpair: args) {
         const auto& value = argpair.second.isStr()
                 ? argpair.second.get_str()
@@ -1416,7 +1432,11 @@ std::vector<RPCResult> ScriptPubKeyDoc() {
              {RPCResult::Type::STR, "asm", "Disassembly of the output script"},
              {RPCResult::Type::STR, "desc", "Inferred descriptor for the output"},
              {RPCResult::Type::STR_HEX, "hex", "The raw output script bytes, hex-encoded"},
+<<<<<<< HEAD
              {RPCResult::Type::STR, "address", /*optional=*/true, "The Bitcoin address (only if a well-defined address exists)"},
+=======
+             {RPCResult::Type::STR, "address", /*optional=*/true, "The BitNova address (only if a well-defined address exists)"},
+>>>>>>> 5360f2baff (Initialized BitNova project)
              {RPCResult::Type::STR, "type", "The type (one of: " + GetAllOutputTypes() + ")"},
          };
 }

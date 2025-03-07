@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 #
+<<<<<<< HEAD
 # Copyright (c) 2018-present The Bitcoin Core developers
+=======
+# Copyright (c) 2018-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -18,7 +22,11 @@ fi
 
 RUST_BACKTRACE=1 "${LINT_RUNNER_PATH}/test_runner"
 
+<<<<<<< HEAD
 if [ "$CIRRUS_REPO_FULL_NAME" = "bitcoin/bitcoin" ] && [ "$CIRRUS_PR" = "" ] ; then
+=======
+if [ "$CIRRUS_REPO_FULL_NAME" = "bitnova/bitnova" ] && [ "$CIRRUS_PR" = "" ] ; then
+>>>>>>> 5360f2baff (Initialized BitNova project)
     # Sanity check only the last few commits to get notified of missing sigs,
     # missing keys, or expired keys. Usually there is only one new merge commit
     # per push on the master branch and a few commits on release branches, so

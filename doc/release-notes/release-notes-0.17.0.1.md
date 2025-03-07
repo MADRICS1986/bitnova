@@ -1,16 +1,30 @@
+<<<<<<< HEAD
 Bitcoin Core version 0.17.0.1 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.17.0.1/>
+=======
+BitNova Core version 0.17.0.1 is now available from:
+
+  <https://bitnovacore.org/bin/bitnova-core-0.17.0.1/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This release provides a minor bug fix for 0.17.0.
 
 Please report bugs using the issue tracker at GitHub:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Notable changes
 ===============

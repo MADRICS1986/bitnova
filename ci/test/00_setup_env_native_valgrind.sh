@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 #
+<<<<<<< HEAD
 # Copyright (c) 2019-present The Bitcoin Core developers
+=======
+# Copyright (c) 2019-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,7 +15,11 @@ export CONTAINER_NAME=ci_native_valgrind
 export PACKAGES="valgrind clang-16 llvm-16 libclang-rt-16-dev python3-zmq libevent-dev libboost-dev libdb5.3++-dev libzmq3-dev libsqlite3-dev"
 export USE_VALGRIND=1
 export NO_DEPENDS=1
+<<<<<<< HEAD
 export TEST_RUNNER_EXTRA="--exclude feature_init,rpc_bind,feature_bind_extra"  # feature_init excluded for now, see https://github.com/bitcoin/bitcoin/issues/30011 ; bind tests excluded for now, see https://github.com/bitcoin/bitcoin/issues/17765#issuecomment-602068547
+=======
+export TEST_RUNNER_EXTRA="--exclude feature_init,rpc_bind,feature_bind_extra"  # feature_init excluded for now, see https://github.com/bitnova/bitnova/issues/30011 ; bind tests excluded for now, see https://github.com/bitnova/bitnova/issues/17765#issuecomment-602068547
+>>>>>>> 5360f2baff (Initialized BitNova project)
 export GOAL="install"
 # TODO enable GUI
 export BITCOIN_CONFIG="\

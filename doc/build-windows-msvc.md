@@ -1,6 +1,10 @@
 # Windows / MSVC Build Guide
 
+<<<<<<< HEAD
 This guide describes how to build bitcoind, command-line utilities, and GUI on Windows using Microsoft Visual Studio.
+=======
+This guide describes how to build bitnovad, command-line utilities, and GUI on Windows using Microsoft Visual Studio.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 For cross-compiling options, please see [`build-windows.md`](./build-windows.md).
 
@@ -21,21 +25,37 @@ The former is assumed hereinafter.
 
 Download and install [Git for Windows](https://git-scm.com/download/win). Once installed, Git is available from PowerShell or the Command Prompt.
 
+<<<<<<< HEAD
 ### 3. Clone Bitcoin Repository
 
 Clone the Bitcoin Core repository to a directory. All build scripts and commands will run from this directory.
 ```
 git clone https://github.com/bitcoin/bitcoin.git
+=======
+### 3. Clone BitNova Repository
+
+Clone the BitNova Core repository to a directory. All build scripts and commands will run from this directory.
+```
+git clone https://github.com/bitnova/bitnova.git
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 
 
 ## Triplets and Presets
 
+<<<<<<< HEAD
 The Bitcoin Core project supports the following vcpkg triplets:
 - `x64-windows` (both CRT and library linkage is dynamic)
 - `x64-windows-static` (both CRT and library linkage is static)
 
 To facilitate build process, the Bitcoin Core project provides presets, which are used in this guide.
+=======
+The BitNova Core project supports the following vcpkg triplets:
+- `x64-windows` (both CRT and library linkage is dynamic)
+- `x64-windows-static` (both CRT and library linkage is static)
+
+To facilitate build process, the BitNova Core project provides presets, which are used in this guide.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Available presets can be listed as follows:
 ```
@@ -92,4 +112,8 @@ Available features are listed in the [`vcpkg.json`](/vcpkg.json) file.
 
 ### 7. Antivirus Software
 
+<<<<<<< HEAD
 To improve the build process performance, one might add the Bitcoin repository directory to the Microsoft Defender Antivirus exclusions.
+=======
+To improve the build process performance, one might add the BitNova repository directory to the Microsoft Defender Antivirus exclusions.
+>>>>>>> 5360f2baff (Initialized BitNova project)

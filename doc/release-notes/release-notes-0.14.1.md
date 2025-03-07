@@ -1,22 +1,40 @@
+<<<<<<< HEAD
 Bitcoin Core version 0.14.1 is now available from:
 
   <https://bitcoin.org/bin/bitcoin-core-0.14.1/>
+=======
+BitNova Core version 0.14.1 is now available from:
+
+  <https://bitnova.org/bin/bitnova-core-0.14.1/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a new minor version release, including various bugfixes and
 performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Compatibility
 ==============
 
+<<<<<<< HEAD
 Bitcoin Core is extensively tested on multiple operating systems using
+=======
+BitNova Core is extensively tested on multiple operating systems using
+>>>>>>> 5360f2baff (Initialized BitNova project)
 the Linux kernel, macOS 10.8+, and Windows Vista and later.
 
 Microsoft ended support for Windows XP on [April 8th, 2014](https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support),
@@ -24,7 +42,11 @@ No attempt is made to prevent installing or running the software on Windows XP, 
 can still do so at your own risk but be aware that there are known instabilities and issues.
 Please do not report issues about Windows XP to the issue tracker.
 
+<<<<<<< HEAD
 Bitcoin Core should also work on most other Unix-like systems but is not
+=======
+BitNova Core should also work on most other Unix-like systems but is not
+>>>>>>> 5360f2baff (Initialized BitNova project)
 frequently tested on them.
 
 Notable changes
@@ -75,7 +97,11 @@ this parameter.
 
 Additional information relating to running on low-memory systems can be found
 here:
+<<<<<<< HEAD
 [reducing-bitcoind-memory-usage.md](https://gist.github.com/laanwj/efe29c7661ce9b6620a7).
+=======
+[reducing-bitnovad-memory-usage.md](https://gist.github.com/laanwj/efe29c7661ce9b6620a7).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 0.14.1 Change log
 =================
@@ -117,7 +143,11 @@ git merge commit are mentioned.
 ### Miscellaneous
 - #10037 `4d8e660` Trivial: Fix typo in help getrawtransaction RPC (keystrike)
 - #10120 `e4c9a90` util: Work around (virtual) memory exhaustion on 32-bit w/ glibc (laanwj)
+<<<<<<< HEAD
 - #10130 `ecc5232` bitcoin-tx input verification (awemany, jnewbery)
+=======
+- #10130 `ecc5232` bitnova-tx input verification (awemany, jnewbery)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Credits
 =======
@@ -139,5 +169,9 @@ Thanks to everyone who directly contributed to this release:
 - Suhas Daftuar
 - Wladimir J. van der Laan
 
+<<<<<<< HEAD
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
+=======
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 

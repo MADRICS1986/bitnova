@@ -59,8 +59,13 @@
         <translation type="unfinished">&amp;Pilih</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">Ini adalah alamat Bitcoin anda untuk pembayaran. Periksa jumlah dan alamat penerima sebelum membuat penghantaran koin sentiasa.</translation>
+=======
+        <source>These are your BitNova addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Ini adalah alamat BitNova anda untuk pembayaran. Periksa jumlah dan alamat penerima sebelum membuat penghantaran koin sentiasa.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -238,7 +243,11 @@
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">&amp;Gambaran Keseluruhan</translation>
@@ -293,8 +302,13 @@
         <translation type="unfinished">Aktiviti rangkaian dilumpuhkan</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Bitcoin address</source>
         <translation type="unfinished">Menghantar koin kepada alamat Bitcoin</translation>
+=======
+        <source>Send coins to a BitNova address</source>
+        <translation type="unfinished">Menghantar koin kepada alamat BitNova</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -317,12 +331,21 @@
         <translation type="unfinished">sulitkan kata laluan milik peribadi anda</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Bitcoin addresses to prove you own them</source>
         <translation type="unfinished">sahkan mesej bersama alamat bitcoin anda untuk menunjukkan alamat ini anda punya</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
         <translation type="unfinished">Sahkan mesej untuk memastikan mereka telah ditandatangani dengan alamat Bitcoin yang ditentukan</translation>
+=======
+        <source>Sign messages with your BitNova addresses to prove you own them</source>
+        <translation type="unfinished">sahkan mesej bersama alamat bitnova anda untuk menunjukkan alamat ini anda punya</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified BitNova addresses</source>
+        <translation type="unfinished">Sahkan mesej untuk memastikan mereka telah ditandatangani dengan alamat BitNova yang ditentukan</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>&amp;File</source>
@@ -342,8 +365,13 @@
 </translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
         <translation type="unfinished">Request payments (generates QR codes and bitcoin: URIs)
+=======
+        <source>Request payments (generates QR codes and bitnova: URIs)</source>
+        <translation type="unfinished">Request payments (generates QR codes and bitnova: URIs)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 </translation>
     </message>
     <message>
@@ -382,7 +410,11 @@
         <translation type="unfinished">Tutup Wallet</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -557,7 +589,11 @@
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>bitcoin-core</name>
+=======
+    <name>bitnova-core</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>Done loading</source>
         <translation type="unfinished">Baca Selesai</translation>

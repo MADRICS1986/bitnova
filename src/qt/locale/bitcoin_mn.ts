@@ -54,7 +54,11 @@
         <translation type="unfinished">С&amp;онго</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+=======
+        <source>These are your BitNova addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Эдгээр Биткойн хаягууд нь илгээх хаягууд. Хүлээн авах хаяг болон тоо хэмжээг илгээхээсээ өмнө сайн нягталж үзэж байна уу</translation>
     </message>
     <message>
@@ -157,7 +161,11 @@
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinApplication</name>
+=======
+    <name>BitNovaApplication</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>Internal error</source>
         <translation type="unfinished">Дотоод алдаа</translation>
@@ -225,7 +233,11 @@
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>&amp;Transactions</source>
         <translation type="unfinished">Гүйлгээнүүд</translation>
@@ -328,7 +340,11 @@
         <translation type="unfinished">Шинэчлэгдсэн</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -484,7 +500,11 @@
 <context>
     <name>Intro</name>
     <message>
+<<<<<<< HEAD
         <source>Bitcoin</source>
+=======
+        <source>BitNova</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Биткойн</translation>
     </message>
     <message numerus="yes">
@@ -820,7 +840,11 @@
         </translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: Invalid Bitcoin address</source>
+=======
+        <source>Warning: Invalid BitNova address</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Анхаар:Буруу Биткойны хаяг байна</translation>
     </message>
     <message>
@@ -1093,7 +1117,11 @@
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>bitcoin-core</name>
+=======
+    <name>bitnova-core</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>Done loading</source>
         <translation type="unfinished">Ачааллаж дууслаа</translation>

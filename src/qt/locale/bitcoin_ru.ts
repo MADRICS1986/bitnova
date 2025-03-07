@@ -58,11 +58,19 @@
         <translation type="unfinished">&amp;Выбрать</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">Это ваши биткоин-адреса для отправки платежей. Всегда проверяйте сумму и адрес получателя перед отправкой перевода.</translation>
     </message>
     <message>
         <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+=======
+        <source>These are your BitNova addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Это ваши биткоин-адреса для отправки платежей. Всегда проверяйте сумму и адрес получателя перед отправкой перевода.</translation>
+    </message>
+    <message>
+        <source>These are your BitNova addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Это ваши биткоин-адреса для приема платежей. Используйте кнопку "Создать новый адрес получения" на вкладке получения, чтобы создать новые адреса.
 Подпись возможна только с адресами типа "устаревший".</translation>
@@ -192,7 +200,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Назад</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+=======
+        <source>Remember that encrypting your wallet cannot fully protect your bitnovas from being stolen by malware infecting your computer.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Помните, что шифрование кошелька не может полностью защитить ваши биткоины от кражи вредоносным ПО, заразившим ваш компьютер.</translation>
     </message>
     <message>
@@ -264,7 +276,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinApplication</name>
+=======
+    <name>BitNovaApplication</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>Settings file %1 might be corrupt or invalid.</source>
         <translation type="unfinished">Файл настроек %1 повреждён или имеет неверный формат.</translation>
@@ -368,7 +384,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">&amp;Обзор</translation>
@@ -435,7 +455,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Прокси &lt;b&gt;включён&lt;/b&gt;: %1</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Bitcoin address</source>
+=======
+        <source>Send coins to a BitNova address</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Отправить средства на Биткоин адрес</translation>
     </message>
     <message>
@@ -479,7 +503,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Подписать &amp;сообщение...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+=======
+        <source>Sign messages with your BitNova addresses to prove you own them</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Подписать сообщения своими Биткоин кошельками, что-бы доказать, что вы ими владеете</translation>
     </message>
     <message>
@@ -487,7 +515,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Проверить сообщение</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
+=======
+        <source>Verify messages to ensure they were signed with specified BitNova addresses</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Проверяйте сообщения, чтобы убедиться, что они подписаны конкретными биткоин-адресами</translation>
     </message>
     <message>
@@ -547,8 +579,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Подключение к узлам…</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
         <translation type="unfinished">Запросить платёж (генерирует QR-коды и URI протокола bitcoin:)</translation>
+=======
+        <source>Request payments (generates QR codes and bitnova: URIs)</source>
+        <translation type="unfinished">Запросить платёж (генерирует QR-коды и URI протокола bitnova:)</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -603,7 +640,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Синхронизированно</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Bitcoin Transaction</source>
+=======
+        <source>Load Partially Signed BitNova Transaction</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Загрузить частично подписанную биткоин-транзакцию (PSBT)</translation>
     </message>
     <message>
@@ -611,7 +652,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Загрузить PSBT из &amp;буфера обмена…</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Bitcoin Transaction from clipboard</source>
+=======
+        <source>Load Partially Signed BitNova Transaction from clipboard</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Загрузить частично подписанную биткоин-транзакцию из буфера обмена</translation>
     </message>
     <message>
@@ -631,8 +676,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Адреса для получения</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Open a bitcoin: URI</source>
         <translation type="unfinished">Открыть URI протокола bitcoin:</translation>
+=======
+        <source>Open a bitnova: URI</source>
+        <translation type="unfinished">Открыть URI протокола bitnova:</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Open Wallet</source>
@@ -669,7 +719,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Перенос кошелька</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
+=======
+        <source>Show the %1 help message to get a list with possible BitNova command-line options</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Показать справку %1 со списком доступных параметров командной строки</translation>
     </message>
     <message>
@@ -729,12 +783,21 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Показать</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform>%n активное подключение к сети Bitcoin.</numerusform>
             <numerusform>%n активных подключения к сети Bitcoin.</numerusform>
             <numerusform>%n активных подключений к сети Bitcoin.</numerusform>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+        <extracomment>A substring of the tooltip.</extracomment>
+        <translation type="unfinished">
+            <numerusform>%n активное подключение к сети BitNova.</numerusform>
+            <numerusform>%n активных подключения к сети BitNova.</numerusform>
+            <numerusform>%n активных подключений к сети BitNova.</numerusform>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         </translation>
     </message>
     <message>
@@ -1243,7 +1306,11 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Изменить адрес отправки</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The entered address "%1" is not a valid Bitcoin address.</source>
+=======
+        <source>The entered address "%1" is not a valid BitNova address.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Введенный адрес "%1" не является действительным биткоин-адресом.</translation>
     </message>
     <message>
@@ -1330,8 +1397,13 @@ The migration process will create a backup of the wallet before migrating. This 
         </translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>%1 will download and store a copy of the Bitcoin block chain.</source>
         <translation type="unfinished">%1 скачает и сохранит копию цепочки блоков Bitcoin.</translation>
+=======
+        <source>%1 will download and store a copy of the BitNova block chain.</source>
+        <translation type="unfinished">%1 скачает и сохранит копию цепочки блоков BitNova.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1419,11 +1491,19 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>ModalOverlay</name>
     <message>
+<<<<<<< HEAD
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
         <translation type="unfinished">Недавние транзакции могут быть пока не видны, и поэтому отображаемый баланс вашего кошелька может быть неточной. Информация станет точной после завершения синхронизации с сетью биткоина. Прогресс синхронизации вы можете видеть снизу.</translation>
     </message>
     <message>
         <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+=======
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitnova network, as detailed below.</source>
+        <translation type="unfinished">Недавние транзакции могут быть пока не видны, и поэтому отображаемый баланс вашего кошелька может быть неточной. Информация станет точной после завершения синхронизации с сетью биткоина. Прогресс синхронизации вы можете видеть снизу.</translation>
+    </message>
+    <message>
+        <source>Attempting to spend bitnovas that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Попытка потратить средства, использованные в транзакциях, которые ещё не синхронизированы, будет отклонена сетью.</translation>
     </message>
     <message>
@@ -1474,8 +1554,13 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>OpenURIDialog</name>
     <message>
+<<<<<<< HEAD
         <source>Open bitcoin URI</source>
         <translation type="unfinished">Открыть URI bitcoin</translation>
+=======
+        <source>Open bitnova URI</source>
+        <translation type="unfinished">Открыть URI bitnova</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -1642,7 +1727,11 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">&amp;Внешний скрипт для подписи</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+=======
+        <source>Automatically open the BitNova client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Автоматически открыть порт биткоин-клиента на маршрутизаторе. Работает, если ваш маршрутизатор поддерживает UPnP, и данная функция на нём включена.</translation>
     </message>
     <message>
@@ -1650,7 +1739,11 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Пробросить порт через &amp;UPnP</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Automatically open the Bitcoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+=======
+        <source>Automatically open the BitNova client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Автоматически открыть порт биткоин-клиента на роутере. Сработает только если ваш роутер поддерживает NAT-PMP, и данная функция на нём включена. Внешний порт может быть случайным.</translation>
     </message>
     <message>
@@ -1666,8 +1759,13 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Разрешить &amp;входящие соединения</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
         <translation type="unfinished">Подключиться к сети Bitcoin через SOCKS5 прокси.</translation>
+=======
+        <source>Connect to the BitNova network through a SOCKS5 proxy.</source>
+        <translation type="unfinished">Подключиться к сети BitNova через SOCKS5 прокси.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1746,8 +1844,13 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Показывать параметры управления монетами.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Connect to the Bitcoin network through a separate SOCKS5 proxy for Tor onion services.</source>
         <translation type="unfinished">Подключаться к сети Bitcoin через отдельный SOCKS5 прокси для скрытых сервисов Tor.</translation>
+=======
+        <source>Connect to the BitNova network through a separate SOCKS5 proxy for Tor onion services.</source>
+        <translation type="unfinished">Подключаться к сети BitNova через отдельный SOCKS5 прокси для скрытых сервисов Tor.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor onion services:</source>
@@ -1834,8 +1937,13 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>OverviewPage</name>
     <message>
+<<<<<<< HEAD
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished">Отображаемая информация может быть устаревшей. Ваш кошелёк автоматически синхронизируется с сетью Bitcoin после подключения, и этот процесс пока не завершён.</translation>
+=======
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitNova network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished">Отображаемая информация может быть устаревшей. Ваш кошелёк автоматически синхронизируется с сетью BitNova после подключения, и этот процесс пока не завершён.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1961,7 +2069,11 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
+<<<<<<< HEAD
         <source>You can sign messages/agreements with your legacy (P2PKH) addresses to prove you can receive bitcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+=======
+        <source>You can sign messages/agreements with your legacy (P2PKH) addresses to prove you can receive bitnovas sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Вы можете подписывать сообщения/соглашения своими устаревшими (P2PKH) адресами, чтобы доказать, что вы можете получать биткоины на них. Будьте осторожны и не подписывайте непонятные или случайные сообщения, так как мошенники могут таким образом пытаться присвоить вашу личность. Подписывайте только такие сообщения, с которыми вы согласны вплоть до мелочей.</translation>
     </message>
     <message>
@@ -2186,14 +2298,23 @@ Go to File &gt; Open Wallet to load a wallet.
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>bitcoin-core</name>
+=======
+    <name>bitnova-core</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>The %s developers</source>
         <translation type="unfinished">Разработчики %s</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>%s corrupt. Try using the wallet tool bitcoin-wallet to salvage or restoring a backup.</source>
         <translation type="unfinished">%s испорчен. Попробуйте восстановить его с помощью инструмента bitcoin-wallet или из резервной копии.</translation>
+=======
+        <source>%s corrupt. Try using the wallet tool bitnova-wallet to salvage or restoring a backup.</source>
+        <translation type="unfinished">%s испорчен. Попробуйте восстановить его с помощью инструмента bitnova-wallet или из резервной копии.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>%s failed to validate the -assumeutxo snapshot state. This indicates a hardware problem, or a bug in the software, or a bad software modification that allowed an invalid snapshot to be loaded. As a result of this, the node will shut down and stop using any state that was built on the snapshot, resetting the chain height from %d to %d. On the next restart, the node will resume syncing from %d without using any snapshot data. Please report this incident to %s, including how you obtained the snapshot. The invalid snapshot chainstate will be left on disk in case it is helpful in diagnosing the issue that caused this error.</source>
@@ -2240,7 +2361,11 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">Ошибка: запись идентификатора дамп-файла неверна. Обнаружено "%s", ожидалось "%s".</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Error: Dumpfile version is not supported. This version of bitcoin-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
+=======
+        <source>Error: Dumpfile version is not supported. This version of bitnova-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Ошибка: версия дамп-файла не поддерживается. Эта версия биткоин-кошелька поддерживает только дамп-файлы версии 1. Обнаружен дамп-файл версии %s</translation>
     </message>
     <message>

@@ -1,22 +1,40 @@
+<<<<<<< HEAD
 Bitcoin Core version 0.14.2 is now available from:
 
   <https://bitcoin.org/bin/bitcoin-core-0.14.2/>
+=======
+BitNova Core version 0.14.2 is now available from:
+
+  <https://bitnova.org/bin/bitnova-core-0.14.2/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a new minor version release, including various bugfixes and
 performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Compatibility
 ==============
 
+<<<<<<< HEAD
 Bitcoin Core is extensively tested on multiple operating systems using
+=======
+BitNova Core is extensively tested on multiple operating systems using
+>>>>>>> 5360f2baff (Initialized BitNova project)
 the Linux kernel, macOS 10.8+, and Windows Vista and later.
 
 Microsoft ended support for Windows XP on [April 8th, 2014](https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support),
@@ -24,7 +42,11 @@ No attempt is made to prevent installing or running the software on Windows XP, 
 can still do so at your own risk but be aware that there are known instabilities and issues.
 Please do not report issues about Windows XP to the issue tracker.
 
+<<<<<<< HEAD
 Bitcoin Core should also work on most other Unix-like systems but is not
+=======
+BitNova Core should also work on most other Unix-like systems but is not
+>>>>>>> 5360f2baff (Initialized BitNova project)
 frequently tested on them.
 
 Notable changes
@@ -40,7 +62,11 @@ other impact.
 
 This only affects users that have explicitly enabled UPnP through the GUI
 setting or through the `-upnp` option, as since the last UPnP vulnerability
+<<<<<<< HEAD
 (in Bitcoin Core 0.10.3) it has been disabled by default.
+=======
+(in BitNova Core 0.10.3) it has been disabled by default.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 If you use this option, it is recommended to upgrade to this version as soon as
 possible.
@@ -48,7 +74,11 @@ possible.
 Known Bugs
 ==========
 
+<<<<<<< HEAD
 Since 0.14.0 the approximate transaction fee shown in Bitcoin-Qt when using coin
+=======
+Since 0.14.0 the approximate transaction fee shown in BitNova-Qt when using coin
+>>>>>>> 5360f2baff (Initialized BitNova project)
 control and smart fee estimation does not reflect any change in target from the
 smart fee slider. It will only present an approximate fee calculated using the
 default target. The fee calculated using the correct target is still applied to
@@ -71,7 +101,11 @@ git merge commit are mentioned.
 
 ### Build system
 - #10414 `ffb0c4b` miniupnpc 2.0.20170509 (fanquake)
+<<<<<<< HEAD
 - #10228 `ae479bc` Regenerate bitcoin-config.h as necessary (theuni)
+=======
+- #10228 `ae479bc` Regenerate bitnova-config.h as necessary (theuni)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ### Miscellaneous
 - #10245 `44a17f2` Minor fix in build documentation for FreeBSD 11 (shigeya)
@@ -98,5 +132,9 @@ Thanks to everyone who directly contributed to this release:
 - Shigeya Suzuki
 - Wladimir J. van der Laan
 
+<<<<<<< HEAD
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
+=======
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 

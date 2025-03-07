@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2020-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2020-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the getblockfrompeer RPC."""
@@ -15,14 +19,22 @@ from test_framework.p2p import (
     P2P_SERVICES,
     P2PInterface,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
 )
 
 
+<<<<<<< HEAD
 class GetBlockFromPeerTest(BitcoinTestFramework):
+=======
+class GetBlockFromPeerTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 3
         self.extra_args = [

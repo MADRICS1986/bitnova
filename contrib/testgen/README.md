@@ -1,6 +1,10 @@
 ### TestGen ###
 
+<<<<<<< HEAD
 Utilities to generate test vectors for the data-driven Bitcoin tests.
+=======
+Utilities to generate test vectors for the data-driven BitNova tests.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 To use inside a scripted-diff (or just execute directly):
 

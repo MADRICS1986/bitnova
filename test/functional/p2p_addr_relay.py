@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2020-2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2020-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -20,7 +24,11 @@ from test_framework.p2p import (
     p2p_lock,
     P2P_SERVICES,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
     assert_greater_than,
@@ -84,7 +92,11 @@ class AddrReceiver(P2PInterface):
         return self.message_count['getaddr'] > 0
 
 
+<<<<<<< HEAD
 class AddrTest(BitcoinTestFramework):
+=======
+class AddrTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     counter = 0
     mocktime = int(time.time())
 

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2021-2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2021-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -7,11 +11,19 @@ Test ports handling for I2P hosts
 """
 
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
 
 PROXY = "127.0.0.1:60000"
 
 class I2PPorts(BitcoinTestFramework):
+=======
+from test_framework.test_framework import BitNovaTestFramework
+
+PROXY = "127.0.0.1:60000"
+
+class I2PPorts(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         # The test assumes that an I2P SAM proxy is not listening here.

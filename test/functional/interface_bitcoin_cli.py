@@ -1,15 +1,26 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2017-2022 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test bitcoin-cli"""
+=======
+# Copyright (c) 2017-2022 The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+"""Test bitnova-cli"""
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 from decimal import Decimal
 import re
 
 from test_framework.blocktools import COINBASE_MATURITY
 from test_framework.netutil import test_ipv6_local
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
     assert_greater_than_or_equal,
@@ -33,7 +44,11 @@ WALLET_NOT_LOADED = 'Requested wallet does not exist or is not loaded'
 WALLET_NOT_SPECIFIED = (
     "Multiple wallets are loaded. Please select which wallet to use by requesting the RPC "
     "through the /wallet/<walletname> URI path. Or for the CLI, specify the \"-rpcwallet=<walletname>\" "
+<<<<<<< HEAD
     "option before the command (run \"bitcoin-cli -h\" for help or \"bitcoin-cli listwallets\" to see "
+=======
+    "option before the command (run \"bitnova-cli -h\" for help or \"bitnova-cli listwallets\" to see "
+>>>>>>> 5360f2baff (Initialized BitNova project)
     "which wallets are currently loaded)."
 )
 
@@ -72,7 +87,11 @@ def cli_get_info_string_to_dict(cli_get_info_string):
     return cli_get_info
 
 
+<<<<<<< HEAD
 class TestBitcoinCli(BitcoinTestFramework):
+=======
+class TestBitNovaCli(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser)
 
@@ -87,7 +106,11 @@ class TestBitcoinCli(BitcoinTestFramework):
         """Main test logic"""
         self.generate(self.nodes[0], BLOCKS)
 
+<<<<<<< HEAD
         self.log.info("Compare responses from getblockchaininfo RPC and `bitcoin-cli getblockchaininfo`")
+=======
+        self.log.info("Compare responses from getblockchaininfo RPC and `bitnova-cli getblockchaininfo`")
+>>>>>>> 5360f2baff (Initialized BitNova project)
         cli_response = self.nodes[0].cli.getblockchaininfo()
         rpc_response = self.nodes[0].getblockchaininfo()
         assert_equal(cli_response, rpc_response)
@@ -139,7 +162,11 @@ class TestBitcoinCli(BitcoinTestFramework):
 
         self.log.info("Test port usage preferences")
         node_rpc_port = rpc_port(self.nodes[0].index)
+<<<<<<< HEAD
         # Prevent bitcoin-cli from using existing rpcport in conf
+=======
+        # Prevent bitnova-cli from using existing rpcport in conf
+>>>>>>> 5360f2baff (Initialized BitNova project)
         conf_rpcport = "rpcport=" + str(node_rpc_port)
         self.nodes[0].replace_in_config([(conf_rpcport, "#" + conf_rpcport)])
         # prefer rpcport over rpcconnect
@@ -199,7 +226,11 @@ class TestBitcoinCli(BitcoinTestFramework):
         assert_equal(Decimal(cli_get_info['Difficulty']), blockchain_info['difficulty'])
         assert_equal(cli_get_info['Chain'], blockchain_info['chain'])
 
+<<<<<<< HEAD
         self.log.info("Test -getinfo and bitcoin-cli return all proxies")
+=======
+        self.log.info("Test -getinfo and bitnova-cli return all proxies")
+>>>>>>> 5360f2baff (Initialized BitNova project)
         self.restart_node(0, extra_args=["-proxy=127.0.0.1:9050", "-i2psam=127.0.0.1:7656"])
         network_info = self.nodes[0].getnetworkinfo()
         cli_get_info_string = self.nodes[0].cli('-getinfo').send_cli()
@@ -207,7 +238,11 @@ class TestBitcoinCli(BitcoinTestFramework):
         assert_equal(cli_get_info["Proxies"], "127.0.0.1:9050 (ipv4, ipv6, onion, cjdns), 127.0.0.1:7656 (i2p)")
 
         if self.is_specified_wallet_compiled():
+<<<<<<< HEAD
             self.log.info("Test -getinfo and bitcoin-cli getwalletinfo return expected wallet info")
+=======
+            self.log.info("Test -getinfo and bitnova-cli getwalletinfo return expected wallet info")
+>>>>>>> 5360f2baff (Initialized BitNova project)
             # Explicitly set the output type in order to have consistent tx vsize / fees
             # for both legacy and descriptor wallets (disables the change address type detection algorithm)
             self.restart_node(0, extra_args=["-addresstype=bech32", "-changetype=bech32"])
@@ -296,7 +331,11 @@ class TestBitcoinCli(BitcoinTestFramework):
             assert 'Balance' not in cli_get_info_keys
             assert 'Balances' not in cli_get_info_string
 
+<<<<<<< HEAD
             # Test bitcoin-cli -generate.
+=======
+            # Test bitnova-cli -generate.
+>>>>>>> 5360f2baff (Initialized BitNova project)
             n1 = 3
             n2 = 4
             w2.walletpassphrase(password, self.rpc_timeout)
@@ -337,7 +376,11 @@ class TestBitcoinCli(BitcoinTestFramework):
             assert_raises_rpc_error(-18, WALLET_NOT_LOADED, self.nodes[0].cli(rpcwallet3, '-generate', 0).echo)
             assert_raises_rpc_error(-18, WALLET_NOT_LOADED, self.nodes[0].cli(rpcwallet3, '-generate', 1, 2, 3).echo)
 
+<<<<<<< HEAD
             # Test bitcoin-cli -generate with -rpcwallet in multiwallet mode.
+=======
+            # Test bitnova-cli -generate with -rpcwallet in multiwallet mode.
+>>>>>>> 5360f2baff (Initialized BitNova project)
             self.nodes[0].loadwallet(wallets[2])
             n3 = 4
             n4 = 10
@@ -402,4 +445,8 @@ class TestBitcoinCli(BitcoinTestFramework):
 
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     TestBitcoinCli(__file__).main()
+=======
+    TestBitNovaCli(__file__).main()
+>>>>>>> 5360f2baff (Initialized BitNova project)

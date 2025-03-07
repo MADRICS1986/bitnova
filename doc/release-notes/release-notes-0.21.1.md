@@ -1,36 +1,60 @@
 0.21.1 Release Notes
 ====================
 
+<<<<<<< HEAD
 Bitcoin Core version 0.21.1 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.21.1/>
+=======
+BitNova Core version 0.21.1 is now available from:
+
+  <https://bitnovacore.org/bin/bitnova-core-0.21.1/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This minor release includes various bug fixes and performance
 improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 How to Upgrade
 ==============
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
+<<<<<<< HEAD
 installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
 or `bitcoind`/`bitcoin-qt` (on Linux).
 
 Upgrading directly from a version of Bitcoin Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
 wallet versions of Bitcoin Core are generally supported.
+=======
+installer (on Windows) or just copy over `/Applications/BitNova-Qt` (on Mac)
+or `bitnovad`/`bitnova-qt` (on Linux).
+
+Upgrading directly from a version of BitNova Core that has reached its EOL is
+possible, but it might take some time if the data directory needs to be migrated. Old
+wallet versions of BitNova Core are generally supported.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Compatibility
 ==============
 
+<<<<<<< HEAD
 Bitcoin Core is supported and extensively tested on operating systems
 using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  Bitcoin
 Core should also work on most other Unix-like systems but is not as
@@ -39,6 +63,16 @@ unsupported systems.
 
 From Bitcoin Core 0.20.0 onwards, macOS versions earlier than 10.12 are no
 longer supported. Additionally, Bitcoin Core does not yet change appearance
+=======
+BitNova Core is supported and extensively tested on operating systems
+using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  BitNova
+Core should also work on most other Unix-like systems but is not as
+frequently tested on them.  It is not recommended to use BitNova Core on
+unsupported systems.
+
+From BitNova Core 0.20.0 onwards, macOS versions earlier than 10.12 are no
+longer supported. Additionally, BitNova Core does not yet change appearance
+>>>>>>> 5360f2baff (Initialized BitNova project)
 when macOS "dark mode" is activated.
 
 Notable changes
@@ -53,7 +87,11 @@ for schnorr signatures (BIP340) and tapscript (BIP342).
 If activated, these improvements will allow users of single-signature
 scripts, multisignature scripts, and complex contracts to all use
 identical-appearing commitments that enhance their privacy and the
+<<<<<<< HEAD
 fungibility of all bitcoins. Spenders will enjoy lower fees and the
+=======
+fungibility of all bitnovas. Spenders will enjoy lower fees and the
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ability to resolve many multisig scripts and complex contracts with the
 same efficiency, low fees, and large anonymity set as single-sig users.
 Taproot and schnorr also include efficiency improvements for full nodes
@@ -80,7 +118,11 @@ payments to such addresses are not secure until taproot activates.
 It also includes the ability to relay and mine taproot transactions
 after activation.  Beyond those two basic capabilities, this release
 does not include any code that allows anyone to directly use taproot.
+<<<<<<< HEAD
 The addition of taproot-related features to Bitcoin Core's wallet is
+=======
+The addition of taproot-related features to BitNova Core's wallet is
+>>>>>>> 5360f2baff (Initialized BitNova project)
 expected in later releases once taproot activation is assured.
 
 All users, businesses, and miners are encouraged to upgrade to this
@@ -97,13 +139,18 @@ activates.  Alternatively, miners may manually start signaling on bit 2
 at any time; if taproot activates, they will need to ensure they update
 their nodes before block 709632 or non-upgraded nodes could cause them to mine on
 an invalid chain.  See the [versionbits
+<<<<<<< HEAD
 FAQ](https://bitcoincore.org/en/2016/06/08/version-bits-miners-faq/) for
+=======
+FAQ](https://bitnovacore.org/en/2016/06/08/version-bits-miners-faq/) for
+>>>>>>> 5360f2baff (Initialized BitNova project)
 details.
 
 
 For more information about taproot, please see the following resources:
 
 - Technical specifications
+<<<<<<< HEAD
   - [BIP340 Schnorr signatures for secp256k1](https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki) 
   - [BIP341 Taproot: SegWit version 1 spending rules](https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki)
   - [BIP342 Validation of Taproot scripts](https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki)
@@ -121,18 +168,45 @@ For more information about taproot, please see the following resources:
 
 - Other
   - [Questions and answers related to taproot](https://bitcoin.stackexchange.com/questions/tagged/taproot)
+=======
+  - [BIP340 Schnorr signatures for secp256k1](https://github.com/bitnova/bips/blob/master/bip-0340.mediawiki) 
+  - [BIP341 Taproot: SegWit version 1 spending rules](https://github.com/bitnova/bips/blob/master/bip-0341.mediawiki)
+  - [BIP342 Validation of Taproot scripts](https://github.com/bitnova/bips/blob/master/bip-0342.mediawiki)
+
+- Popular articles;
+  - [Taproot Is Coming: What It Is, and How It Will Benefit BitNova](https://bitnovamagazine.com/technical/taproot-coming-what-it-and-how-it-will-benefit-bitnova)
+  - [What do Schnorr Signatures Mean for BitNova?](https://academy.binance.com/en/articles/what-do-schnorr-signatures-mean-for-bitnova)
+  - [The Schnorr Signature & Taproot Softfork Proposal](https://blog.bitmex.com/the-schnorr-signature-taproot-softfork-proposal/)
+
+- Development history overview
+  - [Taproot](https://bitnovaops.org/en/topics/taproot/)
+  - [Schnorr signatures](https://bitnovaops.org/en/topics/schnorr-signatures/)
+  - [Tapscript](https://bitnovaops.org/en/topics/tapscript/)
+  - [Soft fork activation](https://bitnovaops.org/en/topics/soft-fork-activation/)
+
+- Other
+  - [Questions and answers related to taproot](https://bitnova.stackexchange.com/questions/tagged/taproot)
+>>>>>>> 5360f2baff (Initialized BitNova project)
   - [Taproot review](https://github.com/ajtowns/taproot-review)
 
 Updated RPCs
 ------------
 
+<<<<<<< HEAD
 - Due to [BIP 350](https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki)
+=======
+- Due to [BIP 350](https://github.com/bitnova/bips/blob/master/bip-0350.mediawiki)
+>>>>>>> 5360f2baff (Initialized BitNova project)
   being implemented, behavior for all RPCs that accept addresses is changed when
   a native witness version 1 (or higher) is passed. These now require a Bech32m
   encoding instead of a Bech32 one, and Bech32m encoding will be used for such
   addresses in RPC output as well. No version 1 addresses should be created
   for mainnet until consensus rules are adopted that give them meaning
+<<<<<<< HEAD
   (e.g. through [BIP 341](https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki)).
+=======
+  (e.g. through [BIP 341](https://github.com/bitnova/bips/blob/master/bip-0341.mediawiki)).
+>>>>>>> 5360f2baff (Initialized BitNova project)
   Once that happens, Bech32m is expected to be used for them, so this shouldn't
   affect any production systems, but may be observed on other networks where such
   addresses already have meaning (like signet).
@@ -174,7 +248,11 @@ Updated RPCs
 - #20861 BIP 350: Implement Bech32m and use it for v1+ segwit addresses (sipa)
 
 ### Documentation
+<<<<<<< HEAD
 - #21384 add signet to bitcoin.conf documentation (jonatack)
+=======
+- #21384 add signet to bitnova.conf documentation (jonatack)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #21342 Remove outdated comment (hebasto)
 
 Credits
@@ -200,4 +278,8 @@ Thanks to everyone who directly contributed to this release:
 - W. J. van der Laan
 
 As well as to everyone that helped with translations on
+<<<<<<< HEAD
 [Transifex](https://www.transifex.com/bitcoin/bitcoin/).
+=======
+[Transifex](https://www.transifex.com/bitnova/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)

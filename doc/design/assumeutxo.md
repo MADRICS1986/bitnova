@@ -5,8 +5,13 @@ For notes on the usage of Assumeutxo, please refer to [the usage doc](/doc/assum
 ## General background
 
 - [assumeutxo proposal](https://github.com/jamesob/assumeutxo-docs/tree/2019-04-proposal/proposal)
+<<<<<<< HEAD
 - [Github issue](https://github.com/bitcoin/bitcoin/issues/15605)
 - [draft PR](https://github.com/bitcoin/bitcoin/pull/15606)
+=======
+- [Github issue](https://github.com/bitnova/bitnova/issues/15605)
+- [draft PR](https://github.com/bitnova/bitnova/pull/15606)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ## Design notes
 
@@ -39,7 +44,11 @@ data.
 
 `ChainstateManager` manages a single Chainstate object, for which
 `m_from_snapshot_blockhash` is `std::nullopt`. This chainstate is (maybe obviously)
+<<<<<<< HEAD
 considered active. This is the "traditional" mode of operation for bitcoind.
+=======
+considered active. This is the "traditional" mode of operation for bitnovad.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 |    |    |
 | ---------- | ----------- |
@@ -109,7 +118,11 @@ background chainstate's UTXO set contents and ensure it matches the compiled val
 
 The background chainstate data lingers on disk until the program is restarted.
 
+<<<<<<< HEAD
 ### Bitcoind restarts sometime after snapshot validation has completed
+=======
+### BitNovad restarts sometime after snapshot validation has completed
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 After a shutdown and subsequent restart, `LoadChainstate()` cleans up the background
 chainstate with `ValidatedSnapshotCleanup()`, which renames the `chainstate_snapshot`

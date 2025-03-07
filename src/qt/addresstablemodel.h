@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2020 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2020 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -35,7 +39,11 @@ public:
 
     enum ColumnIndex {
         Label = 0,   /**< User specified label */
+<<<<<<< HEAD
         Address = 1  /**< Bitcoin address */
+=======
+        Address = 1  /**< BitNova address */
+>>>>>>> 5360f2baff (Initialized BitNova project)
     };
 
     enum RoleIndex {

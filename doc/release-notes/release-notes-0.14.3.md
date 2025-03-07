@@ -1,22 +1,40 @@
+<<<<<<< HEAD
 Bitcoin Core version *0.14.3* is now available from:
 
   <https://bitcoin.org/bin/bitcoin-core-0.14.3/>
+=======
+BitNova Core version *0.14.3* is now available from:
+
+  <https://bitnova.org/bin/bitnova-core-0.14.3/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a new minor version release, including various bugfixes and
 performance improvements.
 
 Please report bugs using the issue tracker at github:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Compatibility
 ==============
 
+<<<<<<< HEAD
 Bitcoin Core is extensively tested on multiple operating systems using
+=======
+BitNova Core is extensively tested on multiple operating systems using
+>>>>>>> 5360f2baff (Initialized BitNova project)
 the Linux kernel, macOS 10.8+, and Windows Vista and later.
 
 Microsoft ended support for Windows XP on [April 8th, 2014](https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support),
@@ -24,7 +42,11 @@ No attempt is made to prevent installing or running the software on Windows XP, 
 can still do so at your own risk but be aware that there are known instabilities and issues.
 Please do not report issues about Windows XP to the issue tracker.
 
+<<<<<<< HEAD
 Bitcoin Core should also work on most other Unix-like systems but is not
+=======
+BitNova Core should also work on most other Unix-like systems but is not
+>>>>>>> 5360f2baff (Initialized BitNova project)
 frequently tested on them.
 
 Notable changes
@@ -34,13 +56,21 @@ Denial-of-Service vulnerability CVE-2018-17144
  -------------------------------
 
 A denial-of-service vulnerability exploitable by miners has been discovered in
+<<<<<<< HEAD
 Bitcoin Core versions 0.14.0 up to 0.16.2. It is recommended to upgrade any of
+=======
+BitNova Core versions 0.14.0 up to 0.16.2. It is recommended to upgrade any of
+>>>>>>> 5360f2baff (Initialized BitNova project)
 the vulnerable versions to 0.14.3, 0.15.2 or 0.16.3 as soon as possible.
 
 Known Bugs
 ==========
 
+<<<<<<< HEAD
 Since 0.14.0 the approximate transaction fee shown in Bitcoin-Qt when using coin
+=======
+Since 0.14.0 the approximate transaction fee shown in BitNova-Qt when using coin
+>>>>>>> 5360f2baff (Initialized BitNova project)
 control and smart fee estimation does not reflect any change in target from the
 smart fee slider. It will only present an approximate fee calculated using the
 default target. The fee calculated using the correct target is still applied to
@@ -72,7 +102,11 @@ git merge commit are mentioned.
 
 ### Miscellaneous
 
+<<<<<<< HEAD
 - #10451 `3612219` contrib/init/bitcoind.openrcconf: Don't disable wallet by default (Luke Dashjr)
+=======
+- #10451 `3612219` contrib/init/bitnovad.openrcconf: Don't disable wallet by default (Luke Dashjr)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #10250 `e23cef0` Fix some empty vector references (Pieter Wuille)
 - #10196 `d28d583` PrioritiseTransaction updates the mempool tx counter (Suhas Daftuar)
 - #9497 `e207342` Fix CCheckQueue IsIdle (potential) race condition and remove dangerous constructors. (Jeremy Rubin)

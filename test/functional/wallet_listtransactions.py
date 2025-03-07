@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2014-present The Bitcoin Core developers
+=======
+# Copyright (c) 2014-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the listtransactions API."""
@@ -12,7 +16,11 @@ from test_framework.messages import (
     COIN,
     tx_from_hex,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_array_result,
     assert_equal,
@@ -20,7 +28,11 @@ from test_framework.util import (
 )
 
 
+<<<<<<< HEAD
 class ListTransactionsTest(BitcoinTestFramework):
+=======
+class ListTransactionsTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser)
 
@@ -306,7 +318,11 @@ class ListTransactionsTest(BitcoinTestFramework):
         txid_join = self.nodes[0].sendrawtransaction(hexstring=raw_hex, maxfeerate=0)
         fee_join = self.nodes[0].getmempoolentry(txid_join)["fees"]["base"]
         # Fee should be correct: assert_equal(fee_join, self.nodes[0].gettransaction(txid_join)['fee'])
+<<<<<<< HEAD
         # But it is not, see for example https://github.com/bitcoin/bitcoin/issues/14136:
+=======
+        # But it is not, see for example https://github.com/bitnova/bitnova/issues/14136:
+>>>>>>> 5360f2baff (Initialized BitNova project)
         assert fee_join != self.nodes[0].gettransaction(txid_join)["fee"]
 
     def run_invalid_parameters_test(self):

@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 """  Tests the mempool:* tracepoint API interface.
+<<<<<<< HEAD
      See https://github.com/bitcoin/bitcoin/blob/master/doc/tracing.md#context-mempool
+=======
+     See https://github.com/bitnova/bitnova/blob/master/doc/tracing.md#context-mempool
+>>>>>>> 5360f2baff (Initialized BitNova project)
 """
 
 import ctypes
@@ -19,7 +27,11 @@ except ImportError:
 from test_framework.blocktools import COINBASE_MATURITY
 from test_framework.messages import COIN, DEFAULT_MEMPOOL_EXPIRY_HOURS
 from test_framework.p2p import P2PDataStore
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import assert_equal
 from test_framework.wallet import MiniWallet
 
@@ -145,14 +157,22 @@ class MempoolReplaced(ctypes.Structure):
     ]
 
 
+<<<<<<< HEAD
 class MempoolTracepointTest(BitcoinTestFramework):
+=======
+class MempoolTracepointTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True
 
     def skip_test_if_missing_module(self):
         self.skip_if_platform_not_linux()
+<<<<<<< HEAD
         self.skip_if_no_bitcoind_tracepoints()
+=======
+        self.skip_if_no_bitnovad_tracepoints()
+>>>>>>> 5360f2baff (Initialized BitNova project)
         self.skip_if_no_python_bcc()
         self.skip_if_no_bpf_permissions()
 

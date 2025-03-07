@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -21,7 +25,11 @@ namespace Ui {
 }
 
 /**
+<<<<<<< HEAD
  * A single entry in the dialog for sending bitcoins.
+=======
+ * A single entry in the dialog for sending bitnovas.
+>>>>>>> 5360f2baff (Initialized BitNova project)
  */
 class SendCoinsEntry : public QWidget
 {

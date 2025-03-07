@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Copyright (c) 2024-present The Bitcoin Core developers
+=======
+# Copyright (c) 2024-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
@@ -19,7 +23,11 @@ execute_process(
   COMMAND_ERROR_IS_FATAL ANY
 )
 execute_process(
+<<<<<<< HEAD
   COMMAND ${LCOV_COMMAND} --capture --directory src --test-name test_bitcoin --output-file test_bitcoin.info
+=======
+  COMMAND ${LCOV_COMMAND} --capture --directory src --test-name test_bitnova --output-file test_bitnova.info
+>>>>>>> 5360f2baff (Initialized BitNova project)
   WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
   COMMAND_ERROR_IS_FATAL ANY
 )
@@ -29,22 +37,38 @@ execute_process(
   COMMAND_ERROR_IS_FATAL ANY
 )
 execute_process(
+<<<<<<< HEAD
   COMMAND ${LCOV_FILTER_COMMAND} test_bitcoin.info test_bitcoin_filtered.info
+=======
+  COMMAND ${LCOV_FILTER_COMMAND} test_bitnova.info test_bitnova_filtered.info
+>>>>>>> 5360f2baff (Initialized BitNova project)
   WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
   COMMAND_ERROR_IS_FATAL ANY
 )
 execute_process(
+<<<<<<< HEAD
   COMMAND ${LCOV_COMMAND} --add-tracefile test_bitcoin_filtered.info --output-file test_bitcoin_filtered.info
+=======
+  COMMAND ${LCOV_COMMAND} --add-tracefile test_bitnova_filtered.info --output-file test_bitnova_filtered.info
+>>>>>>> 5360f2baff (Initialized BitNova project)
   WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
   COMMAND_ERROR_IS_FATAL ANY
 )
 execute_process(
+<<<<<<< HEAD
   COMMAND ${LCOV_COMMAND} --add-tracefile baseline_filtered.info --add-tracefile test_bitcoin_filtered.info --output-file test_bitcoin_coverage.info
+=======
+  COMMAND ${LCOV_COMMAND} --add-tracefile baseline_filtered.info --add-tracefile test_bitnova_filtered.info --output-file test_bitnova_coverage.info
+>>>>>>> 5360f2baff (Initialized BitNova project)
   WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
   COMMAND_ERROR_IS_FATAL ANY
 )
 execute_process(
+<<<<<<< HEAD
   COMMAND ${GENHTML_COMMAND} test_bitcoin_coverage.info --output-directory test_bitcoin.coverage
+=======
+  COMMAND ${GENHTML_COMMAND} test_bitnova_coverage.info --output-directory test_bitnova.coverage
+>>>>>>> 5360f2baff (Initialized BitNova project)
   WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
   COMMAND_ERROR_IS_FATAL ANY
 )
@@ -75,7 +99,11 @@ execute_process(
   COMMAND_ERROR_IS_FATAL ANY
 )
 execute_process(
+<<<<<<< HEAD
   COMMAND ${LCOV_COMMAND} --add-tracefile baseline_filtered.info --add-tracefile test_bitcoin_filtered.info --add-tracefile functional_test_filtered.info --output-file total_coverage.info
+=======
+  COMMAND ${LCOV_COMMAND} --add-tracefile baseline_filtered.info --add-tracefile test_bitnova_filtered.info --add-tracefile functional_test_filtered.info --output-file total_coverage.info
+>>>>>>> 5360f2baff (Initialized BitNova project)
   COMMAND ${GREP_EXECUTABLE} "%"
   COMMAND ${AWK_EXECUTABLE} "{ print substr($3,2,50) \"/\" $5 }"
   OUTPUT_FILE coverage_percent.txt

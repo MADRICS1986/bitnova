@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2018-2020 The Bitcoin Core developers
+=======
+// Copyright (c) 2018-2020 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,19 +14,32 @@
 #include <string>
 #include <utility>
 
+<<<<<<< HEAD
 class BitcoinApplication;
 class BitcoinGUI;
+=======
+class BitNovaApplication;
+class BitNovaGUI;
+>>>>>>> 5360f2baff (Initialized BitNova project)
 class RPCConsole;
 
 class AppTests : public QObject
 {
     Q_OBJECT
 public:
+<<<<<<< HEAD
     explicit AppTests(BitcoinApplication& app) : m_app(app) {}
 
 private Q_SLOTS:
     void appTests();
     void guiTests(BitcoinGUI* window);
+=======
+    explicit AppTests(BitNovaApplication& app) : m_app(app) {}
+
+private Q_SLOTS:
+    void appTests();
+    void guiTests(BitNovaGUI* window);
+>>>>>>> 5360f2baff (Initialized BitNova project)
     void consoleTests(RPCConsole* console);
 
 private:
@@ -37,8 +54,13 @@ private:
         ~HandleCallback();
     };
 
+<<<<<<< HEAD
     //! Bitcoin application.
     BitcoinApplication& m_app;
+=======
+    //! BitNova application.
+    BitNovaApplication& m_app;
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     //! Set of pending callback names. Used to track expected callbacks and shut
     //! down the app after the last callback has been handled and all tests have

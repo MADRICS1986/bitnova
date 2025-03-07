@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 // Copyright (c) 2020-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2020-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef BITCOIN_UTIL_TRACE_H
 #define BITCOIN_UTIL_TRACE_H
 
+<<<<<<< HEAD
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #ifdef ENABLE_TRACING
 

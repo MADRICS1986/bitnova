@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,9 +24,15 @@ QT_END_NAMESPACE
 
 /**
  * A container for embedding all wallet-related
+<<<<<<< HEAD
  * controls into BitcoinGUI. The purpose of this class is to allow future
  * refinements of the wallet controls with minimal need for further
  * modifications to BitcoinGUI, thus greatly simplifying merges while
+=======
+ * controls into BitNovaGUI. The purpose of this class is to allow future
+ * refinements of the wallet controls with minimal need for further
+ * modifications to BitNovaGUI, thus greatly simplifying merges while
+>>>>>>> 5360f2baff (Initialized BitNova project)
  * reducing the risk of breaking top-level stuff.
  */
 class WalletFrame : public QFrame
@@ -81,7 +91,11 @@ public Q_SLOTS:
     /** Show Sign/Verify Message dialog and switch to verify message tab */
     void gotoVerifyMessageTab(QString addr = "");
 
+<<<<<<< HEAD
     /** Load Partially Signed Bitcoin Transaction */
+=======
+    /** Load Partially Signed BitNova Transaction */
+>>>>>>> 5360f2baff (Initialized BitNova project)
     void gotoLoadPSBT(bool from_clipboard = false);
 
     /** Encrypt the wallet */

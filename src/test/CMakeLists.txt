@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 # Copyright (c) 2023-present The Bitcoin Core developers
+=======
+# Copyright (c) 2023-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
 # Do not use generator expressions in test sources because the
 # SOURCES property is processed to gather test suite macros.
+<<<<<<< HEAD
 add_executable(test_bitcoin
+=======
+add_executable(test_bitnova
+>>>>>>> 5360f2baff (Initialized BitNova project)
   main.cpp
   addrman_tests.cpp
   allocator_tests.cpp
@@ -125,7 +133,11 @@ add_executable(test_bitcoin
 )
 
 include(TargetDataSources)
+<<<<<<< HEAD
 target_json_data_sources(test_bitcoin
+=======
+target_json_data_sources(test_bitnova
+>>>>>>> 5360f2baff (Initialized BitNova project)
   data/base58_encode_decode.json
   data/bip341_wallet_vectors.json
   data/blockfilters.json
@@ -136,6 +148,7 @@ target_json_data_sources(test_bitcoin
   data/tx_invalid.json
   data/tx_valid.json
 )
+<<<<<<< HEAD
 target_raw_data_sources(test_bitcoin NAMESPACE test::data
   data/asmap.raw
 )
@@ -146,6 +159,18 @@ target_link_libraries(test_bitcoin
   bitcoin_cli
   bitcoin_node
   bitcoin_consensus
+=======
+target_raw_data_sources(test_bitnova NAMESPACE test::data
+  data/asmap.raw
+)
+
+target_link_libraries(test_bitnova
+  core_interface
+  test_util
+  bitnova_cli
+  bitnova_node
+  bitnova_consensus
+>>>>>>> 5360f2baff (Initialized BitNova project)
   minisketch
   secp256k1
   Boost::headers
@@ -157,17 +182,29 @@ if(ENABLE_WALLET)
 endif()
 
 if(WITH_MULTIPROCESS)
+<<<<<<< HEAD
   target_link_libraries(bitcoin_ipc_test
+=======
+  target_link_libraries(bitnova_ipc_test
+>>>>>>> 5360f2baff (Initialized BitNova project)
     PRIVATE
       core_interface
       univalue
   )
 
+<<<<<<< HEAD
   target_sources(test_bitcoin
     PRIVATE
       ipc_tests.cpp
   )
   target_link_libraries(test_bitcoin bitcoin_ipc_test bitcoin_ipc)
+=======
+  target_sources(test_bitnova
+    PRIVATE
+      ipc_tests.cpp
+  )
+  target_link_libraries(test_bitnova bitnova_ipc_test bitnova_ipc)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 endif()
 
 function(add_boost_test source_file)
@@ -186,7 +223,11 @@ function(add_boost_test source_file)
   )
   if(test_suite_name)
     add_test(NAME ${test_suite_name}
+<<<<<<< HEAD
       COMMAND test_bitcoin --run_test=${test_suite_name} --catch_system_error=no --log_level=test_suite -- DEBUG_LOG_OUT
+=======
+      COMMAND test_bitnova --run_test=${test_suite_name} --catch_system_error=no --log_level=test_suite -- DEBUG_LOG_OUT
+>>>>>>> 5360f2baff (Initialized BitNova project)
     )
     set_property(TEST ${test_suite_name} PROPERTY
       SKIP_REGULAR_EXPRESSION "no test cases matching filter"
@@ -195,8 +236,13 @@ function(add_boost_test source_file)
 endfunction()
 
 function(add_all_test_targets)
+<<<<<<< HEAD
   get_target_property(test_source_dir test_bitcoin SOURCE_DIR)
   get_target_property(test_sources test_bitcoin SOURCES)
+=======
+  get_target_property(test_source_dir test_bitnova SOURCE_DIR)
+  get_target_property(test_sources test_bitnova SOURCES)
+>>>>>>> 5360f2baff (Initialized BitNova project)
   foreach(test_source ${test_sources})
     cmake_path(IS_RELATIVE test_source result)
     if(result)
@@ -208,4 +254,8 @@ endfunction()
 
 add_all_test_targets()
 
+<<<<<<< HEAD
 install_binary_component(test_bitcoin)
+=======
+install_binary_component(test_bitnova)
+>>>>>>> 5360f2baff (Initialized BitNova project)

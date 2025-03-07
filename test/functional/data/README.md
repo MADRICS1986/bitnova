@@ -14,7 +14,11 @@ The alternate mainnet chain was generated as follows:
 for i in {1..2015}
 do
  faketime "`date -d @"$(( 1231006505 + $i * 120 ))"  +'%Y-%m-%d %H:%M:%S'`" \
+<<<<<<< HEAD
  bitcoind -connect=0 -nocheckpoints -stopatheight=$i
+=======
+ bitnovad -connect=0 -nocheckpoints -stopatheight=$i
+>>>>>>> 5360f2baff (Initialized BitNova project)
 done
 ```
 

@@ -1,11 +1,19 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
+<<<<<<< HEAD
 // Copyright (c) 2009-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2009-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <wallet/wallet.h>
 
+<<<<<<< HEAD
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <addresstype.h>
 #include <blockfilter.h>
 #include <chain.h>
@@ -1184,9 +1192,15 @@ CWalletTx* CWallet::AddToWallet(CTransactionRef tx, const TxState& state, const 
 #ifndef WIN32
         // Substituting the wallet name isn't currently supported on windows
         // because windows shell escaping has not been implemented yet:
+<<<<<<< HEAD
         // https://github.com/bitcoin/bitcoin/pull/13339#issuecomment-537384875
         // A few ways it could be implemented in the future are described in:
         // https://github.com/bitcoin/bitcoin/pull/13339#issuecomment-461288094
+=======
+        // https://github.com/bitnova/bitnova/pull/13339#issuecomment-537384875
+        // A few ways it could be implemented in the future are described in:
+        // https://github.com/bitnova/bitnova/pull/13339#issuecomment-461288094
+>>>>>>> 5360f2baff (Initialized BitNova project)
         ReplaceAll(strCmd, "%w", ShellEscape(GetName()));
 #endif
         std::thread t(runCommand, strCmd);
@@ -1204,7 +1218,11 @@ bool CWallet::LoadToWallet(const uint256& hash, const UpdateWalletTxFn& fill_wtx
     if (!fill_wtx(wtx, ins.second)) {
         return false;
     }
+<<<<<<< HEAD
     // If wallet doesn't have a chain (e.g when using bitcoin-wallet tool),
+=======
+    // If wallet doesn't have a chain (e.g when using bitnova-wallet tool),
+>>>>>>> 5360f2baff (Initialized BitNova project)
     // don't bother to update txn.
     if (HaveChain()) {
       wtx.updateState(chain());
@@ -1476,7 +1494,11 @@ void CWallet::transactionRemovedFromMempool(const CTransactionRef& tx, MemPoolRe
         //    provide the conflicting block's hash and height, and for backwards
         //    compatibility reasons it may not be not safe to store conflicted
         //    wallet transactions with a null block hash. See
+<<<<<<< HEAD
         //    https://github.com/bitcoin/bitcoin/pull/18600#discussion_r420195993.
+=======
+        //    https://github.com/bitnova/bitnova/pull/18600#discussion_r420195993.
+>>>>>>> 5360f2baff (Initialized BitNova project)
         // 2. For most of these transactions, the wallet's internal conflict
         //    detection in the blockConnected handler will subsequently call
         //    MarkConflicted and update them with CONFLICTED status anyway. This
@@ -1484,7 +1506,11 @@ void CWallet::transactionRemovedFromMempool(const CTransactionRef& tx, MemPoolRe
         //    block, or that has ancestors in the wallet with inputs spent by
         //    the block.
         // 3. Longstanding behavior since the sync implementation in
+<<<<<<< HEAD
         //    https://github.com/bitcoin/bitcoin/pull/9371 and the prior sync
+=======
+        //    https://github.com/bitnova/bitnova/pull/9371 and the prior sync
+>>>>>>> 5360f2baff (Initialized BitNova project)
         //    implementation before that was to mark these transactions
         //    unconfirmed rather than conflicted.
         //
@@ -1492,7 +1518,11 @@ void CWallet::transactionRemovedFromMempool(const CTransactionRef& tx, MemPoolRe
         // when improving this code in the future. The wallet's heuristics for
         // distinguishing between conflicted and unconfirmed transactions are
         // imperfect, and could be improved in general, see
+<<<<<<< HEAD
         // https://github.com/bitcoin-core/bitcoin-devwiki/wiki/Wallet-Transaction-Conflict-Tracking
+=======
+        // https://github.com/bitnova-core/bitnova-devwiki/wiki/Wallet-Transaction-Conflict-Tracking
+>>>>>>> 5360f2baff (Initialized BitNova project)
         SyncTransaction(tx, TxStateInactive{});
     }
 
@@ -2855,8 +2885,13 @@ void CWallet::GetKeyBirthTimes(std::map<CKeyID, int64_t>& mapKeyBirth) const {
  *   the block time.
  *
  * For more information see CWalletTx::nTimeSmart,
+<<<<<<< HEAD
  * https://bitcointalk.org/?topic=54527, or
  * https://github.com/bitcoin/bitcoin/pull/1393.
+=======
+ * https://bitnovatalk.org/?topic=54527, or
+ * https://github.com/bitnova/bitnova/pull/1393.
+>>>>>>> 5360f2baff (Initialized BitNova project)
  */
 unsigned int CWallet::ComputeTimeSmart(const CWalletTx& wtx, bool rescanning_old_block) const
 {
@@ -3276,7 +3311,11 @@ bool CWallet::AttachChain(const std::shared_ptr<CWallet>& walletInstance, interf
             // Wallet is assumed to be from another chain, if genesis block in the active
             // chain differs from the genesis block known to the wallet.
             if (chain.getBlockHash(0) != locator.vHave.back()) {
+<<<<<<< HEAD
                 error = Untranslated("Wallet files should not be reused across chains. Restart bitcoind with -walletcrosschain to override.");
+=======
+                error = Untranslated("Wallet files should not be reused across chains. Restart bitnovad with -walletcrosschain to override.");
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 return false;
             }
         }

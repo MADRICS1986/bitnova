@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2021-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2021-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,10 +11,17 @@ import sys
 import ctypes
 from bcc import BPF, USDT
 
+<<<<<<< HEAD
 """Example logging Bitcoin Core utxo set cache flushes utilizing
     the utxocache:flush tracepoint."""
 
 # USAGE:  ./contrib/tracing/log_utxocache_flush.py path/to/bitcoind
+=======
+"""Example logging BitNova Core utxo set cache flushes utilizing
+    the utxocache:flush tracepoint."""
+
+# USAGE:  ./contrib/tracing/log_utxocache_flush.py path/to/bitnovad
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 # BCC: The C program to be compiled to an eBPF program (by BCC) and loaded into
 # a sandboxed Linux kernel VM.
@@ -71,6 +82,7 @@ def print_event(event):
 
 
 def main(pid):
+<<<<<<< HEAD
     print(f"Hooking into bitcoind with pid {pid}")
     bitcoind_with_usdts = USDT(pid=int(pid))
 
@@ -79,6 +91,16 @@ def main(pid):
     bitcoind_with_usdts.enable_probe(
         probe="flush", fn_name="trace_flush")
     b = BPF(text=program, usdt_contexts=[bitcoind_with_usdts])
+=======
+    print(f"Hooking into bitnovad with pid {pid}")
+    bitnovad_with_usdts = USDT(pid=int(pid))
+
+    # attaching the trace functions defined in the BPF program
+    # to the tracepoints
+    bitnovad_with_usdts.enable_probe(
+        probe="flush", fn_name="trace_flush")
+    b = BPF(text=program, usdt_contexts=[bitnovad_with_usdts])
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     def handle_flush(_, data, size):
         """ Coins Flush handler.
@@ -101,7 +123,11 @@ def main(pid):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
+<<<<<<< HEAD
         print("USAGE: ", sys.argv[0], "<pid of bitcoind>")
+=======
+        print("USAGE: ", sys.argv[0], "<pid of bitnovad>")
+>>>>>>> 5360f2baff (Initialized BitNova project)
         exit(1)
 
     pid = sys.argv[1]

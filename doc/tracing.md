@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # User-space, Statically Defined Tracing (USDT) for Bitcoin Core
 
 Bitcoin Core includes statically defined tracepoints to allow for more
+=======
+# User-space, Statically Defined Tracing (USDT) for BitNova Core
+
+BitNova Core includes statically defined tracepoints to allow for more
+>>>>>>> 5360f2baff (Initialized BitNova project)
 observability during development, debugging, code review, and production usage.
 These tracepoints make it possible to keep track of custom statistics and
 enable detailed monitoring of otherwise hidden internals. They have
@@ -11,7 +17,11 @@ eBPF and USDT Overview
 ======================
 
                 ┌──────────────────┐            ┌──────────────┐
+<<<<<<< HEAD
                 │ tracing script   │            │ bitcoind     │
+=======
+                │ tracing script   │            │ bitnovad     │
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 │==================│      2.    │==============│
                 │  eBPF  │ tracing │      hooks │              │
                 │  code  │ logic   │      into┌─┤►tracepoint 1─┼───┐ 3.
@@ -171,7 +181,11 @@ Arguments passed:
 
 The following tracepoints cover the in-memory UTXO cache. UTXOs are, for example,
 added to and removed (spent) from the cache when we connect a new block.
+<<<<<<< HEAD
 **Note**: Bitcoin Core uses temporary clones of the _main_ UTXO cache
+=======
+**Note**: BitNova Core uses temporary clones of the _main_ UTXO cache
+>>>>>>> 5360f2baff (Initialized BitNova project)
 (`chainstate.CoinsTip()`). For example, the RPCs `generateblock` and
 `getblocktemplate` call `TestBlockValidity()`, which applies the UTXO set
 changes to a temporary cache. Similarly, mempool consistency checks, which are
@@ -323,7 +337,11 @@ Arguments passed:
 1. Transaction ID (hash) as `pointer to unsigned chars` (i.e. 32 bytes in little-endian)
 2. Reject reason as `pointer to C-style String` (max. length 118 characters)
 
+<<<<<<< HEAD
 ## Adding tracepoints to Bitcoin Core
+=======
+## Adding tracepoints to BitNova Core
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Use the `TRACEPOINT` macro to add a new tracepoint. If not yet included, include
 `util/trace.h` (defines the tracepoint macros) with `#include <util/trace.h>`.
@@ -422,11 +440,16 @@ maximum expected string size if known.
 
 ## Listing available tracepoints
 
+<<<<<<< HEAD
 Multiple tools can list the available tracepoints in a `bitcoind` binary with
+=======
+Multiple tools can list the available tracepoints in a `bitnovad` binary with
+>>>>>>> 5360f2baff (Initialized BitNova project)
 USDT support.
 
 ### GDB - GNU Project Debugger
 
+<<<<<<< HEAD
 To list probes in Bitcoin Core, use `info probes` in `gdb`:
 
 ```
@@ -437,16 +460,36 @@ Type Provider   Name             Where              Semaphore Object
 stap net        inbound_message  0x000000000014419e 0x0000000000d29bd2 /build/src/bitcoind
 stap net        outbound_message 0x0000000000107c05 0x0000000000d29bd0 /build/src/bitcoind
 stap validation block_connected  0x00000000002fb10c 0x0000000000d29bd8 /build/src/bitcoind
+=======
+To list probes in BitNova Core, use `info probes` in `gdb`:
+
+```
+$ gdb ./build/src/bitnovad
+…
+(gdb) info probes
+Type Provider   Name             Where              Semaphore Object
+stap net        inbound_message  0x000000000014419e 0x0000000000d29bd2 /build/src/bitnovad
+stap net        outbound_message 0x0000000000107c05 0x0000000000d29bd0 /build/src/bitnovad
+stap validation block_connected  0x00000000002fb10c 0x0000000000d29bd8 /build/src/bitnovad
+>>>>>>> 5360f2baff (Initialized BitNova project)
 …
 ```
 
 ### With `readelf`
 
+<<<<<<< HEAD
 The `readelf` tool can be used to display the USDT tracepoints in Bitcoin Core.
 Look for the notes with the description `NT_STAPSDT`.
 
 ```
 $ readelf -n ./build/src/bitcoind | grep NT_STAPSDT -A 4 -B 2
+=======
+The `readelf` tool can be used to display the USDT tracepoints in BitNova Core.
+Look for the notes with the description `NT_STAPSDT`.
+
+```
+$ readelf -n ./build/src/bitnovad | grep NT_STAPSDT -A 4 -B 2
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Displaying notes found in: .note.stapsdt
   Owner                 Data size	Description
   stapsdt              0x0000005d	NT_STAPSDT (SystemTap probe descriptors)
@@ -470,7 +513,11 @@ between distributions. For example, on
 [ubuntu binary]: https://github.com/iovisor/bcc/blob/master/INSTALL.md#ubuntu---binary
 
 ```
+<<<<<<< HEAD
 $ tplist -l ./build/src/bitcoind -v
+=======
+$ tplist -l ./build/src/bitnovad -v
+>>>>>>> 5360f2baff (Initialized BitNova project)
 b'net':b'outbound_message' [sema 0xd29bd0]
   1 location(s)
   6 argument(s)

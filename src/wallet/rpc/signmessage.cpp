@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -17,7 +21,11 @@ RPCHelpMan signmessage()
         "\nSign a message with the private key of an address" +
           HELP_REQUIRING_PASSPHRASE,
         {
+<<<<<<< HEAD
             {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The bitcoin address to use for the private key."},
+=======
+            {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The bitnova address to use for the private key."},
+>>>>>>> 5360f2baff (Initialized BitNova project)
             {"message", RPCArg::Type::STR, RPCArg::Optional::NO, "The message to create a signature of."},
         },
         RPCResult{

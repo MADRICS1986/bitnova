@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2018-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2018-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -21,7 +25,11 @@ private:
     //! The command which handles interaction with the external signer.
     std::string m_command;
 
+<<<<<<< HEAD
     //! Bitcoin mainnet, testnet, etc
+=======
+    //! BitNova mainnet, testnet, etc
+>>>>>>> 5360f2baff (Initialized BitNova project)
     std::string m_chain;
 
     std::string NetworkArg() const;

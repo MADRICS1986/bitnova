@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2018-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2018-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Backwards compatibility functional test
@@ -18,7 +22,11 @@ import os
 import shutil
 
 from test_framework.blocktools import COINBASE_MATURITY
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.descriptors import descsum_create
 
 from test_framework.util import (
@@ -27,7 +35,11 @@ from test_framework.util import (
 )
 
 
+<<<<<<< HEAD
 class BackwardsCompatibilityTest(BitcoinTestFramework):
+=======
+class BackwardsCompatibilityTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser)
 
@@ -108,7 +120,11 @@ class BackwardsCompatibilityTest(BitcoinTestFramework):
         assert wallet.getaddressinfo(address_18075)["solvable"]
         node_v19.unloadwallet("w1_v19")
 
+<<<<<<< HEAD
         # Copy the 0.19 wallet to the last Bitcoin Core version and open it:
+=======
+        # Copy the 0.19 wallet to the last BitNova Core version and open it:
+>>>>>>> 5360f2baff (Initialized BitNova project)
         shutil.copytree(
             os.path.join(node_v19.wallets_path, "w1_v19"),
             os.path.join(node_master.wallets_path, "w1_v19")
@@ -261,7 +277,11 @@ class BackwardsCompatibilityTest(BitcoinTestFramework):
         if self.options.descriptors:
             self.log.info("Test descriptor wallet incompatibility on:")
             for node in legacy_only_nodes:
+<<<<<<< HEAD
                 # RPC loadwallet failure causes bitcoind to exit in <= 0.17, in addition to the RPC
+=======
+                # RPC loadwallet failure causes bitnovad to exit in <= 0.17, in addition to the RPC
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 # call failure, so the following test won't work:
                 # assert_raises_rpc_error(-4, "Wallet loading failed.", node_v17.loadwallet, 'w3')
                 if self.major_version_less_than(node, 18):
@@ -282,7 +302,11 @@ class BackwardsCompatibilityTest(BitcoinTestFramework):
             node_v17.assert_start_raises_init_error(["-wallet=w3"], "Error: wallet.dat corrupt, salvage failed")
         else:
             self.log.info("Test blank wallet incompatibility with v17")
+<<<<<<< HEAD
             node_v17.assert_start_raises_init_error(["-wallet=w3"], "Error: Error loading w3: Wallet requires newer version of Bitcoin Core")
+=======
+            node_v17.assert_start_raises_init_error(["-wallet=w3"], "Error: Error loading w3: Wallet requires newer version of BitNova Core")
+>>>>>>> 5360f2baff (Initialized BitNova project)
         self.start_node(node_v17.index)
 
         # When descriptors are enabled, w1 cannot be opened by 0.21 since it contains a taproot descriptor
@@ -325,7 +349,11 @@ class BackwardsCompatibilityTest(BitcoinTestFramework):
             # Restore the wallet to master
             load_res = node_master.restorewallet(wallet_name, backup_path)
 
+<<<<<<< HEAD
             # Make sure this wallet opens with only the migration warning. See https://github.com/bitcoin/bitcoin/pull/19054
+=======
+            # Make sure this wallet opens with only the migration warning. See https://github.com/bitnova/bitnova/pull/19054
+>>>>>>> 5360f2baff (Initialized BitNova project)
             if not self.options.descriptors:
                 # Legacy wallets will have only a deprecation warning
                 assert_equal(load_res["warnings"], ["Wallet loaded successfully. The legacy wallet type is being deprecated and support for creating and opening legacy wallets will be removed in the future. Legacy wallets can be migrated to a descriptor wallet with migratewallet."])

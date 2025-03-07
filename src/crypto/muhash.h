@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2017-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2017-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -94,7 +98,11 @@ public:
  * is intended to represent a set of elements.
  *
  * See also https://cseweb.ucsd.edu/~mihir/papers/inchash.pdf and
+<<<<<<< HEAD
  * https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-May/014337.html.
+=======
+ * https://lists.linuxfoundation.org/pipermail/bitnova-dev/2017-May/014337.html.
+>>>>>>> 5360f2baff (Initialized BitNova project)
  */
 class MuHash3072
 {

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Copyright (c) 2023-present The Bitcoin Core developers
+=======
+# Copyright (c) 2023-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
@@ -7,7 +11,11 @@ include_guard(GLOBAL)
 # Illumos/SmartOS requires linking with -lsocket if
 # using getifaddrs & freeifaddrs.
 # See:
+<<<<<<< HEAD
 # - https://github.com/bitcoin/bitcoin/pull/21486
+=======
+# - https://github.com/bitnova/bitnova/pull/21486
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # - https://smartos.org/man/3socket/getifaddrs
 function(test_append_socket_library target)
   if (NOT TARGET ${target})

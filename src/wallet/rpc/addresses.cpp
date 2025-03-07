@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-present The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+// Copyright (c) 2011-present The BitNova Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <core_io.h>
 #include <key_io.h>
@@ -21,7 +29,11 @@ namespace wallet {
 RPCHelpMan getnewaddress()
 {
     return RPCHelpMan{"getnewaddress",
+<<<<<<< HEAD
                 "\nReturns a new Bitcoin address for receiving payments.\n"
+=======
+                "\nReturns a new BitNova address for receiving payments.\n"
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 "If 'label' is specified, it is added to the address book \n"
                 "so payments received with the address will be associated with 'label'.\n",
                 {
@@ -29,7 +41,11 @@ RPCHelpMan getnewaddress()
                     {"address_type", RPCArg::Type::STR, RPCArg::DefaultHint{"set by -addresstype"}, "The address type to use. Options are \"legacy\", \"p2sh-segwit\", \"bech32\", and \"bech32m\"."},
                 },
                 RPCResult{
+<<<<<<< HEAD
                     RPCResult::Type::STR, "address", "The new bitcoin address"
+=======
+                    RPCResult::Type::STR, "address", "The new bitnova address"
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 },
                 RPCExamples{
                     HelpExampleCli("getnewaddress", "")
@@ -73,7 +89,11 @@ RPCHelpMan getnewaddress()
 RPCHelpMan getrawchangeaddress()
 {
     return RPCHelpMan{"getrawchangeaddress",
+<<<<<<< HEAD
                 "\nReturns a new Bitcoin address, for receiving change.\n"
+=======
+                "\nReturns a new BitNova address, for receiving change.\n"
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 "This is for use with raw transactions, NOT normal use.\n",
                 {
                     {"address_type", RPCArg::Type::STR, RPCArg::DefaultHint{"set by -changetype"}, "The address type to use. Options are \"legacy\", \"p2sh-segwit\", \"bech32\", and \"bech32m\"."},
@@ -122,7 +142,11 @@ RPCHelpMan setlabel()
     return RPCHelpMan{"setlabel",
                 "\nSets the label associated with the given address.\n",
                 {
+<<<<<<< HEAD
                     {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The bitcoin address to be associated with a label."},
+=======
+                    {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The bitnova address to be associated with a label."},
+>>>>>>> 5360f2baff (Initialized BitNova project)
                     {"label", RPCArg::Type::STR, RPCArg::Optional::NO, "The label to assign to the address."},
                 },
                 RPCResult{RPCResult::Type::NONE, "", ""},
@@ -139,7 +163,11 @@ RPCHelpMan setlabel()
 
     CTxDestination dest = DecodeDestination(request.params[0].get_str());
     if (!IsValidDestination(dest)) {
+<<<<<<< HEAD
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Bitcoin address");
+=======
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BitNova address");
+>>>>>>> 5360f2baff (Initialized BitNova project)
     }
 
     const std::string label{LabelFromValue(request.params[1])};
@@ -169,7 +197,11 @@ RPCHelpMan listaddressgroupings()
                         {
                             {RPCResult::Type::ARR_FIXED, "", "",
                             {
+<<<<<<< HEAD
                                 {RPCResult::Type::STR, "address", "The bitcoin address"},
+=======
+                                {RPCResult::Type::STR, "address", "The bitnova address"},
+>>>>>>> 5360f2baff (Initialized BitNova project)
                                 {RPCResult::Type::STR_AMOUNT, "amount", "The amount in " + CURRENCY_UNIT},
                                 {RPCResult::Type::STR, "label", /*optional=*/true, "The label"},
                             }},
@@ -219,16 +251,26 @@ RPCHelpMan addmultisigaddress()
 {
     return RPCHelpMan{"addmultisigaddress",
                 "\nAdd an nrequired-to-sign multisignature address to the wallet. Requires a new wallet backup.\n"
+<<<<<<< HEAD
                 "Each key is a Bitcoin address or hex-encoded public key.\n"
+=======
+                "Each key is a BitNova address or hex-encoded public key.\n"
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 "This functionality is only intended for use with non-watchonly addresses.\n"
                 "See `importaddress` for watchonly p2sh address support.\n"
                 "If 'label' is specified, assign address to that label.\n"
                 "Note: This command is only compatible with legacy wallets.\n",
                 {
                     {"nrequired", RPCArg::Type::NUM, RPCArg::Optional::NO, "The number of required signatures out of the n keys or addresses."},
+<<<<<<< HEAD
                     {"keys", RPCArg::Type::ARR, RPCArg::Optional::NO, "The bitcoin addresses or hex-encoded public keys",
                         {
                             {"key", RPCArg::Type::STR, RPCArg::Optional::OMITTED, "bitcoin address or hex-encoded public key"},
+=======
+                    {"keys", RPCArg::Type::ARR, RPCArg::Optional::NO, "The bitnova addresses or hex-encoded public keys",
+                        {
+                            {"key", RPCArg::Type::STR, RPCArg::Optional::OMITTED, "bitnova address or hex-encoded public key"},
+>>>>>>> 5360f2baff (Initialized BitNova project)
                         },
                         },
                     {"label", RPCArg::Type::STR, RPCArg::Optional::OMITTED, "A label to assign the addresses to."},
@@ -520,15 +562,26 @@ static UniValue DescribeWalletAddress(const CWallet& wallet, const CTxDestinatio
 RPCHelpMan getaddressinfo()
 {
     return RPCHelpMan{"getaddressinfo",
+<<<<<<< HEAD
                 "\nReturn information about the given bitcoin address.\n"
                 "Some of the information will only be present if the address is in the active wallet.\n",
                 {
                     {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The bitcoin address for which to get information."},
+=======
+                "\nReturn information about the given bitnova address.\n"
+                "Some of the information will only be present if the address is in the active wallet.\n",
+                {
+                    {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The bitnova address for which to get information."},
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 },
                 RPCResult{
                     RPCResult::Type::OBJ, "", "",
                     {
+<<<<<<< HEAD
                         {RPCResult::Type::STR, "address", "The bitcoin address validated."},
+=======
+                        {RPCResult::Type::STR, "address", "The bitnova address validated."},
+>>>>>>> 5360f2baff (Initialized BitNova project)
                         {RPCResult::Type::STR_HEX, "scriptPubKey", "The hex-encoded output script generated by the address."},
                         {RPCResult::Type::BOOL, "ismine", "If the address is yours."},
                         {RPCResult::Type::BOOL, "iswatchonly", "If the address is watchonly."},
@@ -785,7 +838,11 @@ RPCHelpMan walletdisplayaddress()
         "walletdisplayaddress",
         "Display address on an external signer for verification.",
         {
+<<<<<<< HEAD
             {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "bitcoin address to display"},
+=======
+            {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "bitnova address to display"},
+>>>>>>> 5360f2baff (Initialized BitNova project)
         },
         RPCResult{
             RPCResult::Type::OBJ,"","",

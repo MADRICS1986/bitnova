@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -52,7 +56,11 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
+<<<<<<< HEAD
 /** Utility functions used by the Bitcoin Qt UI.
+=======
+/** Utility functions used by the BitNova Qt UI.
+>>>>>>> 5360f2baff (Initialized BitNova project)
  */
 namespace GUIUtil
 {
@@ -77,10 +85,17 @@ namespace GUIUtil
      */
     void AddButtonShortcut(QAbstractButton* button, const QKeySequence& shortcut);
 
+<<<<<<< HEAD
     // Parse "bitcoin:" URI into recipient object, return true on successful parsing
     bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out);
     bool parseBitcoinURI(QString uri, SendCoinsRecipient *out);
     QString formatBitcoinURI(const SendCoinsRecipient &info);
+=======
+    // Parse "bitnova:" URI into recipient object, return true on successful parsing
+    bool parseBitNovaURI(const QUrl &uri, SendCoinsRecipient *out);
+    bool parseBitNovaURI(QString uri, SendCoinsRecipient *out);
+    QString formatBitNovaURI(const SendCoinsRecipient &info);
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     // Returns true if given address+amount meets "dust" definition
     bool isDust(interfaces::Node& node, const QString& address, const CAmount& amount);
@@ -178,7 +193,11 @@ namespace GUIUtil
     void openDebugLogfile();
 
     // Open the config file
+<<<<<<< HEAD
     bool openBitcoinConf();
+=======
+    bool openBitNovaConf();
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     /** Qt event filter that intercepts ToolTipChange events, and replaces the tooltip with a rich text
       representation if needed. This assures that Qt can word-wrap long tooltip messages.

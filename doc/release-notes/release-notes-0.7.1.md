@@ -1,23 +1,44 @@
+<<<<<<< HEAD
 Bitcoin version 0.7.1 is now available from:
   http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.7.1/
+=======
+BitNova version 0.7.1 is now available from:
+  http://sourceforge.net/projects/bitnova/files/BitNova/bitnova-0.7.1/
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a bug-fix minor release.
 
 Please report bugs using the issue tracker at github:
+<<<<<<< HEAD
   https://github.com/bitcoin/bitcoin/issues
 
 Project source code is hosted at github; you can get
 source-only tarballs/zipballs directly from there:
   https://github.com/bitcoin/bitcoin/tarball/v0.7.1  # .tar.gz
   https://github.com/bitcoin/bitcoin/zipball/v0.7.1  # .zip
+=======
+  https://github.com/bitnova/bitnova/issues
+
+Project source code is hosted at github; you can get
+source-only tarballs/zipballs directly from there:
+  https://github.com/bitnova/bitnova/tarball/v0.7.1  # .tar.gz
+  https://github.com/bitnova/bitnova/zipball/v0.7.1  # .zip
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Ubuntu Linux users can use the "Personal Package Archive" (PPA)
 maintained by Matt Corallo to automatically keep 
 up-to-date.  Just type:
+<<<<<<< HEAD
   sudo apt-add-repository ppa:bitcoin/bitcoin
   sudo apt-get update
 in your terminal, then install the bitcoin-qt package:
   sudo apt-get install bitcoin-qt
+=======
+  sudo apt-add-repository ppa:bitnova/bitnova
+  sudo apt-get update
+in your terminal, then install the bitnova-qt package:
+  sudo apt-get install bitnova-qt
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 KNOWN ISSUES
 ------------
@@ -30,7 +51,11 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
+<<<<<<< HEAD
 /Applications/Bitcoin-Qt (on Mac) or bitcoind/bitcoin-qt (on Linux).
+=======
+/Applications/BitNova-Qt (on Mac) or bitnovad/bitnova-qt (on Linux).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 If you were running on Linux with a version that might have been compiled
 with a different version of Berkeley DB (for example, if you were using an
@@ -75,7 +100,11 @@ Dependency changes
 Bug fixes
 ---------
 
+<<<<<<< HEAD
 * Clicking on a bitcoin: URI on Windows should now launch Bitcoin-Qt properly.
+=======
+* Clicking on a bitnova: URI on Windows should now launch BitNova-Qt properly.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 * When running -testnet, use RPC port 18332 by default.
 

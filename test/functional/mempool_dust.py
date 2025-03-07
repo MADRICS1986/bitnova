@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test dust limit mempool policy (`-dustrelayfee` parameter)"""
@@ -24,7 +28,11 @@ from test_framework.script_util import (
     script_to_p2sh_script,
     script_to_p2wsh_script,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.test_node import TestNode
 from test_framework.util import (
     assert_equal,
@@ -37,7 +45,11 @@ from test_framework.wallet_util import generate_keypair
 DUST_RELAY_TX_FEE = 3000  # default setting [sat/kvB]
 
 
+<<<<<<< HEAD
 class DustRelayFeeTest(BitcoinTestFramework):
+=======
+class DustRelayFeeTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [['-permitbaremultisig']]

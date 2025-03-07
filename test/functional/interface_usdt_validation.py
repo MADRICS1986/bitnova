@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 """ Tests the validation:* tracepoint API interface.
+<<<<<<< HEAD
     See https://github.com/bitcoin/bitcoin/blob/master/doc/tracing.md#context-validation
+=======
+    See https://github.com/bitnova/bitnova/blob/master/doc/tracing.md#context-validation
+>>>>>>> 5360f2baff (Initialized BitNova project)
 """
 
 import ctypes
@@ -17,7 +25,11 @@ except ImportError:
     pass
 
 from test_framework.address import ADDRESS_BCRT1_UNSPENDABLE
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import assert_equal
 
 
@@ -53,13 +65,21 @@ int trace_block_connected(struct pt_regs *ctx) {
 """
 
 
+<<<<<<< HEAD
 class ValidationTracepointTest(BitcoinTestFramework):
+=======
+class ValidationTracepointTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
 
     def skip_test_if_missing_module(self):
         self.skip_if_platform_not_linux()
+<<<<<<< HEAD
         self.skip_if_no_bitcoind_tracepoints()
+=======
+        self.skip_if_no_bitnovad_tracepoints()
+>>>>>>> 5360f2baff (Initialized BitNova project)
         self.skip_if_no_python_bcc()
         self.skip_if_no_bpf_permissions()
 
@@ -67,7 +87,11 @@ class ValidationTracepointTest(BitcoinTestFramework):
         # Tests the validation:block_connected tracepoint by generating blocks
         # and comparing the values passed in the tracepoint arguments with the
         # blocks.
+<<<<<<< HEAD
         # See https://github.com/bitcoin/bitcoin/blob/master/doc/tracing.md#tracepoint-validationblock_connected
+=======
+        # See https://github.com/bitnova/bitnova/blob/master/doc/tracing.md#tracepoint-validationblock_connected
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         class Block(ctypes.Structure):
             _fields_ = [

@@ -2,12 +2,21 @@
 
 ## Supported Versions
 
+<<<<<<< HEAD
 See our website for versions of Bitcoin Core that are currently supported with
 security updates: https://bitcoincore.org/en/lifecycle/#schedule
 
 ## Reporting a Vulnerability
 
 To report security issues send an email to security@bitcoincore.org (not for support).
+=======
+See our website for versions of BitNova Core that are currently supported with
+security updates: https://bitnovacore.org/en/lifecycle/#schedule
+
+## Reporting a Vulnerability
+
+To report security issues send an email to security@bitnovacore.org (not for support).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 The following keys may be used to communicate sensitive information to developers:
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # bash programmable completion for bitcoin-cli(1)
 # Copyright (c) 2012-2022 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
@@ -5,6 +6,15 @@
 
 # call $bitcoin-cli for RPC
 _bitcoin_rpc() {
+=======
+# bash programmable completion for bitnova-cli(1)
+# Copyright (c) 2012-2022 The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+# call $bitnova-cli for RPC
+_bitnova_rpc() {
+>>>>>>> 5360f2baff (Initialized BitNova project)
     # determine already specified args necessary for RPC
     local rpcargs=()
     for i in ${COMP_LINE}; do
@@ -14,6 +24,7 @@ _bitcoin_rpc() {
                 ;;
         esac
     done
+<<<<<<< HEAD
     $bitcoin_cli "${rpcargs[@]}" "$@"
 }
 
@@ -24,6 +35,18 @@ _bitcoin_cli() {
     # save and use original argument to invoke bitcoin-cli for -help, help and RPC
     # as bitcoin-cli might not be in $PATH
     bitcoin_cli="$1"
+=======
+    $bitnova_cli "${rpcargs[@]}" "$@"
+}
+
+_bitnova_cli() {
+    local cur prev words=() cword
+    local bitnova_cli
+
+    # save and use original argument to invoke bitnova-cli for -help, help and RPC
+    # as bitnova-cli might not be in $PATH
+    bitnova_cli="$1"
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     COMPREPLY=()
     _get_comp_words_by_ref -n = cur prev words cword
@@ -112,12 +135,20 @@ _bitcoin_cli() {
 
             # only parse -help if senseful
             if [[ -z "$cur" || "$cur" =~ ^- ]]; then
+<<<<<<< HEAD
                 helpopts=$($bitcoin_cli -help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
+=======
+                helpopts=$($bitnova_cli -help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
+>>>>>>> 5360f2baff (Initialized BitNova project)
             fi
 
             # only parse help if senseful
             if [[ -z "$cur" || "$cur" =~ ^[a-z] ]]; then
+<<<<<<< HEAD
                 commands=$(_bitcoin_rpc help 2>/dev/null | awk '$1 ~ /^[a-z]/ { print $1; }')
+=======
+                commands=$(_bitnova_rpc help 2>/dev/null | awk '$1 ~ /^[a-z]/ { print $1; }')
+>>>>>>> 5360f2baff (Initialized BitNova project)
             fi
 
             COMPREPLY=( $( compgen -W "$helpopts $commands" -- "$cur" ) )
@@ -130,7 +161,11 @@ _bitcoin_cli() {
             ;;
     esac
 } &&
+<<<<<<< HEAD
 complete -F _bitcoin_cli bitcoin-cli
+=======
+complete -F _bitnova_cli bitnova-cli
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 # Local variables:
 # mode: shell-script

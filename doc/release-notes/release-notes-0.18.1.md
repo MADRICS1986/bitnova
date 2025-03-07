@@ -1,17 +1,31 @@
+<<<<<<< HEAD
 Bitcoin Core version 0.18.1 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.18.1/>
+=======
+BitNova Core version 0.18.1 is now available from:
+
+  <https://bitnovacore.org/bin/bitnova-core-0.18.1/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a new minor version release, including new features, various bug
 fixes and performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 How to Upgrade
 ==============
@@ -19,7 +33,11 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has
 completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
+<<<<<<< HEAD
 `/Applications/Bitcoin-Qt` (on Mac) or `bitcoind`/`bitcoin-qt` (on
+=======
+`/Applications/BitNova-Qt` (on Mac) or `bitnovad`/`bitnova-qt` (on
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Linux).
 
 The first time you run version 0.15.0 or newer, your chainstate database
@@ -35,16 +53,28 @@ wallet versions are still supported.
 Compatibility
 ==============
 
+<<<<<<< HEAD
 Bitcoin Core is supported and extensively tested on operating systems
 using the Linux kernel, macOS 10.10+, and Windows 7 and newer. It is not
 recommended to use Bitcoin Core on unsupported systems.
 
 Bitcoin Core should also work on most other Unix-like systems but is not
+=======
+BitNova Core is supported and extensively tested on operating systems
+using the Linux kernel, macOS 10.10+, and Windows 7 and newer. It is not
+recommended to use BitNova Core on unsupported systems.
+
+BitNova Core should also work on most other Unix-like systems but is not
+>>>>>>> 5360f2baff (Initialized BitNova project)
 as frequently tested on them.
 
 From 0.17.0 onwards, macOS <10.10 is no longer supported. 0.17.0 is
 built using Qt 5.9.x, which doesn't support versions of macOS older than
+<<<<<<< HEAD
 10.10. Additionally, Bitcoin Core does not yet change appearance when
+=======
+10.10. Additionally, BitNova Core does not yet change appearance when
+>>>>>>> 5360f2baff (Initialized BitNova project)
 macOS "dark mode" is activated.
 
 Known issues
@@ -91,7 +121,11 @@ not to use coin control features with multiple wallets loaded.
 
 ### Build system
 - #15985 Add test for GCC bug 90348 (sipa)
+<<<<<<< HEAD
 - #15947 Install bitcoin-wallet manpage (domob1812)
+=======
+- #15947 Install bitnova-wallet manpage (domob1812)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #15983 build with -fstack-reuse=none (MarcoFalke)
 
 ### Tests and QA
@@ -133,4 +167,8 @@ Thanks to everyone who directly contributed to this release:
 - tecnovert
 - Wladimir J. van der Laan
 
+<<<<<<< HEAD
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
+=======
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)

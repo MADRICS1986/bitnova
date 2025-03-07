@@ -5,7 +5,11 @@ BEGIN
   printf("Logging opened, closed, misbehaving, and evicted P2P connections\n")
 }
 
+<<<<<<< HEAD
 usdt:./build/src/bitcoind:net:inbound_connection
+=======
+usdt:./build/src/bitnovad:net:inbound_connection
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
   $id = (int64) arg0;
   $addr = str(arg1);
@@ -15,7 +19,11 @@ usdt:./build/src/bitcoind:net:inbound_connection
   printf("INBOUND conn from %s: id=%ld, type=%s, network=%d, total=%d\n", $addr, $id, $conn_type, $network, $existing);
 }
 
+<<<<<<< HEAD
 usdt:./build/src/bitcoind:net:outbound_connection
+=======
+usdt:./build/src/bitnovad:net:outbound_connection
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
   $id = (int64) arg0;
   $addr = str(arg1);
@@ -25,7 +33,11 @@ usdt:./build/src/bitcoind:net:outbound_connection
   printf("OUTBOUND conn to %s: id=%ld, type=%s, network=%d, total=%d\n", $addr, $id, $conn_type, $network, $existing);
 }
 
+<<<<<<< HEAD
 usdt:./build/src/bitcoind:net:closed_connection
+=======
+usdt:./build/src/bitnovad:net:closed_connection
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
   $id = (int64) arg0;
   $addr = str(arg1);
@@ -34,7 +46,11 @@ usdt:./build/src/bitcoind:net:closed_connection
   printf("CLOSED conn to %s: id=%ld, type=%s, network=%d, established=%ld\n", $addr, $id, $conn_type, $network, arg4);
 }
 
+<<<<<<< HEAD
 usdt:./build/src/bitcoind:net:evicted_inbound_connection
+=======
+usdt:./build/src/bitnovad:net:evicted_inbound_connection
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
   $id = (int64) arg0;
   $addr = str(arg1);
@@ -43,7 +59,11 @@ usdt:./build/src/bitcoind:net:evicted_inbound_connection
   printf("EVICTED conn to %s: id=%ld, type=%s, network=%d, established=%ld\n", $addr, $id, $conn_type, $network, arg4);
 }
 
+<<<<<<< HEAD
 usdt:./build/src/bitcoind:net:misbehaving_connection
+=======
+usdt:./build/src/bitnovad:net:misbehaving_connection
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
   $id = (int64) arg0;
   $message = str(arg1);

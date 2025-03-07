@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 Bitcoin-Qt version 0.8.6 final is now available from:
 
   http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.8.6/
+=======
+BitNova-Qt version 0.8.6 final is now available from:
+
+  http://sourceforge.net/projects/bitnova/files/BitNova/bitnova-0.8.6/
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a maintenance release to fix a critical bug; we urge all users to upgrade.
 
 Please report bugs using the issue tracker at github:
 
+<<<<<<< HEAD
   https://github.com/bitcoin/bitcoin/issues
+=======
+  https://github.com/bitnova/bitnova/issues
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 How to Upgrade
 --------------
@@ -16,7 +26,11 @@ If you already downloaded 0.8.6rc1 you do not need to re-download. This release 
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
+<<<<<<< HEAD
 /Applications/Bitcoin-Qt (on Mac) or bitcoind/bitcoin-qt (on Linux).
+=======
+/Applications/BitNova-Qt (on Mac) or bitnovad/bitnova-qt (on Linux).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 If you are upgrading from version 0.7.2 or earlier, the first time you
 run 0.8.6 your blockchain files will be re-indexed, which will take
@@ -47,7 +61,11 @@ your machine.
 
 - Additional debug.log logging for diagnosis of network problems, log timestamps by default
 
+<<<<<<< HEAD
 - Fix Bitcoin-Qt startup crash when clicking dock icon on OSX 
+=======
+- Fix BitNova-Qt startup crash when clicking dock icon on OSX 
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 - Fix memory leaks in CKey::SetCompactSignature() and Key::SignCompact()
 
@@ -63,4 +81,8 @@ Warning
   Hence it is recommended to use a 64-bit executable if possible.
   A 64-bit executable for Windows is planned for 0.9.
 
+<<<<<<< HEAD
 Note: Gavin Andresen's GPG signing key for SHA256SUMS.asc has been changed from  key id 1FC730C1 to sub key 7BF6E212 (see https://github.com/bitcoin/bitcoin.org/pull/279).
+=======
+Note: Gavin Andresen's GPG signing key for SHA256SUMS.asc has been changed from  key id 1FC730C1 to sub key 7BF6E212 (see https://github.com/bitnova/bitnova.org/pull/279).
+>>>>>>> 5360f2baff (Initialized BitNova project)

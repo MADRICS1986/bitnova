@@ -6,6 +6,10 @@ includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
 Name: @CLIENT_NAME@ kernel library
 Description: Experimental library for the @CLIENT_NAME@ validation engine.
 Version: @CLIENT_VERSION_STRING@
+<<<<<<< HEAD
 Libs: -L${libdir} -lbitcoinkernel
+=======
+Libs: -L${libdir} -lbitnovakernel
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Libs.private: -L${libdir} @LIBS_PRIVATE@
 Cflags: -I${includedir}

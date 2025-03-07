@@ -11,7 +11,11 @@
   </array>
 
   <key>CFBundleIconFile</key>
+<<<<<<< HEAD
   <string>bitcoin.icns</string>
+=======
+  <string>bitnova.icns</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
@@ -34,16 +38,27 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
+<<<<<<< HEAD
   <string>Bitcoin-Qt</string>
 
   <key>CFBundleName</key>
   <string>Bitcoin-Qt</string>
+=======
+  <string>BitNova-Qt</string>
+
+  <key>CFBundleName</key>
+  <string>BitNova-Qt</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
+<<<<<<< HEAD
   <string>org.bitcoinfoundation.Bitcoin-Qt</string>
+=======
+  <string>org.bitnovafoundation.BitNova-Qt</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -51,10 +66,17 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
+<<<<<<< HEAD
       <string>org.bitcoin.BitcoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>bitcoin</string>
+=======
+      <string>org.bitnova.BitNovaPayment</string>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>bitnova</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
       </array>
     </dict>
   </array>

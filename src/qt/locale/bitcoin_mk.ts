@@ -58,11 +58,19 @@
         <translation type="unfinished">Избери</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">Ова се вашите Bitcoin-адреси за испраќање плаќања. Секогаш проверувајте ја количината и адресите за примање пред да испраќате монети.</translation>
     </message>
     <message>
         <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+=======
+        <source>These are your BitNova addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Ова се вашите BitNova-адреси за испраќање плаќања. Секогаш проверувајте ја количината и адресите за примање пред да испраќате монети.</translation>
+    </message>
+    <message>
+        <source>These are your BitNova addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Ова се вашите биткоин-адреси за примање плаќања. Користете го копчето „Создавање нови адреси“ во јазичето за примање за да создадете нови адреси. Потпишувањето е можно само со „наследни“ адреси.</translation>
     </message>
@@ -175,7 +183,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Внесете ја старата и новата лозинка за паричникот.</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+=======
+        <source>Remember that encrypting your wallet cannot fully protect your bitnovas from being stolen by malware infecting your computer.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Запомнете дека шифрирањето на вашиот паричник не може целосно да ги заштити вашите биткоини од кражба од злонамерен софтвер, заразувајќи го вашиот сметач.</translation>
     </message>
     <message>
@@ -239,7 +251,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinApplication</name>
+=======
+    <name>BitNovaApplication</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>Settings file %1 might be corrupt or invalid.</source>
         <translation type="unfinished">Датотеката со поставки %1 може да е оштетена или неважечка.</translation>
@@ -371,7 +387,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">Преглед</translation>
@@ -438,7 +458,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Проксито е &lt;b&gt;дозволено&lt;/b&gt;: %1</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Bitcoin address</source>
+=======
+        <source>Send coins to a BitNova address</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Испрати биткоини на биткоин-адреса</translation>
     </message>
     <message>
@@ -482,7 +506,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Потпиши &amp;порака...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+=======
+        <source>Sign messages with your BitNova addresses to prove you own them</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Напишете пораки со вашата биткоин-адреса за да докажете дека е ваша.</translation>
     </message>
     <message>
@@ -490,7 +518,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Потврди порака...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
+=======
+        <source>Verify messages to ensure they were signed with specified BitNova addresses</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Потврдување на пораките за да се знае дека се напишани со дадените биткоин-адреси.</translation>
     </message>
     <message>
@@ -550,7 +582,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Поврзување со врсници...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+=======
+        <source>Request payments (generates QR codes and bitnova: URIs)</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Барање за плаќања (создава QR-кодови и биткоин: URI)</translation>
     </message>
     <message>
@@ -606,7 +642,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Во тек</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Bitcoin Transaction</source>
+=======
+        <source>Load Partially Signed BitNova Transaction</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Вчитајте делумно потпишана биткоин-трансакција</translation>
     </message>
     <message>
@@ -614,7 +654,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Вчитајте PSBT од &amp;клипбордот...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Bitcoin Transaction from clipboard</source>
+=======
+        <source>Load Partially Signed BitNova Transaction from clipboard</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Вчитајте делумно потпишана биткоин-трансакција од клипбордот</translation>
     </message>
     <message>
@@ -634,7 +678,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Примање на адреси</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Open a bitcoin: URI</source>
+=======
+        <source>Open a bitnova: URI</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Отвори биткоин: URI</translation>
     </message>
     <message>
@@ -664,7 +712,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Затвори ги сите паричници</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
+=======
+        <source>Show the %1 help message to get a list with possible BitNova command-line options</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Прикажи %1 помошна порака за да добиеш список на можни биткоин-команди.</translation>
     </message>
     <message>
@@ -724,7 +776,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Покажи</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -954,7 +1010,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message>
+<<<<<<< HEAD
         <source>Bitcoin</source>
+=======
+        <source>BitNova</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <translation type="unfinished">Биткоин</translation>
     </message>
     <message numerus="yes">
@@ -1357,7 +1417,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>bitcoin-core</name>
+=======
+    <name>bitnova-core</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>Insufficient funds</source>
         <translation type="unfinished">Недоволно средства</translation>

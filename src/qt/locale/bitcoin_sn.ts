@@ -59,8 +59,13 @@
         <translation type="unfinished">Marii</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Enter a Bitcoin address (e.g. %1)</source>
         <translation type="unfinished">Nyora kero ye Bitcoin (sekuti %1)</translation>
+=======
+        <source>Enter a BitNova address (e.g. %1)</source>
+        <translation type="unfinished">Nyora kero ye BitNova (sekuti %1)</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>None</source>
@@ -114,7 +119,11 @@
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>E&amp;xit</source>
         <translation type="unfinished">Buda</translation>
@@ -171,7 +180,11 @@
         <translation type="unfinished">Ruzivo</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />

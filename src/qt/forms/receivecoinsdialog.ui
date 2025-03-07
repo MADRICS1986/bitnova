@@ -47,7 +47,11 @@
         <item row="6" column="0">
          <widget class="QLabel" name="label_3">
           <property name="toolTip">
+<<<<<<< HEAD
            <string>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</string>
+=======
+           <string>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BitNova network.</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
           </property>
           <property name="text">
            <string>&amp;Message:</string>
@@ -111,7 +115,11 @@
              <string>&amp;Create new receiving address</string>
             </property>
             <property name="icon">
+<<<<<<< HEAD
              <iconset resource="../bitcoin.qrc">
+=======
+             <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
               <normaloff>:/icons/receiving_addresses</normaloff>:/icons/receiving_addresses</iconset>
             </property>
             <property name="autoDefault">
@@ -137,7 +145,11 @@
              <string>Clear</string>
             </property>
             <property name="icon">
+<<<<<<< HEAD
              <iconset resource="../bitcoin.qrc">
+=======
+             <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
               <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
             </property>
             <property name="autoDefault">
@@ -170,7 +182,11 @@
         <item row="5" column="2">
          <layout class="QHBoxLayout" name="horizontalLayout_6">
           <item>
+<<<<<<< HEAD
            <widget class="BitcoinAmountField" name="reqAmount">
+=======
+           <widget class="BitNovaAmountField" name="reqAmount">
+>>>>>>> 5360f2baff (Initialized BitNova project)
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -301,7 +317,11 @@
            <string>Show</string>
           </property>
           <property name="icon">
+<<<<<<< HEAD
            <iconset resource="../bitcoin.qrc">
+=======
+           <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
             <normaloff>:/icons/eye</normaloff>:/icons/eye</iconset>
           </property>
           <property name="autoDefault">
@@ -321,7 +341,11 @@
            <string>Remove</string>
           </property>
           <property name="icon">
+<<<<<<< HEAD
            <iconset resource="../bitcoin.qrc">
+=======
+           <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
             <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
           </property>
           <property name="autoDefault">
@@ -351,9 +375,15 @@
  </widget>
  <customwidgets>
   <customwidget>
+<<<<<<< HEAD
    <class>BitcoinAmountField</class>
    <extends>QLineEdit</extends>
    <header>qt/bitcoinamountfield.h</header>
+=======
+   <class>BitNovaAmountField</class>
+   <extends>QLineEdit</extends>
+   <header>qt/bitnovaamountfield.h</header>
+>>>>>>> 5360f2baff (Initialized BitNova project)
    <container>1</container>
   </customwidget>
  </customwidgets>
@@ -369,7 +399,11 @@
   <tabstop>removeRequestButton</tabstop>
  </tabstops>
  <resources>
+<<<<<<< HEAD
   <include location="../bitcoin.qrc"/>
+=======
+  <include location="../bitnova.qrc"/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
  </resources>
  <connections/>
 </ui>

@@ -65,7 +65,11 @@
    <item row="2" column="1" alignment="Qt::AlignTop">
     <widget class="QLabel" name="uri_content">
      <property name="text">
+<<<<<<< HEAD
       <string notr="true">bitcoin:BC1…</string>
+=======
+      <string notr="true">bitnova:BC1…</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
      </property>
      <property name="textFormat">
       <enum>Qt::RichText</enum>

@@ -1,11 +1,19 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2020-present The Bitcoin Core developers
+=======
+# Copyright (c) 2020-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test indices in conjunction with prune."""
 import concurrent.futures
 import os
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
     assert_greater_than,
@@ -13,7 +21,11 @@ from test_framework.util import (
 )
 
 
+<<<<<<< HEAD
 class FeatureIndexPruneTest(BitcoinTestFramework):
+=======
+class FeatureIndexPruneTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 4
         self.extra_args = [

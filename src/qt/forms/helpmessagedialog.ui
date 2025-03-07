@@ -52,7 +52,11 @@
         </size>
        </property>
        <property name="pixmap">
+<<<<<<< HEAD
         <pixmap resource="../bitcoin.qrc">:/icons/bitcoin</pixmap>
+=======
+        <pixmap resource="../bitnova.qrc">:/icons/bitnova</pixmap>
+>>>>>>> 5360f2baff (Initialized BitNova project)
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -150,7 +154,11 @@
   </layout>
  </widget>
  <resources>
+<<<<<<< HEAD
   <include location="../bitcoin.qrc"/>
+=======
+  <include location="../bitnova.qrc"/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
  </resources>
  <connections>
   <connection>

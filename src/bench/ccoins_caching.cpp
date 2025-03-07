@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2016-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2016-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,7 +24,11 @@
 // many times micro-benchmarks of the database showed completely different
 // characteristics than e.g. reindex timings. But that's not a requirement of
 // every benchmark."
+<<<<<<< HEAD
 // (https://github.com/bitcoin/bitcoin/issues/7883#issuecomment-224807484)
+=======
+// (https://github.com/bitnova/bitnova/issues/7883#issuecomment-224807484)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 static void CCoinsCaching(benchmark::Bench& bench)
 {
     ECC_Context ecc_context{};

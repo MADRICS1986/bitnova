@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 # Copyright 2014 BitPay Inc.
+<<<<<<< HEAD
 # Copyright 2016-2017 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test framework for bitcoin utils.
+=======
+# Copyright 2016-2017 The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+"""Test framework for bitnova utils.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Runs automatically during `ctest --test-dir build/`.
 
@@ -39,7 +46,11 @@ def main():
     # Add the format/level to the logger
     logging.basicConfig(format=formatter, level=level)
 
+<<<<<<< HEAD
     bctester(os.path.join(env_conf["SRCDIR"], "test", "util", "data"), "bitcoin-util-test.json", env_conf)
+=======
+    bctester(os.path.join(env_conf["SRCDIR"], "test", "util", "data"), "bitnova-util-test.json", env_conf)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 def bctester(testDir, input_basename, buildenv):
     """ Loads and parses the input file, runs all tests and reports results"""
@@ -74,9 +85,15 @@ def bctest(testDir, testObj, buildenv):
     """
     # Get the exec names and arguments
     execprog = os.path.join(buildenv["BUILDDIR"], "src", testObj["exec"] + buildenv["EXEEXT"])
+<<<<<<< HEAD
     if testObj["exec"] == "./bitcoin-util":
         execprog = os.getenv("BITCOINUTIL", default=execprog)
     elif testObj["exec"] == "./bitcoin-tx":
+=======
+    if testObj["exec"] == "./bitnova-util":
+        execprog = os.getenv("BITCOINUTIL", default=execprog)
+    elif testObj["exec"] == "./bitnova-tx":
+>>>>>>> 5360f2baff (Initialized BitNova project)
         execprog = os.getenv("BITCOINTX", default=execprog)
 
     execargs = testObj['args']
@@ -157,7 +174,11 @@ def bctest(testDir, testObj, buildenv):
         want_error = testObj["error_txt"]
         # Compare error text
         # TODO: ideally, we'd compare the strings exactly and also assert
+<<<<<<< HEAD
         # That stderr is empty if no errors are expected. However, bitcoin-tx
+=======
+        # That stderr is empty if no errors are expected. However, bitnova-tx
+>>>>>>> 5360f2baff (Initialized BitNova project)
         # emits DISPLAY errors when running as a windows application on
         # linux through wine. Just assert that the expected error text appears
         # somewhere in stderr.

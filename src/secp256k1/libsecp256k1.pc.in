@@ -5,7 +5,11 @@ includedir=@includedir@
 
 Name: libsecp256k1
 Description: Optimized C library for EC operations on curve secp256k1
+<<<<<<< HEAD
 URL: https://github.com/bitcoin-core/secp256k1
+=======
+URL: https://github.com/bitnova-core/secp256k1
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Version: @PACKAGE_VERSION@
 Cflags: -I${includedir}
 Libs: -L${libdir} -lsecp256k1

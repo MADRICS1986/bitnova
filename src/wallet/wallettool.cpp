@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 // Copyright (c) 2016-2022 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+// Copyright (c) 2016-2022 The BitNova Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <wallet/wallettool.h>
 
@@ -18,7 +26,11 @@ namespace wallet {
 namespace WalletTool {
 
 // The standard wallet deleter function blocks on the validation interface
+<<<<<<< HEAD
 // queue, which doesn't exist for the bitcoin-wallet. Define our own
+=======
+// queue, which doesn't exist for the bitnova-wallet. Define our own
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // deleter here.
 static void WalletToolReleaseWallet(CWallet* wallet)
 {
@@ -209,7 +221,11 @@ bool ExecuteWalletToolFunc(const ArgsManager& args, const std::string& command)
             tfm::format(std::cerr, "%s\n", error.original);
             return ret;
         }
+<<<<<<< HEAD
         tfm::format(std::cout, "The dumpfile may contain private keys. To ensure the safety of your Bitcoin, do not share the dumpfile.\n");
+=======
+        tfm::format(std::cout, "The dumpfile may contain private keys. To ensure the safety of your BitNova, do not share the dumpfile.\n");
+>>>>>>> 5360f2baff (Initialized BitNova project)
         return ret;
     } else if (command == "createfromdump") {
         bilingual_str error;

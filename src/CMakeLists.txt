@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 # Copyright (c) 2023-present The Bitcoin Core developers
+=======
+# Copyright (c) 2023-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
 include(AddWindowsResources)
 
+<<<<<<< HEAD
 configure_file(${PROJECT_SOURCE_DIR}/cmake/bitcoin-build-config.h.in bitcoin-build-config.h USE_SOURCE_PERMISSIONS @ONLY)
 include_directories(${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
 
@@ -21,6 +26,25 @@ target_link_libraries(bitcoin_clientversion
     core_interface
 )
 add_dependencies(bitcoin_clientversion generate_build_info)
+=======
+configure_file(${PROJECT_SOURCE_DIR}/cmake/bitnova-build-config.h.in bitnova-build-config.h USE_SOURCE_PERMISSIONS @ONLY)
+include_directories(${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
+
+add_custom_target(generate_build_info
+  BYPRODUCTS ${PROJECT_BINARY_DIR}/src/bitnova-build-info.h
+  COMMAND ${CMAKE_COMMAND} -DBUILD_INFO_HEADER_PATH=${PROJECT_BINARY_DIR}/src/bitnova-build-info.h -DSOURCE_DIR=${PROJECT_SOURCE_DIR} -P ${PROJECT_SOURCE_DIR}/cmake/script/GenerateBuildInfo.cmake
+  COMMENT "Generating bitnova-build-info.h"
+  VERBATIM
+)
+add_library(bitnova_clientversion STATIC EXCLUDE_FROM_ALL
+  clientversion.cpp
+)
+target_link_libraries(bitnova_clientversion
+  PRIVATE
+    core_interface
+)
+add_dependencies(bitnova_clientversion generate_build_info)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 add_subdirectory(crypto)
 add_subdirectory(univalue)
@@ -78,7 +102,11 @@ set_target_properties(secp256k1 PROPERTIES
 )
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+<<<<<<< HEAD
 add_library(bitcoin_consensus STATIC EXCLUDE_FROM_ALL
+=======
+add_library(bitnova_consensus STATIC EXCLUDE_FROM_ALL
+>>>>>>> 5360f2baff (Initialized BitNova project)
   arith_uint256.cpp
   consensus/merkle.cpp
   consensus/tx_check.cpp
@@ -91,10 +119,17 @@ add_library(bitcoin_consensus STATIC EXCLUDE_FROM_ALL
   script/script_error.cpp
   uint256.cpp
 )
+<<<<<<< HEAD
 target_link_libraries(bitcoin_consensus
   PRIVATE
     core_interface
     bitcoin_crypto
+=======
+target_link_libraries(bitnova_consensus
+  PRIVATE
+    core_interface
+    bitnova_crypto
+>>>>>>> 5360f2baff (Initialized BitNova project)
     secp256k1
 )
 
@@ -103,8 +138,13 @@ if(WITH_ZMQ)
 endif()
 
 # Home for common functionality shared by different executables and libraries.
+<<<<<<< HEAD
 # Similar to `bitcoin_util` library, but higher-level.
 add_library(bitcoin_common STATIC EXCLUDE_FROM_ALL
+=======
+# Similar to `bitnova_util` library, but higher-level.
+add_library(bitnova_common STATIC EXCLUDE_FROM_ALL
+>>>>>>> 5360f2baff (Initialized BitNova project)
   addresstype.cpp
   base58.cpp
   bech32.cpp
@@ -156,11 +196,19 @@ add_library(bitcoin_common STATIC EXCLUDE_FROM_ALL
   script/signingprovider.cpp
   script/solver.cpp
 )
+<<<<<<< HEAD
 target_link_libraries(bitcoin_common
   PRIVATE
     core_interface
     bitcoin_consensus
     bitcoin_util
+=======
+target_link_libraries(bitnova_common
+  PRIVATE
+    core_interface
+    bitnova_consensus
+    bitnova_util
+>>>>>>> 5360f2baff (Initialized BitNova project)
     univalue
     secp256k1
     Boost::headers
@@ -174,6 +222,7 @@ if(ENABLE_WALLET)
   add_subdirectory(wallet)
 
   if(BUILD_WALLET_TOOL)
+<<<<<<< HEAD
     add_executable(bitcoin-wallet
       bitcoin-wallet.cpp
       init/bitcoin-wallet.cpp
@@ -188,12 +237,33 @@ if(ENABLE_WALLET)
       Boost::headers
     )
     install_binary_component(bitcoin-wallet HAS_MANPAGE)
+=======
+    add_executable(bitnova-wallet
+      bitnova-wallet.cpp
+      init/bitnova-wallet.cpp
+      wallet/wallettool.cpp
+    )
+    add_windows_resources(bitnova-wallet bitnova-wallet-res.rc)
+    target_link_libraries(bitnova-wallet
+      core_interface
+      bitnova_wallet
+      bitnova_common
+      bitnova_util
+      Boost::headers
+    )
+    install_binary_component(bitnova-wallet HAS_MANPAGE)
+>>>>>>> 5360f2baff (Initialized BitNova project)
   endif()
 endif()
 
 
+<<<<<<< HEAD
 # P2P and RPC server functionality used by `bitcoind` and `bitcoin-qt` executables.
 add_library(bitcoin_node STATIC EXCLUDE_FROM_ALL
+=======
+# P2P and RPC server functionality used by `bitnovad` and `bitnova-qt` executables.
+add_library(bitnova_node STATIC EXCLUDE_FROM_ALL
+>>>>>>> 5360f2baff (Initialized BitNova project)
   addrdb.cpp
   addrman.cpp
   banman.cpp
@@ -285,6 +355,7 @@ add_library(bitcoin_node STATIC EXCLUDE_FROM_ALL
   validation.cpp
   validationinterface.cpp
   versionbits.cpp
+<<<<<<< HEAD
   $<$<TARGET_EXISTS:bitcoin_wallet>:wallet/init.cpp>
   $<$<NOT:$<TARGET_EXISTS:bitcoin_wallet>>:dummywallet.cpp>
 )
@@ -294,6 +365,17 @@ target_link_libraries(bitcoin_node
     bitcoin_common
     bitcoin_util
     $<TARGET_NAME_IF_EXISTS:bitcoin_zmq>
+=======
+  $<$<TARGET_EXISTS:bitnova_wallet>:wallet/init.cpp>
+  $<$<NOT:$<TARGET_EXISTS:bitnova_wallet>>:dummywallet.cpp>
+)
+target_link_libraries(bitnova_node
+  PRIVATE
+    core_interface
+    bitnova_common
+    bitnova_util
+    $<TARGET_NAME_IF_EXISTS:bitnova_zmq>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     leveldb
     minisketch
     univalue
@@ -305,6 +387,7 @@ target_link_libraries(bitcoin_node
 )
 
 
+<<<<<<< HEAD
 # Bitcoin Core bitcoind.
 if(BUILD_DAEMON)
   add_executable(bitcoind
@@ -335,11 +418,44 @@ endif()
 
 if(WITH_MULTIPROCESS AND BUILD_TESTS)
     # bitcoin_ipc_test library target is defined here in src/CMakeLists.txt
+=======
+# BitNova Core bitnovad.
+if(BUILD_DAEMON)
+  add_executable(bitnovad
+    bitnovad.cpp
+    init/bitnovad.cpp
+  )
+  add_windows_resources(bitnovad bitnovad-res.rc)
+  target_link_libraries(bitnovad
+    core_interface
+    bitnova_node
+    $<TARGET_NAME_IF_EXISTS:bitnova_wallet>
+  )
+  install_binary_component(bitnovad HAS_MANPAGE)
+endif()
+if(WITH_MULTIPROCESS AND BUILD_DAEMON)
+  add_executable(bitnova-node
+    bitnovad.cpp
+    init/bitnova-node.cpp
+  )
+  target_link_libraries(bitnova-node
+    core_interface
+    bitnova_node
+    bitnova_ipc
+    $<TARGET_NAME_IF_EXISTS:bitnova_wallet>
+  )
+  install_binary_component(bitnova-node)
+endif()
+
+if(WITH_MULTIPROCESS AND BUILD_TESTS)
+    # bitnova_ipc_test library target is defined here in src/CMakeLists.txt
+>>>>>>> 5360f2baff (Initialized BitNova project)
     # instead of src/test/CMakeLists.txt so capnp files in src/test/ are able to
     # reference capnp files in src/ipc/capnp/ by relative path. The Cap'n Proto
     # compiler only allows importing by relative path when the importing and
     # imported files are underneath the same compilation source prefix, so the
     # source prefix must be src/, not src/test/
+<<<<<<< HEAD
     add_library(bitcoin_ipc_test STATIC EXCLUDE_FROM_ALL
       test/ipc_test.cpp
     )
@@ -355,12 +471,30 @@ add_library(bitcoin_cli STATIC EXCLUDE_FROM_ALL
   rpc/client.cpp
 )
 target_link_libraries(bitcoin_cli
+=======
+    add_library(bitnova_ipc_test STATIC EXCLUDE_FROM_ALL
+      test/ipc_test.cpp
+    )
+    target_capnp_sources(bitnova_ipc_test ${PROJECT_SOURCE_DIR}
+      test/ipc_test.capnp
+    )
+    add_dependencies(bitnova_ipc_test bitnova_ipc_headers)
+endif()
+
+
+add_library(bitnova_cli STATIC EXCLUDE_FROM_ALL
+  compat/stdin.cpp
+  rpc/client.cpp
+)
+target_link_libraries(bitnova_cli
+>>>>>>> 5360f2baff (Initialized BitNova project)
   PUBLIC
     core_interface
     univalue
 )
 
 
+<<<<<<< HEAD
 # Bitcoin Core RPC client
 if(BUILD_CLI)
   add_executable(bitcoin-cli bitcoin-cli.cpp)
@@ -374,10 +508,26 @@ if(BUILD_CLI)
     libevent::extra
   )
   install_binary_component(bitcoin-cli HAS_MANPAGE)
+=======
+# BitNova Core RPC client
+if(BUILD_CLI)
+  add_executable(bitnova-cli bitnova-cli.cpp)
+  add_windows_resources(bitnova-cli bitnova-cli-res.rc)
+  target_link_libraries(bitnova-cli
+    core_interface
+    bitnova_cli
+    bitnova_common
+    bitnova_util
+    libevent::core
+    libevent::extra
+  )
+  install_binary_component(bitnova-cli HAS_MANPAGE)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 endif()
 
 
 if(BUILD_TX)
+<<<<<<< HEAD
   add_executable(bitcoin-tx bitcoin-tx.cpp)
   add_windows_resources(bitcoin-tx bitcoin-tx-res.rc)
   target_link_libraries(bitcoin-tx
@@ -387,10 +537,22 @@ if(BUILD_TX)
     univalue
   )
   install_binary_component(bitcoin-tx HAS_MANPAGE)
+=======
+  add_executable(bitnova-tx bitnova-tx.cpp)
+  add_windows_resources(bitnova-tx bitnova-tx-res.rc)
+  target_link_libraries(bitnova-tx
+    core_interface
+    bitnova_common
+    bitnova_util
+    univalue
+  )
+  install_binary_component(bitnova-tx HAS_MANPAGE)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 endif()
 
 
 if(BUILD_UTIL)
+<<<<<<< HEAD
   add_executable(bitcoin-util bitcoin-util.cpp)
   add_windows_resources(bitcoin-util bitcoin-util-res.rc)
   target_link_libraries(bitcoin-util
@@ -399,6 +561,16 @@ if(BUILD_UTIL)
     bitcoin_util
   )
   install_binary_component(bitcoin-util HAS_MANPAGE)
+=======
+  add_executable(bitnova-util bitnova-util.cpp)
+  add_windows_resources(bitnova-util bitnova-util-res.rc)
+  target_link_libraries(bitnova-util
+    core_interface
+    bitnova_common
+    bitnova_util
+  )
+  install_binary_component(bitnova-util HAS_MANPAGE)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 endif()
 
 
@@ -412,13 +584,19 @@ if(BUILD_KERNEL_LIB)
 endif()
 
 if(BUILD_UTIL_CHAINSTATE)
+<<<<<<< HEAD
   add_executable(bitcoin-chainstate
     bitcoin-chainstate.cpp
+=======
+  add_executable(bitnova-chainstate
+    bitnova-chainstate.cpp
+>>>>>>> 5360f2baff (Initialized BitNova project)
   )
   # TODO: The `SKIP_BUILD_RPATH` property setting can be deleted
   #       in the future after reordering Guix script commands to
   #       perform binary checks after the installation step.
   # Relevant discussions:
+<<<<<<< HEAD
   # - https://github.com/hebasto/bitcoin/pull/236#issuecomment-2183120953
   # - https://github.com/bitcoin/bitcoin/pull/30312#issuecomment-2191235833
   set_target_properties(bitcoin-chainstate PROPERTIES
@@ -428,6 +606,17 @@ if(BUILD_UTIL_CHAINSTATE)
     PRIVATE
       core_interface
       bitcoinkernel
+=======
+  # - https://github.com/hebasto/bitnova/pull/236#issuecomment-2183120953
+  # - https://github.com/bitnova/bitnova/pull/30312#issuecomment-2191235833
+  set_target_properties(bitnova-chainstate PROPERTIES
+    SKIP_BUILD_RPATH OFF
+  )
+  target_link_libraries(bitnova-chainstate
+    PRIVATE
+      core_interface
+      bitnovakernel
+>>>>>>> 5360f2baff (Initialized BitNova project)
   )
 endif()
 

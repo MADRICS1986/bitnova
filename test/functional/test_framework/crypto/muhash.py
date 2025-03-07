@@ -18,7 +18,11 @@ def data_to_num3072(data):
 class MuHash3072:
     """Class representing the MuHash3072 computation of a set.
 
+<<<<<<< HEAD
     See https://cseweb.ucsd.edu/~mihir/papers/inchash.pdf and https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-May/014337.html
+=======
+    See https://cseweb.ucsd.edu/~mihir/papers/inchash.pdf and https://lists.linuxfoundation.org/pipermail/bitnova-dev/2017-May/014337.html
+>>>>>>> 5360f2baff (Initialized BitNova project)
     """
 
     MODULUS = 2**3072 - 1103717

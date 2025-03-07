@@ -45,7 +45,11 @@
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
         <translation type="unfinished">
@@ -54,11 +58,19 @@
         </translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform>%n active connection(s) to Bitcoin network.</numerusform>
             <numerusform>%n active connection(s) to Bitcoin network.</numerusform>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+        <extracomment>A substring of the tooltip.</extracomment>
+        <translation type="unfinished">
+            <numerusform>%n active connection(s) to BitNova network.</numerusform>
+            <numerusform>%n active connection(s) to BitNova network.</numerusform>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         </translation>
     </message>
     </context>

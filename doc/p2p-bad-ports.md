@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 When Bitcoin Core automatically opens outgoing P2P connections, it chooses
 a peer (address and port) from its list of potential peers. This list is
 populated with unchecked data gossiped over the P2P network by other peers.
@@ -10,13 +11,31 @@ nodes.
 "Bad" ports are ones used by services which are usually not open to the public
 and usually require authentication. A connection attempt (by Bitcoin Core,
 trying to connect because it thinks there is a Bitcoin node on that
+=======
+When BitNova Core automatically opens outgoing P2P connections, it chooses
+a peer (address and port) from its list of potential peers. This list is
+populated with unchecked data gossiped over the P2P network by other peers.
+
+A malicious actor may gossip an address:port where no BitNova node is listening,
+or one where a service is listening that is not related to the BitNova network.
+As a result, this service may occasionally get connection attempts from BitNova
+nodes.
+
+"Bad" ports are ones used by services which are usually not open to the public
+and usually require authentication. A connection attempt (by BitNova Core,
+trying to connect because it thinks there is a BitNova node on that
+>>>>>>> 5360f2baff (Initialized BitNova project)
 address:port) to such service may be considered a malicious action by an
 ultra-paranoid administrator. An example for such a port is 22 (ssh). On the
 other hand, connection attempts to public services that usually do not require
 authentication are unlikely to be considered a malicious action,
 e.g. port 80 (http).
 
+<<<<<<< HEAD
 Below is a list of "bad" ports which Bitcoin Core avoids when choosing a peer to
+=======
+Below is a list of "bad" ports which BitNova Core avoids when choosing a peer to
+>>>>>>> 5360f2baff (Initialized BitNova project)
 connect to. If a node is listening on such a port, it will likely receive fewer
 incoming connections.
 
@@ -103,9 +122,15 @@ incoming connections.
 
 For further information see:
 
+<<<<<<< HEAD
 [pull/23306](https://github.com/bitcoin/bitcoin/pull/23306#issuecomment-947516736)
 
 [pull/23542](https://github.com/bitcoin/bitcoin/pull/23542)
+=======
+[pull/23306](https://github.com/bitnova/bitnova/pull/23306#issuecomment-947516736)
+
+[pull/23542](https://github.com/bitnova/bitnova/pull/23542)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 [fetch.spec.whatwg.org](https://fetch.spec.whatwg.org/#port-blocking)
 

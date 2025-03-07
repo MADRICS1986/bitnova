@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) The Bitcoin Core developers
+=======
+# Copyright (c) The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -16,7 +20,11 @@ from test_framework.messages import (
     msg_blocktxn,
     HeaderAndShortIDs,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.blocktools import (
     COINBASE_MATURITY,
     create_block,
@@ -27,7 +35,11 @@ from test_framework.util import assert_equal
 from test_framework.wallet import MiniWallet
 import copy
 
+<<<<<<< HEAD
 class MutatedBlocksTest(BitcoinTestFramework):
+=======
+class MutatedBlocksTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

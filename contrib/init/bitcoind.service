@@ -1,39 +1,66 @@
 # It is not recommended to modify this file in-place, because it will
 # be overwritten during package upgrades. If you want to add further
 # options or overwrite existing ones then use
+<<<<<<< HEAD
 # $ systemctl edit bitcoind.service
 # See "man systemd.service" for details.
 
 # Note that almost all daemon options could be specified in
 # /etc/bitcoin/bitcoin.conf, but keep in mind those explicitly
+=======
+# $ systemctl edit bitnovad.service
+# See "man systemd.service" for details.
+
+# Note that almost all daemon options could be specified in
+# /etc/bitnova/bitnova.conf, but keep in mind those explicitly
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # specified as arguments in ExecStart= will override those in the
 # config file.
 
 [Unit]
+<<<<<<< HEAD
 Description=Bitcoin daemon
 Documentation=https://github.com/bitcoin/bitcoin/blob/master/doc/init.md
+=======
+Description=BitNova daemon
+Documentation=https://github.com/bitnova/bitnova/blob/master/doc/init.md
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 # https://www.freedesktop.org/wiki/Software/systemd/NetworkTarget/
 After=network-online.target
 Wants=network-online.target
 
 [Service]
+<<<<<<< HEAD
 ExecStart=/usr/bin/bitcoind -pid=/run/bitcoind/bitcoind.pid \
                             -conf=/etc/bitcoin/bitcoin.conf \
                             -datadir=/var/lib/bitcoind \
+=======
+ExecStart=/usr/bin/bitnovad -pid=/run/bitnovad/bitnovad.pid \
+                            -conf=/etc/bitnova/bitnova.conf \
+                            -datadir=/var/lib/bitnovad \
+>>>>>>> 5360f2baff (Initialized BitNova project)
                             -startupnotify='systemd-notify --ready' \
                             -shutdownnotify='systemd-notify --stopping'
 
 # Make sure the config directory is readable by the service user
 PermissionsStartOnly=true
+<<<<<<< HEAD
 ExecStartPre=/bin/chgrp bitcoin /etc/bitcoin
+=======
+ExecStartPre=/bin/chgrp bitnova /etc/bitnova
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 # Process management
 ####################
 
 Type=notify
 NotifyAccess=all
+<<<<<<< HEAD
 PIDFile=/run/bitcoind/bitcoind.pid
+=======
+PIDFile=/run/bitnovad/bitnovad.pid
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Restart=on-failure
 TimeoutStartSec=infinity
@@ -42,6 +69,7 @@ TimeoutStopSec=600
 # Directory creation and permissions
 ####################################
 
+<<<<<<< HEAD
 # Run as bitcoin:bitcoin
 User=bitcoin
 Group=bitcoin
@@ -56,6 +84,22 @@ ConfigurationDirectoryMode=0710
 
 # /var/lib/bitcoind
 StateDirectory=bitcoind
+=======
+# Run as bitnova:bitnova
+User=bitnova
+Group=bitnova
+
+# /run/bitnovad
+RuntimeDirectory=bitnovad
+RuntimeDirectoryMode=0710
+
+# /etc/bitnova
+ConfigurationDirectory=bitnova
+ConfigurationDirectoryMode=0710
+
+# /var/lib/bitnovad
+StateDirectory=bitnovad
+>>>>>>> 5360f2baff (Initialized BitNova project)
 StateDirectoryMode=0710
 
 # Hardening measures

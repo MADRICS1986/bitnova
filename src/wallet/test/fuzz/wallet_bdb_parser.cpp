@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 // Copyright (c) 2023-present The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+// Copyright (c) 2023-present The BitNova Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <test/fuzz/FuzzedDataProvider.h>
 #include <test/fuzz/fuzz.h>
 #include <test/fuzz/util.h>
@@ -19,7 +27,11 @@
 #include <iostream>
 
 // There is an inconsistency in BDB on Windows.
+<<<<<<< HEAD
 // See: https://github.com/bitcoin/bitcoin/pull/26606#issuecomment-2322763212
+=======
+// See: https://github.com/bitnova/bitnova/pull/26606#issuecomment-2322763212
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #undef USE_BDB_NON_MSVC
 #if defined(USE_BDB) && !defined(_MSC_VER)
 #define USE_BDB_NON_MSVC

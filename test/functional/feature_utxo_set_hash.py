@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2020-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2020-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test UTXO set hash value calculation in gettxoutsetinfo."""
@@ -10,11 +14,19 @@ from test_framework.messages import (
     from_hex,
 )
 from test_framework.crypto.muhash import MuHash3072
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
 from test_framework.util import assert_equal
 from test_framework.wallet import MiniWallet
 
 class UTXOSetHashTest(BitcoinTestFramework):
+=======
+from test_framework.test_framework import BitNovaTestFramework
+from test_framework.util import assert_equal
+from test_framework.wallet import MiniWallet
+
+class UTXOSetHashTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True

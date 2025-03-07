@@ -7,7 +7,11 @@ To run linters locally with the same versions as the CI environment, use the inc
 Dockerfile:
 
 ```sh
+<<<<<<< HEAD
 DOCKER_BUILDKIT=1 docker build -t bitcoin-linter --file "./ci/lint_imagefile" ./ && docker run --rm -v $(pwd):/bitcoin -it bitcoin-linter
+=======
+DOCKER_BUILDKIT=1 docker build -t bitnova-linter --file "./ci/lint_imagefile" ./ && docker run --rm -v $(pwd):/bitnova -it bitnova-linter
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 
 Building the container can be done every time, because it is fast when the
@@ -92,16 +96,28 @@ Usage: test/lint/git-subtree-check.sh [-r] DIR [COMMIT]
 
 To do a full check with `-r`, make sure that you have fetched the upstream repository branch in which the subtree is
 maintained:
+<<<<<<< HEAD
 * for `src/secp256k1`: https://github.com/bitcoin-core/secp256k1.git (branch master)
 * for `src/leveldb`: https://github.com/bitcoin-core/leveldb-subtree.git (branch bitcoin-fork)
 * for `src/crypto/ctaes`: https://github.com/bitcoin-core/ctaes.git (branch master)
 * for `src/crc32c`: https://github.com/bitcoin-core/crc32c-subtree.git (branch bitcoin-fork)
 * for `src/minisketch`: https://github.com/bitcoin-core/minisketch.git (branch master)
+=======
+* for `src/secp256k1`: https://github.com/bitnova-core/secp256k1.git (branch master)
+* for `src/leveldb`: https://github.com/bitnova-core/leveldb-subtree.git (branch bitnova-fork)
+* for `src/crypto/ctaes`: https://github.com/bitnova-core/ctaes.git (branch master)
+* for `src/crc32c`: https://github.com/bitnova-core/crc32c-subtree.git (branch bitnova-fork)
+* for `src/minisketch`: https://github.com/bitnova-core/minisketch.git (branch master)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 To do so, add the upstream repository as remote:
 
 ```
+<<<<<<< HEAD
 git remote add --fetch secp256k1 https://github.com/bitcoin-core/secp256k1.git
+=======
+git remote add --fetch secp256k1 https://github.com/bitnova-core/secp256k1.git
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 
 lint_ignore_dirs.py

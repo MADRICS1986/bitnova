@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2010 ArtForz -- public domain half-a-node
 # Copyright (c) 2012 Jeff Garzik
+<<<<<<< HEAD
 # Copyright (c) 2010-2022 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -9,6 +10,16 @@
 CBlock, CTransaction, CBlockHeader, CTxIn, CTxOut, etc....:
     data structures that should map to corresponding structures in
     bitcoin/primitives
+=======
+# Copyright (c) 2010-2022 The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+"""BitNova test framework primitive and message structures
+
+CBlock, CTransaction, CBlockHeader, CTxIn, CTxOut, etc....:
+    data structures that should map to corresponding structures in
+    bitnova/primitives
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 msg_block, msg_tx, msg_headers, etc.:
     data structures that represent network messages
@@ -236,13 +247,21 @@ def from_binary(cls, stream):
     return obj
 
 
+<<<<<<< HEAD
 # Objects that map to bitcoind objects, which can be serialized/deserialized
+=======
+# Objects that map to bitnovad objects, which can be serialized/deserialized
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 
 class CAddress:
     __slots__ = ("net", "ip", "nServices", "port", "time")
 
+<<<<<<< HEAD
     # see https://github.com/bitcoin/bips/blob/master/bip-0155.mediawiki
+=======
+    # see https://github.com/bitnova/bips/blob/master/bip-0155.mediawiki
+>>>>>>> 5360f2baff (Initialized BitNova project)
     NET_IPV4 = 1
     NET_IPV6 = 2
     NET_TORV3 = 4
@@ -413,7 +432,11 @@ class CBlockLocator:
 
     def serialize(self):
         r = b""
+<<<<<<< HEAD
         r += (0).to_bytes(4, "little", signed=True)  # Bitcoin Core ignores the version field. Set it to 0.
+=======
+        r += (0).to_bytes(4, "little", signed=True)  # BitNova Core ignores the version field. Set it to 0.
+>>>>>>> 5360f2baff (Initialized BitNova project)
         r += ser_uint256_vector(self.vHave)
         return r
 
@@ -590,7 +613,11 @@ class CTransaction:
         if len(self.vin) == 0:
             flags = int.from_bytes(f.read(1), "little")
             # Not sure why flags can't be zero, but this
+<<<<<<< HEAD
             # matches the implementation in bitcoind
+=======
+            # matches the implementation in bitnovad
+>>>>>>> 5360f2baff (Initialized BitNova project)
             if (flags != 0):
                 self.vin = deser_vector(f, CTxIn)
                 self.vout = deser_vector(f, CTxOut)
@@ -1140,7 +1167,11 @@ class msg_version:
         self.nStartingHeight = int.from_bytes(f.read(4), "little", signed=True)
 
         # Relay field is optional for version 70001 onwards
+<<<<<<< HEAD
         # But, unconditionally check it to match behaviour in bitcoind
+=======
+        # But, unconditionally check it to match behaviour in bitnovad
+>>>>>>> 5360f2baff (Initialized BitNova project)
         self.relay = int.from_bytes(f.read(1), "little")  # f.read(1) may return an empty b''
 
     def serialize(self):
@@ -1521,7 +1552,11 @@ class msg_headers:
         self.headers = headers if headers is not None else []
 
     def deserialize(self, f):
+<<<<<<< HEAD
         # comment in bitcoind indicates these should be deserialized as blocks
+=======
+        # comment in bitnovad indicates these should be deserialized as blocks
+>>>>>>> 5360f2baff (Initialized BitNova project)
         blocks = deser_vector(f, CBlock)
         for x in blocks:
             self.headers.append(CBlockHeader(x))

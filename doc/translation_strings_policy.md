@@ -1,6 +1,10 @@
 # Translation Strings Policy
 
+<<<<<<< HEAD
 This document provides guidelines for internationalization of the Bitcoin Core software.
+=======
+This document provides guidelines for internationalization of the BitNova Core software.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ## How to translate?
 
@@ -72,10 +76,17 @@ In Qt code, use tr's third argument for optional plurality. For example:
 This adds `<numerusform>`s to the respective `.ts` file, which can be translated separately depending on the language. In English, this is simply:
 
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network</source>
         <translation>
             <numerusform>%n active connection to Bitcoin network</numerusform>
             <numerusform>%n active connections to Bitcoin network</numerusform>
+=======
+        <source>%n active connection(s) to BitNova network</source>
+        <translation>
+            <numerusform>%n active connection to BitNova network</numerusform>
+            <numerusform>%n active connections to BitNova network</numerusform>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         </translation>
     </message>
 
@@ -93,4 +104,8 @@ The second example reduces the number of pluralized words that translators have 
 
 During a string freeze (often before a major release), no translation strings are to be added, modified or removed.
 
+<<<<<<< HEAD
 This can be checked by building the `translate` target with `cmake` ([instructions](translation_process.md)), then verifying that `bitcoin_en.ts` remains unchanged.
+=======
+This can be checked by building the `translate` target with `cmake` ([instructions](translation_process.md)), then verifying that `bitnova_en.ts` remains unchanged.
+>>>>>>> 5360f2baff (Initialized BitNova project)

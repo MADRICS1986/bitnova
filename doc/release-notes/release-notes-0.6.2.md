@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 Bitcoin version 0.6.2 is now available for download at:
 http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.6.2/
+=======
+BitNova version 0.6.2 is now available for download at:
+http://sourceforge.net/projects/bitnova/files/BitNova/bitnova-0.6.2/
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a bug-fix and code-cleanup release, with no major new features.
 
 Please report bugs using the github issue tracker at:
+<<<<<<< HEAD
 https://github.com/bitcoin/bitcoin/issues
+=======
+https://github.com/bitnova/bitnova/issues
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 
 NOTABLE CHANGES
@@ -14,7 +23,11 @@ portable to different data directories by default. If you need a
 portable blkindex.dat file then run with the new -detachdb=1 option
 or the "Detach databases at shutdown" GUI preference.
 
+<<<<<<< HEAD
 Fixed https://github.com/bitcoin/bitcoin/issues/1065, a bug that
+=======
+Fixed https://github.com/bitnova/bitnova/issues/1065, a bug that
+>>>>>>> 5360f2baff (Initialized BitNova project)
 could cause long-running nodes to crash.
 
 Mac and Windows binaries are compiled against OpenSSL 1.0.1b (Linux

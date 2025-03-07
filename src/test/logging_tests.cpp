@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2019-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2019-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -222,7 +226,11 @@ BOOST_FIXTURE_TEST_CASE(logging_Conf, LogSetup)
         ResetLogger();
         ArgsManager args;
         args.AddArg("-loglevel", "...", ArgsManager::ALLOW_ANY, OptionsCategory::DEBUG_TEST);
+<<<<<<< HEAD
         const char* argv_test[] = {"bitcoind", "-loglevel=debug"};
+=======
+        const char* argv_test[] = {"bitnovad", "-loglevel=debug"};
+>>>>>>> 5360f2baff (Initialized BitNova project)
         std::string err;
         BOOST_REQUIRE(args.ParseParameters(2, argv_test, err));
 
@@ -236,7 +244,11 @@ BOOST_FIXTURE_TEST_CASE(logging_Conf, LogSetup)
         ResetLogger();
         ArgsManager args;
         args.AddArg("-loglevel", "...", ArgsManager::ALLOW_ANY, OptionsCategory::DEBUG_TEST);
+<<<<<<< HEAD
         const char* argv_test[] = {"bitcoind", "-loglevel=net:trace"};
+=======
+        const char* argv_test[] = {"bitnovad", "-loglevel=net:trace"};
+>>>>>>> 5360f2baff (Initialized BitNova project)
         std::string err;
         BOOST_REQUIRE(args.ParseParameters(2, argv_test, err));
 
@@ -255,7 +267,11 @@ BOOST_FIXTURE_TEST_CASE(logging_Conf, LogSetup)
         ResetLogger();
         ArgsManager args;
         args.AddArg("-loglevel", "...", ArgsManager::ALLOW_ANY, OptionsCategory::DEBUG_TEST);
+<<<<<<< HEAD
         const char* argv_test[] = {"bitcoind", "-loglevel=debug", "-loglevel=net:trace", "-loglevel=http:info"};
+=======
+        const char* argv_test[] = {"bitnovad", "-loglevel=debug", "-loglevel=net:trace", "-loglevel=http:info"};
+>>>>>>> 5360f2baff (Initialized BitNova project)
         std::string err;
         BOOST_REQUIRE(args.ParseParameters(4, argv_test, err));
 

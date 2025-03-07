@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Copyright (c) 2018-2022 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -7,6 +8,17 @@
 #include <common/args.h>
 #include <init.h>
 #include <qt/bitcoin.h>
+=======
+// Copyright (c) 2018-2022 The BitNova Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#include <bitnova-build-config.h> // IWYU pragma: keep
+
+#include <common/args.h>
+#include <init.h>
+#include <qt/bitnova.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <qt/guiutil.h>
 #include <qt/test/optiontests.h>
 #include <test/util/setup_common.h>
@@ -87,7 +99,11 @@ void OptionTests::migrateSettings()
 
 void OptionTests::integerGetArgBug()
 {
+<<<<<<< HEAD
     // Test regression https://github.com/bitcoin/bitcoin/issues/24457. Ensure
+=======
+    // Test regression https://github.com/bitnova/bitnova/issues/24457. Ensure
+>>>>>>> 5360f2baff (Initialized BitNova project)
     // that setting integer prune value doesn't cause an exception to be thrown
     // in the OptionsModel constructor
     gArgs.LockSettings([&](common::Settings& settings) {
@@ -105,10 +121,17 @@ void OptionTests::integerGetArgBug()
 
 void OptionTests::parametersInteraction()
 {
+<<<<<<< HEAD
     // Test that the bug https://github.com/bitcoin-core/gui/issues/567 does not resurface.
     // It was fixed via https://github.com/bitcoin-core/gui/pull/568.
     // With fListen=false in ~/.config/Bitcoin/Bitcoin-Qt.conf and all else left as default,
     // bitcoin-qt should set both -listen and -listenonion to false and start successfully.
+=======
+    // Test that the bug https://github.com/bitnova-core/gui/issues/567 does not resurface.
+    // It was fixed via https://github.com/bitnova-core/gui/pull/568.
+    // With fListen=false in ~/.config/BitNova/BitNova-Qt.conf and all else left as default,
+    // bitnova-qt should set both -listen and -listenonion to false and start successfully.
+>>>>>>> 5360f2baff (Initialized BitNova project)
     gArgs.LockSettings([&](common::Settings& s) {
         s.forced_settings.erase("listen");
         s.forced_settings.erase("listenonion");

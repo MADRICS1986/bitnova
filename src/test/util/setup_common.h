@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2015-present The Bitcoin Core developers
+=======
+// Copyright (c) 2015-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -94,7 +98,11 @@ struct BasicTestingSetup {
      * compatibility. In the future, it will point to m_args to further isolate
      * test environments.
      *
+<<<<<<< HEAD
      * @see https://github.com/bitcoin/bitcoin/issues/25055 for additional context.
+=======
+     * @see https://github.com/bitnova/bitnova/issues/25055 for additional context.
+>>>>>>> 5360f2baff (Initialized BitNova project)
      */
     ArgsManager m_args;
 };

@@ -66,7 +66,11 @@ time-machine() {
 ################
 
 VERSION="${FORCE_VERSION:-$(git_head_version)}"
+<<<<<<< HEAD
 DISTNAME="${DISTNAME:-bitcoin-${VERSION}}"
+=======
+DISTNAME="${DISTNAME:-bitnova-${VERSION}}"
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 version_base_prefix="${PWD}/guix-build-"
 VERSION_BASE="${version_base_prefix}${VERSION}"  # TOP

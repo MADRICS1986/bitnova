@@ -1,18 +1,34 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2019-2021 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test bitcoind aborts if can't disconnect a block.
+=======
+# Copyright (c) 2019-2021 The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+"""Test bitnovad aborts if can't disconnect a block.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 - Start a single node and generate 3 blocks.
 - Delete the undo data.
 - Mine a fork that requires disconnecting the tip.
+<<<<<<< HEAD
 - Verify that bitcoind AbortNode's.
 """
 from test_framework.test_framework import BitcoinTestFramework
 
 
 class AbortNodeTest(BitcoinTestFramework):
+=======
+- Verify that bitnovad AbortNode's.
+"""
+from test_framework.test_framework import BitNovaTestFramework
+
+
+class AbortNodeTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2

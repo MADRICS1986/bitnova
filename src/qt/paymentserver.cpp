@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <qt/paymentserver.h>
 
+<<<<<<< HEAD
 #include <qt/bitcoinunits.h>
+=======
+#include <qt/bitnovaunits.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <qt/guiutil.h>
 #include <qt/optionsmodel.h>
 
@@ -33,7 +41,11 @@
 #include <QUrlQuery>
 
 const int BITCOIN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
+<<<<<<< HEAD
 const QString BITCOIN_IPC_PREFIX("bitcoin:");
+=======
+const QString BITCOIN_IPC_PREFIX("bitnova:");
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 //
 // Create a name that is unique for:
@@ -42,7 +54,11 @@ const QString BITCOIN_IPC_PREFIX("bitcoin:");
 //
 static QString ipcServerName()
 {
+<<<<<<< HEAD
     QString name("BitcoinQt");
+=======
+    QString name("BitNovaQt");
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     // Append a simple hash of the datadir
     // Note that gArgs.GetDataDirNet() returns a different path
@@ -76,7 +92,11 @@ void PaymentServer::ipcParseCommandLine(int argc, char* argv[])
         QString arg(argv[i]);
         if (arg.startsWith("-")) continue;
 
+<<<<<<< HEAD
         if (arg.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // bitcoin: URI
+=======
+        if (arg.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // bitnova: URI
+>>>>>>> 5360f2baff (Initialized BitNova project)
         {
             savedPaymentRequests.insert(arg);
         }
@@ -126,7 +146,11 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer)
     : QObject(parent)
 {
     // Install global event filter to catch QFileOpenEvents
+<<<<<<< HEAD
     // on Mac: sent when you click bitcoin: links
+=======
+    // on Mac: sent when you click bitnova: links
+>>>>>>> 5360f2baff (Initialized BitNova project)
     // other OSes: helpful when dealing with payment request files
     if (parent)
         parent->installEventFilter(this);
@@ -143,7 +167,11 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer)
         if (!uriServer->listen(name)) {
             // constructor is called early in init, so don't use "Q_EMIT message()" here
             QMessageBox::critical(nullptr, tr("Payment request error"),
+<<<<<<< HEAD
                 tr("Cannot start bitcoin: click-to-pay handler"));
+=======
+                tr("Cannot start bitnova: click-to-pay handler"));
+>>>>>>> 5360f2baff (Initialized BitNova project)
         }
         else {
             connect(uriServer, &QLocalServer::newConnection, this, &PaymentServer::handleURIConnection);
@@ -154,7 +182,11 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer)
 PaymentServer::~PaymentServer() = default;
 
 //
+<<<<<<< HEAD
 // OSX-specific way of handling bitcoin: URIs
+=======
+// OSX-specific way of handling bitnova: URIs
+>>>>>>> 5360f2baff (Initialized BitNova project)
 //
 bool PaymentServer::eventFilter(QObject *object, QEvent *event)
 {
@@ -189,18 +221,31 @@ void PaymentServer::handleURIOrFile(const QString& s)
         return;
     }
 
+<<<<<<< HEAD
     if (s.startsWith("bitcoin://", Qt::CaseInsensitive))
     {
         Q_EMIT message(tr("URI handling"), tr("'bitcoin://' is not a valid URI. Use 'bitcoin:' instead."),
             CClientUIInterface::MSG_ERROR);
     }
     else if (s.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // bitcoin: URI
+=======
+    if (s.startsWith("bitnova://", Qt::CaseInsensitive))
+    {
+        Q_EMIT message(tr("URI handling"), tr("'bitnova://' is not a valid URI. Use 'bitnova:' instead."),
+            CClientUIInterface::MSG_ERROR);
+    }
+    else if (s.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // bitnova: URI
+>>>>>>> 5360f2baff (Initialized BitNova project)
     {
         QUrlQuery uri((QUrl(s)));
         // normal URI
         {
             SendCoinsRecipient recipient;
+<<<<<<< HEAD
             if (GUIUtil::parseBitcoinURI(s, &recipient))
+=======
+            if (GUIUtil::parseBitNovaURI(s, &recipient))
+>>>>>>> 5360f2baff (Initialized BitNova project)
             {
                 std::string error_msg;
                 const CTxDestination dest = DecodeDestination(recipient.address.toStdString(), error_msg);
@@ -221,7 +266,11 @@ void PaymentServer::handleURIOrFile(const QString& s)
             }
             else
                 Q_EMIT message(tr("URI handling"),
+<<<<<<< HEAD
                     tr("URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters."),
+=======
+                    tr("URI cannot be parsed! This can be caused by an invalid BitNova address or malformed URI parameters."),
+>>>>>>> 5360f2baff (Initialized BitNova project)
                     CClientUIInterface::ICON_WARNING);
 
             return;

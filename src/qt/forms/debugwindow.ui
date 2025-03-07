@@ -279,7 +279,11 @@
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
          </property>
          <property name="toolTip">
+<<<<<<< HEAD
           <string>Network addresses that your Bitcoin node is currently using to communicate with other nodes.</string>
+=======
+          <string>Network addresses that your BitNova node is currently using to communicate with other nodes.</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
          </property>
         </widget>
        </item>
@@ -513,7 +517,11 @@
             <string/>
            </property>
            <property name="icon">
+<<<<<<< HEAD
             <iconset resource="../bitcoin.qrc">
+=======
+            <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
              <normaloff>:/icons/fontsmaller</normaloff>:/icons/fontsmaller</iconset>
            </property>
            <property name="iconSize">
@@ -533,7 +541,11 @@
             <string/>
            </property>
            <property name="icon">
+<<<<<<< HEAD
             <iconset resource="../bitcoin.qrc">
+=======
+            <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
              <normaloff>:/icons/fontbigger</normaloff>:/icons/fontbigger</iconset>
            </property>
            <property name="iconSize">
@@ -556,7 +568,11 @@
             <string/>
            </property>
            <property name="icon">
+<<<<<<< HEAD
             <iconset resource="../bitcoin.qrc">
+=======
+            <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
              <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
            </property>
            <property name="iconSize">
@@ -611,7 +627,11 @@
             <string/>
            </property>
            <property name="icon">
+<<<<<<< HEAD
             <iconset resource="../bitcoin.qrc">
+=======
+            <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
              <normaloff>:/icons/prompticon</normaloff>
              <disabledoff>:/icons/prompticon</disabledoff>:/icons/prompticon</iconset>
            </property>
@@ -1111,7 +1131,11 @@
                         <string />
                       </property>
                       <property name="icon">
+<<<<<<< HEAD
                         <iconset resource="../bitcoin.qrc">
+=======
+                        <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
                           <normaloff>:/icons/remove</normaloff>
                           :/icons/remove
                         </iconset>
@@ -1870,7 +1894,11 @@
   </customwidget>
  </customwidgets>
  <resources>
+<<<<<<< HEAD
   <include location="../bitcoin.qrc"/>
+=======
+  <include location="../bitnova.qrc"/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
  </resources>
  <connections/>
 </ui>

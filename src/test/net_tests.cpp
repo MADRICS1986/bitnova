@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2012-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2012-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -444,7 +448,11 @@ BOOST_AUTO_TEST_CASE(cnetaddr_unserialize_v2)
     // Valid IPv6, contains embedded "internal".
     s << "02"                                    // network type (IPv6)
          "10"                                    // address length
+<<<<<<< HEAD
          "fd6b88c08724ca978112ca1bbdcafac2"_hex; // address: 0xfd + sha256("bitcoin")[0:5] +
+=======
+         "fd6b88c08724ca978112ca1bbdcafac2"_hex; // address: 0xfd + sha256("bitnova")[0:5] +
+>>>>>>> 5360f2baff (Initialized BitNova project)
                                                  // sha256(name)[0:10]
     s >> ser_params(addr);
     BOOST_CHECK(addr.IsInternal());

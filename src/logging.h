@@ -1,5 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
+<<<<<<< HEAD
 // Copyright (c) 2009-present The Bitcoin Core developers
+=======
+// Copyright (c) 2009-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -175,7 +179,11 @@ namespace BCLog {
         /** Disable logging
          * This offers a slight speedup and slightly smaller memory usage
          * compared to leaving the logging system in its default state.
+<<<<<<< HEAD
          * Mostly intended for libbitcoin-kernel apps that don't want any logging.
+=======
+         * Mostly intended for libbitnova-kernel apps that don't want any logging.
+>>>>>>> 5360f2baff (Initialized BitNova project)
          * Should be used instead of StartLogging().
          */
         void DisableLogging() EXCLUSIVE_LOCKS_REQUIRED(!m_cs);

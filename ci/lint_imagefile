@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Copyright (c) The Bitcoin Core developers
+=======
+# Copyright (c) The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
@@ -21,5 +25,9 @@ RUN /install.sh && \
   rm -rf /var/lib/apt/lists/*
 
 
+<<<<<<< HEAD
 WORKDIR /bitcoin
+=======
+WORKDIR /bitnova
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ENTRYPOINT ["/entrypoint.sh"]

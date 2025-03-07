@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2023 The Bitcoin Core developers
+=======
+// Copyright (c) 2023 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -33,7 +37,11 @@
 namespace ipc {
 namespace capnp {
 //! Construct a ParamStream wrapping a data stream with serialization parameters
+<<<<<<< HEAD
 //! needed to pass transaction objects between bitcoin processes.
+=======
+//! needed to pass transaction objects between bitnova processes.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 //! In the future, more params may be added here to serialize other objects that
 //! require serialization parameters. Params should just be chosen to serialize
 //! objects completely and ensure that serializing and deserializing objects
@@ -53,7 +61,11 @@ concept Deserializable = std::is_constructible_v<T, ::deserialize_type, ::DataSt
 } // namespace capnp
 } // namespace ipc
 
+<<<<<<< HEAD
 //! Functions to serialize / deserialize common bitcoin types.
+=======
+//! Functions to serialize / deserialize common bitnova types.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 namespace mp {
 //! Overload multiprocess library's CustomBuildField hook to allow any
 //! serializable object to be stored in a capnproto Data field or passed to a

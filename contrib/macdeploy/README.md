@@ -6,7 +6,11 @@ The `macdeployqtplus` script should not be run manually. Instead, after building
 make deploy
 ```
 
+<<<<<<< HEAD
 When complete, it will have produced `Bitcoin-Core.zip`.
+=======
+When complete, it will have produced `BitNova-Core.zip`.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ## SDK Extraction
 
@@ -29,7 +33,11 @@ To extract the `.xip` on Linux:
 ```bash
 # Install/clone tools needed for extracting Xcode.app
 apt install cpio
+<<<<<<< HEAD
 git clone https://github.com/bitcoin-core/apple-sdk-tools.git
+=======
+git clone https://github.com/bitnova-core/apple-sdk-tools.git
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 # Unpack the .xip and place the resulting Xcode.app in your current
 # working directory
@@ -72,6 +80,10 @@ for the build process to remain somewhat deterministic. Here's how it works:
   users may choose to bless, self-codesign, and run. It also outputs an unsigned app structure
   in the form of a tarball.
 - The Apple keyholder uses this unsigned app to create a detached signature, using the
+<<<<<<< HEAD
   included script. Detached signatures are available from this [repository](https://github.com/bitcoin-core/bitcoin-detached-sigs).
+=======
+  included script. Detached signatures are available from this [repository](https://github.com/bitnova-core/bitnova-detached-sigs).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - Builders feed the unsigned app + detached signature back into Guix, which combines the
   pieces into a deterministic ZIP.

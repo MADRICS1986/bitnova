@@ -3,7 +3,11 @@ Reduce Traffic
 
 Some node operators need to deal with bandwidth caps imposed by their ISPs.
 
+<<<<<<< HEAD
 By default, Bitcoin Core allows up to 125 connections to different peers, 11 of
+=======
+By default, BitNova Core allows up to 125 connections to different peers, 11 of
+>>>>>>> 5360f2baff (Initialized BitNova project)
 which are outbound. You can therefore, have at most 114 inbound connections.
 Of the 11 outbound peers, there can be 8 full-relay connections, 2
 block-relay-only ones and occasionally 1 short-lived feeler or an extra block-relay-only connection.
@@ -35,7 +39,11 @@ blocks and transactions to fewer nodes.
 ## 3. Reduce maximum connections (`-maxconnections=<num>`)
 
 Reducing the maximum connected nodes to a minimum could be desirable if traffic
+<<<<<<< HEAD
 limits are tiny. Keep in mind that bitcoin's trustless model works best if you are
+=======
+limits are tiny. Keep in mind that bitnova's trustless model works best if you are
+>>>>>>> 5360f2baff (Initialized BitNova project)
 connected to a handful of nodes.
 
 ## 4. Turn off transaction relay (`-blocksonly`)

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2017-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2017-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test recovery from a crash during chainstate writing.
@@ -34,7 +38,11 @@ from test_framework.blocktools import COINBASE_MATURITY
 from test_framework.messages import (
     COIN,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
 )
@@ -44,7 +52,11 @@ from test_framework.wallet import (
 )
 
 
+<<<<<<< HEAD
 class ChainstateWriteCrashTest(BitcoinTestFramework):
+=======
+class ChainstateWriteCrashTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 4
         self.rpc_timeout = 480
@@ -89,14 +101,24 @@ class ChainstateWriteCrashTest(BitcoinTestFramework):
                 return utxo_hash
             except Exception:
                 # An exception here should mean the node is about to crash.
+<<<<<<< HEAD
                 # If bitcoind exits, then try again.  wait_for_node_exit()
                 # should raise an exception if bitcoind doesn't exit.
+=======
+                # If bitnovad exits, then try again.  wait_for_node_exit()
+                # should raise an exception if bitnovad doesn't exit.
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 self.wait_for_node_exit(node_index, timeout=10)
             self.crashed_on_restart += 1
             time.sleep(1)
 
+<<<<<<< HEAD
         # If we got here, bitcoind isn't coming back up on restart.  Could be a
         # bug in bitcoind, or we've gotten unlucky with our dbcrash ratio --
+=======
+        # If we got here, bitnovad isn't coming back up on restart.  Could be a
+        # bug in bitnovad, or we've gotten unlucky with our dbcrash ratio --
+>>>>>>> 5360f2baff (Initialized BitNova project)
         # perhaps we generated a test case that blew up our cache?
         # TODO: If this happens a lot, we should try to restart without -dbcrashratio
         # and make sure that recovery happens.

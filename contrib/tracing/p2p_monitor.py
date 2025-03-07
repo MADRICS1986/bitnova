@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2021 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -7,6 +8,16 @@
     net:inbound_message and net:outbound_message tracepoints. """
 
 # This script demonstrates what USDT for Bitcoin Core can enable. It uses BCC
+=======
+# Copyright (c) 2021 The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+""" Interactive bitnovad P2P network traffic monitor utilizing USDT and the
+    net:inbound_message and net:outbound_message tracepoints. """
+
+# This script demonstrates what USDT for BitNova Core can enable. It uses BCC
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # (https://github.com/iovisor/bcc) to load a sandboxed eBPF program into the
 # Linux kernel (root privileges are required). The eBPF program attaches to two
 # statically defined tracepoints. The tracepoint 'net:inbound_message' is called
@@ -126,6 +137,7 @@ class Peer:
 
 def main(pid):
     peers = dict()
+<<<<<<< HEAD
     print(f"Hooking into bitcoind with pid {pid}")
     bitcoind_with_usdts = USDT(pid=int(pid))
 
@@ -135,6 +147,17 @@ def main(pid):
     bitcoind_with_usdts.enable_probe(
         probe="outbound_message", fn_name="trace_outbound_message")
     bpf = BPF(text=program, usdt_contexts=[bitcoind_with_usdts])
+=======
+    print(f"Hooking into bitnovad with pid {pid}")
+    bitnovad_with_usdts = USDT(pid=int(pid))
+
+    # attaching the trace functions defined in the BPF program to the tracepoints
+    bitnovad_with_usdts.enable_probe(
+        probe="inbound_message", fn_name="trace_inbound_message")
+    bitnovad_with_usdts.enable_probe(
+        probe="outbound_message", fn_name="trace_outbound_message")
+    bpf = BPF(text=program, usdt_contexts=[bitnovad_with_usdts])
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     # BCC: perf buffer handle function for inbound_messages
     def handle_inbound(_, data, size):
@@ -259,7 +282,11 @@ def running_as_root():
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
+<<<<<<< HEAD
         print("USAGE:", sys.argv[0], "<pid of bitcoind>")
+=======
+        print("USAGE:", sys.argv[0], "<pid of bitnovad>")
+>>>>>>> 5360f2baff (Initialized BitNova project)
         exit()
     if not running_as_root():
         print("You might not have the privileges required to hook into the tracepoints!")

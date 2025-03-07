@@ -2,6 +2,7 @@
 
 # backward compatibility for existing gentoo layout 
 #
+<<<<<<< HEAD
 if [ -d "/var/lib/bitcoin/.bitcoin" ]; then
 	BITCOIND_DEFAULT_DATADIR="/var/lib/bitcoin/.bitcoin"
 else
@@ -22,6 +23,28 @@ name="Bitcoin Core Daemon"
 description="Bitcoin cryptocurrency P2P network daemon"
 
 command="/usr/bin/bitcoind"
+=======
+if [ -d "/var/lib/bitnova/.bitnova" ]; then
+	BITCOIND_DEFAULT_DATADIR="/var/lib/bitnova/.bitnova"
+else
+	BITCOIND_DEFAULT_DATADIR="/var/lib/bitnovad"
+fi
+
+BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/bitnova/bitnova.conf}
+BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/bitnovad}
+BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/bitnovad.pid}
+BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
+BITCOIND_USER=${BITCOIND_USER:-${BITCOIN_USER:-bitnova}}
+BITCOIND_GROUP=${BITCOIND_GROUP:-bitnova}
+BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/bitnovad}
+BITCOIND_NICE=${BITCOIND_NICE:-${NICELEVEL:-0}}
+BITCOIND_OPTS="${BITCOIND_OPTS:-${BITCOIN_OPTS}}"
+
+name="BitNova Core Daemon"
+description="BitNova cryptocurrency P2P network daemon"
+
+command="/usr/bin/bitnovad"
+>>>>>>> 5360f2baff (Initialized BitNova project)
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
 		-conf=\"${BITCOIND_CONFIGFILE}\" \
 		-datadir=\"${BITCOIND_DATADIR}\" \
@@ -72,7 +95,11 @@ checkconfig()
 	if grep -qs '^rpcuser=' "${BITCOIND_CONFIGFILE}" && \
 		! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
 		eerror ""
+<<<<<<< HEAD
 		eerror "ERROR: You must set a secure rpcpassword to run bitcoind."
+=======
+		eerror "ERROR: You must set a secure rpcpassword to run bitnovad."
+>>>>>>> 5360f2baff (Initialized BitNova project)
 		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "
@@ -85,7 +112,11 @@ checkconfig()
 		eerror "It is recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
+<<<<<<< HEAD
 		eerror "ie: alertnotify=echo %%s | mail -s \"Bitcoin Alert\"" \
+=======
+		eerror "ie: alertnotify=echo %%s | mail -s \"BitNova Alert\"" \
+>>>>>>> 5360f2baff (Initialized BitNova project)
 			"admin@foo.com"
 		eerror ""
 		return 1

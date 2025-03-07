@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 Bitcoin Core version 0.10.2 is now available from:
 
   <https://bitcoin.org/bin/bitcoin-core-0.10.2/>
+=======
+BitNova Core version 0.10.2 is now available from:
+
+  <https://bitnova.org/bin/bitnova-core-0.10.2/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a new minor version release, bringing minor bug fixes and translation 
 updates. It is recommended to upgrade to this version.
 
 Please report bugs using the issue tracker at github:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Upgrading and downgrading
 =========================
@@ -17,15 +27,24 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
+<<<<<<< HEAD
 installer (on Windows) or just copy over /Applications/Bitcoin-Qt (on Mac) or
 bitcoind/bitcoin-qt (on Linux).
+=======
+installer (on Windows) or just copy over /Applications/BitNova-Qt (on Mac) or
+bitnovad/bitnova-qt (on Linux).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Downgrade warning
 ------------------
 
 Because release 0.10.0 and later makes use of headers-first synchronization and
 parallel block download (see further), the block files and databases are not
+<<<<<<< HEAD
 backwards-compatible with pre-0.10 versions of Bitcoin Core or other software:
+=======
+backwards-compatible with pre-0.10 versions of BitNova Core or other software:
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 * Blocks will be stored on disk out of order (in the order they are
 received, really), which makes it incompatible with some tools or
@@ -47,12 +66,20 @@ Notable changes
 ===============
 
 This fixes a serious problem on Windows with data directories that have non-ASCII
+<<<<<<< HEAD
 characters (https://github.com/bitcoin/bitcoin/issues/6078).
+=======
+characters (https://github.com/bitnova/bitnova/issues/6078).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 For other platforms there are no notable changes.
 
 For the notable changes in 0.10, refer to the release notes
+<<<<<<< HEAD
 at https://github.com/bitcoin/bitcoin/blob/v0.10.0/doc/release-notes.md
+=======
+at https://github.com/bitnova/bitnova/blob/v0.10.0/doc/release-notes.md
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 0.10.2 Change log
 =================
@@ -83,4 +110,8 @@ And all those who contributed additional code review and/or security research:
 - Pieter Wuille
 - vayvanne
 
+<<<<<<< HEAD
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
+=======
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)

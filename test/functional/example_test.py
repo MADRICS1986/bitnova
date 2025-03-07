@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2017-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2017-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """An example functional test
@@ -29,7 +33,11 @@ from test_framework.p2p import (
     msg_getdata,
     p2p_lock,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
 )
@@ -69,12 +77,21 @@ def custom_function():
 
     If this function is more generally useful for other tests, consider
     moving it to a module in test_framework."""
+<<<<<<< HEAD
     # self.log.info("running custom_function")  # Oops! Can't run self.log outside the BitcoinTestFramework
     pass
 
 
 class ExampleTest(BitcoinTestFramework):
     # Each functional test is a subclass of the BitcoinTestFramework class.
+=======
+    # self.log.info("running custom_function")  # Oops! Can't run self.log outside the BitNovaTestFramework
+    pass
+
+
+class ExampleTest(BitNovaTestFramework):
+    # Each functional test is a subclass of the BitNovaTestFramework class.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     # Override the set_test_params(), skip_test_if_missing_module(), add_options(), setup_chain(), setup_network()
     # and setup_nodes() methods to customize the test setup as required.
@@ -140,7 +157,11 @@ class ExampleTest(BitcoinTestFramework):
 
         Define it in a method here because you're going to use it repeatedly.
         If you think it's useful in general, consider moving it to the base
+<<<<<<< HEAD
         BitcoinTestFramework class so other tests can use it."""
+=======
+        BitNovaTestFramework class so other tests can use it."""
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         self.log.info("Running custom_method")
 

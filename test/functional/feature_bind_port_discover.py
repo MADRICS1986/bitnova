@@ -1,12 +1,20 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2020-2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2020-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
 Test that -discover does not add all interfaces' addresses if we listen on only some of them
 """
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework, SkipTest
+=======
+from test_framework.test_framework import BitNovaTestFramework, SkipTest
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import assert_equal
 
 # We need to bind to a routable address for this test to exercise the relevant code
@@ -24,7 +32,11 @@ ADDR2 = '2.2.2.2'
 
 BIND_PORT = 31001
 
+<<<<<<< HEAD
 class BindPortDiscoverTest(BitcoinTestFramework):
+=======
+class BindPortDiscoverTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         # Avoid any -bind= on the command line. Force the framework to avoid adding -bind=127.0.0.1.
         self.setup_clean_chain = True

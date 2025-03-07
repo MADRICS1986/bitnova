@@ -1,6 +1,10 @@
 Checks: '
 -*,
+<<<<<<< HEAD
 bitcoin-*,
+=======
+bitnova-*,
+>>>>>>> 5360f2baff (Initialized BitNova project)
 bugprone-argument-comment,
 bugprone-move-forwarding-reference,
 bugprone-string-constructor,

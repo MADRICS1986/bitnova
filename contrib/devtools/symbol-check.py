@@ -41,7 +41,11 @@ MAX_VERSIONS = {
     lief.ELF.ARCH.RISCV:  (2,31),
 },
 'LIBATOMIC': (1,0),
+<<<<<<< HEAD
 'V':         (0,5,0),  # xkb (bitcoin-qt only)
+=======
+'V':         (0,5,0),  # xkb (bitnova-qt only)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 }
 
 # Ignore symbols that are exported as part of every executable
@@ -92,7 +96,11 @@ ELF_ABIS: dict[lief.ELF.ARCH, dict[lief.ENDIANNESS, list[int]]] = {
 
 # Allowed NEEDED libraries
 ELF_ALLOWED_LIBRARIES = {
+<<<<<<< HEAD
 # bitcoind and bitcoin-qt
+=======
+# bitnovad and bitnova-qt
+>>>>>>> 5360f2baff (Initialized BitNova project)
 'libgcc_s.so.1', # GCC base support
 'libc.so.6', # C library
 'libpthread.so.0', # threading
@@ -105,7 +113,11 @@ ELF_ALLOWED_LIBRARIES = {
 'ld64.so.1', # POWER64 ABIv1 dynamic linker
 'ld64.so.2', # POWER64 ABIv2 dynamic linker
 'ld-linux-riscv64-lp64d.so.1', # 64-bit RISC-V dynamic linker
+<<<<<<< HEAD
 # bitcoin-qt only
+=======
+# bitnova-qt only
+>>>>>>> 5360f2baff (Initialized BitNova project)
 'libxcb.so.1', # part of X11
 'libxkbcommon.so.0', # keyboard keymapping
 'libxkbcommon-x11.so.0', # keyboard keymapping
@@ -127,10 +139,17 @@ ELF_ALLOWED_LIBRARIES = {
 }
 
 MACHO_ALLOWED_LIBRARIES = {
+<<<<<<< HEAD
 # bitcoind and bitcoin-qt
 'libc++.1.dylib', # C++ Standard Library
 'libSystem.B.dylib', # libc, libm, libpthread, libinfo
 # bitcoin-qt only
+=======
+# bitnovad and bitnova-qt
+'libc++.1.dylib', # C++ Standard Library
+'libSystem.B.dylib', # libc, libm, libpthread, libinfo
+# bitnova-qt only
+>>>>>>> 5360f2baff (Initialized BitNova project)
 'AppKit', # user interface
 'ApplicationServices', # common application tasks.
 'Carbon', # deprecated c back-compat API
@@ -157,7 +176,11 @@ PE_ALLOWED_LIBRARIES = {
 'msvcrt.dll', # C standard library for MSVC
 'SHELL32.dll', # shell API
 'WS2_32.dll', # sockets
+<<<<<<< HEAD
 # bitcoin-qt only
+=======
+# bitnova-qt only
+>>>>>>> 5360f2baff (Initialized BitNova project)
 'dwmapi.dll', # desktop window manager
 'GDI32.dll', # graphics device interface
 'IMM32.dll', # input method editor

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -17,7 +21,11 @@ from test_framework.p2p import (
     p2p_lock,
     P2P_SERVICES,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import assert_equal
 
 ADDR = CAddress()
@@ -27,7 +35,11 @@ ADDR.ip = "192.0.0.8"
 ADDR.port = 18444
 
 
+<<<<<<< HEAD
 class P2PAddrFetch(BitcoinTestFramework):
+=======
+class P2PAddrFetch(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

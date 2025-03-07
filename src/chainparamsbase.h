@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2014-2020 The Bitcoin Core developers
+=======
+// Copyright (c) 2014-2020 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,8 +18,13 @@
 class ArgsManager;
 
 /**
+<<<<<<< HEAD
  * CBaseChainParams defines the base parameters (shared between bitcoin-cli and bitcoind)
  * of a given instance of the Bitcoin system.
+=======
+ * CBaseChainParams defines the base parameters (shared between bitnova-cli and bitnovad)
+ * of a given instance of the BitNova system.
+>>>>>>> 5360f2baff (Initialized BitNova project)
  */
 class CBaseChainParams
 {

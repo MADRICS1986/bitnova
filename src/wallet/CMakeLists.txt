@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 # Copyright (c) 2023-present The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
 # Wallet functionality used by bitcoind and bitcoin-wallet executables.
 add_library(bitcoin_wallet STATIC EXCLUDE_FROM_ALL
+=======
+# Copyright (c) 2023-present The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or https://opensource.org/license/mit/.
+
+# Wallet functionality used by bitnovad and bitnova-wallet executables.
+add_library(bitnova_wallet STATIC EXCLUDE_FROM_ALL
+>>>>>>> 5360f2baff (Initialized BitNova project)
   coincontrol.cpp
   coinselection.cpp
   context.cpp
@@ -33,10 +42,17 @@ add_library(bitcoin_wallet STATIC EXCLUDE_FROM_ALL
   walletdb.cpp
   walletutil.cpp
 )
+<<<<<<< HEAD
 target_link_libraries(bitcoin_wallet
   PRIVATE
     core_interface
     bitcoin_common
+=======
+target_link_libraries(bitnova_wallet
+  PRIVATE
+    core_interface
+    bitnova_common
+>>>>>>> 5360f2baff (Initialized BitNova project)
     univalue
     Boost::headers
     $<TARGET_NAME_IF_EXISTS:USDT::headers>
@@ -46,14 +62,24 @@ if(NOT USE_SQLITE AND NOT USE_BDB)
   message(FATAL_ERROR "Wallet functionality requested but no BDB or SQLite support available.")
 endif()
 if(USE_SQLITE)
+<<<<<<< HEAD
   target_sources(bitcoin_wallet PRIVATE sqlite.cpp)
   target_link_libraries(bitcoin_wallet
+=======
+  target_sources(bitnova_wallet PRIVATE sqlite.cpp)
+  target_link_libraries(bitnova_wallet
+>>>>>>> 5360f2baff (Initialized BitNova project)
     PRIVATE
       $<TARGET_NAME_IF_EXISTS:unofficial::sqlite3::sqlite3>
       $<TARGET_NAME_IF_EXISTS:SQLite::SQLite3>
   )
 endif()
 if(USE_BDB)
+<<<<<<< HEAD
   target_sources(bitcoin_wallet PRIVATE bdb.cpp salvage.cpp)
   target_link_libraries(bitcoin_wallet PUBLIC BerkeleyDB::BerkeleyDB)
+=======
+  target_sources(bitnova_wallet PRIVATE bdb.cpp salvage.cpp)
+  target_link_libraries(bitnova_wallet PUBLIC BerkeleyDB::BerkeleyDB)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 endif()

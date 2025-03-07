@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2020 The Bitcoin Core developers
+=======
+# Copyright (c) 2020 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -494,9 +498,15 @@ def do_calibrate(args):
     print("nbits=%08x for %ds average mining time" % (target_to_nbits(want_targ), want_time))
     return 0
 
+<<<<<<< HEAD
 def bitcoin_cli(basecmd, args, **kwargs):
     cmd = basecmd + ["-signet"] + args
     logging.debug("Calling bitcoin-cli: %r", cmd)
+=======
+def bitnova_cli(basecmd, args, **kwargs):
+    cmd = basecmd + ["-signet"] + args
+    logging.debug("Calling bitnova-cli: %r", cmd)
+>>>>>>> 5360f2baff (Initialized BitNova project)
     out = subprocess.run(cmd, stdout=subprocess.PIPE, **kwargs, check=True).stdout
     if isinstance(out, bytes):
         out = out.decode('utf8')
@@ -504,7 +514,11 @@ def bitcoin_cli(basecmd, args, **kwargs):
 
 def main():
     parser = argparse.ArgumentParser()
+<<<<<<< HEAD
     parser.add_argument("--cli", default="bitcoin-cli", type=str, help="bitcoin-cli command")
+=======
+    parser.add_argument("--cli", default="bitnova-cli", type=str, help="bitnova-cli command")
+>>>>>>> 5360f2baff (Initialized BitNova project)
     parser.add_argument("--debug", action="store_true", help="Print debugging info")
     parser.add_argument("--quiet", action="store_true", help="Only print warnings/errors")
 
@@ -549,7 +563,11 @@ def main():
 
     args = parser.parse_args(sys.argv[1:])
 
+<<<<<<< HEAD
     args.bcli = lambda *a, input=b"", **kwargs: bitcoin_cli(args.cli.split(" "), list(a), input=input, **kwargs)
+=======
+    args.bcli = lambda *a, input=b"", **kwargs: bitnova_cli(args.cli.split(" "), list(a), input=input, **kwargs)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     if hasattr(args, "address") and hasattr(args, "descriptor"):
         args.derived_addresses = {}

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2015-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2015-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test decoding scripts via decodescript RPC command."""
@@ -11,13 +15,21 @@ from test_framework.messages import (
     sha256,
     tx_from_hex,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
 )
 
 
+<<<<<<< HEAD
 class DecodeScriptTest(BitcoinTestFramework):
+=======
+class DecodeScriptTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -275,7 +287,11 @@ class DecodeScriptTest(BitcoinTestFramework):
 
     def decodescript_miniscript(self):
         """Check that a Miniscript is decoded when possible under P2WSH context."""
+<<<<<<< HEAD
         # Sourced from https://github.com/bitcoin/bitcoin/pull/27037#issuecomment-1416151907.
+=======
+        # Sourced from https://github.com/bitnova/bitnova/pull/27037#issuecomment-1416151907.
+>>>>>>> 5360f2baff (Initialized BitNova project)
         # Miniscript-compatible offered HTLC
         res = self.nodes[0].decodescript("82012088a914ffffffffffffffffffffffffffffffffffffffff88210250929b74c1a04954b78b4b6035e97a5e078a5a0f28ec96d547bfee9ace803ac0ad51b2")
         assert res["segwit"]["desc"] == "wsh(and_v(and_v(v:hash160(ffffffffffffffffffffffffffffffffffffffff),v:pk(0250929b74c1a04954b78b4b6035e97a5e078a5a0f28ec96d547bfee9ace803ac0)),older(1)))#gm8xz4fl"

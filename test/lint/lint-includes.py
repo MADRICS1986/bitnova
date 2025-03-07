@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 #
+<<<<<<< HEAD
 # Copyright (c) 2018-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2018-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
@@ -17,7 +21,11 @@ from subprocess import check_output, CalledProcessError
 from lint_ignore_dirs import SHARED_EXCLUDED_SUBTREES
 
 
+<<<<<<< HEAD
 EXCLUDED_DIRS = ["contrib/devtools/bitcoin-tidy/",
+=======
+EXCLUDED_DIRS = ["contrib/devtools/bitnova-tidy/",
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 ] + SHARED_EXCLUDED_SUBTREES
 
 EXPECTED_BOOST_INCLUDES = [

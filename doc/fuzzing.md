@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Fuzzing Bitcoin Core using libFuzzer
 
 ## Quickstart guide
@@ -10,6 +11,20 @@ $ cd bitcoin/
 $ cmake --preset=libfuzzer
 # macOS users: If you have problem with this step then make sure to read "macOS hints for
 # libFuzzer" on https://github.com/bitcoin/bitcoin/blob/master/doc/fuzzing.md#macos-hints-for-libfuzzer
+=======
+# Fuzzing BitNova Core using libFuzzer
+
+## Quickstart guide
+
+To quickly get started fuzzing BitNova Core using [libFuzzer](https://llvm.org/docs/LibFuzzer.html):
+
+```sh
+$ git clone https://github.com/bitnova/bitnova
+$ cd bitnova/
+$ cmake --preset=libfuzzer
+# macOS users: If you have problem with this step then make sure to read "macOS hints for
+# libFuzzer" on https://github.com/bitnova/bitnova/blob/master/doc/fuzzing.md#macos-hints-for-libfuzzer
+>>>>>>> 5360f2baff (Initialized BitNova project)
 $ cmake --build build_fuzz
 $ FUZZ=process_message build_fuzz/src/test/fuzz/fuzz
 # abort fuzzing using ctrl-c
@@ -21,6 +36,7 @@ See [further](#run-without-sanitizers-for-increased-throughput) for more informa
 There is also a runner script to execute all fuzz targets. Refer to
 `./test/fuzz/test_runner.py --help` for more details.
 
+<<<<<<< HEAD
 ## Overview of Bitcoin Core fuzzing
 
 [Google](https://github.com/google/fuzzing/) has a good overview of fuzzing in general, with contributions from key architects of some of the most-used fuzzers. [This paper](https://agroce.github.io/bitcoin_report.pdf) includes an external overview of the status of Bitcoin Core fuzzing, as of summer 2021.  [John Regehr](https://blog.regehr.org/archives/1687) provides good advice on writing code that assists fuzzers in finding bugs, which is useful for developers to keep in mind.
@@ -28,6 +44,15 @@ There is also a runner script to execute all fuzz targets. Refer to
 ## Fuzzing harnesses and output
 
 [`process_message`](https://github.com/bitcoin/bitcoin/blob/master/src/test/fuzz/process_message.cpp) is a fuzzing harness for the [`ProcessMessage(...)` function (`net_processing`)](https://github.com/bitcoin/bitcoin/blob/master/src/net_processing.cpp). The available fuzzing harnesses are found in [`src/test/fuzz/`](https://github.com/bitcoin/bitcoin/tree/master/src/test/fuzz).
+=======
+## Overview of BitNova Core fuzzing
+
+[Google](https://github.com/google/fuzzing/) has a good overview of fuzzing in general, with contributions from key architects of some of the most-used fuzzers. [This paper](https://agroce.github.io/bitnova_report.pdf) includes an external overview of the status of BitNova Core fuzzing, as of summer 2021.  [John Regehr](https://blog.regehr.org/archives/1687) provides good advice on writing code that assists fuzzers in finding bugs, which is useful for developers to keep in mind.
+
+## Fuzzing harnesses and output
+
+[`process_message`](https://github.com/bitnova/bitnova/blob/master/src/test/fuzz/process_message.cpp) is a fuzzing harness for the [`ProcessMessage(...)` function (`net_processing`)](https://github.com/bitnova/bitnova/blob/master/src/net_processing.cpp). The available fuzzing harnesses are found in [`src/test/fuzz/`](https://github.com/bitnova/bitnova/tree/master/src/test/fuzz).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 The fuzzer will output `NEW` every time it has created a test input that covers new areas of the code under test. For more information on how to interpret the fuzzer output, see the [libFuzzer documentation](https://llvm.org/docs/LibFuzzer.html).
 
@@ -73,7 +98,11 @@ block^@M-^?M-^?M-^?M-^?M-^?nM-^?M-^?
 
 In this case the fuzzer managed to create a `block` message which when passed to `ProcessMessage(...)` increased coverage.
 
+<<<<<<< HEAD
 It is possible to specify `bitcoind` arguments to the `fuzz` executable.
+=======
+It is possible to specify `bitnovad` arguments to the `fuzz` executable.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Depending on the test, they may be ignored or consumed and alter the behavior
 of the test. Just make sure to use double-dash to distinguish them from the
 fuzzer's own arguments:
@@ -84,12 +113,21 @@ $ FUZZ=address_deserialize_v2 build_fuzz/src/test/fuzz/fuzz -runs=1 fuzz_corpora
 
 ## Fuzzing corpora
 
+<<<<<<< HEAD
 The project's collection of seed corpora is found in the [`bitcoin-core/qa-assets`](https://github.com/bitcoin-core/qa-assets) repo.
 
 To fuzz `process_message` using the [`bitcoin-core/qa-assets`](https://github.com/bitcoin-core/qa-assets) seed corpus:
 
 ```sh
 $ git clone https://github.com/bitcoin-core/qa-assets
+=======
+The project's collection of seed corpora is found in the [`bitnova-core/qa-assets`](https://github.com/bitnova-core/qa-assets) repo.
+
+To fuzz `process_message` using the [`bitnova-core/qa-assets`](https://github.com/bitnova-core/qa-assets) seed corpus:
+
+```sh
+$ git clone https://github.com/bitnova-core/qa-assets
+>>>>>>> 5360f2baff (Initialized BitNova project)
 $ FUZZ=process_message build_fuzz/src/test/fuzz/fuzz qa-assets/fuzz_corpora/process_message/
 INFO: Seed: 1346407872
 INFO: Loaded 1 modules   (424174 inline 8-bit counters): 424174 [0x55d8a9004ab8, 0x55d8a906c3a6),
@@ -106,8 +144,13 @@ INFO: seed corpus: files: 991 min: 1b max: 1858b total: 288291b rss: 150Mb
 MSan [requires](https://clang.llvm.org/docs/MemorySanitizer.html#handling-external-code)
 that all linked code be instrumented. The exact steps to achieve this may vary
 but involve compiling `clang` from source, using the built `clang` to compile
+<<<<<<< HEAD
 an instrumentalized libc++, then using it to build [Bitcoin Core dependencies
 from source](../depends/README.md) and finally the Bitcoin Core fuzz binary
+=======
+an instrumentalized libc++, then using it to build [BitNova Core dependencies
+from source](../depends/README.md) and finally the BitNova Core fuzz binary
+>>>>>>> 5360f2baff (Initialized BitNova project)
 itself. One can use the MSan CI job as an example for how to perform these
 steps.
 
@@ -121,7 +164,11 @@ will limit the ability to find new coverage. A good approach is to perform
 occasional long runs without the additional bug-detectors
 (`--preset=libfuzzer-nosan`) and then merge new inputs into a corpus as described in
 the qa-assets repo
+<<<<<<< HEAD
 (https://github.com/bitcoin-core/qa-assets/blob/main/.github/PULL_REQUEST_TEMPLATE.md).
+=======
+(https://github.com/bitnova-core/qa-assets/blob/main/.github/PULL_REQUEST_TEMPLATE.md).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Patience is useful; even with improved throughput, libFuzzer may need days and
 10s of millions of executions to reach deep/hard targets.
 
@@ -139,9 +186,15 @@ Patience is useful; even with improved throughput, libFuzzer may need days and
 
 ## Submit improved coverage
 
+<<<<<<< HEAD
 If you find coverage increasing inputs when fuzzing you are highly encouraged to submit them for inclusion in the [`bitcoin-core/qa-assets`](https://github.com/bitcoin-core/qa-assets) repo.
 
 Every single pull request submitted against the Bitcoin Core repo is automatically tested against all inputs in the [`bitcoin-core/qa-assets`](https://github.com/bitcoin-core/qa-assets) repo. Contributing new coverage increasing inputs is an easy way to help make Bitcoin Core more robust.
+=======
+If you find coverage increasing inputs when fuzzing you are highly encouraged to submit them for inclusion in the [`bitnova-core/qa-assets`](https://github.com/bitnova-core/qa-assets) repo.
+
+Every single pull request submitted against the BitNova Core repo is automatically tested against all inputs in the [`bitnova-core/qa-assets`](https://github.com/bitnova-core/qa-assets) repo. Contributing new coverage increasing inputs is an easy way to help make BitNova Core more robust.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ## macOS hints for libFuzzer
 
@@ -167,6 +220,7 @@ $ cmake --preset=libfuzzer \
 
 Read the [libFuzzer documentation](https://llvm.org/docs/LibFuzzer.html) for more information. This [libFuzzer tutorial](https://github.com/google/fuzzing/blob/master/tutorial/libFuzzerTutorial.md) might also be of interest.
 
+<<<<<<< HEAD
 # Fuzzing Bitcoin Core using afl++
 
 ## Quickstart guide
@@ -176,6 +230,17 @@ To quickly get started fuzzing Bitcoin Core using [afl++](https://github.com/AFL
 ```sh
 $ git clone https://github.com/bitcoin/bitcoin
 $ cd bitcoin/
+=======
+# Fuzzing BitNova Core using afl++
+
+## Quickstart guide
+
+To quickly get started fuzzing BitNova Core using [afl++](https://github.com/AFLplusplus/AFLplusplus):
+
+```sh
+$ git clone https://github.com/bitnova/bitnova
+$ cd bitnova/
+>>>>>>> 5360f2baff (Initialized BitNova project)
 $ git clone https://github.com/AFLplusplus/AFLplusplus
 $ make -C AFLplusplus/ source-only
 # If afl-clang-lto is not available, see
@@ -196,6 +261,7 @@ $ FUZZ=bech32 ./AFLplusplus/afl-fuzz -i inputs/ -o outputs/ -- build_fuzz/src/te
 
 Read the [afl++ documentation](https://github.com/AFLplusplus/AFLplusplus) for more information.
 
+<<<<<<< HEAD
 # Fuzzing Bitcoin Core using Honggfuzz
 
 ## Quickstart guide
@@ -205,6 +271,17 @@ To quickly get started fuzzing Bitcoin Core using [Honggfuzz](https://github.com
 ```sh
 $ git clone https://github.com/bitcoin/bitcoin
 $ cd bitcoin/
+=======
+# Fuzzing BitNova Core using Honggfuzz
+
+## Quickstart guide
+
+To quickly get started fuzzing BitNova Core using [Honggfuzz](https://github.com/google/honggfuzz):
+
+```sh
+$ git clone https://github.com/bitnova/bitnova
+$ cd bitnova/
+>>>>>>> 5360f2baff (Initialized BitNova project)
 $ git clone https://github.com/google/honggfuzz
 $ cd honggfuzz/
 $ make
@@ -223,12 +300,23 @@ Read the [Honggfuzz documentation](https://github.com/google/honggfuzz/blob/mast
 
 # OSS-Fuzz
 
+<<<<<<< HEAD
 Bitcoin Core participates in Google's [OSS-Fuzz](https://github.com/google/oss-fuzz/tree/master/projects/bitcoin-core)
 program, which includes a dashboard of [publicly disclosed vulnerabilities](https://issues.oss-fuzz.com/issues?q=bitcoin-core%20status:open).
 
 Bitcoin Core follows its [security disclosure policy](https://bitcoincore.org/en/security-advisories/),
+=======
+BitNova Core participates in Google's [OSS-Fuzz](https://github.com/google/oss-fuzz/tree/master/projects/bitnova-core)
+program, which includes a dashboard of [publicly disclosed vulnerabilities](https://issues.oss-fuzz.com/issues?q=bitnova-core%20status:open).
+
+BitNova Core follows its [security disclosure policy](https://bitnovacore.org/en/security-advisories/),
+>>>>>>> 5360f2baff (Initialized BitNova project)
 which may differ from Google's standard
 [90-day disclosure window](https://google.github.io/oss-fuzz/getting-started/bug-disclosure-guidelines/)
 .
 
+<<<<<<< HEAD
 OSS-Fuzz also produces [a fuzzing coverage report](https://oss-fuzz.com/coverage-report/job/libfuzzer_asan_bitcoin-core/latest).
+=======
+OSS-Fuzz also produces [a fuzzing coverage report](https://oss-fuzz.com/coverage-report/job/libfuzzer_asan_bitnova-core/latest).
+>>>>>>> 5360f2baff (Initialized BitNova project)

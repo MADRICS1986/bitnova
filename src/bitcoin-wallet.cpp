@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 // Copyright (c) 2016-present The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+// Copyright (c) 2016-present The BitNova Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <chainparams.h>
 #include <chainparamsbase.h>
@@ -61,17 +69,29 @@ static std::optional<int> WalletAppInit(ArgsManager& args, int argc, char* argv[
     }
     const bool missing_args{argc < 2};
     if (missing_args || HelpRequested(args) || args.GetBoolArg("-version", false)) {
+<<<<<<< HEAD
         std::string strUsage = strprintf("%s bitcoin-wallet utility version", CLIENT_NAME) + " " + FormatFullVersion() + "\n";
+=======
+        std::string strUsage = strprintf("%s bitnova-wallet utility version", CLIENT_NAME) + " " + FormatFullVersion() + "\n";
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         if (args.GetBoolArg("-version", false)) {
             strUsage += FormatParagraph(LicenseInfo());
         } else {
             strUsage += "\n"
+<<<<<<< HEAD
                 "bitcoin-wallet is an offline tool for creating and interacting with " CLIENT_NAME " wallet files.\n\n"
                 "By default bitcoin-wallet will act on wallets in the default mainnet wallet directory in the datadir.\n\n"
                 "To change the target wallet, use the -datadir, -wallet and (test)chain selection arguments.\n"
                 "\n"
                 "Usage: bitcoin-wallet [options] <command>\n"
+=======
+                "bitnova-wallet is an offline tool for creating and interacting with " CLIENT_NAME " wallet files.\n\n"
+                "By default bitnova-wallet will act on wallets in the default mainnet wallet directory in the datadir.\n\n"
+                "To change the target wallet, use the -datadir, -wallet and (test)chain selection arguments.\n"
+                "\n"
+                "Usage: bitnova-wallet [options] <command>\n"
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 "\n";
             strUsage += "\n" + args.GetHelpMessage();
         }
@@ -124,7 +144,11 @@ MAIN_FUNCTION
 
     const auto command = args.GetCommand();
     if (!command) {
+<<<<<<< HEAD
         tfm::format(std::cerr, "No method provided. Run `bitcoin-wallet -help` for valid methods.\n");
+=======
+        tfm::format(std::cerr, "No method provided. Run `bitnova-wallet -help` for valid methods.\n");
+>>>>>>> 5360f2baff (Initialized BitNova project)
         return EXIT_FAILURE;
     }
     if (command->args.size() != 0) {

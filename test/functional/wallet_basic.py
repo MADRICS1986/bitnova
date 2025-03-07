@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2014-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2014-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the wallet."""
@@ -12,7 +16,11 @@ from test_framework.messages import (
     COIN,
     DEFAULT_ANCESTOR_LIMIT,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_array_result,
     assert_equal,
@@ -26,7 +34,11 @@ NOT_A_NUMBER_OR_STRING = "Amount is not a number or string"
 OUT_OF_RANGE = "Amount out of range"
 
 
+<<<<<<< HEAD
 class WalletTest(BitcoinTestFramework):
+=======
+class WalletTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser)
 
@@ -451,6 +463,7 @@ class WalletTest(BitcoinTestFramework):
             # This will raise an exception for attempting to dump the private key of an address you do not own
             assert_raises_rpc_error(-3, "Address does not refer to a key", self.nodes[0].dumpprivkey, temp_address)
 
+<<<<<<< HEAD
             # This will raise an exception for attempting to get the private key of an invalid Bitcoin address
             assert_raises_rpc_error(-5, "Invalid Bitcoin address", self.nodes[0].dumpprivkey, "invalid")
 
@@ -459,6 +472,16 @@ class WalletTest(BitcoinTestFramework):
 
             # This will raise an exception for importing an invalid address
             assert_raises_rpc_error(-5, "Invalid Bitcoin address or script", self.nodes[0].importaddress, "invalid")
+=======
+            # This will raise an exception for attempting to get the private key of an invalid BitNova address
+            assert_raises_rpc_error(-5, "Invalid BitNova address", self.nodes[0].dumpprivkey, "invalid")
+
+            # This will raise an exception for attempting to set a label for an invalid BitNova address
+            assert_raises_rpc_error(-5, "Invalid BitNova address", self.nodes[0].setlabel, "invalid address", "label")
+
+            # This will raise an exception for importing an invalid address
+            assert_raises_rpc_error(-5, "Invalid BitNova address or script", self.nodes[0].importaddress, "invalid")
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
             # This will raise an exception for attempting to import a pubkey that isn't in hex
             assert_raises_rpc_error(-5, 'Pubkey "not hex" must be a hex string', self.nodes[0].importpubkey, "not hex")

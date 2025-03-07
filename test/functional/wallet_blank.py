@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://www.opensource.org/licenses/mit-license.php.
 
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.address import (
     ADDRESS_BCRT1_UNSPENDABLE,
     ADDRESS_BCRT1_UNSPENDABLE_DESCRIPTOR,
@@ -15,7 +23,11 @@ from test_framework.util import (
 from test_framework.wallet_util import generate_keypair
 
 
+<<<<<<< HEAD
 class WalletBlankTest(BitcoinTestFramework):
+=======
+class WalletBlankTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
 

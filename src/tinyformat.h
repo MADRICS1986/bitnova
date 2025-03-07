@@ -142,11 +142,19 @@ namespace tfm = tinyformat;
 //------------------------------------------------------------------------------
 // Implementation details.
 #include <algorithm>
+<<<<<<< HEAD
 #include <attributes.h> // Added for Bitcoin Core
 #include <iostream>
 #include <sstream>
 #include <stdexcept> // Added for Bitcoin Core
 #include <util/string.h> // Added for Bitcoin Core
+=======
+#include <attributes.h> // Added for BitNova Core
+#include <iostream>
+#include <sstream>
+#include <stdexcept> // Added for BitNova Core
+#include <util/string.h> // Added for BitNova Core
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #ifndef TINYFORMAT_ASSERT
 #   include <cassert>
@@ -180,13 +188,21 @@ namespace tfm = tinyformat;
 
 namespace tinyformat {
 
+<<<<<<< HEAD
 // Added for Bitcoin Core. Similar to std::runtime_format from C++26.
+=======
+// Added for BitNova Core. Similar to std::runtime_format from C++26.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 struct RuntimeFormat {
     const std::string& fmt; // Not a string view, because tinyformat requires a c_str
     explicit RuntimeFormat(LIFETIMEBOUND const std::string& str) : fmt{str} {}
 };
 
+<<<<<<< HEAD
 // Added for Bitcoin Core. Wrapper for checking format strings at compile time.
+=======
+// Added for BitNova Core. Wrapper for checking format strings at compile time.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Unlike ConstevalFormatString this supports RunTimeFormat-wrapped std::string
 // for runtime string formatting without compile time checks.
 template <unsigned num_params>
@@ -198,7 +214,11 @@ struct FormatStringCheck {
     const char* fmt;
 };
 
+<<<<<<< HEAD
 // Added for Bitcoin Core
+=======
+// Added for BitNova Core
+>>>>>>> 5360f2baff (Initialized BitNova project)
 class format_error: public std::runtime_error
 {
 public:
@@ -1167,7 +1187,11 @@ TINYFORMAT_FOREACH_ARGNUM(TINYFORMAT_MAKE_FORMAT_FUNCS)
 
 } // namespace tinyformat
 
+<<<<<<< HEAD
 // Added for Bitcoin Core:
+=======
+// Added for BitNova Core:
+>>>>>>> 5360f2baff (Initialized BitNova project)
 /** Format arguments and return the string or write to given std::ostream (see tinyformat::format doc for details) */
 #define strprintf tfm::format
 

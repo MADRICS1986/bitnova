@@ -1,16 +1,28 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2023 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test fastprune mode."""
 from test_framework.test_framework import BitcoinTestFramework
+=======
+# Copyright (c) 2023 The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+"""Test fastprune mode."""
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal
 )
 from test_framework.wallet import MiniWallet
 
 
+<<<<<<< HEAD
 class FeatureFastpruneTest(BitcoinTestFramework):
+=======
+class FeatureFastpruneTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [["-fastprune"]]

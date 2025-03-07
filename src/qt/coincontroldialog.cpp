@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,7 +10,11 @@
 #include <qt/forms/ui_coincontroldialog.h>
 
 #include <qt/addresstablemodel.h>
+<<<<<<< HEAD
 #include <qt/bitcoinunits.h>
+=======
+#include <qt/bitnovaunits.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <qt/guiutil.h>
 #include <qt/optionsmodel.h>
 #include <qt/platformstyle.h>
@@ -198,7 +206,11 @@ void CoinControlDialog::showMenu(const QPoint &point)
 // context menu action: copy amount
 void CoinControlDialog::copyAmount()
 {
+<<<<<<< HEAD
     GUIUtil::setClipboard(BitcoinUnits::removeSpaces(contextMenuItem->text(COLUMN_AMOUNT)));
+=======
+    GUIUtil::setClipboard(BitNovaUnits::removeSpaces(contextMenuItem->text(COLUMN_AMOUNT)));
+>>>>>>> 5360f2baff (Initialized BitNova project)
 }
 
 // context menu action: copy label
@@ -492,7 +504,11 @@ void CoinControlDialog::updateLabels(CCoinControl& m_coin_control, WalletModel *
     }
 
     // actually update labels
+<<<<<<< HEAD
     BitcoinUnit nDisplayUnit = BitcoinUnit::BTC;
+=======
+    BitNovaUnit nDisplayUnit = BitNovaUnit::BTC;
+>>>>>>> 5360f2baff (Initialized BitNova project)
     if (model && model->getOptionsModel())
         nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
 
@@ -509,11 +525,19 @@ void CoinControlDialog::updateLabels(CCoinControl& m_coin_control, WalletModel *
 
     // stats
     l1->setText(QString::number(nQuantity));                                 // Quantity
+<<<<<<< HEAD
     l2->setText(BitcoinUnits::formatWithUnit(nDisplayUnit, nAmount));        // Amount
     l3->setText(BitcoinUnits::formatWithUnit(nDisplayUnit, nPayFee));        // Fee
     l4->setText(BitcoinUnits::formatWithUnit(nDisplayUnit, nAfterFee));      // After Fee
     l5->setText(((nBytes > 0) ? ASYMP_UTF8 : "") + QString::number(nBytes));        // Bytes
     l8->setText(BitcoinUnits::formatWithUnit(nDisplayUnit, nChange));        // Change
+=======
+    l2->setText(BitNovaUnits::formatWithUnit(nDisplayUnit, nAmount));        // Amount
+    l3->setText(BitNovaUnits::formatWithUnit(nDisplayUnit, nPayFee));        // Fee
+    l4->setText(BitNovaUnits::formatWithUnit(nDisplayUnit, nAfterFee));      // After Fee
+    l5->setText(((nBytes > 0) ? ASYMP_UTF8 : "") + QString::number(nBytes));        // Bytes
+    l8->setText(BitNovaUnits::formatWithUnit(nDisplayUnit, nChange));        // Change
+>>>>>>> 5360f2baff (Initialized BitNova project)
     if (nPayFee > 0)
     {
         l3->setText(ASYMP_UTF8 + l3->text());
@@ -563,7 +587,11 @@ void CoinControlDialog::updateView()
     QFlags<Qt::ItemFlag> flgCheckbox = Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable;
     QFlags<Qt::ItemFlag> flgTristate = Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsAutoTristate;
 
+<<<<<<< HEAD
     BitcoinUnit nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
+=======
+    BitNovaUnit nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     for (const auto& coins : model->wallet().listCoins()) {
         CCoinControlWidgetItem* itemWalletAddress{nullptr};
@@ -608,7 +636,11 @@ void CoinControlDialog::updateView()
             {
                 sAddress = QString::fromStdString(EncodeDestination(outputAddress));
 
+<<<<<<< HEAD
                 // if listMode or change => show bitcoin address. In tree mode, address is not shown again for direct wallet address outputs
+=======
+                // if listMode or change => show bitnova address. In tree mode, address is not shown again for direct wallet address outputs
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 if (!treeMode || (!(sAddress == sWalletAddress)))
                     itemOutput->setText(COLUMN_ADDRESS, sAddress);
             }
@@ -629,7 +661,11 @@ void CoinControlDialog::updateView()
             }
 
             // amount
+<<<<<<< HEAD
             itemOutput->setText(COLUMN_AMOUNT, BitcoinUnits::format(nDisplayUnit, out.txout.nValue));
+=======
+            itemOutput->setText(COLUMN_AMOUNT, BitNovaUnits::format(nDisplayUnit, out.txout.nValue));
+>>>>>>> 5360f2baff (Initialized BitNova project)
             itemOutput->setData(COLUMN_AMOUNT, Qt::UserRole, QVariant((qlonglong)out.txout.nValue)); // padding so that sorting works correctly
 
             // date
@@ -663,7 +699,11 @@ void CoinControlDialog::updateView()
         if (treeMode)
         {
             itemWalletAddress->setText(COLUMN_CHECKBOX, "(" + QString::number(nChildren) + ")");
+<<<<<<< HEAD
             itemWalletAddress->setText(COLUMN_AMOUNT, BitcoinUnits::format(nDisplayUnit, nSum));
+=======
+            itemWalletAddress->setText(COLUMN_AMOUNT, BitNovaUnits::format(nDisplayUnit, nSum));
+>>>>>>> 5360f2baff (Initialized BitNova project)
             itemWalletAddress->setData(COLUMN_AMOUNT, Qt::UserRole, QVariant((qlonglong)nSum));
         }
     }

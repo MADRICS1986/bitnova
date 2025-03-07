@@ -19,7 +19,11 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with this software; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+<<<<<<< HEAD
 """HTTP proxy for opening RPC connection to bitcoind.
+=======
+"""HTTP proxy for opening RPC connection to bitnovad.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 AuthServiceProxy has the following improvements over python-jsonrpc's
 ServiceProxy class:
@@ -47,7 +51,11 @@ import urllib.parse
 HTTP_TIMEOUT = 30
 USER_AGENT = "AuthServiceProxy/0.1"
 
+<<<<<<< HEAD
 log = logging.getLogger("BitcoinRPC")
+=======
+log = logging.getLogger("BitNovaRPC")
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 class JSONRPCException(Exception):
     def __init__(self, rpc_error, http_status=None):

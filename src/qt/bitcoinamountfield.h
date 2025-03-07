@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,7 +10,11 @@
 #define BITCOIN_QT_BITCOINAMOUNTFIELD_H
 
 #include <consensus/amount.h>
+<<<<<<< HEAD
 #include <qt/bitcoinunits.h>
+=======
+#include <qt/bitnovaunits.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <QWidget>
 
@@ -16,18 +24,32 @@ QT_BEGIN_NAMESPACE
 class QValueComboBox;
 QT_END_NAMESPACE
 
+<<<<<<< HEAD
 /** Widget for entering bitcoin amounts.
   */
 class BitcoinAmountField: public QWidget
+=======
+/** Widget for entering bitnova amounts.
+  */
+class BitNovaAmountField: public QWidget
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
     Q_OBJECT
 
     // ugly hack: for some unknown reason CAmount (instead of qint64) does not work here as expected
+<<<<<<< HEAD
     // discussion: https://github.com/bitcoin/bitcoin/pull/5117
     Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY valueChanged USER true)
 
 public:
     explicit BitcoinAmountField(QWidget *parent = nullptr);
+=======
+    // discussion: https://github.com/bitnova/bitnova/pull/5117
+    Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY valueChanged USER true)
+
+public:
+    explicit BitNovaAmountField(QWidget *parent = nullptr);
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     CAmount value(bool *value=nullptr) const;
     void setValue(const CAmount& value);
@@ -53,7 +75,11 @@ public:
     bool validate();
 
     /** Change unit used to display amount. */
+<<<<<<< HEAD
     void setDisplayUnit(BitcoinUnit new_unit);
+=======
+    void setDisplayUnit(BitNovaUnit new_unit);
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     /** Make field empty and ready for new input. */
     void clear();

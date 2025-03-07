@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2016-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2016-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test label RPCs.
@@ -12,12 +16,20 @@ RPCs tested are:
 from collections import defaultdict
 
 from test_framework.blocktools import COINBASE_MATURITY
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import assert_equal, assert_raises_rpc_error
 from test_framework.wallet_util import test_address
 
 
+<<<<<<< HEAD
 class WalletLabelsTest(BitcoinTestFramework):
+=======
+class WalletLabelsTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser)
 
@@ -82,7 +94,11 @@ class WalletLabelsTest(BitcoinTestFramework):
         assert_equal(node.getbalance(), 100)
 
         # there should be 2 address groups
+<<<<<<< HEAD
         # each with 1 address with a balance of 50 Bitcoins
+=======
+        # each with 1 address with a balance of 50 BitNovas
+>>>>>>> 5360f2baff (Initialized BitNova project)
         address_groups = node.listaddressgroupings()
         assert_equal(len(address_groups), 2)
         # the addresses aren't linked now, but will be after we send to the
@@ -212,7 +228,11 @@ class WalletLabelsTest(BitcoinTestFramework):
                 ad = BECH32_INVALID[l]
                 assert_raises_rpc_error(
                     -5,
+<<<<<<< HEAD
                     "Address is not valid" if self.options.descriptors else "Invalid Bitcoin address or script",
+=======
+                    "Address is not valid" if self.options.descriptors else "Invalid BitNova address or script",
+>>>>>>> 5360f2baff (Initialized BitNova project)
                     lambda: wallet_watch_only.importaddress(label=l, rescan=False, address=ad),
                 )
 

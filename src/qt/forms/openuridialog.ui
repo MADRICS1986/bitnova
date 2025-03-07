@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
+<<<<<<< HEAD
    <string>Open bitcoin URI</string>
+=======
+   <string>Open bitnova URI</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -26,7 +30,11 @@
      <item>
       <widget class="QValidatedLineEdit" name="uriEdit">
        <property name="placeholderText">
+<<<<<<< HEAD
         <string notr="true">bitcoin:</string>
+=======
+        <string notr="true">bitnova:</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
        </property>
       </widget>
      </item>
@@ -39,7 +47,11 @@
         <string/>
        </property>
        <property name="icon">
+<<<<<<< HEAD
         <iconset resource="../bitcoin.qrc">
+=======
+        <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
          <normaloff>:/icons/editpaste</normaloff>:/icons/editpaste
         </iconset>
        </property>

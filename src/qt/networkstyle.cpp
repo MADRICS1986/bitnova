@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2014-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2014-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -30,7 +34,11 @@ NetworkStyle::NetworkStyle(const QString &_appName, const int iconColorHueShift,
     titleAddText(qApp->translate("SplashScreen", _titleAddText))
 {
     // load pixmap
+<<<<<<< HEAD
     QPixmap pixmap(":/icons/bitcoin");
+=======
+    QPixmap pixmap(":/icons/bitnova");
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     if(iconColorHueShift != 0 && iconColorSaturationReduction != 0)
     {

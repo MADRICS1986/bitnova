@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Copyright (c) 2023-present The Bitcoin Core developers
+=======
+# Copyright (c) 2023-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
@@ -42,11 +46,16 @@ set(CMAKE_AUTOUIC_SEARCH_PATHS forms)
 
 # TODO: The file(GLOB ...) command should be replaced with an explicit
 # file list. Such a change must be synced with the corresponding change
+<<<<<<< HEAD
 # to https://github.com/bitcoin-core/bitcoin-maintainer-tools/blob/main/update-translations.py
+=======
+# to https://github.com/bitnova-core/bitnova-maintainer-tools/blob/main/update-translations.py
+>>>>>>> 5360f2baff (Initialized BitNova project)
 file(GLOB ts_files RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} locale/*.ts)
 set_source_files_properties(${ts_files} PROPERTIES OUTPUT_LOCATION ${CMAKE_CURRENT_BINARY_DIR}/locale)
 qt5_add_translation(qm_files ${ts_files})
 
+<<<<<<< HEAD
 configure_file(bitcoin_locale.qrc bitcoin_locale.qrc USE_SOURCE_PERMISSIONS COPYONLY)
 
 # The bitcoinqt sources have to include headers in
@@ -64,6 +73,25 @@ add_library(bitcoinqt STATIC EXCLUDE_FROM_ALL
   bitcoingui.h
   bitcoinunits.cpp
   bitcoinunits.h
+=======
+configure_file(bitnova_locale.qrc bitnova_locale.qrc USE_SOURCE_PERMISSIONS COPYONLY)
+
+# The bitnovaqt sources have to include headers in
+# order to parse them to collect translatable strings.
+add_library(bitnovaqt STATIC EXCLUDE_FROM_ALL
+  bantablemodel.cpp
+  bantablemodel.h
+  bitnova.cpp
+  bitnova.h
+  bitnovaaddressvalidator.cpp
+  bitnovaaddressvalidator.h
+  bitnovaamountfield.cpp
+  bitnovaamountfield.h
+  bitnovagui.cpp
+  bitnovagui.h
+  bitnovaunits.cpp
+  bitnovaunits.h
+>>>>>>> 5360f2baff (Initialized BitNova project)
   clientmodel.cpp
   clientmodel.h
   csvmodelwriter.cpp
@@ -110,15 +138,26 @@ add_library(bitcoinqt STATIC EXCLUDE_FROM_ALL
   utilitydialog.h
   $<$<PLATFORM_ID:Windows>:winshutdownmonitor.cpp>
   $<$<PLATFORM_ID:Windows>:winshutdownmonitor.h>
+<<<<<<< HEAD
   bitcoin.qrc
   ${CMAKE_CURRENT_BINARY_DIR}/bitcoin_locale.qrc
 )
 target_compile_definitions(bitcoinqt
+=======
+  bitnova.qrc
+  ${CMAKE_CURRENT_BINARY_DIR}/bitnova_locale.qrc
+)
+target_compile_definitions(bitnovaqt
+>>>>>>> 5360f2baff (Initialized BitNova project)
   PUBLIC
     QT_NO_KEYWORDS
     QT_USE_QSTRINGBUILDER
 )
+<<<<<<< HEAD
 target_include_directories(bitcoinqt
+=======
+target_include_directories(bitnovaqt
+>>>>>>> 5360f2baff (Initialized BitNova project)
   PUBLIC
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>
 )
@@ -126,12 +165,20 @@ set_property(SOURCE macnotificationhandler.mm
   # Ignore warnings "'NSUserNotificationCenter' is deprecated: first deprecated in macOS 11.0".
   APPEND PROPERTY COMPILE_OPTIONS -Wno-deprecated-declarations
 )
+<<<<<<< HEAD
 target_link_libraries(bitcoinqt
+=======
+target_link_libraries(bitnovaqt
+>>>>>>> 5360f2baff (Initialized BitNova project)
   PUBLIC
     Qt5::Widgets
   PRIVATE
     core_interface
+<<<<<<< HEAD
     bitcoin_cli
+=======
+    bitnova_cli
+>>>>>>> 5360f2baff (Initialized BitNova project)
     leveldb
     Boost::headers
     $<TARGET_NAME_IF_EXISTS:QRencode::QRencode>
@@ -140,7 +187,11 @@ target_link_libraries(bitcoinqt
 )
 
 if(ENABLE_WALLET)
+<<<<<<< HEAD
   target_sources(bitcoinqt
+=======
+  target_sources(bitnovaqt
+>>>>>>> 5360f2baff (Initialized BitNova project)
     PRIVATE
       addressbookpage.cpp
       addressbookpage.h
@@ -203,25 +254,40 @@ if(ENABLE_WALLET)
       walletview.cpp
       walletview.h
   )
+<<<<<<< HEAD
   target_link_libraries(bitcoinqt
     PRIVATE
       bitcoin_wallet
+=======
+  target_link_libraries(bitnovaqt
+    PRIVATE
+      bitnova_wallet
+>>>>>>> 5360f2baff (Initialized BitNova project)
       Qt5::Network
   )
 endif()
 
 if(WITH_DBUS)
+<<<<<<< HEAD
   target_link_libraries(bitcoinqt PRIVATE Qt5::DBus)
+=======
+  target_link_libraries(bitnovaqt PRIVATE Qt5::DBus)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 endif()
 
 if(qt_lib_type STREQUAL "STATIC_LIBRARY")
   # We want to define static plugins to link ourselves, thus preventing
   # automatic linking against a "sane" set of default static plugins.
+<<<<<<< HEAD
   qt5_import_plugins(bitcoinqt
+=======
+  qt5_import_plugins(bitnovaqt
+>>>>>>> 5360f2baff (Initialized BitNova project)
       EXCLUDE_BY_TYPE bearer iconengines imageformats platforms styles
   )
 endif()
 
+<<<<<<< HEAD
 add_executable(bitcoin-qt
   main.cpp
   ../init/bitcoin-qt.cpp
@@ -256,6 +322,42 @@ if(WITH_MULTIPROCESS)
   install_binary_component(bitcoin-gui)
   if(WIN32)
     set_target_properties(bitcoin-gui PROPERTIES WIN32_EXECUTABLE TRUE)
+=======
+add_executable(bitnova-qt
+  main.cpp
+  ../init/bitnova-qt.cpp
+)
+
+add_windows_resources(bitnova-qt res/bitnova-qt-res.rc)
+
+target_link_libraries(bitnova-qt
+  core_interface
+  bitnovaqt
+  bitnova_node
+)
+
+import_plugins(bitnova-qt)
+install_binary_component(bitnova-qt HAS_MANPAGE)
+if(WIN32)
+  set_target_properties(bitnova-qt PROPERTIES WIN32_EXECUTABLE TRUE)
+endif()
+
+if(WITH_MULTIPROCESS)
+  add_executable(bitnova-gui
+    main.cpp
+    ../init/bitnova-gui.cpp
+  )
+  target_link_libraries(bitnova-gui
+    core_interface
+    bitnovaqt
+    bitnova_node
+    bitnova_ipc
+  )
+  import_plugins(bitnova-gui)
+  install_binary_component(bitnova-gui)
+  if(WIN32)
+    set_target_properties(bitnova-gui PROPERTIES WIN32_EXECUTABLE TRUE)
+>>>>>>> 5360f2baff (Initialized BitNova project)
   endif()
 endif()
 
@@ -321,10 +423,17 @@ else()
   file(GLOB ui_files ${CMAKE_CURRENT_SOURCE_DIR}/forms/*.ui)
   add_custom_target(translate
     COMMAND ${CMAKE_COMMAND} -E env XGETTEXT=${XGETTEXT_EXECUTABLE} COPYRIGHT_HOLDERS=${COPYRIGHT_HOLDERS} ${Python3_EXECUTABLE} ${PROJECT_SOURCE_DIR}/share/qt/extract_strings_qt.py ${translatable_sources}
+<<<<<<< HEAD
     COMMAND Qt5::lupdate -no-obsolete -I ${PROJECT_SOURCE_DIR}/src -locations relative ${CMAKE_CURRENT_SOURCE_DIR}/bitcoinstrings.cpp ${ui_files} ${qt_translatable_sources} -ts ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitcoin_en.ts
     COMMAND Qt5::lconvert -drop-translations -o ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitcoin_en.xlf -i ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitcoin_en.ts
     COMMAND ${SED_EXECUTABLE} -i.old -e "s|source-language=\"en\" target-language=\"en\"|source-language=\"en\"|" -e "/<target xml:space=\"preserve\"><\\/target>/d" ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitcoin_en.xlf
     COMMAND ${CMAKE_COMMAND} -E rm ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitcoin_en.xlf.old
+=======
+    COMMAND Qt5::lupdate -no-obsolete -I ${PROJECT_SOURCE_DIR}/src -locations relative ${CMAKE_CURRENT_SOURCE_DIR}/bitnovastrings.cpp ${ui_files} ${qt_translatable_sources} -ts ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitnova_en.ts
+    COMMAND Qt5::lconvert -drop-translations -o ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitnova_en.xlf -i ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitnova_en.ts
+    COMMAND ${SED_EXECUTABLE} -i.old -e "s|source-language=\"en\" target-language=\"en\"|source-language=\"en\"|" -e "/<target xml:space=\"preserve\"><\\/target>/d" ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitnova_en.xlf
+    COMMAND ${CMAKE_COMMAND} -E rm ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitnova_en.xlf.old
+>>>>>>> 5360f2baff (Initialized BitNova project)
     WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src
     VERBATIM
   )

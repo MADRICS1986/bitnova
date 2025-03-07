@@ -1,40 +1,70 @@
 23.0 Release Notes
 ==================
 
+<<<<<<< HEAD
 Bitcoin Core version 23.0 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-23.0/>
+=======
+BitNova Core version 23.0 is now available from:
+
+  <https://bitnovacore.org/bin/bitnova-core-23.0/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This release includes new features, various bug fixes and performance
 improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 How to Upgrade
 ==============
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
+<<<<<<< HEAD
 installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
 or `bitcoind`/`bitcoin-qt` (on Linux).
 
 Upgrading directly from a version of Bitcoin Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
 wallet versions of Bitcoin Core are generally supported.
+=======
+installer (on Windows) or just copy over `/Applications/BitNova-Qt` (on Mac)
+or `bitnovad`/`bitnova-qt` (on Linux).
+
+Upgrading directly from a version of BitNova Core that has reached its EOL is
+possible, but it might take some time if the data directory needs to be migrated. Old
+wallet versions of BitNova Core are generally supported.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Compatibility
 ==============
 
+<<<<<<< HEAD
 Bitcoin Core is supported and extensively tested on operating systems
 using the Linux kernel, macOS 10.15+, and Windows 7 and newer.  Bitcoin
 Core should also work on most other Unix-like systems but is not as
 frequently tested on them.  It is not recommended to use Bitcoin Core on
+=======
+BitNova Core is supported and extensively tested on operating systems
+using the Linux kernel, macOS 10.15+, and Windows 7 and newer.  BitNova
+Core should also work on most other Unix-like systems but is not as
+frequently tested on them.  It is not recommended to use BitNova Core on
+>>>>>>> 5360f2baff (Initialized BitNova project)
 unsupported systems.
 
 Notable changes
@@ -43,6 +73,7 @@ Notable changes
 P2P and network changes
 -----------------------
 
+<<<<<<< HEAD
 - A bitcoind node will no longer rumour addresses to inbound peers by default.
   They will become eligible for address gossip after sending an ADDR, ADDRV2,
   or GETADDR message. (#21528)
@@ -50,6 +81,15 @@ P2P and network changes
 - Before this release, Bitcoin Core had a strong preference to try to connect only to peers that listen on port 8333. As a result of that, Bitcoin nodes listening on non-standard ports would likely not get any Bitcoin Core peers connecting to them. This preference has been removed. (#23542)
 
 - Full support has been added for the CJDNS network. See the new option `-cjdnsreachable` and [doc/cjdns.md](https://github.com/bitcoin/bitcoin/tree/23.x/doc/cjdns.md) (#23077)
+=======
+- A bitnovad node will no longer rumour addresses to inbound peers by default.
+  They will become eligible for address gossip after sending an ADDR, ADDRV2,
+  or GETADDR message. (#21528)
+
+- Before this release, BitNova Core had a strong preference to try to connect only to peers that listen on port 8333. As a result of that, BitNova nodes listening on non-standard ports would likely not get any BitNova Core peers connecting to them. This preference has been removed. (#23542)
+
+- Full support has been added for the CJDNS network. See the new option `-cjdnsreachable` and [doc/cjdns.md](https://github.com/bitnova/bitnova/tree/23.x/doc/cjdns.md) (#23077)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Fee estimation changes
 ----------------------
@@ -67,13 +107,22 @@ Otherwise, please use the `rescanblockchain` RPC to trigger a rescan. (#23123)
 Tracepoints and Userspace, Statically Defined Tracing support
 -------------------------------------------------------------
 
+<<<<<<< HEAD
 Bitcoin Core release binaries for Linux now include experimental tracepoints which
+=======
+BitNova Core release binaries for Linux now include experimental tracepoints which
+>>>>>>> 5360f2baff (Initialized BitNova project)
 act as an interface for process-internal events. These can be used for review,
 debugging, monitoring, and more. The tracepoint API is semi-stable. While the API
 is tested, process internals might change between releases requiring changes to the
 tracepoints. Information about the existing tracepoints can be found under
+<<<<<<< HEAD
 [doc/tracing.md](https://github.com/bitcoin/bitcoin/blob/23.x/doc/tracing.md) and
 usage examples are provided in [contrib/tracing/](https://github.com/bitcoin/bitcoin/tree/23.x/contrib/tracing).
+=======
+[doc/tracing.md](https://github.com/bitnova/bitnova/blob/23.x/doc/tracing.md) and
+usage examples are provided in [contrib/tracing/](https://github.com/bitnova/bitnova/tree/23.x/contrib/tracing).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Updated RPCs
 ------------
@@ -131,7 +180,11 @@ Files
 -----
 
 * On startup, the list of banned hosts and networks (via `setban` RPC) in
+<<<<<<< HEAD
   `banlist.dat` is ignored and only `banlist.json` is considered. Bitcoin Core
+=======
+  `banlist.dat` is ignored and only `banlist.json` is considered. BitNova Core
+>>>>>>> 5360f2baff (Initialized BitNova project)
   version 22.x is the only version that can read `banlist.dat` and also write
   it to `banlist.json`. If `banlist.json` already exists, version 22.x will not
   try to translate the `banlist.dat` into json. After an upgrade, `listbanned`
@@ -163,7 +216,11 @@ Tools and Utilities
 
 - CLI `-addrinfo` now returns a single field for the number of `onion` addresses
   known to the node instead of separate `torv2` and `torv3` fields, as support
+<<<<<<< HEAD
   for Tor V2 addresses was removed from Bitcoin Core in 22.0. (#22544)
+=======
+  for Tor V2 addresses was removed from BitNova Core in 22.0. (#22544)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Wallet
 ------
@@ -254,8 +311,13 @@ Thanks to everyone who directly contributed to this release:
 - Arnab Sen
 - Ben Woosley
 - benthecarman
+<<<<<<< HEAD
 - Bitcoin Hodler
 - BitcoinTsunami
+=======
+- BitNova Hodler
+- BitNovaTsunami
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - brianddk
 - Bruno Garcia
 - CallMeMisterOwl
@@ -370,4 +432,8 @@ Thanks to everyone who directly contributed to this release:
 - Zero-1729
 
 As well as to everyone that helped with translations on
+<<<<<<< HEAD
 [Transifex](https://www.transifex.com/bitcoin/bitcoin/).
+=======
+[Transifex](https://www.transifex.com/bitnova/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)

@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 #
+<<<<<<< HEAD
 # Copyright (c) 2019-2020 The Bitcoin Core developers
+=======
+# Copyright (c) 2019-2020 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
@@ -34,7 +38,11 @@ NON_DETERMINISTIC_TESTS=(
     "wallet_tests/wallet_disableprivkeys"                     # validation.cpp: if (signals.CallbacksPending() > 10)
 )
 
+<<<<<<< HEAD
 TEST_BITCOIN_BINARY="src/test/test_bitcoin"
+=======
+TEST_BITCOIN_BINARY="src/test/test_bitnova"
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 print_usage() {
     echo "Usage: $0 [custom test filter (default: all but known non-deterministic tests)] [number of test runs (default: 2)]"

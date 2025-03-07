@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <qt/bitcoinaddressvalidator.h>
+=======
+// Copyright (c) 2011-2018 The BitNova Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#include <qt/bitnovaaddressvalidator.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <key_io.h>
 
@@ -15,12 +23,20 @@
   - All lower-case letters except for 'l'
 */
 
+<<<<<<< HEAD
 BitcoinAddressEntryValidator::BitcoinAddressEntryValidator(QObject *parent) :
+=======
+BitNovaAddressEntryValidator::BitNovaAddressEntryValidator(QObject *parent) :
+>>>>>>> 5360f2baff (Initialized BitNova project)
     QValidator(parent)
 {
 }
 
+<<<<<<< HEAD
 QValidator::State BitcoinAddressEntryValidator::validate(QString &input, int &pos) const
+=======
+QValidator::State BitNovaAddressEntryValidator::validate(QString &input, int &pos) const
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
     Q_UNUSED(pos);
 
@@ -80,15 +96,26 @@ QValidator::State BitcoinAddressEntryValidator::validate(QString &input, int &po
     return state;
 }
 
+<<<<<<< HEAD
 BitcoinAddressCheckValidator::BitcoinAddressCheckValidator(QObject *parent) :
+=======
+BitNovaAddressCheckValidator::BitNovaAddressCheckValidator(QObject *parent) :
+>>>>>>> 5360f2baff (Initialized BitNova project)
     QValidator(parent)
 {
 }
 
+<<<<<<< HEAD
 QValidator::State BitcoinAddressCheckValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
     // Validate the passed Bitcoin address
+=======
+QValidator::State BitNovaAddressCheckValidator::validate(QString &input, int &pos) const
+{
+    Q_UNUSED(pos);
+    // Validate the passed BitNova address
+>>>>>>> 5360f2baff (Initialized BitNova project)
     if (IsValidDestinationString(input.toStdString())) {
         return QValidator::Acceptable;
     }

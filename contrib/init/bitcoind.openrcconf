@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # /etc/conf.d/bitcoind: config file for /etc/init.d/bitcoind
 
 # Config file location
@@ -20,12 +21,40 @@
 #BITCOIND_BIN="/usr/bin/bitcoind"
 
 # Nice value to run bitcoind under
+=======
+# /etc/conf.d/bitnovad: config file for /etc/init.d/bitnovad
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/bitnova/bitnova.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/bitnovad"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/bitnovad.pid"
+
+# Where to write bitnovad data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/bitnovad"
+
+# User and group to own bitnovad process
+#BITCOIND_USER="bitnova"
+#BITCOIND_GROUP="bitnova"
+
+# Path to bitnovad executable
+#BITCOIND_BIN="/usr/bin/bitnovad"
+
+# Nice value to run bitnovad under
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #BITCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
 #BITCOIND_OPTS=""
 
+<<<<<<< HEAD
 # The timeout in seconds OpenRC will wait for bitcoind to terminate
+=======
+# The timeout in seconds OpenRC will wait for bitnovad to terminate
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule

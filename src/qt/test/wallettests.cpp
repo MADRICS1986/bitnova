@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2015-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2015-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,8 +13,13 @@
 #include <interfaces/chain.h>
 #include <interfaces/node.h>
 #include <key_io.h>
+<<<<<<< HEAD
 #include <qt/bitcoinamountfield.h>
 #include <qt/bitcoinunits.h>
+=======
+#include <qt/bitnovaamountfield.h>
+#include <qt/bitnovaunits.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <qt/clientmodel.h>
 #include <qt/optionsmodel.h>
 #include <qt/overviewpage.h>
@@ -81,7 +90,11 @@ uint256 SendCoins(CWallet& wallet, SendCoinsDialog& sendCoinsDialog, const CTxDe
     QVBoxLayout* entries = sendCoinsDialog.findChild<QVBoxLayout*>("entries");
     SendCoinsEntry* entry = qobject_cast<SendCoinsEntry*>(entries->itemAt(0)->widget());
     entry->findChild<QValidatedLineEdit*>("payTo")->setText(QString::fromStdString(EncodeDestination(address)));
+<<<<<<< HEAD
     entry->findChild<BitcoinAmountField*>("payAmount")->setValue(amount);
+=======
+    entry->findChild<BitNovaAmountField*>("payAmount")->setValue(amount);
+>>>>>>> 5360f2baff (Initialized BitNova project)
     sendCoinsDialog.findChild<QFrame*>("frameFee")
         ->findChild<QFrame*>("frameFeeSelection")
         ->findChild<QCheckBox*>("optInRBF")
@@ -138,8 +151,13 @@ void BumpFee(TransactionView& view, const uint256& txid, bool expectDisabled, st
 
 void CompareBalance(WalletModel& walletModel, CAmount expected_balance, QLabel* balance_label_to_check)
 {
+<<<<<<< HEAD
     BitcoinUnit unit = walletModel.getOptionsModel()->getDisplayUnit();
     QString balanceComparison = BitcoinUnits::formatWithUnit(unit, expected_balance, false, BitcoinUnits::SeparatorStyle::ALWAYS);
+=======
+    BitNovaUnit unit = walletModel.getOptionsModel()->getDisplayUnit();
+    QString balanceComparison = BitNovaUnits::formatWithUnit(unit, expected_balance, false, BitNovaUnits::SeparatorStyle::ALWAYS);
+>>>>>>> 5360f2baff (Initialized BitNova project)
     QCOMPARE(balance_label_to_check->text().trimmed(), balanceComparison);
 }
 
@@ -268,9 +286,15 @@ public:
 //
 // This also requires overriding the default minimal Qt platform:
 //
+<<<<<<< HEAD
 //     QT_QPA_PLATFORM=xcb     src/qt/test/test_bitcoin-qt  # Linux
 //     QT_QPA_PLATFORM=windows src/qt/test/test_bitcoin-qt  # Windows
 //     QT_QPA_PLATFORM=cocoa   src/qt/test/test_bitcoin-qt  # macOS
+=======
+//     QT_QPA_PLATFORM=xcb     src/qt/test/test_bitnova-qt  # Linux
+//     QT_QPA_PLATFORM=windows src/qt/test/test_bitnova-qt  # Windows
+//     QT_QPA_PLATFORM=cocoa   src/qt/test/test_bitnova-qt  # macOS
+>>>>>>> 5360f2baff (Initialized BitNova project)
 void TestGUI(interfaces::Node& node, const std::shared_ptr<CWallet>& wallet)
 {
     // Create widgets for sending coins and listing transactions.
@@ -322,7 +346,11 @@ void TestGUI(interfaces::Node& node, const std::shared_ptr<CWallet>& wallet)
     labelInput->setText("TEST_LABEL_1");
 
     // Amount input
+<<<<<<< HEAD
     BitcoinAmountField* amountInput = receiveCoinsDialog.findChild<BitcoinAmountField*>("reqAmount");
+=======
+    BitNovaAmountField* amountInput = receiveCoinsDialog.findChild<BitNovaAmountField*>("reqAmount");
+>>>>>>> 5360f2baff (Initialized BitNova project)
     amountInput->setValue(1);
 
     // Message input
@@ -338,7 +366,11 @@ void TestGUI(interfaces::Node& node, const std::shared_ptr<CWallet>& wallet)
             QCOMPARE(receiveRequestDialog->QObject::findChild<QLabel*>("payment_header")->text(), QString("Payment information"));
             QCOMPARE(receiveRequestDialog->QObject::findChild<QLabel*>("uri_tag")->text(), QString("URI:"));
             QString uri = receiveRequestDialog->QObject::findChild<QLabel*>("uri_content")->text();
+<<<<<<< HEAD
             QCOMPARE(uri.count("bitcoin:"), 2);
+=======
+            QCOMPARE(uri.count("bitnova:"), 2);
+>>>>>>> 5360f2baff (Initialized BitNova project)
             QCOMPARE(receiveRequestDialog->QObject::findChild<QLabel*>("address_tag")->text(), QString("Address:"));
             QVERIFY(address.isEmpty());
             address = receiveRequestDialog->QObject::findChild<QLabel*>("address_content")->text();
@@ -476,7 +508,11 @@ void WalletTests::walletTests()
         // and fails to handle returned nulls
         // (https://bugreports.qt.io/browse/QTBUG-49686).
         qWarning() << "Skipping WalletTests on mac build with 'minimal' platform set due to Qt bugs. To run AppTests, invoke "
+<<<<<<< HEAD
                       "with 'QT_QPA_PLATFORM=cocoa test_bitcoin-qt' on mac, or else use a linux or windows build.";
+=======
+                      "with 'QT_QPA_PLATFORM=cocoa test_bitnova-qt' on mac, or else use a linux or windows build.";
+>>>>>>> 5360f2baff (Initialized BitNova project)
         return;
     }
 #endif

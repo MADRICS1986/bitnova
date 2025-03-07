@@ -1,7 +1,11 @@
 Description
 ------------
 
+<<<<<<< HEAD
 This directory contains data-driven tests for various aspects of Bitcoin.
+=======
+This directory contains data-driven tests for various aspects of BitNova.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 License
 --------

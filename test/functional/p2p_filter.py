@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2020-2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2020-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -29,7 +33,11 @@ from test_framework.p2p import (
     p2p_lock,
 )
 from test_framework.script import MAX_SCRIPT_ELEMENT_SIZE
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.wallet import (
     MiniWallet,
     getnewdestination,
@@ -91,7 +99,11 @@ class P2PBloomFilter(P2PInterface):
             self._merkleblock_received = value
 
 
+<<<<<<< HEAD
 class FilterTest(BitcoinTestFramework):
+=======
+class FilterTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         # whitelist peers to speed up tx relay / mempool sync

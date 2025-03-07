@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) The Bitcoin Core developers
+=======
+// Copyright (c) The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or https://opensource.org/license/mit/.
 
@@ -29,7 +33,11 @@ fn get_linter_list() -> Vec<&'static Linter> {
             lint_fn: lint_doc
         },
         &Linter {
+<<<<<<< HEAD
             description: "Check that no symbol from bitcoin-build-config.h is used without the header being included",
+=======
+            description: "Check that no symbol from bitnova-build-config.h is used without the header being included",
+>>>>>>> 5360f2baff (Initialized BitNova project)
             name: "includes_build_config",
             lint_fn: lint_includes_build_config
         },
@@ -468,7 +476,11 @@ fn get_pathspecs_exclude_whitespace() -> Vec<String> {
             "doc/README_windows.txt",
             // Temporary excludes, or existing violations
             "doc/release-notes/release-notes-0.*",
+<<<<<<< HEAD
             "contrib/init/bitcoind.openrc",
+=======
+            "contrib/init/bitnovad.openrc",
+>>>>>>> 5360f2baff (Initialized BitNova project)
             "contrib/macdeploy/macdeployqtplus",
             "src/crypto/sha256_sse4.cpp",
             "src/qt/res/src/*.svg",
@@ -536,7 +548,11 @@ Please add any false positives, such as subtrees, or externally sourced files to
 }
 
 fn lint_includes_build_config() -> LintResult {
+<<<<<<< HEAD
     let config_path = "./cmake/bitcoin-build-config.h.in";
+=======
+    let config_path = "./cmake/bitnova-build-config.h.in";
+>>>>>>> 5360f2baff (Initialized BitNova project)
     let defines_regex = format!(
         r"^\s*(?!//).*({})",
         check_output(Command::new("grep").args(["define", "--", config_path]))
@@ -570,7 +586,11 @@ fn lint_includes_build_config() -> LintResult {
                 ])
                 .args(get_pathspecs_exclude_subtrees())
                 .args([
+<<<<<<< HEAD
                     // These are exceptions which don't use bitcoin-build-config.h, rather CMakeLists.txt adds
+=======
+                    // These are exceptions which don't use bitnova-build-config.h, rather CMakeLists.txt adds
+>>>>>>> 5360f2baff (Initialized BitNova project)
                     // these cppflags manually.
                     ":(exclude)src/crypto/sha256_arm_shani.cpp",
                     ":(exclude)src/crypto/sha256_avx2.cpp",
@@ -588,9 +608,15 @@ fn lint_includes_build_config() -> LintResult {
                     "--files-with-matches"
                 },
                 if mode {
+<<<<<<< HEAD
                     "^#include <bitcoin-build-config.h> // IWYU pragma: keep$"
                 } else {
                     "#include <bitcoin-build-config.h>" // Catch redundant includes with and without the IWYU pragma
+=======
+                    "^#include <bitnova-build-config.h> // IWYU pragma: keep$"
+                } else {
+                    "#include <bitnova-build-config.h>" // Catch redundant includes with and without the IWYU pragma
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 },
                 "--",
             ])
@@ -603,11 +629,19 @@ fn lint_includes_build_config() -> LintResult {
     if missing {
         return Err(format!(
             r#"
+<<<<<<< HEAD
 One or more files use a symbol declared in the bitcoin-build-config.h header. However, they are not
 including the header. This is problematic, because the header may or may not be indirectly
 included. If the indirect include were to be intentionally or accidentally removed, the build could
 still succeed, but silently be buggy. For example, a slower fallback algorithm could be picked,
 even though bitcoin-build-config.h indicates that a faster feature is available and should be used.
+=======
+One or more files use a symbol declared in the bitnova-build-config.h header. However, they are not
+including the header. This is problematic, because the header may or may not be indirectly
+included. If the indirect include were to be intentionally or accidentally removed, the build could
+still succeed, but silently be buggy. For example, a slower fallback algorithm could be picked,
+even though bitnova-build-config.h indicates that a faster feature is available and should be used.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 If you are unsure which symbol is used, you can find it with this command:
 git grep --perl-regexp '{}' -- file_name
@@ -615,7 +649,11 @@ git grep --perl-regexp '{}' -- file_name
 Make sure to include it with the IWYU pragma. Otherwise, IWYU may falsely instruct to remove the
 include again.
 
+<<<<<<< HEAD
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
             "#,
             defines_regex
         )
@@ -625,7 +663,11 @@ include again.
     let redundant = print_affected_files(false);
     if redundant {
         return Err(r#"
+<<<<<<< HEAD
 None of the files use a symbol declared in the bitcoin-build-config.h header. However, they are including
+=======
+None of the files use a symbol declared in the bitnova-build-config.h header. However, they are including
+>>>>>>> 5360f2baff (Initialized BitNova project)
 the header. Consider removing the unused include.
             "#
         .to_string());

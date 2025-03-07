@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2013-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2013-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,7 +24,11 @@ BOOST_AUTO_TEST_CASE(murmurhash3)
 
     // Test MurmurHash3 with various inputs. Of course this is retested in the
     // bloom filter tests - they would fail if MurmurHash3() had any problems -
+<<<<<<< HEAD
     // but is useful for those trying to implement Bitcoin libraries as a
+=======
+    // but is useful for those trying to implement BitNova libraries as a
+>>>>>>> 5360f2baff (Initialized BitNova project)
     // source of test data for their MurmurHash3() primitive during
     // development.
     //

@@ -1,11 +1,19 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2019-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2019-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the wallet implicit segwit feature."""
 
 import test_framework.address as address
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 # TODO: Might be nice to test p2pk here too
 address_types = ('legacy', 'bech32', 'p2sh-segwit')
@@ -38,7 +46,11 @@ def check_implicit_transactions(implicit_keys, implicit_node):
             b_address = key_to_address(pubkey, b)
             assert ('receive', b_address) in tuple((tx['category'], tx['address']) for tx in txs)
 
+<<<<<<< HEAD
 class ImplicitSegwitTest(BitcoinTestFramework):
+=======
+class ImplicitSegwitTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser, descriptors=False)
 

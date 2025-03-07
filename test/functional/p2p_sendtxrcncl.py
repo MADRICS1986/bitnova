@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test SENDTXRCNCL message
@@ -18,7 +22,11 @@ from test_framework.p2p import (
     P2P_SUBVERSION,
     P2P_VERSION,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import assert_equal
 
 class PeerNoVerack(P2PInterface):
@@ -63,7 +71,11 @@ def create_sendtxrcncl_msg():
     sendtxrcncl_msg.salt = 2
     return sendtxrcncl_msg
 
+<<<<<<< HEAD
 class SendTxRcnclTest(BitcoinTestFramework):
+=======
+class SendTxRcnclTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [['-txreconciliation']]

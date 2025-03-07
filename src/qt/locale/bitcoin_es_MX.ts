@@ -51,6 +51,7 @@ Click-derecho para editar direccion o nivel</translation>
         <translation type="unfinished">Eliga la direccion para recibir monedas con</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">Esta es tu direccion para enviar pagos con Bitcoin. Siempre revisa la cantidad y la direccion correcta de monedas antes de enviar.</translation>
     </message>
@@ -58,6 +59,15 @@ Click-derecho para editar direccion o nivel</translation>
         <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Esta es la direccion de Bitcoin para recibir pagos. Usa el botton ‘Crea nueva direccion de pagos’ en la pestaña crear nueva direccion. 
+=======
+        <source>These are your BitNova addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Esta es tu direccion para enviar pagos con BitNova. Siempre revisa la cantidad y la direccion correcta de monedas antes de enviar.</translation>
+    </message>
+    <message>
+        <source>These are your BitNova addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+Signing is only possible with addresses of the type 'legacy'.</source>
+        <translation type="unfinished">Esta es la direccion de BitNova para recibir pagos. Usa el botton ‘Crea nueva direccion de pagos’ en la pestaña crear nueva direccion. 
+>>>>>>> 5360f2baff (Initialized BitNova project)
 la entrada solo es posible con las direcciones del tipo ‘legacy’</translation>
     </message>
     <message>
@@ -177,8 +187,13 @@ la entrada solo es posible con las direcciones del tipo ‘legacy’</translatio
         <translation type="unfinished">Atrás</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">Recuerde que el cifrado de su billetera no puede proteger completamente sus bitcoins de ser robados por el malware que infecta su ordenador.</translation>
+=======
+        <source>Remember that encrypting your wallet cannot fully protect your bitnovas from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Recuerde que el cifrado de su billetera no puede proteger completamente sus bitnovas de ser robados por el malware que infecta su ordenador.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     </context>
 <context>
@@ -235,7 +250,11 @@ la entrada solo es posible con las direcciones del tipo ‘legacy’</translatio
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>Change the passphrase used for wallet encryption</source>
         <translation type="unfinished">Cambiar la contraseña usada para la encriptación de la cartera</translation>
@@ -261,16 +280,26 @@ la entrada solo es posible con las direcciones del tipo ‘legacy’</translatio
         <translation type="unfinished">Firmar &amp;mensaje...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Bitcoin addresses to prove you own them</source>
         <translation type="unfinished">Firme mensajes con sus direcciones de Bitcoin para demostrar que los posee</translation>
+=======
+        <source>Sign messages with your BitNova addresses to prove you own them</source>
+        <translation type="unfinished">Firme mensajes con sus direcciones de BitNova para demostrar que los posee</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>&amp;Verify message…</source>
         <translation type="unfinished">&amp;Verificar mensaje...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
         <translation type="unfinished">Verifique los mensajes para asegurarse de que se firmaron con direcciones de Bitcoin especificadas.</translation>
+=======
+        <source>Verify messages to ensure they were signed with specified BitNova addresses</source>
+        <translation type="unfinished">Verifique los mensajes para asegurarse de que se firmaron con direcciones de BitNova especificadas.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>&amp;Load PSBT from file…</source>
@@ -393,11 +422,19 @@ la entrada solo es posible con las direcciones del tipo ‘legacy’</translatio
         <translation type="unfinished">&amp;Mostrar</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform>%n conexiones activas con la red Bitcoin</numerusform>
             <numerusform>%n conexiones activas con la red Bitcoin </numerusform>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+        <extracomment>A substring of the tooltip.</extracomment>
+        <translation type="unfinished">
+            <numerusform>%n conexiones activas con la red BitNova</numerusform>
+            <numerusform>%n conexiones activas con la red BitNova </numerusform>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         </translation>
     </message>
     <message>
@@ -563,8 +600,13 @@ la entrada solo es posible con las direcciones del tipo ‘legacy’</translatio
         <translation type="unfinished">Direcciones locales</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Network addresses that your Bitcoin node is currently using to communicate with other nodes.</source>
         <translation type="unfinished">Direcciones de red que tu nodo Bitcoin usa actualmente para comunicarse con otros nodos.</translation>
+=======
+        <source>Network addresses that your BitNova node is currently using to communicate with other nodes.</source>
+        <translation type="unfinished">Direcciones de red que tu nodo BitNova usa actualmente para comunicarse con otros nodos.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Hide Peers Detail</source>
@@ -611,8 +653,13 @@ la entrada solo es posible con las direcciones del tipo ‘legacy’</translatio
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
+<<<<<<< HEAD
         <source>You can sign messages/agreements with your legacy (P2PKH) addresses to prove you can receive bitcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished">Puedes firmar mensajes o acuerdos con tus direcciones tipo legacy (P2PKH) para demostrar que puedes recibir los bitcoins que se envíen a ellas. Ten cuidado de no firmar cosas confusas o al azar, ya que los ataques de phishing pueden tratar de engañarte para que les envíes la firma con tu identidad. Firma solo declaraciones totalmente detalladas con las que estés de acuerdo.</translation>
+=======
+        <source>You can sign messages/agreements with your legacy (P2PKH) addresses to prove you can receive bitnovas sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation type="unfinished">Puedes firmar mensajes o acuerdos con tus direcciones tipo legacy (P2PKH) para demostrar que puedes recibir los bitnovas que se envíen a ellas. Ten cuidado de no firmar cosas confusas o al azar, ya que los ataques de phishing pueden tratar de engañarte para que les envíes la firma con tu identidad. Firma solo declaraciones totalmente detalladas con las que estés de acuerdo.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>The entered address does not refer to a legacy (P2PKH) key. Message signing for SegWit and other non-P2PKH address types is not supported in this version of %1. Please check the address and try again.</source>
@@ -688,7 +735,11 @@ la entrada solo es posible con las direcciones del tipo ‘legacy’</translatio
     </message>
     </context>
 <context>
+<<<<<<< HEAD
     <name>bitcoin-core</name>
+=======
+    <name>bitnova-core</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>Failed to remove snapshot chainstate dir (%s). Manually remove it before restarting.
 </source>

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # Bootstrappable Bitcoin Core Builds
 
 This directory contains the files necessary to perform bootstrappable Bitcoin
+=======
+# Bootstrappable BitNova Core Builds
+
+This directory contains the files necessary to perform bootstrappable BitNova
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Core builds.
 
 [Bootstrappability][b17e] furthers our binary security guarantees by allowing us
@@ -57,7 +63,11 @@ and examples](#common-guix-build-invocation-patterns-and-examples) section below
 before starting a build. For a full list of customization options, see the
 [recognized environment variables][env-vars-list] section.*
 
+<<<<<<< HEAD
 To build Bitcoin Core reproducibly with all default options, invoke the
+=======
+To build BitNova Core reproducibly with all default options, invoke the
+>>>>>>> 5360f2baff (Initialized BitNova project)
 following from the top of a clean repository:
 
 ```sh
@@ -80,14 +90,22 @@ crucial differences:
     * _**DETACHED_SIGS_REPO**_
 
       Set the directory where detached codesignatures can be found for the current
+<<<<<<< HEAD
       Bitcoin Core version being built.
+=======
+      BitNova Core version being built.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
       _REQUIRED environment variable_
 
 An invocation with all default options would look like:
 
 ```
+<<<<<<< HEAD
 env DETACHED_SIGS_REPO=<path/to/bitcoin-detached-sigs> ./contrib/guix/guix-codesign
+=======
+env DETACHED_SIGS_REPO=<path/to/bitnova-detached-sigs> ./contrib/guix/guix-codesign
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 
 ## Cleaning intermediate work directories
@@ -108,7 +126,11 @@ worktree to save disk space:
 
 Much like how Gitian build outputs are attested to in a `gitian.sigs`
 repository, Guix build outputs are attested to in the [`guix.sigs`
+<<<<<<< HEAD
 repository](https://github.com/bitcoin-core/guix.sigs).
+=======
+repository](https://github.com/bitnova-core/guix.sigs).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 After you've cloned the `guix.sigs` repository, to attest to the current
 worktree's commit/tag:

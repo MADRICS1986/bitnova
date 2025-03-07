@@ -1,5 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
+<<<<<<< HEAD
 // Copyright (c) 2009-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2009-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,7 +24,11 @@
 
 typedef uint256 ChainCode;
 
+<<<<<<< HEAD
 /** A hasher class for Bitcoin's 256-bit hash (double SHA-256). */
+=======
+/** A hasher class for BitNova's 256-bit hash (double SHA-256). */
+>>>>>>> 5360f2baff (Initialized BitNova project)
 class CHash256 {
 private:
     CSHA256 sha;
@@ -45,7 +53,11 @@ public:
     }
 };
 
+<<<<<<< HEAD
 /** A hasher class for Bitcoin's 160-bit hash (SHA-256 + RIPEMD-160). */
+=======
+/** A hasher class for BitNova's 160-bit hash (SHA-256 + RIPEMD-160). */
+>>>>>>> 5360f2baff (Initialized BitNova project)
 class CHash160 {
 private:
     CSHA256 sha;

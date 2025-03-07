@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2014-2021 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test running bitcoind with -reindex and -reindex-chainstate options.
+=======
+# Copyright (c) 2014-2021 The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+"""Test running bitnovad with -reindex and -reindex-chainstate options.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 - Start a single node and generate 3 blocks.
 - Stop the node and restart it with -reindex. Verify that the node has reindexed up to block 3.
@@ -10,7 +17,11 @@
 - Verify that out-of-order blocks are correctly processed, see LoadExternalBlockFile()
 """
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.messages import MAGIC_BYTES
 from test_framework.util import (
     assert_equal,
@@ -18,7 +29,11 @@ from test_framework.util import (
 )
 
 
+<<<<<<< HEAD
 class ReindexTest(BitcoinTestFramework):
+=======
+class ReindexTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

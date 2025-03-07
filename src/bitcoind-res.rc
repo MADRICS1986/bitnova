@@ -14,6 +14,7 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
+<<<<<<< HEAD
             VALUE "CompanyName",        "Bitcoin"
             VALUE "FileDescription",    "bitcoind (Bitcoin node with a JSON-RPC server)"
             VALUE "FileVersion",        CLIENT_VERSION_STRING
@@ -22,6 +23,16 @@ BEGIN
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "bitcoind.exe"
             VALUE "ProductName",        "bitcoind"
+=======
+            VALUE "CompanyName",        "BitNova"
+            VALUE "FileDescription",    "bitnovad (BitNova node with a JSON-RPC server)"
+            VALUE "FileVersion",        CLIENT_VERSION_STRING
+            VALUE "InternalName",       "bitnovad"
+            VALUE "LegalCopyright",     COPYRIGHT_STR
+            VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
+            VALUE "OriginalFilename",   "bitnovad.exe"
+            VALUE "ProductName",        "bitnovad"
+>>>>>>> 5360f2baff (Initialized BitNova project)
             VALUE "ProductVersion",     CLIENT_VERSION_STRING
         END
     END

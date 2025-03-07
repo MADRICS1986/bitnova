@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2017-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2017-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -385,9 +389,15 @@ Num3072 Num3072::GetInverse() const
     // Compute a modular inverse based on a variant of the safegcd algorithm:
     // - Paper: https://gcd.cr.yp.to/papers.html
     // - Inspired by this code in libsecp256k1:
+<<<<<<< HEAD
     //   https://github.com/bitcoin-core/secp256k1/blob/master/src/modinv32_impl.h
     // - Explanation of the algorithm:
     //   https://github.com/bitcoin-core/secp256k1/blob/master/doc/safegcd_implementation.md
+=======
+    //   https://github.com/bitnova-core/secp256k1/blob/master/src/modinv32_impl.h
+    // - Explanation of the algorithm:
+    //   https://github.com/bitnova-core/secp256k1/blob/master/doc/safegcd_implementation.md
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     // Local variables d, e, f, g:
     // - f and g are the variables whose gcd we compute (despite knowing the answer is 1):

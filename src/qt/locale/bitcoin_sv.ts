@@ -50,8 +50,13 @@
         <translation type="unfinished">V&amp;älj</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">Detta är dina Bitcoin-adresser för att skicka betalningar. Kontrollera alltid belopp och mottagaradress innan du skickar bitcoin.</translation>
+=======
+        <source>These are your BitNova addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Detta är dina BitNova-adresser för att skicka betalningar. Kontrollera alltid belopp och mottagaradress innan du skickar bitnova.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -175,8 +180,13 @@ Försök igen.</translation>
         <translation type="unfinished">Tillbaka</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">Kom ihåg att kryptering av din plånbok inte helt kan skydda dig från stöld av dina bitcoins om skadlig kod infekterat din dator.</translation>
+=======
+        <source>Remember that encrypting your wallet cannot fully protect your bitnovas from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Kom ihåg att kryptering av din plånbok inte helt kan skydda dig från stöld av dina bitnovas om skadlig kod infekterat din dator.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -247,7 +257,11 @@ Försök igen.</translation>
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinApplication</name>
+=======
+    <name>BitNovaApplication</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>Settings file %1 might be corrupt or invalid.</source>
         <translation type="unfinished">Konfigurationsfil %1 verkar vara korrupt</translation>
@@ -302,8 +316,13 @@ Försök igen.</translation>
         <translation type="unfinished">Belopp</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Enter a Bitcoin address (e.g. %1)</source>
         <translation type="unfinished">Ange en Bitcoin-adress (t.ex. %1)</translation>
+=======
+        <source>Enter a BitNova address (e.g. %1)</source>
+        <translation type="unfinished">Ange en BitNova-adress (t.ex. %1)</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Inbound</source>
@@ -385,7 +404,11 @@ Försök igen.</translation>
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>BitcoinGUI</name>
+=======
+    <name>BitNovaGUI</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">&amp;Översikt</translation>
@@ -452,8 +475,13 @@ Försök igen.</translation>
         <translation type="unfinished">Proxy är &lt;b&gt; aktiverad &lt;/b&gt;: %1</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Send coins to a Bitcoin address</source>
         <translation type="unfinished">Skicka bitcoin till en Bitcoin-adress</translation>
+=======
+        <source>Send coins to a BitNova address</source>
+        <translation type="unfinished">Skicka bitnova till en BitNova-adress</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -496,16 +524,26 @@ Försök igen.</translation>
         <translation type="unfinished">Signera &amp;meddelandet...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign messages with your Bitcoin addresses to prove you own them</source>
         <translation type="unfinished">Signera meddelanden med dina Bitcoin-adresser för att bevisa att du äger dem</translation>
+=======
+        <source>Sign messages with your BitNova addresses to prove you own them</source>
+        <translation type="unfinished">Signera meddelanden med dina BitNova-adresser för att bevisa att du äger dem</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>&amp;Verify message…</source>
         <translation type="unfinished">&amp;Bekräfta meddelandet…</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
         <translation type="unfinished">Verifiera meddelanden för att vara säker på att de signerades med angivna Bitcoin-adresser</translation>
+=======
+        <source>Verify messages to ensure they were signed with specified BitNova addresses</source>
+        <translation type="unfinished">Verifiera meddelanden för att vara säker på att de signerades med angivna BitNova-adresser</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>&amp;Load PSBT from file…</source>
@@ -564,8 +602,13 @@ Försök igen.</translation>
         <translation type="unfinished">Ansluter till noder...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
         <translation type="unfinished">Begär betalningar (skapar QR-koder och bitcoin: -URIer)</translation>
+=======
+        <source>Request payments (generates QR codes and bitnova: URIs)</source>
+        <translation type="unfinished">Begär betalningar (skapar QR-koder och bitnova: -URIer)</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -615,16 +658,26 @@ Försök igen.</translation>
         <translation type="unfinished">Uppdaterad</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Bitcoin Transaction</source>
         <translation type="unfinished">Läs in Delvis signerad Bitcoin transaktion (PSBT)</translation>
+=======
+        <source>Load Partially Signed BitNova Transaction</source>
+        <translation type="unfinished">Läs in Delvis signerad BitNova transaktion (PSBT)</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Load PSBT from &amp;clipboard…</source>
         <translation type="unfinished">Ladda PSBT från &amp;urklipp...</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Load Partially Signed Bitcoin Transaction from clipboard</source>
         <translation type="unfinished">Läs in Delvis signerad Bitcoin transaktion (PSBT) från urklipp</translation>
+=======
+        <source>Load Partially Signed BitNova Transaction from clipboard</source>
+        <translation type="unfinished">Läs in Delvis signerad BitNova transaktion (PSBT) från urklipp</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Node window</source>
@@ -643,8 +696,13 @@ Försök igen.</translation>
         <translation type="unfinished">Mottaga&amp;radresser</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Open a bitcoin: URI</source>
         <translation type="unfinished">Öppna en bitcoin:-URI</translation>
+=======
+        <source>Open a bitnova: URI</source>
+        <translation type="unfinished">Öppna en bitnova:-URI</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Open Wallet</source>
@@ -681,8 +739,13 @@ Försök igen.</translation>
         <translation type="unfinished">Migrera en plånbok</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
         <translation type="unfinished">Visa %1 hjälpmeddelande för att få en lista med möjliga Bitcoin kommandoradsalternativ.</translation>
+=======
+        <source>Show the %1 help message to get a list with possible BitNova command-line options</source>
+        <translation type="unfinished">Visa %1 hjälpmeddelande för att få en lista med möjliga BitNova kommandoradsalternativ.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -741,11 +804,19 @@ Försök igen.</translation>
         <translation type="unfinished">V&amp;isa</translation>
     </message>
     <message numerus="yes">
+<<<<<<< HEAD
         <source>%n active connection(s) to Bitcoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform>%n aktiva anslutningar till Bitcoin-nätverket.</numerusform>
             <numerusform>%n aktiva anslutningar till Bitcoin-nätverket.</numerusform>
+=======
+        <source>%n active connection(s) to BitNova network.</source>
+        <extracomment>A substring of the tooltip.</extracomment>
+        <translation type="unfinished">
+            <numerusform>%n aktiva anslutningar till BitNova-nätverket.</numerusform>
+            <numerusform>%n aktiva anslutningar till BitNova-nätverket.</numerusform>
+>>>>>>> 5360f2baff (Initialized BitNova project)
         </translation>
     </message>
     <message>
@@ -1257,8 +1328,13 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Redigera avsändaradress</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The entered address "%1" is not a valid Bitcoin address.</source>
         <translation type="unfinished">Den angivna adressen "%1" är inte en giltig Bitcoin-adress.</translation>
+=======
+        <source>The entered address "%1" is not a valid BitNova address.</source>
+        <translation type="unfinished">Den angivna adressen "%1" är inte en giltig BitNova-adress.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -1344,8 +1420,13 @@ Om den här plånboken innehåller lösbara</translation>
         </translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>%1 will download and store a copy of the Bitcoin block chain.</source>
         <translation type="unfinished">%1 kommer att ladda ner och lagra en kopia av Bitcoins blockkedja.</translation>
+=======
+        <source>%1 will download and store a copy of the BitNova block chain.</source>
+        <translation type="unfinished">%1 kommer att ladda ner och lagra en kopia av BitNovas blockkedja.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1433,12 +1514,21 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Formulär</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
         <translation type="unfinished">Nyligen gjorda transaktioner visas inte korrekt och därför kan din plånboks saldo visas felaktigt. Denna information kommer att visas korrekt så snart din plånbok har synkroniserats med Bitcoin-nätverket enligt informationen nedan.</translation>
     </message>
     <message>
         <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished">Att försöka spendera bitcoin som påverkas av transaktioner som ännu inte visas kommer inte accepteras av nätverket.</translation>
+=======
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitnova network, as detailed below.</source>
+        <translation type="unfinished">Nyligen gjorda transaktioner visas inte korrekt och därför kan din plånboks saldo visas felaktigt. Denna information kommer att visas korrekt så snart din plånbok har synkroniserats med BitNova-nätverket enligt informationen nedan.</translation>
+    </message>
+    <message>
+        <source>Attempting to spend bitnovas that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation type="unfinished">Att försöka spendera bitnova som påverkas av transaktioner som ännu inte visas kommer inte accepteras av nätverket.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1488,8 +1578,13 @@ Om den här plånboken innehåller lösbara</translation>
 <context>
     <name>OpenURIDialog</name>
     <message>
+<<<<<<< HEAD
         <source>Open bitcoin URI</source>
         <translation type="unfinished">Öppna bitcoin-URI</translation>
+=======
+        <source>Open bitnova URI</source>
+        <translation type="unfinished">Öppna bitnova-URI</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -1634,16 +1729,26 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Extern signerare (e.g. hårdvaruplånbok)</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished">Öppna automatiskt Bitcoin-klientens port på routern. Detta fungerar endast om din router stödjer UPnP och det är är aktiverat.</translation>
+=======
+        <source>Automatically open the BitNova client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="unfinished">Öppna automatiskt BitNova-klientens port på routern. Detta fungerar endast om din router stödjer UPnP och det är är aktiverat.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation type="unfinished">Tilldela port med hjälp av &amp;UPnP</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Automatically open the Bitcoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
         <translation type="unfinished">Öppna automatiskt Bitcoin-klientens port på routern. Detta fungerar endast om din router stödjer NAT-PMP och det är är aktiverat. Den externa porten kan vara slumpmässig.</translation>
+=======
+        <source>Automatically open the BitNova client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+        <translation type="unfinished">Öppna automatiskt BitNova-klientens port på routern. Detta fungerar endast om din router stödjer NAT-PMP och det är är aktiverat. Den externa porten kan vara slumpmässig.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Accept connections from outside.</source>
@@ -1654,8 +1759,13 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Tillåt inkommande anslutningar</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
         <translation type="unfinished">Anslut till Bitcoin-nätverket genom en SOCKS5-proxy.</translation>
+=======
+        <source>Connect to the BitNova network through a SOCKS5 proxy.</source>
+        <translation type="unfinished">Anslut till BitNova-nätverket genom en SOCKS5-proxy.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1722,8 +1832,13 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Om myntkontrollfunktioner skall visas eller inte</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Connect to the Bitcoin network through a separate SOCKS5 proxy for Tor onion services.</source>
         <translation type="unfinished">Anslut till Bitcoin-nätverket genom en separat SOCKS5-proxy för onion-tjänster genom Tor.</translation>
+=======
+        <source>Connect to the BitNova network through a separate SOCKS5 proxy for Tor onion services.</source>
+        <translation type="unfinished">Anslut till BitNova-nätverket genom en separat SOCKS5-proxy för onion-tjänster genom Tor.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor onion services:</source>
@@ -1803,8 +1918,13 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Formulär</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished">Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med Bitcoin-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
+=======
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitNova network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished">Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med BitNova-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1985,20 +2105,34 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Fel vid betalningsbegäran</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Cannot start bitcoin: click-to-pay handler</source>
         <translation type="unfinished">Kan inte starta bitcoin: klicka-och-betala hanteraren</translation>
+=======
+        <source>Cannot start bitnova: click-to-pay handler</source>
+        <translation type="unfinished">Kan inte starta bitnova: klicka-och-betala hanteraren</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>URI handling</source>
         <translation type="unfinished">URI-hantering</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>'bitcoin://' is not a valid URI. Use 'bitcoin:' instead.</source>
         <translation type="unfinished">'bitcoin://' är inte en accepterad URI. Använd 'bitcoin:' istället.</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
         <translation type="unfinished">URI kan inte parsas! Detta kan orsakas av en ogiltig Bitcoin-adress eller felaktiga URI-parametrar.</translation>
+=======
+        <source>'bitnova://' is not a valid URI. Use 'bitnova:' instead.</source>
+        <translation type="unfinished">'bitnova://' är inte en accepterad URI. Använd 'bitnova:' istället.</translation>
+    </message>
+    <message>
+        <source>URI cannot be parsed! This can be caused by an invalid BitNova address or malformed URI parameters.</source>
+        <translation type="unfinished">URI kan inte parsas! Detta kan orsakas av en ogiltig BitNova-adress eller felaktiga URI-parametrar.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -2420,8 +2554,13 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">&amp;Meddelande:</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
         <translation type="unfinished">Ett valfritt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. Obs: Meddelandet kommer inte att sändas med betalningen över Bitcoin-nätverket.</translation>
+=======
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BitNova network.</source>
+        <translation type="unfinished">Ett valfritt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. Obs: Meddelandet kommer inte att sändas med betalningen över BitNova-nätverket.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2582,7 +2721,11 @@ Om den här plånboken innehåller lösbara</translation>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
+<<<<<<< HEAD
         <translation type="unfinished">Skicka Bitcoins</translation>
+=======
+        <translation type="unfinished">Skicka BitNovas</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -2677,8 +2820,13 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Dölj alternativ för transaktionsavgift</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for bitcoin transactions than the network can process.</source>
         <translation type="unfinished">När transaktionsvolymen är mindre än utrymmet i blocken kan både brytardatorer och relänoder kräva en minimiavgift. Det är okej att bara betala denna minimiavgift, men du ska vara medveten om att det kan leda till att en transaktion aldrig bekräftas så fort efterfrågan på bitcointransaktioner är större än vad nätverket kan hantera.</translation>
+=======
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for bitnova transactions than the network can process.</source>
+        <translation type="unfinished">När transaktionsvolymen är mindre än utrymmet i blocken kan både brytardatorer och relänoder kräva en minimiavgift. Det är okej att bara betala denna minimiavgift, men du ska vara medveten om att det kan leda till att en transaktion aldrig bekräftas så fort efterfrågan på bitnovatransaktioner är större än vad nätverket kan hantera.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>A too low fee might result in a never confirming transaction (read the tooltip)</source>
@@ -2749,8 +2897,13 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Sk&amp;apa Osignerad</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Creates a Partially Signed Bitcoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation type="unfinished">Skapar en delvis signerad Bitcoin transaktion (PSBT) att använda vid t.ex. en offline %1 plånbok, eller en PSBT-kompatibel hårdvaruplånbok.</translation>
+=======
+        <source>Creates a Partially Signed BitNova Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <translation type="unfinished">Skapar en delvis signerad BitNova transaktion (PSBT) att använda vid t.ex. en offline %1 plånbok, eller en PSBT-kompatibel hårdvaruplånbok.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>%1 to '%2'</source>
@@ -2782,9 +2935,15 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Du kan höja avgiften senare (signalerar Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Please, review your transaction proposal. This will produce a Partially Signed Bitcoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
         <translation type="unfinished">Verifiera ditt transaktionsförslag. Det kommer skapas en delvis signerad Bitcoin transaktion (PSBT) som du kan spara eller kopiera och sen signera med t.ex. en offline %1 plånbok, eller en PSBT-kompatibel hårdvaruplånbok.</translation>
+=======
+        <source>Please, review your transaction proposal. This will produce a Partially Signed BitNova Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <translation type="unfinished">Verifiera ditt transaktionsförslag. Det kommer skapas en delvis signerad BitNova transaktion (PSBT) som du kan spara eller kopiera och sen signera med t.ex. en offline %1 plånbok, eller en PSBT-kompatibel hårdvaruplånbok.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>%1 from wallet '%2'</source>
@@ -2852,8 +3011,13 @@ Om den här plånboken innehåller lösbara</translation>
         </translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Warning: Invalid Bitcoin address</source>
         <translation type="unfinished">Varning: Ogiltig Bitcoin-adress</translation>
+=======
+        <source>Warning: Invalid BitNova address</source>
+        <translation type="unfinished">Varning: Ogiltig BitNova-adress</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2891,8 +3055,13 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Välj tidigare använda adresser</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Bitcoin address to send the payment to</source>
         <translation type="unfinished">Bitcoin-adress att sända betalning till</translation>
+=======
+        <source>The BitNova address to send the payment to</source>
+        <translation type="unfinished">BitNova-adress att sända betalning till</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -2907,8 +3076,13 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Beloppett att skicka i vald enhet</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished">Avgiften dras från beloppet som skickas. Mottagaren kommer att ta emot mindre bitcoin än du angivit i beloppsfältet. Om flera mottagare väljs kommer avgiften att fördelas jämt.</translation>
+=======
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitnovas than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation type="unfinished">Avgiften dras från beloppet som skickas. Mottagaren kommer att ta emot mindre bitnova än du angivit i beloppsfältet. Om flera mottagare väljs kommer avgiften att fördelas jämt.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2927,8 +3101,13 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Ange en etikett för denna adress för att lägga till den i listan med använda adresser</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation type="unfinished">Ett meddelande som bifogades bitcoin: -URIn och som sparas med transaktionen som referens. Obs: Meddelandet sänds inte över Bitcoin-nätverket.</translation>
+=======
+        <source>A message that was attached to the bitnova: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitNova network.</source>
+        <translation type="unfinished">Ett meddelande som bifogades bitnova: -URIn och som sparas med transaktionen som referens. Obs: Meddelandet sänds inte över BitNova-nätverket.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
 </context>
 <context>
@@ -2953,8 +3132,13 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">&amp;Signera meddelande</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Bitcoin address to sign the message with</source>
         <translation type="unfinished">Bitcoin-adress att signera meddelandet med</translation>
+=======
+        <source>The BitNova address to sign the message with</source>
+        <translation type="unfinished">BitNova-adress att signera meddelandet med</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2977,8 +3161,13 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Kopiera signaturen till systemets Urklipp</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Sign the message to prove you own this Bitcoin address</source>
         <translation type="unfinished">Signera meddelandet för att bevisa att du äger denna Bitcoin-adress</translation>
+=======
+        <source>Sign the message to prove you own this BitNova address</source>
+        <translation type="unfinished">Signera meddelandet för att bevisa att du äger denna BitNova-adress</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3001,8 +3190,13 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Ange mottagarens adress, meddelande (kopiera radbrytningar, mellanslag, TAB-tecken, osv. exakt) och signatur nedan, för att verifiera meddelandet. Undvik att läsa in mera information i signaturen än vad som stod i själva det signerade meddelandet, för att undvika ett man-in-the-middle-angrepp. Notera att detta endast bevisar att den signerande parten tar emot med adressen, det bevisar inte vem som skickat transaktionen!</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>The Bitcoin address the message was signed with</source>
         <translation type="unfinished">Bitcoin-adress som meddelandet signerades med</translation>
+=======
+        <source>The BitNova address the message was signed with</source>
+        <translation type="unfinished">BitNova-adress som meddelandet signerades med</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -3013,8 +3207,13 @@ Om den här plånboken innehåller lösbara</translation>
         <translation type="unfinished">Signatur när meddelandet signerades</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
         <translation type="unfinished">Verifiera meddelandet för att vara säker på att det signerades med angiven Bitcoin-adress</translation>
+=======
+        <source>Verify the message to ensure it was signed with the specified BitNova address</source>
+        <translation type="unfinished">Verifiera meddelandet för att vara säker på att det signerades med angiven BitNova-adress</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3511,7 +3710,11 @@ Gå till Fil &gt; Öppna plånbok för att läsa in en plånbok.
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
+<<<<<<< HEAD
         <translation type="unfinished">Skicka Bitcoins</translation>
+=======
+        <translation type="unfinished">Skicka BitNovas</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Fee bump error</source>
@@ -3608,14 +3811,23 @@ Gå till Fil &gt; Öppna plånbok för att läsa in en plånbok.
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>bitcoin-core</name>
+=======
+    <name>bitnova-core</name>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     <message>
         <source>The %s developers</source>
         <translation type="unfinished">%s-utvecklarna</translation>
     </message>
     <message>
+<<<<<<< HEAD
         <source>%s corrupt. Try using the wallet tool bitcoin-wallet to salvage or restoring a backup.</source>
         <translation type="unfinished">%s är korrupt. Testa att använda verktyget bitcoin-wallet för att rädda eller återställa en backup.</translation>
+=======
+        <source>%s corrupt. Try using the wallet tool bitnova-wallet to salvage or restoring a backup.</source>
+        <translation type="unfinished">%s är korrupt. Testa att använda verktyget bitnova-wallet för att rädda eller återställa en backup.</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Cannot obtain a lock on data directory %s. %s is probably already running.</source>
@@ -3819,7 +4031,11 @@ Gå till Fil &gt; Öppna plånbok för att läsa in en plånbok.
     </message>
     <message>
         <source>Insufficient funds</source>
+<<<<<<< HEAD
         <translation type="unfinished">Otillräckligt med bitcoins</translation>
+=======
+        <translation type="unfinished">Otillräckligt med bitnovas</translation>
+>>>>>>> 5360f2baff (Initialized BitNova project)
     </message>
     <message>
         <source>Invalid -onion address or hostname: '%s'</source>

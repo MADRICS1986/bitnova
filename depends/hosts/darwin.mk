@@ -29,7 +29,11 @@ darwin_STRIP=$(shell $(SHELL) $(.SHELLFLAGS) "command -v llvm-strip")
 #     -mlinker-version
 #
 #         Ensures that modern linker features are enabled. See here for more
+<<<<<<< HEAD
 #         details: https://github.com/bitcoin/bitcoin/pull/19407.
+=======
+#         details: https://github.com/bitnova/bitnova/pull/19407.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #
 #     -isysroot$(OSX_SDK) -nostdlibinc
 #

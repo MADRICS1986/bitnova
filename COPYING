@@ -1,7 +1,12 @@
 The MIT License (MIT)
 
+<<<<<<< HEAD
 Copyright (c) 2009-2025 The Bitcoin Core developers
 Copyright (c) 2009-2025 Bitcoin Developers
+=======
+Copyright (c) 2009-2025 The BitNova Core developers
+Copyright (c) 2009-2025 BitNova Developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

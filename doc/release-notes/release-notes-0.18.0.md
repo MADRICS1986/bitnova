@@ -1,17 +1,31 @@
+<<<<<<< HEAD
 Bitcoin Core version 0.18.0 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.18.0/>
+=======
+BitNova Core version 0.18.0 is now available from:
+
+  <https://bitnovacore.org/bin/bitnova-core-0.18.0/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a new major version release, including new features, various bug
 fixes and performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 How to Upgrade
 ==============
@@ -19,7 +33,11 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has
 completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
+<<<<<<< HEAD
 `/Applications/Bitcoin-Qt` (on Mac) or `bitcoind`/`bitcoin-qt` (on
+=======
+`/Applications/BitNova-Qt` (on Mac) or `bitnovad`/`bitnova-qt` (on
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Linux).
 
 The first time you run version 0.15.0 or newer, your chainstate database
@@ -35,16 +53,28 @@ wallet versions are still supported.
 Compatibility
 ==============
 
+<<<<<<< HEAD
 Bitcoin Core is supported and extensively tested on operating systems
 using the Linux kernel, macOS 10.10+, and Windows 7 and newer. It is not
 recommended to use Bitcoin Core on unsupported systems.
 
 Bitcoin Core should also work on most other Unix-like systems but is not
+=======
+BitNova Core is supported and extensively tested on operating systems
+using the Linux kernel, macOS 10.10+, and Windows 7 and newer. It is not
+recommended to use BitNova Core on unsupported systems.
+
+BitNova Core should also work on most other Unix-like systems but is not
+>>>>>>> 5360f2baff (Initialized BitNova project)
 as frequently tested on them.
 
 From 0.17.0 onwards, macOS <10.10 is no longer supported. 0.17.0 is
 built using Qt 5.9.x, which doesn't support versions of macOS older than
+<<<<<<< HEAD
 10.10. Additionally, Bitcoin Core does not yet change appearance when
+=======
+10.10. Additionally, BitNova Core does not yet change appearance when
+>>>>>>> 5360f2baff (Initialized BitNova project)
 macOS "dark mode" is activated.
 
 In addition to previously-supported CPU platforms, this release's
@@ -52,11 +82,19 @@ pre-compiled distribution also provides binaries for the RISC-V
 platform.
 
 If you are using the `systemd` unit configuration file located at
+<<<<<<< HEAD
 `contrib/init/bitcoind.service`, it has been changed to use
 `/var/lib/bitcoind` as the data directory instead of
 `~bitcoin/.bitcoin`. When switching over to the new configuration file,
 please make sure that the filesystem on which `/var/lib/bitcoind` will
 exist has enough space (check using `df -h /var/lib/bitcoind`), and
+=======
+`contrib/init/bitnovad.service`, it has been changed to use
+`/var/lib/bitnovad` as the data directory instead of
+`~bitnova/.bitnova`. When switching over to the new configuration file,
+please make sure that the filesystem on which `/var/lib/bitnovad` will
+exist has enough space (check using `df -h /var/lib/bitnovad`), and
+>>>>>>> 5360f2baff (Initialized BitNova project)
 optionally copy over your existing data directory. See the [systemd init
 file section](#systemd-init-file) for more details.
 
@@ -95,7 +133,11 @@ Configuration option changes
   messages that ZMQ will queue in memory (the "high water mark") before
   dropping additional messages.  The default value is 1,000, the same as
   was used for previous releases.  See the [ZMQ
+<<<<<<< HEAD
   documentation](https://github.com/bitcoin/bitcoin/blob/master/doc/zmq.md#usage)
+=======
+  documentation](https://github.com/bitnova/bitnova/blob/master/doc/zmq.md#usage)
+>>>>>>> 5360f2baff (Initialized BitNova project)
   for details.
 
 - The `rpcallowip` option can no longer be used to automatically listen
@@ -119,16 +161,26 @@ Configuration option changes
   disconnect/ban behavior will not cause a node that is whitelisting
   another to be dropped by peers.  Users can still explicitly enable
   this behavior with the command line option (and may want to consider
+<<<<<<< HEAD
   [contacting](https://bitcoincore.org/en/contact/) the Bitcoin Core
+=======
+  [contacting](https://bitnovacore.org/en/contact/) the BitNova Core
+>>>>>>> 5360f2baff (Initialized BitNova project)
   project to let us know about their use-case, as this feature could be
   deprecated in the future).
 
 systemd init file
 -----------------
 
+<<<<<<< HEAD
 The systemd init file (`contrib/init/bitcoind.service`) has been changed
 to use `/var/lib/bitcoind` as the data directory instead of
 `~bitcoin/.bitcoin`. This change makes Bitcoin Core more consistent with
+=======
+The systemd init file (`contrib/init/bitnovad.service`) has been changed
+to use `/var/lib/bitnovad` as the data directory instead of
+`~bitnova/.bitnova`. This change makes BitNova Core more consistent with
+>>>>>>> 5360f2baff (Initialized BitNova project)
 other services, and makes the systemd init config more consistent with
 existing Upstart and OpenRC configs.
 
@@ -138,15 +190,23 @@ See [`systemd.exec(5)`](https://www.freedesktop.org/software/systemd/man/systemd
 for more details.
 
 When using the provided init files under `contrib/init`, overriding the
+<<<<<<< HEAD
 `datadir` option in `/etc/bitcoin/bitcoin.conf` will have no effect.
 This is because the command line arguments specified in the init files
 take precedence over the options specified in
 `/etc/bitcoin/bitcoin.conf`.
+=======
+`datadir` option in `/etc/bitnova/bitnova.conf` will have no effect.
+This is because the command line arguments specified in the init files
+take precedence over the options specified in
+`/etc/bitnova/bitnova.conf`.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 
 Documentation
 -------------
 
+<<<<<<< HEAD
 - A new short [document](https://github.com/bitcoin/bitcoin/blob/master/doc/JSON-RPC-interface.md)
   about the JSON-RPC interface describes cases where the results of an
   RPC might contain inconsistencies between data sourced from different
@@ -165,6 +225,26 @@ Documentation
 - A new document introduces Bitcoin Core's BIP174 [Partially-Signed
   Bitcoin Transactions
   (PSBT)](https://github.com/bitcoin/bitcoin/blob/master/doc/psbt.md)
+=======
+- A new short [document](https://github.com/bitnova/bitnova/blob/master/doc/JSON-RPC-interface.md)
+  about the JSON-RPC interface describes cases where the results of an
+  RPC might contain inconsistencies between data sourced from different
+  subsystems, such as wallet state and mempool state.  A note is added
+  to the [REST interface documentation](https://github.com/bitnova/bitnova/blob/master/doc/REST-interface.md)
+  indicating that the same rules apply.
+
+- Further information is added to the [JSON-RPC
+  documentation](https://github.com/bitnova/bitnova/blob/master/doc/JSON-RPC-interface.md)
+  about how to secure this interface.
+
+- A new [document](https://github.com/bitnova/bitnova/blob/master/doc/bitnova-conf.md)
+  about the `bitnova.conf` file describes how to use it to configure
+  BitNova Core.
+
+- A new document introduces BitNova Core's BIP174 [Partially-Signed
+  BitNova Transactions
+  (PSBT)](https://github.com/bitnova/bitnova/blob/master/doc/psbt.md)
+>>>>>>> 5360f2baff (Initialized BitNova project)
   interface, which is used to allow multiple programs to collaboratively
   work to create, sign, and broadcast new transactions.  This is useful
   for offline (cold storage) wallets, multisig wallets, coinjoin
@@ -172,7 +252,11 @@ Documentation
   to interact to generate a complete transaction.
 
 - The [output script
+<<<<<<< HEAD
   descriptor](https://github.com/bitcoin/bitcoin/blob/master/doc/descriptors.md)
+=======
+  descriptor](https://github.com/bitnova/bitnova/blob/master/doc/descriptors.md)
+>>>>>>> 5360f2baff (Initialized BitNova project)
   documentation has been updated with information about new features in
   this still-developing language for describing the output scripts that
   a wallet or other program wants to receive notifications for, such as
@@ -185,15 +269,25 @@ Build system changes
 --------------------
 
 - A new `--disable-bip70` option may be passed to `./configure` to
+<<<<<<< HEAD
   prevent Bitcoin-Qt from being built with support for the BIP70 payment
   protocol or from linking libssl.  As the payment protocol has exposed
   Bitcoin Core to libssl vulnerabilities in the past, builders who don't
+=======
+  prevent BitNova-Qt from being built with support for the BIP70 payment
+  protocol or from linking libssl.  As the payment protocol has exposed
+  BitNova Core to libssl vulnerabilities in the past, builders who don't
+>>>>>>> 5360f2baff (Initialized BitNova project)
   need BIP70 support are encouraged to use this option to reduce their
   exposure to future vulnerabilities.
 
 - The minimum required version of Qt (when building the GUI) has been
   increased from 5.2 to 5.5.1 (the [depends
+<<<<<<< HEAD
   system](https://github.com/bitcoin/bitcoin/blob/master/depends/README.md)
+=======
+  system](https://github.com/bitnova/bitnova/blob/master/depends/README.md)
+>>>>>>> 5360f2baff (Initialized BitNova project)
   provides 5.9.7)
 
 New RPCs
@@ -211,7 +305,11 @@ New RPCs
   they've been running.
 
 - `deriveaddresses` returns one or more addresses corresponding to an
+<<<<<<< HEAD
   [output descriptor](https://github.com/bitcoin/bitcoin/blob/master/doc/descriptors.md).
+=======
+  [output descriptor](https://github.com/bitnova/bitnova/blob/master/doc/descriptors.md).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 - `getdescriptorinfo` accepts a descriptor and returns information about
   it, including its computed checksum.
@@ -278,7 +376,11 @@ in the Low-level Changes section below.
   ignored or are inconsistent, if there are any.
 
 - `getaddressinfo` now returns an additional `solvable` boolean field
+<<<<<<< HEAD
   when Bitcoin Core knows enough about the address's scriptPubKey,
+=======
+  when BitNova Core knows enough about the address's scriptPubKey,
+>>>>>>> 5360f2baff (Initialized BitNova project)
   optional redeemScript, and optional witnessScript in order for the
   wallet to be able to generate an unsigned input spending funds sent to
   that address.
@@ -292,7 +394,11 @@ in the Low-level Changes section below.
 - `importprivkey` will preserve previously-set labels for addresses or
   public keys corresponding to the private key being imported.  For
   example, if you imported a watch-only address with the label "cold
+<<<<<<< HEAD
   wallet" in earlier releases of Bitcoin Core, subsequently importing
+=======
+  wallet" in earlier releases of BitNova Core, subsequently importing
+>>>>>>> 5360f2baff (Initialized BitNova project)
   the private key would default to resetting the address's label to the
   default empty-string label ("").  In this release, the previous label
   of "cold wallet" will be retained.  If you optionally specify any
@@ -320,7 +426,11 @@ in the Low-level Changes section below.
   origin information imported through `importmulti` will have their key
   origin information stored in the wallet for use with creating PSBTs.
   More information about descriptors can be found
+<<<<<<< HEAD
   [here](https://github.com/bitcoin/bitcoin/blob/master/doc/descriptors.md).
+=======
+  [here](https://github.com/bitnova/bitnova/blob/master/doc/descriptors.md).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 - `listunspent` has been modified so that it also returns
   `witnessScript`, the witness script in the case of a P2WSH or
@@ -343,7 +453,11 @@ Deprecated or removed RPCs
 - The 'account' API is removed after being deprecated in v0.17.  The
   'label' API was introduced in v0.17 as a replacement for accounts.
   See the [release notes from
+<<<<<<< HEAD
   v0.17](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.17.0.md#label-and-account-apis-for-wallet)
+=======
+  v0.17](https://github.com/bitnova/bitnova/blob/master/doc/release-notes/release-notes-0.17.0.md#label-and-account-apis-for-wallet)
+>>>>>>> 5360f2baff (Initialized BitNova project)
   for a full description of the changes from the 'account' API to the
   'label' API.
 
@@ -359,7 +473,11 @@ Deprecated or removed RPCs
   require or use the wallet component. Calling `generatetoaddress` with
   an address returned by the `getnewaddress` RPC gives the same
   functionality as the old `generate` RPC.  To continue using `generate`
+<<<<<<< HEAD
   in this version, restart bitcoind with the `-deprecatedrpc=generate`
+=======
+  in this version, restart bitnovad with the `-deprecatedrpc=generate`
+>>>>>>> 5360f2baff (Initialized BitNova project)
   configuration option.
 
 - Be reminded that parts of the `validateaddress` command have been
@@ -406,7 +524,11 @@ Graphical User Interface (GUI)
 Tools
 -----
 
+<<<<<<< HEAD
 - A new `bitcoin-wallet` tool is now distributed alongside Bitcoin
+=======
+- A new `bitnova-wallet` tool is now distributed alongside BitNova
+>>>>>>> 5360f2baff (Initialized BitNova project)
   Core's other executables.  Without needing to use any RPCs, this tool
   can currently create a new wallet file or display some basic
   information about an existing wallet, such as whether the wallet is
@@ -416,6 +538,7 @@ Tools
 Planned changes
 ===============
 
+<<<<<<< HEAD
 This section describes planned changes to Bitcoin Core that may affect
 other Bitcoin software and services.
 
@@ -429,11 +552,30 @@ other Bitcoin software and services.
   to bech32 addresses, and if the Bitcoin Core project sees enough
   additional adoption, it will instead default to bech32 receiving
   addresses in Bitcoin Core 0.19 (approximately November 2019).
+=======
+This section describes planned changes to BitNova Core that may affect
+other BitNova software and services.
+
+- Since version 0.16.0, BitNova Core’s built-in wallet has defaulted to
+  generating P2SH-wrapped segwit addresses when users want to receive
+  payments. These addresses are backwards compatible with all
+  widely-used software.  Starting with BitNova Core 0.20 (expected about
+  a year after 0.18), BitNova Core will default to native segwit
+  addresses (bech32) that provide additional fee savings and other
+  benefits. Currently, many wallets and services already support sending
+  to bech32 addresses, and if the BitNova Core project sees enough
+  additional adoption, it will instead default to bech32 receiving
+  addresses in BitNova Core 0.19 (approximately November 2019).
+>>>>>>> 5360f2baff (Initialized BitNova project)
   P2SH-wrapped segwit addresses will continue to be provided if the user
   requests them in the GUI or by RPC, and anyone who doesn’t want the
   update will be able to configure their default address type.
   (Similarly, pioneering users who want to change their default now may
+<<<<<<< HEAD
   set the `addresstype=bech32` configuration option in any Bitcoin Core
+=======
+  set the `addresstype=bech32` configuration option in any BitNova Core
+>>>>>>> 5360f2baff (Initialized BitNova project)
   release from 0.16.0 up.)
 
 Deprecated P2P messages
@@ -495,7 +637,11 @@ Network
   a misbehaving node will be disconnected to make room for nodes without
   a history of problems (unless the misbehaving node helps your node in
   some other way, such as by connecting to a part of the Internet from
+<<<<<<< HEAD
   which you don't have many other peers).  Previously, Bitcoin Core
+=======
+  which you don't have many other peers).  Previously, BitNova Core
+>>>>>>> 5360f2baff (Initialized BitNova project)
   banned the IP addresses of misbehaving peers for a period of time
   (default of 1 day); this was easily circumvented by attackers with
   multiple IP addresses. If you manually ban a peer, such as by using
@@ -514,18 +660,31 @@ Wallet
   software. Instead such wallets will be completely unloaded and
   reloaded to achieve the same effect.
 
+<<<<<<< HEAD
 - A sub-project of Bitcoin Core now provides Hardware Wallet Interaction
   (HWI) scripts that allow command-line users to use several popular
   hardware key management devices with Bitcoin Core.  See their [project
   page](https://github.com/bitcoin-core/HWI#readme) for details.
+=======
+- A sub-project of BitNova Core now provides Hardware Wallet Interaction
+  (HWI) scripts that allow command-line users to use several popular
+  hardware key management devices with BitNova Core.  See their [project
+  page](https://github.com/bitnova-core/HWI#readme) for details.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Security
 --------
 
 - This release changes the Random Number Generator (RNG) used from
+<<<<<<< HEAD
   OpenSSL to Bitcoin Core's own implementation, although entropy
   gathered by Bitcoin Core is fed out to OpenSSL and then read back in
   when the program needs strong randomness. This moves Bitcoin Core a
+=======
+  OpenSSL to BitNova Core's own implementation, although entropy
+  gathered by BitNova Core is fed out to OpenSSL and then read back in
+  when the program needs strong randomness. This moves BitNova Core a
+>>>>>>> 5360f2baff (Initialized BitNova project)
   little closer to no longer needing to depend on OpenSSL, a dependency
   that has caused security issues in the past.  The new implementation
   gathers entropy from multiple sources, including from hardware
@@ -534,7 +693,11 @@ Security
 Changes for particular platforms
 --------------------------------
 
+<<<<<<< HEAD
 - On macOS, Bitcoin Core now opts out of application CPU throttling
+=======
+- On macOS, BitNova Core now opts out of application CPU throttling
+>>>>>>> 5360f2baff (Initialized BitNova project)
   ("app nap") during initial blockchain download, when catching up from
   over 100 blocks behind the current chain tip, or when reindexing chain
   data. This helps prevent these operations from taking an excessively
@@ -589,9 +752,15 @@ Changes for particular platforms
 - #14023 Remove accounts RPCs (jnewbery)
 - #13825 Kill accounts (jnewbery)
 - #10605 Add AssertLockHeld assertions in CWallet::ListCoins (ryanofsky)
+<<<<<<< HEAD
 - #12490 Remove deprecated wallet rpc features from `bitcoin_server` (jnewbery)
 - #14138 Set `encrypted_batch` to nullptr after delete. Avoid double free in the case of NDEBUG (practicalswift)
 - #14168 Remove `ENABLE_WALLET` from `libbitcoin_server.a` (jnewbery)
+=======
+- #12490 Remove deprecated wallet rpc features from `bitnova_server` (jnewbery)
+- #14138 Set `encrypted_batch` to nullptr after delete. Avoid double free in the case of NDEBUG (practicalswift)
+- #14168 Remove `ENABLE_WALLET` from `libbitnova_server.a` (jnewbery)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #12493 Reopen CDBEnv after encryption instead of shutting down (achow101)
 - #14282 Remove `-usehd` option (jnewbery)
 - #14146 Remove trailing separators from `-walletdir` arg (PierreRochard)
@@ -623,7 +792,11 @@ Changes for particular platforms
 - #14711 Remove uses of chainActive and mapBlockIndex in wallet code (ryanofsky)
 - #15279 Clarify rescanblockchain doc (MarcoFalke)
 - #15292 Remove `boost::optional`-related false positive -Wmaybe-uninitialized warnings on GCC compiler (hebasto)
+<<<<<<< HEAD
 - #13926 [Tools] bitcoin-wallet - a tool for creating and managing wallets offline (jnewbery)
+=======
+- #13926 [Tools] bitnova-wallet - a tool for creating and managing wallets offline (jnewbery)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #11911 Free BerkeleyEnvironment instances when not in use (ryanofsky)
 - #15235 Do not import private keys to wallets with private keys disabled (achow101)
 - #15263 Descriptor expansions only need pubkey entries for PKH/WPKH (sipa)
@@ -709,7 +882,11 @@ Changes for particular platforms
 - #13248 Make proxy icon from statusbar clickable (mess110)
 - #12818 TransactionView: highlight replacement tx after fee bump (Sjors)
 - #13529 Use new Qt5 connect syntax (promag)
+<<<<<<< HEAD
 - #14162 Also log and print messages or questions like bitcoind (MarcoFalke)
+=======
+- #14162 Also log and print messages or questions like bitnovad (MarcoFalke)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #14385 Avoid system harfbuzz and bz2 (theuni)
 - #14450 Fix QCompleter popup regression (hebasto)
 - #14177 Set C locale for amountWidget (hebasto)
@@ -717,7 +894,11 @@ Changes for particular platforms
 - #14554 Remove unused `adjustedTime` parameter (hebasto)
 - #14228 Enable system tray icon by default if available (hebasto)
 - #14608 Remove the "Pay only required fee…" checkbox (hebasto)
+<<<<<<< HEAD
 - #14521 qt, docs: Fix `bitcoin-qt -version` output formatting (hebasto)
+=======
+- #14521 qt, docs: Fix `bitnova-qt -version` output formatting (hebasto)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #13966 When private key is disabled, only show watch-only balance (ken2812221)
 - #14828 Remove hidden columns in coin control dialog (promag)
 - #14783 Fix `boost::signals2::no_slots_error` in early calls to InitWarning (promag)
@@ -730,7 +911,11 @@ Changes for particular platforms
 - #14375 Correct misleading "overridden options" label (hebasto)
 - #15007 Notificator class refactoring (hebasto)
 - #14784 Use `WalletModel*` instead of the wallet name as map key (promag)
+<<<<<<< HEAD
 - #11625 Add BitcoinApplication & RPCConsole tests (ryanofsky)
+=======
+- #11625 Add BitNovaApplication & RPCConsole tests (ryanofsky)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #14517 Fix start with the `-min` option (hebasto)
 - #13216 implements concept for different disk sizes on intro (marcoagner)
 - #15114 Replace remaining 0 with nullptr (Empact)
@@ -766,7 +951,11 @@ Changes for particular platforms
 - #14183 Remove unused Qt 4 dependencies (ken2812221)
 - #14127 Avoid getifaddrs when unavailable (greenaddress)
 - #14184 Scripts and tools: increased timeout downloading (cisba)
+<<<<<<< HEAD
 - #14204 Move `interfaces/*` to `libbitcoin_server` (laanwj)
+=======
+- #14204 Move `interfaces/*` to `libbitnova_server` (laanwj)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #14208 Actually remove `ENABLE_WALLET` (jnewbery)
 - #14212 Remove libssl from LDADD unless GUI (MarcoFalke)
 - #13578 Upgrade zeromq to 4.2.5 and avoid deprecated zeromq API functions (mruddy)
@@ -786,19 +975,32 @@ Changes for particular platforms
 - #14849 Qt 5.9.7 (fanquake)
 - #15020 Add names to Travis jobs (gkrizek)
 - #15047 Allow to configure --with-sanitizers=fuzzer (MarcoFalke)
+<<<<<<< HEAD
 - #15154 Configure: bitcoin-tx doesn't need libevent, so don't pull it in (luke-jr)
 - #15175 Drop macports support (Empact)
 - #15308 Restore compatibility with older boost (Empact)
 - #15407 msvc: Fix silent merge conflict between #13926 and #14372 part II (ken2812221)
 - #15388 Makefile.am: add rule for src/bitcoin-wallet (Sjors)
+=======
+- #15154 Configure: bitnova-tx doesn't need libevent, so don't pull it in (luke-jr)
+- #15175 Drop macports support (Empact)
+- #15308 Restore compatibility with older boost (Empact)
+- #15407 msvc: Fix silent merge conflict between #13926 and #14372 part II (ken2812221)
+- #15388 Makefile.am: add rule for src/bitnova-wallet (Sjors)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #15393 Bump minimum Qt version to 5.5.1 (Sjors)
 - #15285 Prefer Python 3.4 even if newer versions are present on the system (Sjors)
 - #15398 msvc: Add rapidcheck property tests (ken2812221)
 - #15431 msvc: scripted-diff: Remove NDEBUG pre-define in project file (ken2812221)
 - #15549 gitian: Improve error handling (laanwj)
 - #15548 use full version string in setup.exe (MarcoFalke)
+<<<<<<< HEAD
 - #11526 Visual Studio build configuration for Bitcoin Core (sipsorcery)
 - #15110 build\_msvc: Fix the build problem in `libbitcoin_server` (Mr-Leshiy)
+=======
+- #11526 Visual Studio build configuration for BitNova Core (sipsorcery)
+- #15110 build\_msvc: Fix the build problem in `libbitnova_server` (Mr-Leshiy)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #14372 msvc: build secp256k1 and leveldb locally (ken2812221)
 - #15325 msvc: Fix silent merge conflict between #13926 and #14372 (ken2812221)
 - #15391 Add compile time verification of assumptions we're currently making implicitly/tacitly (practicalswift)
@@ -808,7 +1010,11 @@ Changes for particular platforms
 
 ### Tests and QA
 - #15405 appveyor: Clean cache when build configuration changes (Sjors)
+<<<<<<< HEAD
 - #13953 Fix deprecation in bitcoin-util-test.py (isghe)
+=======
+- #13953 Fix deprecation in bitnova-util-test.py (isghe)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #13963 Replace usage of tostring() with tobytes() (dongcarl)
 - #13964 ci: Add appveyor ci (ken2812221)
 - #13997 appveyor: fetch the latest port data (ken2812221)
@@ -824,7 +1030,11 @@ Changes for particular platforms
 - #14088 Don't assert(…) with side effects (practicalswift)
 - #14086 appveyor: Use clcache to speed up build (ken2812221)
 - #13954 Warn (don't fail!) on spelling errors. Fix typos reported by codespell (practicalswift)
+<<<<<<< HEAD
 - #12775 Integration of property based testing into Bitcoin Core (Christewart)
+=======
+- #12775 Integration of property based testing into BitNova Core (Christewart)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #14119 Read reject reasons from debug log, not P2P messages (MarcoFalke)
 - #14189 Fix silent merge conflict in `wallet_importmulti` (MarcoFalke)
 - #13419 Speed up `knapsack_solver_test` by not recreating wallet 100 times (lucash-dev)
@@ -837,7 +1047,11 @@ Changes for particular platforms
 - #14275 Write the notification message to different files to avoid race condition in `feature_notifications.py` (ken2812221)
 - #14306 appveyor: Move AppVeyor YAML to dot-file-style YAML (MitchellCash)
 - #14305 Enforce critical class instance attributes in functional tests, fix segwit test specificity (JustinTArthur)
+<<<<<<< HEAD
 - #12246 Bugfix: Only run bitcoin-tx tests when bitcoin-tx is enabled (luke-jr)
+=======
+- #12246 Bugfix: Only run bitnova-tx tests when bitnova-tx is enabled (luke-jr)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #14316 Exclude all tests with difference parameters in `--exclude` list (ken2812221)
 - #14381 Add missing call to `skip_if_no_cli()` (practicalswift)
 - #14389 travis: Set codespell version to avoid breakage (MarcoFalke)
@@ -859,7 +1073,11 @@ Changes for particular platforms
 - #14631 Move deterministic address import to `setup_nodes` (jnewbery)
 - #14630 test: Remove travis specific code (MarcoFalke)
 - #14528 travis: Compile once on xenial (MarcoFalke)
+<<<<<<< HEAD
 - #14092 Dry run `bench_bitcoin` as part `make check` to allow for quick identification of assertion/sanitizer failures in benchmarking code (practicalswift)
+=======
+- #14092 Dry run `bench_bitnova` as part `make check` to allow for quick identification of assertion/sanitizer failures in benchmarking code (practicalswift)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #14664 `example_test.py`: fixup coinbase height argument, derive number clearly (instagibbs)
 - #14522 Add invalid P2P message tests (jamesob)
 - #14619 Fix value display name in `test_runner` help text (merland)
@@ -903,7 +1121,11 @@ Changes for particular platforms
 - #14969 Fix `cuckoocache_tests` TSAN failure introduced in 14935 (practicalswift)
 - #14964 Fix race in `mempool_accept` (MarcoFalke)
 - #14829 travis: Enable functional tests in the threadsanitizer (tsan) build job (practicalswift)
+<<<<<<< HEAD
 - #14985 Remove `thread_local` from `test_bitcoin` (MarcoFalke)
+=======
+- #14985 Remove `thread_local` from `test_bitnova` (MarcoFalke)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #15005 Bump timeout to run tests in travis thread sanitizer (MarcoFalke)
 - #15013 Avoid race in `p2p_timeouts` (MarcoFalke)
 - #14960 lint/format-strings: Correctly exclude escaped percent symbols (luke-jr)
@@ -980,8 +1202,13 @@ Changes for particular platforms
 - #14097 validation: Log FormatStateMessage on ConnectBlock error in ConnectTip (MarcoFalke)
 - #13724 contrib: Support ARM and RISC-V symbol check (ken2812221)
 - #13159 Don't close old debug log file handle prematurely when trying to re-open (on SIGHUP) (practicalswift)
+<<<<<<< HEAD
 - #14186 bitcoin-cli: don't translate command line options (HashUnlimited)
 - #14057 logging: Only log `using config file path_to_bitcoin.conf` message on startup if conf file exists (leishman)
+=======
+- #14186 bitnova-cli: don't translate command line options (HashUnlimited)
+- #14057 logging: Only log `using config file path_to_bitnova.conf` message on startup if conf file exists (leishman)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #14164 Update univalue subtree (MarcoFalke)
 - #14272 init: Remove deprecated args from hidden args (MarcoFalke)
 - #14494 Error if # is used in rpcpassword in conf (MeshCollider)
@@ -1001,7 +1228,11 @@ Changes for particular platforms
 - #14839 threads: Fix unitialized members in `sched_param` (fanquake)
 - #14955 Switch all RNG code to the built-in PRNG (sipa)
 - #15258 Scripts and tools: Fix `devtools/copyright_header.py` to always honor exclusions (Empact)
+<<<<<<< HEAD
 - #12255 Update bitcoin.service to conform to init.md (dongcarl)
+=======
+- #12255 Update bitnova.service to conform to init.md (dongcarl)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #15266 memory: Construct globals on first use (MarcoFalke)
 - #15347 Fix build after pr 15266 merged (hebasto)
 - #15351 Update linearize-hashes.py (OverlordQ)
@@ -1037,7 +1268,11 @@ Changes for particular platforms
 - #14428 Fix macOS files description in qt/README.md (hebasto)
 - #14390 release process: RPC documentation (karel-3d)
 - #14472 getblocktemplate: use SegWit in example (Sjors)
+<<<<<<< HEAD
 - #14497 Add doc/bitcoin-conf.md (hebasto)
+=======
+- #14497 Add doc/bitnova-conf.md (hebasto)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #14526 Document lint tests (fanquake)
 - #14511 Remove explicit storage requirement from README.md (merland)
 - #14600 Clarify commit message guidelines (merland)
@@ -1073,7 +1308,11 @@ Changes for particular platforms
 - #15272 Correct logging return type and RPC example (fanquake)
 - #15244 Gdb attaching to process during tests has non-sudo solution (instagibbs)
 - #15332 Small updates to `getrawtransaction` description (amitiuttarwar)
+<<<<<<< HEAD
 - #15354 Add missing `bitcoin-wallet` tool manpages (MarcoFalke)
+=======
+- #15354 Add missing `bitnova-wallet` tool manpages (MarcoFalke)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #15343 netaddress: Make IPv4 loopback comment more descriptive (dongcarl)
 - #15353 Minor textual improvements in `translation_strings_policy.md` (merland)
 - #15426 importmulti: add missing description of keypool option (harding)
@@ -1091,9 +1330,15 @@ Changes for particular platforms
 - #15754 getrpcinfo docs (benthecarman)
 - #15763 Update bips.md for 0.18.0 (sipa)
 - #15757 List new RPCs in psbt.md and descriptors.md (sipa)
+<<<<<<< HEAD
 - #15765 correct bitcoinconsensus_version in shared-libraries.md (fanquake)
 - #15792 describe onlynet option in doc/tor.md (jonatack)
 - #15802 mention creating application support bitcoin folder on OSX (JimmyMow)
+=======
+- #15765 correct bitnovaconsensus_version in shared-libraries.md (fanquake)
+- #15792 describe onlynet option in doc/tor.md (jonatack)
+- #15802 mention creating application support bitnova folder on OSX (JimmyMow)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #15799 Clarify RPC versioning (MarcoFalke)
 
 Credits
@@ -1122,7 +1367,11 @@ Thanks to everyone who directly contributed to this release:
 - Ben Carman
 - Ben Woosley
 - benthecarman
+<<<<<<< HEAD
 - bitcoinhodler
+=======
+- bitnovahodler
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - Carl Dong
 - Chakib Benziane
 - Chris Moore
@@ -1221,4 +1470,8 @@ Thanks to everyone who directly contributed to this release:
 - Wladimir J. van der Laan
 - Zain Iqbal Allarakhia
 
+<<<<<<< HEAD
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
+=======
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)

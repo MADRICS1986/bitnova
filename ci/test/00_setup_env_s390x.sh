@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 #
+<<<<<<< HEAD
 # Copyright (c) 2019-present The Bitcoin Core developers
+=======
+# Copyright (c) 2019-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,7 +15,11 @@ export PACKAGES="python3-zmq"
 export CONTAINER_NAME=ci_s390x
 export CI_IMAGE_NAME_TAG="mirror.gcr.io/ubuntu:24.04"
 export CI_IMAGE_PLATFORM="linux/s390x"
+<<<<<<< HEAD
 export TEST_RUNNER_EXTRA="--exclude rpc_bind,feature_bind_extra"  # Excluded for now, see https://github.com/bitcoin/bitcoin/issues/17765#issuecomment-602068547
+=======
+export TEST_RUNNER_EXTRA="--exclude rpc_bind,feature_bind_extra"  # Excluded for now, see https://github.com/bitnova/bitnova/issues/17765#issuecomment-602068547
+>>>>>>> 5360f2baff (Initialized BitNova project)
 export RUN_FUNCTIONAL_TESTS=true
 export GOAL="install"
 export BITCOIN_CONFIG="-DREDUCE_EXPORTS=ON"

@@ -50,7 +50,11 @@
      <item>
       <widget class="QValidatedLineEdit" name="payTo">
        <property name="toolTip">
+<<<<<<< HEAD
         <string>The Bitcoin address to send the payment to</string>
+=======
+        <string>The BitNova address to send the payment to</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
        </property>
       </widget>
      </item>
@@ -63,7 +67,11 @@
         <string/>
        </property>
        <property name="icon">
+<<<<<<< HEAD
         <iconset resource="../bitcoin.qrc">
+=======
+        <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
          <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
        </property>
        <property name="iconSize">
@@ -86,7 +94,11 @@
         <string/>
        </property>
        <property name="icon">
+<<<<<<< HEAD
         <iconset resource="../bitcoin.qrc">
+=======
+        <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
          <normaloff>:/icons/editpaste</normaloff>:/icons/editpaste</iconset>
        </property>
        <property name="iconSize">
@@ -109,7 +121,11 @@
         <string/>
        </property>
        <property name="icon">
+<<<<<<< HEAD
         <iconset resource="../bitcoin.qrc">
+=======
+        <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
          <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
        </property>
        <property name="iconSize">
@@ -161,7 +177,11 @@
    <item row="2" column="1">
     <layout class="QHBoxLayout" name="horizontalLayoutAmount" stretch="0,1,0">
      <item>
+<<<<<<< HEAD
       <widget class="BitcoinAmountField" name="payAmount" native="true">
+=======
+      <widget class="BitNovaAmountField" name="payAmount" native="true">
+>>>>>>> 5360f2baff (Initialized BitNova project)
        <property name="toolTip">
         <string>The amount to send in the selected unit</string>
        </property>
@@ -170,7 +190,11 @@
      <item>
       <widget class="QCheckBox" name="checkboxSubtractFeeFromAmount">
        <property name="toolTip">
+<<<<<<< HEAD
         <string>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</string>
+=======
+        <string>The fee will be deducted from the amount being sent. The recipient will receive less bitnovas than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
        </property>
        <property name="text">
         <string>S&amp;ubtract fee from amount</string>
@@ -199,7 +223,11 @@
    <item row="3" column="1">
     <widget class="QLabel" name="messageTextLabel">
      <property name="toolTip">
+<<<<<<< HEAD
       <string>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</string>
+=======
+      <string>A message that was attached to the bitnova: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitNova network.</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
      </property>
      <property name="textFormat">
       <enum>Qt::PlainText</enum>
@@ -222,9 +250,15 @@
    <header>qt/qvalidatedlineedit.h</header>
   </customwidget>
   <customwidget>
+<<<<<<< HEAD
    <class>BitcoinAmountField</class>
    <extends>QWidget</extends>
    <header>qt/bitcoinamountfield.h</header>
+=======
+   <class>BitNovaAmountField</class>
+   <extends>QWidget</extends>
+   <header>qt/bitnovaamountfield.h</header>
+>>>>>>> 5360f2baff (Initialized BitNova project)
    <container>1</container>
   </customwidget>
  </customwidgets>
@@ -237,7 +271,11 @@
   <tabstop>payAmount</tabstop>
  </tabstops>
  <resources>
+<<<<<<< HEAD
   <include location="../bitcoin.qrc"/>
+=======
+  <include location="../bitnova.qrc"/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
  </resources>
  <connections/>
 </ui>

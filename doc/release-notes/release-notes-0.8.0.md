@@ -1,11 +1,20 @@
+<<<<<<< HEAD
 Bitcoin-Qt version 0.8.0 is now available from:
   http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.8.0/
+=======
+BitNova-Qt version 0.8.0 is now available from:
+  http://sourceforge.net/projects/bitnova/files/BitNova/bitnova-0.8.0/
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a major release designed to improve performance and handle the
 increasing volume of transactions on the network.
 
 Please report bugs using the issue tracker at github:
+<<<<<<< HEAD
   https://github.com/bitcoin/bitcoin/issues
+=======
+  https://github.com/bitnova/bitnova/issues
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 How to Upgrade
 --------------
@@ -13,7 +22,11 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
+<<<<<<< HEAD
 /Applications/Bitcoin-Qt (on Mac) or bitcoind/bitcoin-qt (on Linux).
+=======
+/Applications/BitNova-Qt (on Mac) or bitnovad/bitnova-qt (on Linux).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 The first time you run after the upgrade a re-indexing process will be
 started that will take anywhere from 30 minutes to several hours,
@@ -31,7 +44,11 @@ details).
 Improvements
 ------------
 
+<<<<<<< HEAD
 Mac and Windows binaries are signed with certificates owned by the Bitcoin
+=======
+Mac and Windows binaries are signed with certificates owned by the BitNova
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Foundation, to be compatible with the new security features in OSX 10.8 and
 Windows 8.
 
@@ -61,7 +78,11 @@ contrib/spendfrom is a python-language command-line utility that demonstrates
 how to use the "raw transactions" JSON-RPC api to send coins received from particular
 addresses (also known as "coin control").
 
+<<<<<<< HEAD
 New/changed settings (command-line or bitcoin.conf file)
+=======
+New/changed settings (command-line or bitnova.conf file)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 --------------------------------------------------------
 
 dbcache : controls LevelDB memory usage.

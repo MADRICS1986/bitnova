@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * The file `ecdsa_secp256k1_sha256_bitcoin_test.json` in this directory
   comes from Google's project Wycheproof with git commit
   `b063b4aedae951c69df014cd25fa6d69ae9e8cb9`, see
@@ -5,6 +6,15 @@
 
 * The file `ecdsa_secp256k1_sha256_bitcoin_test.h` is generated from
   `ecdsa_secp256k1_sha256_bitcoin_test.json` using the script
+=======
+* The file `ecdsa_secp256k1_sha256_bitnova_test.json` in this directory
+  comes from Google's project Wycheproof with git commit
+  `b063b4aedae951c69df014cd25fa6d69ae9e8cb9`, see
+  https://github.com/google/wycheproof/blob/b063b4aedae951c69df014cd25fa6d69ae9e8cb9/testvectors_v1/ecdsa_secp256k1_sha256_bitnova_test.json
+
+* The file `ecdsa_secp256k1_sha256_bitnova_test.h` is generated from
+  `ecdsa_secp256k1_sha256_bitnova_test.json` using the script
+>>>>>>> 5360f2baff (Initialized BitNova project)
   `tests_wycheproof_generate.py`.
 
 -------------------------------------------------------------------------------

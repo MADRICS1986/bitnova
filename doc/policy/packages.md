@@ -50,7 +50,11 @@ The following rules are enforced for all packages:
 
    - Parent feerate must be lower than package feerate.
 
+<<<<<<< HEAD
    - Must improve [feerate diagram](https://delvingbitcoin.org/t/mempool-incentive-compatibility/553). (#29242)
+=======
+   - Must improve [feerate diagram](https://delvingbitnova.org/t/mempool-incentive-compatibility/553). (#29242)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
    - *Rationale*: Basic support for package RBF can be used by wallets
      by making chains of no longer than two, then directly conflicting

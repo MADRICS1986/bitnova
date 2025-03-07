@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <qt/recentrequeststablemodel.h>
 
+<<<<<<< HEAD
 #include <qt/bitcoinunits.h>
+=======
+#include <qt/bitnovaunits.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <qt/guiutil.h>
 #include <qt/optionsmodel.h>
 #include <qt/walletmodel.h>
@@ -88,9 +96,15 @@ QVariant RecentRequestsTableModel::data(const QModelIndex &index, int role) cons
             if (rec->recipient.amount == 0 && role == Qt::DisplayRole)
                 return tr("(no amount requested)");
             else if (role == Qt::EditRole)
+<<<<<<< HEAD
                 return BitcoinUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), rec->recipient.amount, false, BitcoinUnits::SeparatorStyle::NEVER);
             else
                 return BitcoinUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), rec->recipient.amount);
+=======
+                return BitNovaUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), rec->recipient.amount, false, BitNovaUnits::SeparatorStyle::NEVER);
+            else
+                return BitNovaUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), rec->recipient.amount);
+>>>>>>> 5360f2baff (Initialized BitNova project)
         }
     }
     else if (role == Qt::TextAlignmentRole)
@@ -131,7 +145,11 @@ QString RecentRequestsTableModel::getAmountTitle()
     if (!walletModel->getOptionsModel()) return {};
     return tr("Requested") +
            QLatin1String(" (") +
+<<<<<<< HEAD
            BitcoinUnits::shortName(this->walletModel->getOptionsModel()->getDisplayUnit()) +
+=======
+           BitNovaUnits::shortName(this->walletModel->getOptionsModel()->getDisplayUnit()) +
+>>>>>>> 5360f2baff (Initialized BitNova project)
            QLatin1Char(')');
 }
 

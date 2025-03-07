@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 # Copyright (c) 2023-present The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
 add_executable(bench_bitcoin
   bench_bitcoin.cpp
+=======
+# Copyright (c) 2023-present The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or https://opensource.org/license/mit/.
+
+add_executable(bench_bitnova
+  bench_bitnova.cpp
+>>>>>>> 5360f2baff (Initialized BitNova project)
   bench.cpp
   nanobench.cpp
 # Benchmarks:
@@ -53,6 +62,7 @@ add_executable(bench_bitcoin
 )
 
 include(TargetDataSources)
+<<<<<<< HEAD
 target_raw_data_sources(bench_bitcoin NAMESPACE benchmark::data
   data/block413567.raw
 )
@@ -61,11 +71,25 @@ target_link_libraries(bench_bitcoin
   core_interface
   test_util
   bitcoin_node
+=======
+target_raw_data_sources(bench_bitnova NAMESPACE benchmark::data
+  data/block413567.raw
+)
+
+target_link_libraries(bench_bitnova
+  core_interface
+  test_util
+  bitnova_node
+>>>>>>> 5360f2baff (Initialized BitNova project)
   Boost::headers
 )
 
 if(ENABLE_WALLET)
+<<<<<<< HEAD
   target_sources(bench_bitcoin
+=======
+  target_sources(bench_bitnova
+>>>>>>> 5360f2baff (Initialized BitNova project)
     PRIVATE
       coin_selection.cpp
       wallet_balance.cpp
@@ -75,6 +99,7 @@ if(ENABLE_WALLET)
       wallet_ismine.cpp
       wallet_migration.cpp
   )
+<<<<<<< HEAD
   target_link_libraries(bench_bitcoin bitcoin_wallet)
 endif()
 
@@ -83,3 +108,13 @@ add_test(NAME bench_sanity_check_high_priority
 )
 
 install_binary_component(bench_bitcoin)
+=======
+  target_link_libraries(bench_bitnova bitnova_wallet)
+endif()
+
+add_test(NAME bench_sanity_check_high_priority
+  COMMAND bench_bitnova -sanity-check -priority-level=high
+)
+
+install_binary_component(bench_bitnova)
+>>>>>>> 5360f2baff (Initialized BitNova project)

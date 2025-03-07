@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 Bitcoin Core
+=======
+BitNova Core
+>>>>>>> 5360f2baff (Initialized BitNova project)
 =============
 
 Setup
 ---------------------
+<<<<<<< HEAD
 Bitcoin Core is the original Bitcoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Bitcoin transactions, which requires several hundred gigabytes or more of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to several days or more.
 
 To download Bitcoin Core, visit [bitcoincore.org](https://bitcoincore.org/en/download/).
@@ -10,11 +15,21 @@ To download Bitcoin Core, visit [bitcoincore.org](https://bitcoincore.org/en/dow
 Running
 ---------------------
 The following are some helpful notes on how to run Bitcoin Core on your native platform.
+=======
+BitNova Core is the original BitNova client and it builds the backbone of the network. It downloads and, by default, stores the entire history of BitNova transactions, which requires several hundred gigabytes or more of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to several days or more.
+
+To download BitNova Core, visit [bitnovacore.org](https://bitnovacore.org/en/download/).
+
+Running
+---------------------
+The following are some helpful notes on how to run BitNova Core on your native platform.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ### Unix
 
 Unpack the files into a directory and run:
 
+<<<<<<< HEAD
 - `bin/bitcoin-qt` (GUI) or
 - `bin/bitcoind` (headless)
 
@@ -37,6 +52,30 @@ for help and more information.
 Building
 ---------------------
 The following are developer notes on how to build Bitcoin Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+=======
+- `bin/bitnova-qt` (GUI) or
+- `bin/bitnovad` (headless)
+
+### Windows
+
+Unpack the files into a directory, and then run bitnova-qt.exe.
+
+### macOS
+
+Drag BitNova Core to your applications folder, and then run BitNova Core.
+
+### Need Help?
+
+* See the documentation at the [BitNova Wiki](https://en.bitnova.it/wiki/Main_Page)
+for help and more information.
+* Ask for help on [BitNova StackExchange](https://bitnova.stackexchange.com).
+* Ask for help on #bitnova on Libera Chat. If you don't have an IRC client, you can use [web.libera.chat](https://web.libera.chat/#bitnova).
+* Ask for help on the [BitNovaTalk](https://bitnovatalk.org/) forums, in the [Technical Support board](https://bitnovatalk.org/index.php?board=4.0).
+
+Building
+---------------------
+The following are developer notes on how to build BitNova Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 - [Dependencies](dependencies.md)
 - [macOS Build Notes](build-osx.md)
@@ -48,12 +87,20 @@ The following are developer notes on how to build Bitcoin Core on your native pl
 
 Development
 ---------------------
+<<<<<<< HEAD
 The Bitcoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+=======
+The BitNova repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 - [Developer Notes](developer-notes.md)
 - [Productivity Notes](productivity.md)
 - [Release Process](release-process.md)
+<<<<<<< HEAD
 - [Source Code Documentation (External Link)](https://doxygen.bitcoincore.org/)
+=======
+- [Source Code Documentation (External Link)](https://doxygen.bitnovacore.org/)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [JSON-RPC Interface](JSON-RPC-interface.md)
@@ -64,12 +111,21 @@ The Bitcoin repo's [root README](/README.md) contains relevant information on th
 - [Internal Design Docs](design/)
 
 ### Resources
+<<<<<<< HEAD
 * Discuss on the [BitcoinTalk](https://bitcointalk.org/) forums, in the [Development & Technical Discussion board](https://bitcointalk.org/index.php?board=6.0).
 * Discuss project-specific development on #bitcoin-core-dev on Libera Chat. If you don't have an IRC client, you can use [web.libera.chat](https://web.libera.chat/#bitcoin-core-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
 - [bitcoin.conf Configuration File](bitcoin-conf.md)
+=======
+* Discuss on the [BitNovaTalk](https://bitnovatalk.org/) forums, in the [Development & Technical Discussion board](https://bitnovatalk.org/index.php?board=6.0).
+* Discuss project-specific development on #bitnova-core-dev on Libera Chat. If you don't have an IRC client, you can use [web.libera.chat](https://web.libera.chat/#bitnova-core-dev).
+
+### Miscellaneous
+- [Assets Attribution](assets-attribution.md)
+- [bitnova.conf Configuration File](bitnova-conf.md)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - [CJDNS Support](cjdns.md)
 - [Files](files.md)
 - [Fuzz-testing](fuzzing.md)

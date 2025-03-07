@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 // Copyright (c) 2021-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2021-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 //! @file
+<<<<<<< HEAD
 //! @brief Common init functions shared by bitcoin-node, bitcoin-wallet, etc.
+=======
+//! @brief Common init functions shared by bitnova-node, bitnova-wallet, etc.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #ifndef BITCOIN_INIT_COMMON_H
 #define BITCOIN_INIT_COMMON_H

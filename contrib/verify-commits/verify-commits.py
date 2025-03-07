@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2018-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2018-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Verify commits against a trusted keys list."""
@@ -16,7 +20,11 @@ GIT = os.getenv('GIT', 'git')
 def tree_sha512sum(commit='HEAD'):
     """Calculate the Tree-sha512 for the commit.
 
+<<<<<<< HEAD
     This is copied from github-merge.py. See https://github.com/bitcoin-core/bitcoin-maintainer-tools."""
+=======
+    This is copied from github-merge.py. See https://github.com/bitnova-core/bitnova-maintainer-tools."""
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     # request metadata for entire tree, recursively
     files = []

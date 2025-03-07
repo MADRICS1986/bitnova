@@ -1,14 +1,23 @@
 #!/usr/bin/env bash
 #
+<<<<<<< HEAD
 # Copyright (c) The Bitcoin Core developers
+=======
+# Copyright (c) The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
 export LC_ALL=C
 
 # Fixes permission issues when there is a container UID/GID mismatch with the owner
+<<<<<<< HEAD
 # of the mounted bitcoin src dir.
 git config --global --add safe.directory /bitcoin
+=======
+# of the mounted bitnova src dir.
+git config --global --add safe.directory /bitnova
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 export PATH="/python_build/bin:${PATH}"
 export LINT_RUNNER_PATH="/lint_test_runner"

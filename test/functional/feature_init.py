@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2021-present The Bitcoin Core developers
+=======
+# Copyright (c) 2021-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Tests related to node initialization."""
@@ -7,7 +11,11 @@ from pathlib import Path
 import platform
 import shutil
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework, SkipTest
+=======
+from test_framework.test_framework import BitNovaTestFramework, SkipTest
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.test_node import (
     BITCOIN_PID_FILENAME_DEFAULT,
     ErrorMatch,
@@ -15,7 +23,11 @@ from test_framework.test_node import (
 from test_framework.util import assert_equal
 
 
+<<<<<<< HEAD
 class InitTest(BitcoinTestFramework):
+=======
+class InitTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     """
     Ensure that initialization can be interrupted at a number of points and not impair
     subsequent starts.
@@ -151,7 +163,11 @@ class InitTest(BitcoinTestFramework):
             shutil.move(node.chain_path / "chainstate_bak", node.chain_path / "chainstate")
 
     def init_pid_test(self):
+<<<<<<< HEAD
         BITCOIN_PID_FILENAME_CUSTOM = "my_fancy_bitcoin_pid_file.foobar"
+=======
+        BITCOIN_PID_FILENAME_CUSTOM = "my_fancy_bitnova_pid_file.foobar"
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         self.log.info("Test specifying custom pid file via -pid command line option")
         custom_pidfile_relative = BITCOIN_PID_FILENAME_CUSTOM

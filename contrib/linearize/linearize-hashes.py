@@ -2,7 +2,11 @@
 #
 # linearize-hashes.py:  List blocks in a linear, no-fork version of the chain.
 #
+<<<<<<< HEAD
 # Copyright (c) 2013-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2013-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
@@ -17,7 +21,11 @@ import os.path
 
 settings = {}
 
+<<<<<<< HEAD
 class BitcoinRPC:
+=======
+class BitNovaRPC:
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def __init__(self, host, port, username, password):
         authpair = "%s:%s" % (username, password)
         authpair = authpair.encode('utf-8')
@@ -59,7 +67,11 @@ class BitcoinRPC:
         return 'error' in resp_obj and resp_obj['error'] is not None
 
 def get_block_hashes(settings, max_blocks_per_call=10000):
+<<<<<<< HEAD
     rpc = BitcoinRPC(settings['host'], settings['port'],
+=======
+    rpc = BitNovaRPC(settings['host'], settings['port'],
+>>>>>>> 5360f2baff (Initialized BitNova project)
              settings['rpcuser'], settings['rpcpassword'])
 
     height = settings['min_height']

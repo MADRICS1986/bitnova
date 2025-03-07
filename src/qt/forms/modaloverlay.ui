@@ -130,7 +130,11 @@ QLabel { color: rgb(40,40,40);  }</string>
              <item>
               <widget class="QLabel" name="infoText">
                <property name="text">
+<<<<<<< HEAD
                 <string>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</string>
+=======
+                <string>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitnova network, as detailed below.</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
                </property>
                <property name="textFormat">
                 <enum>Qt::RichText</enum>
@@ -149,7 +153,11 @@ QLabel { color: rgb(40,40,40);  }</string>
                 </font>
                </property>
                <property name="text">
+<<<<<<< HEAD
                 <string>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</string>
+=======
+                <string>Attempting to spend bitnovas that are affected by not-yet-displayed transactions will not be accepted by the network.</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
                </property>
                <property name="textFormat">
                 <enum>Qt::RichText</enum>

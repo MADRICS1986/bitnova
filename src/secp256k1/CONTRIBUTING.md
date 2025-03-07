@@ -3,7 +3,11 @@
 ## Scope
 
 libsecp256k1 is a library for elliptic curve cryptography on the curve secp256k1, not a general-purpose cryptography library.
+<<<<<<< HEAD
 The library primarily serves the needs of the Bitcoin Core project but provides additional functionality for the benefit of the wider Bitcoin ecosystem.
+=======
+The library primarily serves the needs of the BitNova Core project but provides additional functionality for the benefit of the wider BitNova ecosystem.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ## Adding new functionality or modules
 
@@ -20,7 +24,11 @@ Contributors are recommended to provide the following in addition to the new cod
     In addition to a defining the security goals, it should be argued that the new functionality meets these goals.
     Depending on the nature of the new functionality, a wide range of security arguments are acceptable, ranging from being "obviously secure" to rigorous proofs of security.
 * **Relevance Arguments:**
+<<<<<<< HEAD
     The relevance of the new functionality for the Bitcoin ecosystem should be argued by outlining clear use cases.
+=======
+    The relevance of the new functionality for the BitNova ecosystem should be argued by outlining clear use cases.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 These are not the only factors taken into account when considering to add new functionality.
 The proposed new libsecp256k1 code must be of high quality, including API documentation and tests, as well as featuring a misuse-resistant API design.
@@ -38,7 +46,11 @@ Chat history logs can be found at https://gnusha.org/secp256k1/.
 
 ## Contributor workflow & peer review
 
+<<<<<<< HEAD
 The Contributor Workflow & Peer Review in libsecp256k1 are similar to Bitcoin Core's workflow and review processes described in its [CONTRIBUTING.md](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md).
+=======
+The Contributor Workflow & Peer Review in libsecp256k1 are similar to BitNova Core's workflow and review processes described in its [CONTRIBUTING.md](https://github.com/bitnova/bitnova/blob/master/CONTRIBUTING.md).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ### Coding conventions
 
@@ -48,8 +60,13 @@ In addition, libsecp256k1 tries to maintain the following coding conventions:
 * The tests should cover all lines and branches of the library (see [Test coverage](#coverage)).
 * Operations involving secret data should be tested for being constant time with respect to the secrets (see [src/ctime_tests.c](src/ctime_tests.c)).
 * Local variables containing secret data should be cleared explicitly to try to delete secrets from memory.
+<<<<<<< HEAD
 * Use `secp256k1_memcmp_var` instead of `memcmp` (see [#823](https://github.com/bitcoin-core/secp256k1/issues/823)).
 * As a rule of thumb, the default values for configuration options should target standard desktop machines and align with Bitcoin Core's defaults, and the tests should mostly exercise the default configuration (see [#1549](https://github.com/bitcoin-core/secp256k1/issues/1549#issuecomment-2200559257)).
+=======
+* Use `secp256k1_memcmp_var` instead of `memcmp` (see [#823](https://github.com/bitnova-core/secp256k1/issues/823)).
+* As a rule of thumb, the default values for configuration options should target standard desktop machines and align with BitNova Core's defaults, and the tests should mostly exercise the default configuration (see [#1549](https://github.com/bitnova-core/secp256k1/issues/1549#issuecomment-2200559257)).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #### Style conventions
 

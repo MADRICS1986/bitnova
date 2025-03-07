@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2019-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2019-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -30,7 +34,11 @@ FUZZ_TARGET(bech32_random_decode)
     }
 }
 
+<<<<<<< HEAD
 // https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki and https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki
+=======
+// https://github.com/bitnova/bips/blob/master/bip-0173.mediawiki and https://github.com/bitnova/bips/blob/master/bip-0350.mediawiki
+>>>>>>> 5360f2baff (Initialized BitNova project)
 std::string GenerateRandomHRP(FuzzedDataProvider& fdp)
 {
     std::string hrp;

@@ -1,5 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
+<<<<<<< HEAD
 // Copyright (c) 2009-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2009-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -36,7 +40,11 @@
 #include <utility>
 #include <variant>
 
+<<<<<<< HEAD
 const char * const BITCOIN_CONF_FILENAME = "bitcoin.conf";
+=======
+const char * const BITCOIN_CONF_FILENAME = "bitnova.conf";
+>>>>>>> 5360f2baff (Initialized BitNova project)
 const char * const BITCOIN_SETTINGS_FILENAME = "settings.json";
 
 ArgsManager gArgs;
@@ -192,7 +200,11 @@ bool ArgsManager::ParseParameters(int argc, const char* const argv[], std::strin
         if (key.substr(0, 5) == "-psn_") continue;
 #endif
 
+<<<<<<< HEAD
         if (key == "-") break; //bitcoin-tx using stdin
+=======
+        if (key == "-") break; //bitnova-tx using stdin
+>>>>>>> 5360f2baff (Initialized BitNova project)
         std::optional<std::string> val;
         size_t is_index = key.find('=');
         if (is_index != std::string::npos) {
@@ -723,6 +735,7 @@ bool HasTestOption(const ArgsManager& args, const std::string& test_option)
 fs::path GetDefaultDataDir()
 {
     // Windows:
+<<<<<<< HEAD
     //   old: C:\Users\Username\AppData\Roaming\Bitcoin
     //   new: C:\Users\Username\AppData\Local\Bitcoin
     // macOS: ~/Library/Application Support/Bitcoin
@@ -735,6 +748,20 @@ fs::path GetDefaultDataDir()
 
     // Otherwise, fresh installs can start in the new, "proper" location
     return GetSpecialFolderPath(CSIDL_LOCAL_APPDATA) / "Bitcoin";
+=======
+    //   old: C:\Users\Username\AppData\Roaming\BitNova
+    //   new: C:\Users\Username\AppData\Local\BitNova
+    // macOS: ~/Library/Application Support/BitNova
+    // Unix-like: ~/.bitnova
+#ifdef WIN32
+    // Windows
+    // Check for existence of datadir in old location and keep it there
+    fs::path legacy_path = GetSpecialFolderPath(CSIDL_APPDATA) / "BitNova";
+    if (fs::exists(legacy_path)) return legacy_path;
+
+    // Otherwise, fresh installs can start in the new, "proper" location
+    return GetSpecialFolderPath(CSIDL_LOCAL_APPDATA) / "BitNova";
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -744,10 +771,17 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef __APPLE__
     // macOS
+<<<<<<< HEAD
     return pathRet / "Library/Application Support/Bitcoin";
 #else
     // Unix-like
     return pathRet / ".bitcoin";
+=======
+    return pathRet / "Library/Application Support/BitNova";
+#else
+    // Unix-like
+    return pathRet / ".bitnova";
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #endif
 #endif
 }

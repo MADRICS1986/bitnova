@@ -1,12 +1,20 @@
 #!/usr/bin/env bash
 #
+<<<<<<< HEAD
 # Copyright (c) 2019-present The Bitcoin Core developers
+=======
+# Copyright (c) 2019-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 export LC_ALL=C.UTF-8
 
+<<<<<<< HEAD
 export SDK_URL=${SDK_URL:-https://bitcoincore.org/depends-sources/sdks}
+=======
+export SDK_URL=${SDK_URL:-https://bitnovacore.org/depends-sources/sdks}
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 export CONTAINER_NAME=ci_macos_cross
 export CI_IMAGE_NAME_TAG="mirror.gcr.io/ubuntu:24.04"

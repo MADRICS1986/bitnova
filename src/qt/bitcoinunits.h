@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -26,18 +30,32 @@
 #define THIN_SP_UTF8 REAL_THIN_SP_UTF8
 #define THIN_SP_HTML HTML_HACK_SP
 
+<<<<<<< HEAD
 /** Bitcoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
 class BitcoinUnits: public QAbstractListModel
+=======
+/** BitNova unit definitions. Encapsulates parsing and formatting
+   and serves as list model for drop-down selection boxes.
+*/
+class BitNovaUnits: public QAbstractListModel
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
     Q_OBJECT
 
 public:
+<<<<<<< HEAD
     explicit BitcoinUnits(QObject *parent);
 
     /** Bitcoin units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
+=======
+    explicit BitNovaUnits(QObject *parent);
+
+    /** BitNova units.
+      @note Source: https://en.bitnova.it/wiki/Units . Please add only sensible ones
+>>>>>>> 5360f2baff (Initialized BitNova project)
      */
     enum class Unit {
         BTC,
@@ -108,9 +126,16 @@ public:
 private:
     QList<Unit> unitlist;
 };
+<<<<<<< HEAD
 typedef BitcoinUnits::Unit BitcoinUnit;
 
 QDataStream& operator<<(QDataStream& out, const BitcoinUnit& unit);
 QDataStream& operator>>(QDataStream& in, BitcoinUnit& unit);
+=======
+typedef BitNovaUnits::Unit BitNovaUnit;
+
+QDataStream& operator<<(QDataStream& out, const BitNovaUnit& unit);
+QDataStream& operator>>(QDataStream& in, BitNovaUnit& unit);
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #endif // BITCOIN_QT_BITCOINUNITS_H

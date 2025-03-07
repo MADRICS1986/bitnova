@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,7 +10,11 @@
 #define BITCOIN_QT_WALLETVIEW_H
 
 #include <consensus/amount.h>
+<<<<<<< HEAD
 #include <qt/bitcoinunits.h>
+=======
+#include <qt/bitnovaunits.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <QStackedWidget>
 
@@ -53,7 +61,11 @@ private:
     ClientModel* clientModel{nullptr};
 
     //!
+<<<<<<< HEAD
     //! The wallet model represents a bitcoin wallet, and offers access to
+=======
+    //! The wallet model represents a bitnova wallet, and offers access to
+>>>>>>> 5360f2baff (Initialized BitNova project)
     //! the list of transactions, address book and sending functionality.
     //!
     WalletModel* const walletModel;
@@ -119,7 +131,11 @@ Q_SIGNALS:
     /** Encryption status of wallet changed */
     void encryptionStatusChanged();
     /** Notify that a new transaction appeared */
+<<<<<<< HEAD
     void incomingTransaction(const QString& date, BitcoinUnit unit, const CAmount& amount, const QString& type, const QString& address, const QString& label, const QString& walletName);
+=======
+    void incomingTransaction(const QString& date, BitNovaUnit unit, const CAmount& amount, const QString& type, const QString& address, const QString& label, const QString& walletName);
+>>>>>>> 5360f2baff (Initialized BitNova project)
     /** Notify that the out of sync warning icon has been pressed */
     void outOfSyncWarningClicked();
 };

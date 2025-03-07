@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Copyright (c) 2022 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -10,6 +11,20 @@
 //                 it may diverge from Bitcoin Core's coding style.
 //
 // It is part of the libbitcoinkernel project.
+=======
+// Copyright (c) 2022 The BitNova Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+//
+// The bitnova-chainstate executable serves to surface the dependencies required
+// by a program wishing to use BitNova Core's consensus engine as it is right
+// now.
+//
+// DEVELOPER NOTE: Since this is a "demo-only", experimental, etc. executable,
+//                 it may diverge from BitNova Core's coding style.
+//
+// It is part of the libbitnovakernel project.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <kernel/chainparams.h>
 #include <kernel/chainstatemanager_opts.h>

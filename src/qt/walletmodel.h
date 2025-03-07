@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -43,7 +47,11 @@ QT_BEGIN_NAMESPACE
 class QTimer;
 QT_END_NAMESPACE
 
+<<<<<<< HEAD
 /** Interface to Bitcoin wallet from Qt view code. */
+=======
+/** Interface to BitNova wallet from Qt view code. */
+>>>>>>> 5360f2baff (Initialized BitNova project)
 class WalletModel : public QObject
 {
     Q_OBJECT

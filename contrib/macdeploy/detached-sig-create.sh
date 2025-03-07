@@ -1,5 +1,9 @@
 #!/bin/sh
+<<<<<<< HEAD
 # Copyright (c) 2014-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2014-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,9 +14,15 @@ SIGNAPPLE=signapple
 TEMPDIR=sign.temp
 
 BUNDLE_ROOT=dist
+<<<<<<< HEAD
 BUNDLE_NAME="Bitcoin-Qt.app"
 UNSIGNED_BUNDLE="${BUNDLE_ROOT}/${BUNDLE_NAME}"
 UNSIGNED_BINARY="${UNSIGNED_BUNDLE}/Contents/MacOS/Bitcoin-Qt"
+=======
+BUNDLE_NAME="BitNova-Qt.app"
+UNSIGNED_BUNDLE="${BUNDLE_ROOT}/${BUNDLE_NAME}"
+UNSIGNED_BINARY="${UNSIGNED_BUNDLE}/Contents/MacOS/BitNova-Qt"
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ARCH=$(${SIGNAPPLE} info ${UNSIGNED_BINARY} | head -n 1 | cut -d " " -f 1)
 

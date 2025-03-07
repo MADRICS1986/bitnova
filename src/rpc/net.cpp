@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2009-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2009-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -492,7 +496,11 @@ static RPCHelpMan getaddednodeinfo()
                             {
                                 {RPCResult::Type::OBJ, "", "",
                                 {
+<<<<<<< HEAD
                                     {RPCResult::Type::STR, "address", "The bitcoin server IP and port we're connected to"},
+=======
+                                    {RPCResult::Type::STR, "address", "The bitnova server IP and port we're connected to"},
+>>>>>>> 5360f2baff (Initialized BitNova project)
                                     {RPCResult::Type::STR, "connected", "connection, inbound or outbound"},
                                 }},
                             }},

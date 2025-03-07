@@ -30,7 +30,11 @@
        <item>
         <widget class="QLabel" name="infoLabel_SM">
          <property name="text">
+<<<<<<< HEAD
           <string>You can sign messages/agreements with your legacy (P2PKH) addresses to prove you can receive bitcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</string>
+=======
+          <string>You can sign messages/agreements with your legacy (P2PKH) addresses to prove you can receive bitnovas sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
          </property>
          <property name="textFormat">
           <enum>Qt::PlainText</enum>
@@ -48,7 +52,11 @@
          <item>
           <widget class="QValidatedLineEdit" name="addressIn_SM">
            <property name="toolTip">
+<<<<<<< HEAD
             <string>The Bitcoin address to sign the message with</string>
+=======
+            <string>The BitNova address to sign the message with</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
            </property>
           </widget>
          </item>
@@ -61,7 +69,11 @@
             <string/>
            </property>
            <property name="icon">
+<<<<<<< HEAD
             <iconset resource="../bitcoin.qrc">
+=======
+            <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
              <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
            </property>
            <property name="shortcut">
@@ -81,7 +93,11 @@
             <string/>
            </property>
            <property name="icon">
+<<<<<<< HEAD
             <iconset resource="../bitcoin.qrc">
+=======
+            <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
              <normaloff>:/icons/editpaste</normaloff>:/icons/editpaste</iconset>
            </property>
            <property name="shortcut">
@@ -143,7 +159,11 @@
             <string/>
            </property>
            <property name="icon">
+<<<<<<< HEAD
             <iconset resource="../bitcoin.qrc">
+=======
+            <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
              <normaloff>:/icons/editcopy</normaloff>:/icons/editcopy</iconset>
            </property>
            <property name="autoDefault">
@@ -158,13 +178,21 @@
          <item>
           <widget class="QPushButton" name="signMessageButton_SM">
            <property name="toolTip">
+<<<<<<< HEAD
             <string>Sign the message to prove you own this Bitcoin address</string>
+=======
+            <string>Sign the message to prove you own this BitNova address</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
            </property>
            <property name="text">
             <string>Sign &amp;Message</string>
            </property>
            <property name="icon">
+<<<<<<< HEAD
             <iconset resource="../bitcoin.qrc">
+=======
+            <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
              <normaloff>:/icons/edit</normaloff>:/icons/edit</iconset>
            </property>
            <property name="autoDefault">
@@ -181,7 +209,11 @@
             <string>Clear &amp;All</string>
            </property>
            <property name="icon">
+<<<<<<< HEAD
             <iconset resource="../bitcoin.qrc">
+=======
+            <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
              <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
            </property>
            <property name="autoDefault">
@@ -264,7 +296,11 @@
          <item>
           <widget class="QValidatedLineEdit" name="addressIn_VM">
            <property name="toolTip">
+<<<<<<< HEAD
             <string>The Bitcoin address the message was signed with</string>
+=======
+            <string>The BitNova address the message was signed with</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
            </property>
           </widget>
          </item>
@@ -277,7 +313,11 @@
             <string/>
            </property>
            <property name="icon">
+<<<<<<< HEAD
             <iconset resource="../bitcoin.qrc">
+=======
+            <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
              <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
            </property>
            <property name="shortcut">
@@ -315,13 +355,21 @@
          <item>
           <widget class="QPushButton" name="verifyMessageButton_VM">
            <property name="toolTip">
+<<<<<<< HEAD
             <string>Verify the message to ensure it was signed with the specified Bitcoin address</string>
+=======
+            <string>Verify the message to ensure it was signed with the specified BitNova address</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
            </property>
            <property name="text">
             <string>Verify &amp;Message</string>
            </property>
            <property name="icon">
+<<<<<<< HEAD
             <iconset resource="../bitcoin.qrc">
+=======
+            <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
              <normaloff>:/icons/transaction_0</normaloff>:/icons/transaction_0</iconset>
            </property>
            <property name="autoDefault">
@@ -338,7 +386,11 @@
             <string>Clear &amp;All</string>
            </property>
            <property name="icon">
+<<<<<<< HEAD
             <iconset resource="../bitcoin.qrc">
+=======
+            <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
              <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
            </property>
            <property name="autoDefault">
@@ -404,7 +456,11 @@
   </customwidget>
  </customwidgets>
  <resources>
+<<<<<<< HEAD
   <include location="../bitcoin.qrc"/>
+=======
+  <include location="../bitnova.qrc"/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
  </resources>
  <connections/>
 </ui>

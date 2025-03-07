@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <qt/overviewpage.h>
 #include <qt/forms/ui_overviewpage.h>
 
+<<<<<<< HEAD
 #include <qt/bitcoinunits.h>
+=======
+#include <qt/bitnovaunits.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <qt/clientmodel.h>
 #include <qt/guiconstants.h>
 #include <qt/guiutil.h>
@@ -93,7 +101,11 @@ public:
             foreground = option.palette.color(QPalette::Text);
         }
         painter->setPen(foreground);
+<<<<<<< HEAD
         QString amountText = BitcoinUnits::formatWithUnit(unit, amount, true, BitcoinUnits::SeparatorStyle::ALWAYS);
+=======
+        QString amountText = BitNovaUnits::formatWithUnit(unit, amount, true, BitNovaUnits::SeparatorStyle::ALWAYS);
+>>>>>>> 5360f2baff (Initialized BitNova project)
         if(!confirmed)
         {
             amountText = QString("[") + amountText + QString("]");
@@ -124,7 +136,11 @@ public:
         return {DECORATION_SIZE + 8 + minimum_text_width, DECORATION_SIZE};
     }
 
+<<<<<<< HEAD
     BitcoinUnit unit{BitcoinUnit::BTC};
+=======
+    BitNovaUnit unit{BitNovaUnit::BTC};
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Q_SIGNALS:
     //! An intermediate signal for emitting from the `paint() const` member function.
@@ -194,6 +210,7 @@ OverviewPage::~OverviewPage()
 
 void OverviewPage::setBalance(const interfaces::WalletBalances& balances)
 {
+<<<<<<< HEAD
     BitcoinUnit unit = walletModel->getOptionsModel()->getDisplayUnit();
     if (walletModel->wallet().isLegacy()) {
         if (walletModel->wallet().privateKeysDisabled()) {
@@ -216,6 +233,30 @@ void OverviewPage::setBalance(const interfaces::WalletBalances& balances)
         ui->labelUnconfirmed->setText(BitcoinUnits::formatWithPrivacy(unit, balances.unconfirmed_balance, BitcoinUnits::SeparatorStyle::ALWAYS, m_privacy));
         ui->labelImmature->setText(BitcoinUnits::formatWithPrivacy(unit, balances.immature_balance, BitcoinUnits::SeparatorStyle::ALWAYS, m_privacy));
         ui->labelTotal->setText(BitcoinUnits::formatWithPrivacy(unit, balances.balance + balances.unconfirmed_balance + balances.immature_balance, BitcoinUnits::SeparatorStyle::ALWAYS, m_privacy));
+=======
+    BitNovaUnit unit = walletModel->getOptionsModel()->getDisplayUnit();
+    if (walletModel->wallet().isLegacy()) {
+        if (walletModel->wallet().privateKeysDisabled()) {
+            ui->labelBalance->setText(BitNovaUnits::formatWithPrivacy(unit, balances.watch_only_balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelUnconfirmed->setText(BitNovaUnits::formatWithPrivacy(unit, balances.unconfirmed_watch_only_balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelImmature->setText(BitNovaUnits::formatWithPrivacy(unit, balances.immature_watch_only_balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelTotal->setText(BitNovaUnits::formatWithPrivacy(unit, balances.watch_only_balance + balances.unconfirmed_watch_only_balance + balances.immature_watch_only_balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+        } else {
+            ui->labelBalance->setText(BitNovaUnits::formatWithPrivacy(unit, balances.balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelUnconfirmed->setText(BitNovaUnits::formatWithPrivacy(unit, balances.unconfirmed_balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelImmature->setText(BitNovaUnits::formatWithPrivacy(unit, balances.immature_balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelTotal->setText(BitNovaUnits::formatWithPrivacy(unit, balances.balance + balances.unconfirmed_balance + balances.immature_balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelWatchAvailable->setText(BitNovaUnits::formatWithPrivacy(unit, balances.watch_only_balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelWatchPending->setText(BitNovaUnits::formatWithPrivacy(unit, balances.unconfirmed_watch_only_balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelWatchImmature->setText(BitNovaUnits::formatWithPrivacy(unit, balances.immature_watch_only_balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelWatchTotal->setText(BitNovaUnits::formatWithPrivacy(unit, balances.watch_only_balance + balances.unconfirmed_watch_only_balance + balances.immature_watch_only_balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+        }
+    } else {
+        ui->labelBalance->setText(BitNovaUnits::formatWithPrivacy(unit, balances.balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+        ui->labelUnconfirmed->setText(BitNovaUnits::formatWithPrivacy(unit, balances.unconfirmed_balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+        ui->labelImmature->setText(BitNovaUnits::formatWithPrivacy(unit, balances.immature_balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+        ui->labelTotal->setText(BitNovaUnits::formatWithPrivacy(unit, balances.balance + balances.unconfirmed_balance + balances.immature_balance, BitNovaUnits::SeparatorStyle::ALWAYS, m_privacy));
+>>>>>>> 5360f2baff (Initialized BitNova project)
     }
     // only show immature (newly mined) balance if it's non-zero, so as not to complicate things
     // for the non-mining users

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2019-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2019-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -54,7 +58,11 @@ class Warnings;
 //! any member functions. It should just be a collection of references that can
 //! be used without pulling in unwanted dependencies or functionality.
 struct NodeContext {
+<<<<<<< HEAD
     //! libbitcoin_kernel context
+=======
+    //! libbitnova_kernel context
+>>>>>>> 5360f2baff (Initialized BitNova project)
     std::unique_ptr<kernel::Context> kernel;
     std::unique_ptr<ECC_Context> ecc_context;
     //! Init interface for initializing current process and connecting to other processes.

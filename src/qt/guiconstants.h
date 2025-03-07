@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -19,7 +23,11 @@ static constexpr auto SHUTDOWN_POLLING_DELAY{200ms};
 /* AskPassphraseDialog -- Maximum passphrase length */
 static const int MAX_PASSPHRASE_SIZE = 1024;
 
+<<<<<<< HEAD
 /* BitcoinGUI -- Size of icons in status bar */
+=======
+/* BitNovaGUI -- Size of icons in status bar */
+>>>>>>> 5360f2baff (Initialized BitNova project)
 static const int STATUSBAR_ICONSIZE = 16;
 
 static const bool DEFAULT_SPLASHSCREEN = true;
@@ -46,6 +54,7 @@ static const int TOOLTIP_WRAP_THRESHOLD = 80;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
+<<<<<<< HEAD
 #define QAPP_ORG_NAME "Bitcoin"
 #define QAPP_ORG_DOMAIN "bitcoin.org"
 #define QAPP_APP_NAME_DEFAULT "Bitcoin-Qt"
@@ -53,6 +62,15 @@ static const int TOOLTIP_WRAP_THRESHOLD = 80;
 #define QAPP_APP_NAME_TESTNET4 "Bitcoin-Qt-testnet4"
 #define QAPP_APP_NAME_SIGNET "Bitcoin-Qt-signet"
 #define QAPP_APP_NAME_REGTEST "Bitcoin-Qt-regtest"
+=======
+#define QAPP_ORG_NAME "BitNova"
+#define QAPP_ORG_DOMAIN "bitnova.org"
+#define QAPP_APP_NAME_DEFAULT "BitNova-Qt"
+#define QAPP_APP_NAME_TESTNET "BitNova-Qt-testnet"
+#define QAPP_APP_NAME_TESTNET4 "BitNova-Qt-testnet4"
+#define QAPP_APP_NAME_SIGNET "BitNova-Qt-signet"
+#define QAPP_APP_NAME_REGTEST "BitNova-Qt-regtest"
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 /* One gigabyte (GB) in bytes */
 static constexpr uint64_t GB_BYTES{1000000000};

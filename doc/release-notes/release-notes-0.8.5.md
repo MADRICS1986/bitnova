@@ -1,11 +1,20 @@
+<<<<<<< HEAD
 Bitcoin-Qt version 0.8.5 is now available from:
   http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.8.5/
+=======
+BitNova-Qt version 0.8.5 is now available from:
+  http://sourceforge.net/projects/bitnova/files/BitNova/bitnova-0.8.5/
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a maintenance release to fix a critical bug;
 we urge all users to upgrade.
 
 Please report bugs using the issue tracker at github:
+<<<<<<< HEAD
   https://github.com/bitcoin/bitcoin/issues
+=======
+  https://github.com/bitnova/bitnova/issues
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 
 How to Upgrade
@@ -14,7 +23,11 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
+<<<<<<< HEAD
 /Applications/Bitcoin-Qt (on Mac) or bitcoind/bitcoin-qt (on Linux).
+=======
+/Applications/BitNova-Qt (on Mac) or bitnovad/bitnova-qt (on Linux).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 If you are upgrading from version 0.7.2 or earlier, the first time you
 run 0.8.5 your blockchain files will be re-indexed, which will take

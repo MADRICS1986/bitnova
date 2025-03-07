@@ -95,14 +95,22 @@ chain for " target " development."))
 
 (define base-linux-kernel-headers linux-libre-headers-6.1)
 
+<<<<<<< HEAD
 (define* (make-bitcoin-cross-toolchain target
+=======
+(define* (make-bitnova-cross-toolchain target
+>>>>>>> 5360f2baff (Initialized BitNova project)
                                        #:key
                                        (base-gcc-for-libc linux-base-gcc)
                                        (base-kernel-headers base-linux-kernel-headers)
                                        (base-libc glibc-2.31)
                                        (base-gcc linux-base-gcc))
   "Convenience wrapper around MAKE-CROSS-TOOLCHAIN with default values
+<<<<<<< HEAD
 desirable for building Bitcoin Core release binaries."
+=======
+desirable for building BitNova Core release binaries."
+>>>>>>> 5360f2baff (Initialized BitNova project)
   (make-cross-toolchain target
                         base-gcc-for-libc
                         base-kernel-headers
@@ -154,7 +162,11 @@ chain for " target " development."))
 ;; While LIEF is packaged in Guix, we maintain our own package,
 ;; to simplify building, and more easily apply updates.
 ;; Moreover, the Guix's package uses cmake, which caused build
+<<<<<<< HEAD
 ;; failure; see https://github.com/bitcoin/bitcoin/pull/27296.
+=======
+;; failure; see https://github.com/bitnova/bitnova/pull/27296.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 (define-public python-lief
   (package
     (name "python-lief")
@@ -564,7 +576,11 @@ inspecting signatures in Mach-O binaries.")
            (list bison
                  pkg-config
                  (list gcc-toolchain-13 "static")
+<<<<<<< HEAD
                  (make-bitcoin-cross-toolchain target)))
+=======
+                 (make-bitnova-cross-toolchain target)))
+>>>>>>> 5360f2baff (Initialized BitNova project)
           ((string-contains target "darwin")
            (list clang-toolchain-18
                  lld-18

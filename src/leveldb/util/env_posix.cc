@@ -393,7 +393,11 @@ class PosixWritableFile final : public WritableFile {
       return Status::OK();
     }
     // Do not crash if filesystem can't fsync directories
+<<<<<<< HEAD
     // (see https://github.com/bitcoin/bitcoin/pull/10000)
+=======
+    // (see https://github.com/bitnova/bitnova/pull/10000)
+>>>>>>> 5360f2baff (Initialized BitNova project)
     if (syncing_dir && errno == EINVAL) {
       return Status::OK();
     }

@@ -25,7 +25,11 @@ Developer Notes
     - [Threads](#threads)
     - [Ignoring IDE/editor files](#ignoring-ideeditor-files)
 - [Development guidelines](#development-guidelines)
+<<<<<<< HEAD
     - [General Bitcoin Core](#general-bitcoin-core)
+=======
+    - [General BitNova Core](#general-bitnova-core)
+>>>>>>> 5360f2baff (Initialized BitNova project)
     - [Wallet](#wallet)
     - [General C++](#general-c)
     - [C++ data structures](#c-data-structures)
@@ -247,7 +251,11 @@ Refer to [/test/functional/README.md#style-guidelines](/test/functional/README.m
 Coding Style (Doxygen-compatible comments)
 ------------------------------------------
 
+<<<<<<< HEAD
 Bitcoin Core uses [Doxygen](https://www.doxygen.nl/) to generate its official documentation.
+=======
+BitNova Core uses [Doxygen](https://www.doxygen.nl/) to generate its official documentation.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Use Doxygen-compatible comment blocks for functions, methods, and fields.
 
@@ -400,8 +408,13 @@ If the code is behaving strangely, take a look in the `debug.log` file in the da
 error and debugging messages are written there.
 
 Debug logging can be enabled on startup with the `-debug` and `-loglevel`
+<<<<<<< HEAD
 configuration options and toggled while bitcoind is running with the `logging`
 RPC.  For instance, launching bitcoind with `-debug` or `-debug=1` will turn on
+=======
+configuration options and toggled while bitnovad is running with the `logging`
+RPC.  For instance, launching bitnovad with `-debug` or `-debug=1` will turn on
+>>>>>>> 5360f2baff (Initialized BitNova project)
 all log categories and `-loglevel=trace` will turn on all log severity levels.
 
 The Qt code routes `qDebug()` output to `debug.log` under category "qt": run with `-debug=qt`
@@ -411,7 +424,11 @@ to see it.
 
 If you are testing multi-machine code that needs to operate across the internet,
 you can run with either the `-signet` or the `-testnet` config option to test
+<<<<<<< HEAD
 with "play bitcoins" on a test network.
+=======
+with "play bitnovas" on a test network.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 If you are testing something that can run on one machine, run with the
 `-regtest` option.  In regression test mode, blocks can be created on demand;
@@ -419,7 +436,11 @@ see [test/functional/](/test/functional) for tests that run in `-regtest` mode.
 
 ### DEBUG_LOCKORDER
 
+<<<<<<< HEAD
 Bitcoin Core is a multi-threaded application, and deadlocks or other
+=======
+BitNova Core is a multi-threaded application, and deadlocks or other
+>>>>>>> 5360f2baff (Initialized BitNova project)
 multi-threading bugs can be very difficult to track down. The `-DCMAKE_BUILD_TYPE=Debug`
 build option adds `-DDEBUG_LOCKORDER` to the compiler flags. This inserts
 run-time checks to keep track of which locks are held and adds warnings to the
@@ -435,9 +456,15 @@ The `-DCMAKE_BUILD_TYPE=Debug` build option adds `-DDEBUG_LOCKCONTENTION` to the
 compiler flags. You may also enable it manually by building with `-DDEBUG_LOCKCONTENTION`
 added to your CPPFLAGS, i.e. `-DAPPEND_CPPFLAGS="-DDEBUG_LOCKCONTENTION"`.
 
+<<<<<<< HEAD
 You can then use the `-debug=lock` configuration option at bitcoind startup or
 `bitcoin-cli logging '["lock"]'` at runtime to turn on lock contention logging.
 It can be toggled off again with `bitcoin-cli logging [] '["lock"]'`.
+=======
+You can then use the `-debug=lock` configuration option at bitnovad startup or
+`bitnova-cli logging '["lock"]'` at runtime to turn on lock contention logging.
+It can be toggled off again with `bitnova-cli logging [] '["lock"]'`.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ### Assertions and Checks
 
@@ -470,15 +497,26 @@ other input.
 
 Valgrind is a programming tool for memory debugging, memory leak detection, and
 profiling. The repo contains a Valgrind suppressions file
+<<<<<<< HEAD
 ([`valgrind.supp`](https://github.com/bitcoin/bitcoin/blob/master/contrib/valgrind.supp))
+=======
+([`valgrind.supp`](https://github.com/bitnova/bitnova/blob/master/contrib/valgrind.supp))
+>>>>>>> 5360f2baff (Initialized BitNova project)
 which includes known Valgrind warnings in our dependencies that cannot be fixed
 in-tree. Example use:
 
 ```shell
+<<<<<<< HEAD
 $ valgrind --suppressions=contrib/valgrind.supp build/src/test/test_bitcoin
 $ valgrind --suppressions=contrib/valgrind.supp --leak-check=full \
       --show-leak-kinds=all build/src/test/test_bitcoin --log_level=test_suite
 $ valgrind -v --leak-check=full build/src/bitcoind -printtoconsole
+=======
+$ valgrind --suppressions=contrib/valgrind.supp build/src/test/test_bitnova
+$ valgrind --suppressions=contrib/valgrind.supp --leak-check=full \
+      --show-leak-kinds=all build/src/test/test_bitnova --log_level=test_suite
+$ valgrind -v --leak-check=full build/src/bitnovad -printtoconsole
+>>>>>>> 5360f2baff (Initialized BitNova project)
 $ ./build/test/functional/test_runner.py --valgrind
 ```
 
@@ -495,7 +533,11 @@ cmake -B build -DCMAKE_BUILD_TYPE=Coverage
 cmake --build build
 cmake -P build/Coverage.cmake
 
+<<<<<<< HEAD
 # A coverage report will now be accessible at `./build/test_bitcoin.coverage/index.html`,
+=======
+# A coverage report will now be accessible at `./build/test_bitnova.coverage/index.html`,
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # which covers unit tests, and `./build/total.coverage/index.html`, which covers
 # unit and functional tests.
 ```
@@ -537,13 +579,21 @@ Make sure you [understand the security
 trade-offs](https://lwn.net/Articles/420403/) of setting these kernel
 parameters.
 
+<<<<<<< HEAD
 To profile a running bitcoind process for 60 seconds, you could use an
+=======
+To profile a running bitnovad process for 60 seconds, you could use an
+>>>>>>> 5360f2baff (Initialized BitNova project)
 invocation of `perf record` like this:
 
 ```sh
 $ perf record \
     -g --call-graph dwarf --per-thread -F 140 \
+<<<<<<< HEAD
     -p `pgrep bitcoind` -- sleep 60
+=======
+    -p `pgrep bitnovad` -- sleep 60
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 
 You could then analyze the results by running:
@@ -559,7 +609,11 @@ See the functional test documentation for how to invoke perf within tests.
 
 ### Sanitizers
 
+<<<<<<< HEAD
 Bitcoin Core can be compiled with various "sanitizers" enabled, which add
+=======
+BitNova Core can be compiled with various "sanitizers" enabled, which add
+>>>>>>> 5360f2baff (Initialized BitNova project)
 instrumentation for issues regarding things like memory safety, thread race
 conditions, or undefined behavior. This is controlled with the
 `-DSANITIZERS` cmake build flag, which should be a comma separated list of
@@ -631,6 +685,7 @@ and its `cs_KeyStore` lock for example).
 Threads
 -------
 
+<<<<<<< HEAD
 - [Main thread (`bitcoind`)](https://doxygen.bitcoincore.org/bitcoind_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97)
   : Started from `main()` in `bitcoind.cpp`. Responsible for starting up and
   shutting down the application.
@@ -656,20 +711,56 @@ Threads
   addrman and running asynchronous validationinterface callbacks.
 
 - [TorControlThread (`b-torcontrol`)](https://doxygen.bitcoincore.org/torcontrol_8cpp.html#a52a3efff23634500bb42c6474f306091)
+=======
+- [Main thread (`bitnovad`)](https://doxygen.bitnovacore.org/bitnovad_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97)
+  : Started from `main()` in `bitnovad.cpp`. Responsible for starting up and
+  shutting down the application.
+
+- [Init load (`b-initload`)](https://doxygen.bitnovacore.org/namespacenode.html#ab4305679079866f0f420f7dbf278381d)
+  : Performs various loading tasks that are part of init but shouldn't block the node from being started: external block import,
+   reindex, reindex-chainstate, main chain activation, spawn indexes background sync threads and mempool load.
+
+- [CCheckQueue::Loop (`b-scriptch.x`)](https://doxygen.bitnovacore.org/class_c_check_queue.html#a6e7fa51d3a25e7cb65446d4b50e6a987)
+  : Parallel script validation threads for transactions in blocks.
+
+- [ThreadHTTP (`b-http`)](https://doxygen.bitnovacore.org/httpserver_8cpp.html#abb9f6ea8819672bd9a62d3695070709c)
+  : Libevent thread to listen for RPC and REST connections.
+
+- [HTTP worker threads(`b-httpworker.x`)](https://doxygen.bitnovacore.org/httpserver_8cpp.html#aa6a7bc27265043bc0193220c5ae3a55f)
+  : Threads to service RPC and REST requests.
+
+- [Indexer threads (`b-txindex`, etc)](https://doxygen.bitnovacore.org/class_base_index.html#a96a7407421fbf877509248bbe64f8d87)
+  : One thread per indexer.
+
+- [SchedulerThread (`b-scheduler`)](https://doxygen.bitnovacore.org/class_c_scheduler.html#a14d2800815da93577858ea078aed1fba)
+  : Does asynchronous background tasks like dumping wallet contents, dumping
+  addrman and running asynchronous validationinterface callbacks.
+
+- [TorControlThread (`b-torcontrol`)](https://doxygen.bitnovacore.org/torcontrol_8cpp.html#a52a3efff23634500bb42c6474f306091)
+>>>>>>> 5360f2baff (Initialized BitNova project)
   : Libevent thread for tor connections.
 
 - Net threads:
 
+<<<<<<< HEAD
   - [ThreadMessageHandler (`b-msghand`)](https://doxygen.bitcoincore.org/class_c_connman.html#aacdbb7148575a31bb33bc345e2bf22a9)
     : Application level message handling (sending and receiving). Almost
     all net_processing and validation logic runs on this thread.
 
   - [ThreadDNSAddressSeed (`b-dnsseed`)](https://doxygen.bitcoincore.org/class_c_connman.html#aa7c6970ed98a4a7bafbc071d24897d13)
+=======
+  - [ThreadMessageHandler (`b-msghand`)](https://doxygen.bitnovacore.org/class_c_connman.html#aacdbb7148575a31bb33bc345e2bf22a9)
+    : Application level message handling (sending and receiving). Almost
+    all net_processing and validation logic runs on this thread.
+
+  - [ThreadDNSAddressSeed (`b-dnsseed`)](https://doxygen.bitnovacore.org/class_c_connman.html#aa7c6970ed98a4a7bafbc071d24897d13)
+>>>>>>> 5360f2baff (Initialized BitNova project)
     : Loads addresses of peers from the DNS.
 
   - ThreadMapPort (`b-mapport`)
     : Universal plug-and-play startup/shutdown.
 
+<<<<<<< HEAD
   - [ThreadSocketHandler (`b-net`)](https://doxygen.bitcoincore.org/class_c_connman.html#a765597cbfe99c083d8fa3d61bb464e34)
     : Sends/Receives data from peers on port 8333.
 
@@ -680,6 +771,18 @@ Threads
     : Initiates new connections to peers.
 
   - [ThreadI2PAcceptIncoming (`b-i2paccept`)](https://doxygen.bitcoincore.org/class_c_connman.html#a57787b4f9ac847d24065fbb0dd6e70f8)
+=======
+  - [ThreadSocketHandler (`b-net`)](https://doxygen.bitnovacore.org/class_c_connman.html#a765597cbfe99c083d8fa3d61bb464e34)
+    : Sends/Receives data from peers on port 8333.
+
+  - [ThreadOpenAddedConnections (`b-addcon`)](https://doxygen.bitnovacore.org/class_c_connman.html#a0b787caf95e52a346a2b31a580d60a62)
+    : Opens network connections to added nodes.
+
+  - [ThreadOpenConnections (`b-opencon`)](https://doxygen.bitnovacore.org/class_c_connman.html#a55e9feafc3bab78e5c9d408c207faa45)
+    : Initiates new connections to peers.
+
+  - [ThreadI2PAcceptIncoming (`b-i2paccept`)](https://doxygen.bitnovacore.org/class_c_connman.html#a57787b4f9ac847d24065fbb0dd6e70f8)
+>>>>>>> 5360f2baff (Initialized BitNova project)
     : Listens for and accepts incoming I2P connections through the I2P SAM proxy.
 
 Ignoring IDE/editor files
@@ -688,7 +791,11 @@ Ignoring IDE/editor files
 In closed-source environments in which everyone uses the same IDE, it is common
 to add temporary files it produces to the project-wide `.gitignore` file.
 
+<<<<<<< HEAD
 However, in open source software such as Bitcoin Core, where everyone uses
+=======
+However, in open source software such as BitNova Core, where everyone uses
+>>>>>>> 5360f2baff (Initialized BitNova project)
 their own editors/IDE/tools, it is less common. Only you know what files your
 editor produces and this may change from version to version. The canonical way
 to do this is thus to create your local gitignore. Add this to `~/.gitconfig`:
@@ -718,9 +825,15 @@ Development guidelines
 ============================
 
 A few non-style-related recommendations for developers, as well as points to
+<<<<<<< HEAD
 pay attention to for reviewers of Bitcoin Core code.
 
 General Bitcoin Core
+=======
+pay attention to for reviewers of BitNova Core code.
+
+General BitNova Core
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ----------------------
 
 - New features should be exposed on RPC first, then can be made available in the GUI.
@@ -940,7 +1053,11 @@ Strings and formatting
 
 - For `strprintf`, `LogInfo`, `LogDebug`, etc formatting characters don't need size specifiers.
 
+<<<<<<< HEAD
   - *Rationale*: Bitcoin Core uses tinyformat, which is type safe. Leave them out to avoid confusion.
+=======
+  - *Rationale*: BitNova Core uses tinyformat, which is type safe. Leave them out to avoid confusion.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 - Use `.c_str()` sparingly. Its only valid use is to pass C++ strings to C functions that take NULL-terminated
   strings.
@@ -1197,13 +1314,21 @@ Subtrees
 
 Several parts of the repository are subtrees of software maintained elsewhere.
 
+<<<<<<< HEAD
 Some of these are maintained by active developers of Bitcoin Core, in which case
+=======
+Some of these are maintained by active developers of BitNova Core, in which case
+>>>>>>> 5360f2baff (Initialized BitNova project)
 changes should go directly upstream without being PRed directly against the project.
 They will be merged back in the next subtree merge.
 
 Others are external projects without a tight relationship with our project. Changes
 to these should also be sent upstream, but bugfixes may also be prudent to PR against
+<<<<<<< HEAD
 a Bitcoin Core subtree, so that they can be integrated quickly. Cosmetic changes
+=======
+a BitNova Core subtree, so that they can be integrated quickly. Cosmetic changes
+>>>>>>> 5360f2baff (Initialized BitNova project)
 should be taken upstream.
 
 There is a tool in `test/lint/git-subtree-check.sh` ([instructions](../test/lint#git-subtree-checksh))
@@ -1212,7 +1337,11 @@ to check a subtree directory for consistency with its upstream repository.
 Current subtrees include:
 
 - src/leveldb
+<<<<<<< HEAD
   - Subtree at https://github.com/bitcoin-core/leveldb-subtree ; maintained by Core contributors.
+=======
+  - Subtree at https://github.com/bitnova-core/leveldb-subtree ; maintained by Core contributors.
+>>>>>>> 5360f2baff (Initialized BitNova project)
   - Upstream at https://github.com/google/leveldb ; maintained by Google. Open
     important PRs to the subtree to avoid delay.
   - **Note**: Follow the instructions in [Upgrading LevelDB](#upgrading-leveldb) when
@@ -1220,6 +1349,7 @@ Current subtrees include:
 
 - src/crc32c
   - Used by leveldb for hardware acceleration of CRC32C checksums for data integrity.
+<<<<<<< HEAD
   - Subtree at https://github.com/bitcoin-core/crc32c-subtree ; maintained by Core contributors.
   - Upstream at https://github.com/google/crc32c ; maintained by Google.
 
@@ -1231,6 +1361,19 @@ Current subtrees include:
 
 - src/minisketch
   - Upstream at https://github.com/bitcoin-core/minisketch ; maintained by Core contributors.
+=======
+  - Subtree at https://github.com/bitnova-core/crc32c-subtree ; maintained by Core contributors.
+  - Upstream at https://github.com/google/crc32c ; maintained by Google.
+
+- src/secp256k1
+  - Upstream at https://github.com/bitnova-core/secp256k1/ ; maintained by Core contributors.
+
+- src/crypto/ctaes
+  - Upstream at https://github.com/bitnova-core/ctaes ; maintained by Core contributors.
+
+- src/minisketch
+  - Upstream at https://github.com/bitnova-core/minisketch ; maintained by Core contributors.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Upgrading LevelDB
 ---------------------
@@ -1242,7 +1385,11 @@ you must be aware of.
 
 In most configurations, we use the default LevelDB value for `max_open_files`,
 which is 1000 at the time of this writing. If LevelDB actually uses this many
+<<<<<<< HEAD
 file descriptors, it will cause problems with Bitcoin's `select()` loop, because
+=======
+file descriptors, it will cause problems with BitNova's `select()` loop, because
+>>>>>>> 5360f2baff (Initialized BitNova project)
 it may cause new sockets to be created where the fd value is >= 1024. For this
 reason, on 64-bit Unix systems, we rely on an internal LevelDB optimization that
 uses `mmap()` + `close()` to open table files without actually retaining
@@ -1253,7 +1400,11 @@ In addition to reviewing the upstream changes in `env_posix.cc`, you can use `ls
 check this. For example, on Linux this command will show open `.ldb` file counts:
 
 ```bash
+<<<<<<< HEAD
 $ lsof -p $(pidof bitcoind) |\
+=======
+$ lsof -p $(pidof bitnovad) |\
+>>>>>>> 5360f2baff (Initialized BitNova project)
     awk 'BEGIN { fd=0; mem=0; } /ldb$/ { if ($4 == "mem") mem++; else fd++ } END { printf "mem = %s, fd = %s\n", mem, fd}'
 mem = 119, fd = 0
 ```
@@ -1268,14 +1419,22 @@ details.
 ### Consensus Compatibility
 
 It is possible for LevelDB changes to inadvertently change consensus
+<<<<<<< HEAD
 compatibility between nodes. This happened in Bitcoin 0.8 (when LevelDB was
+=======
+compatibility between nodes. This happened in BitNova 0.8 (when LevelDB was
+>>>>>>> 5360f2baff (Initialized BitNova project)
 first introduced). When upgrading LevelDB, you should review the upstream changes
 to check for issues affecting consensus compatibility.
 
 For example, if LevelDB had a bug that accidentally prevented a key from being
 returned in an edge case, and that bug was fixed upstream, the bug "fix" would
 be an incompatible consensus change. In this situation, the correct behavior
+<<<<<<< HEAD
 would be to revert the upstream fix before applying the updates to Bitcoin's
+=======
+would be to revert the upstream fix before applying the updates to BitNova's
+>>>>>>> 5360f2baff (Initialized BitNova project)
 copy of LevelDB. In general, you should be wary of any upstream changes affecting
 what data is returned from LevelDB queries.
 
@@ -1321,6 +1480,7 @@ introduce accidental changes.
 
 Some good examples of scripted-diff:
 
+<<<<<<< HEAD
 - [scripted-diff: Rename InitInterfaces to NodeContext](https://github.com/bitcoin/bitcoin/commit/301bd41a2e6765b185bd55f4c541f9e27aeea29d)
 uses an elegant script to replace occurrences of multiple terms in all source files.
 
@@ -1328,6 +1488,15 @@ uses an elegant script to replace occurrences of multiple terms in all source fi
 replaces specific terms in a list of specific source files.
 
 - [scripted-diff: Replace fprintf with tfm::format](https://github.com/bitcoin/bitcoin/commit/fac03ec43a15ad547161e37e53ea82482cc508f9)
+=======
+- [scripted-diff: Rename InitInterfaces to NodeContext](https://github.com/bitnova/bitnova/commit/301bd41a2e6765b185bd55f4c541f9e27aeea29d)
+uses an elegant script to replace occurrences of multiple terms in all source files.
+
+- [scripted-diff: Remove g_connman, g_banman globals](https://github.com/bitnova/bitnova/commit/8922d7f6b751a3e6b3b9f6fb7961c442877fb65a)
+replaces specific terms in a list of specific source files.
+
+- [scripted-diff: Replace fprintf with tfm::format](https://github.com/bitnova/bitnova/commit/fac03ec43a15ad547161e37e53ea82482cc508f9)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 does a global replacement but excludes certain directories.
 
 To find all previous uses of scripted diffs in the repository, do:
@@ -1393,7 +1562,11 @@ A few guidelines for introducing and reviewing new RPC interfaces:
 - Try not to overload methods on argument type. E.g. don't make `getblock(true)` and `getblock("hash")`
   do different things.
 
+<<<<<<< HEAD
   - *Rationale*: This is impossible to use with `bitcoin-cli`, and can be surprising to users.
+=======
+  - *Rationale*: This is impossible to use with `bitnova-cli`, and can be surprising to users.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
   - *Exception*: Some RPC calls can take both an `int` and `bool`, most notably when a bool was switched
     to a multi-value, or due to other historical reasons. **Always** have false map to 0 and
@@ -1411,7 +1584,11 @@ A few guidelines for introducing and reviewing new RPC interfaces:
 
 - Add every non-string RPC argument `(method, idx, name)` to the table `vRPCConvertParams` in `rpc/client.cpp`.
 
+<<<<<<< HEAD
   - *Rationale*: `bitcoin-cli` and the GUI debug console use this table to determine how to
+=======
+  - *Rationale*: `bitnova-cli` and the GUI debug console use this table to determine how to
+>>>>>>> 5360f2baff (Initialized BitNova project)
     convert a plaintext command line to JSON. If the types don't match, the method can be unusable
     from there.
 
@@ -1432,7 +1609,11 @@ A few guidelines for introducing and reviewing new RPC interfaces:
   RPCs whose behavior does *not* depend on the current chainstate may omit this
   call.
 
+<<<<<<< HEAD
   - *Rationale*: In previous versions of Bitcoin Core, the wallet was always
+=======
+  - *Rationale*: In previous versions of BitNova Core, the wallet was always
+>>>>>>> 5360f2baff (Initialized BitNova project)
     in-sync with the chainstate (by virtue of them all being updated in the
     same cs_main lock). In order to maintain the behavior that wallet RPCs
     return results as of at least the highest best-known block an RPC
@@ -1578,4 +1759,8 @@ communication:
 
   Note: This last convention isn't generally followed outside of
   [`src/interfaces/`](../src/interfaces/), though it did come up for discussion
+<<<<<<< HEAD
   before in [#14635](https://github.com/bitcoin/bitcoin/pull/14635).
+=======
+  before in [#14635](https://github.com/bitnova/bitnova/pull/14635).
+>>>>>>> 5360f2baff (Initialized BitNova project)

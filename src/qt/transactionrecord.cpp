@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -68,7 +72,11 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const interface
 
             if (fAllFromMe) {
                 // Change is only really possible if we're the sender
+<<<<<<< HEAD
                 // Otherwise, someone just sent bitcoins to a change address, which should be shown
+=======
+                // Otherwise, someone just sent bitnovas to a change address, which should be shown
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 if (wtx.txout_is_change[i]) {
                     continue;
                 }
@@ -83,7 +91,11 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const interface
 
                 if (!std::get_if<CNoDestination>(&wtx.txout_address[i]))
                 {
+<<<<<<< HEAD
                     // Sent to Bitcoin Address
+=======
+                    // Sent to BitNova Address
+>>>>>>> 5360f2baff (Initialized BitNova project)
                     sub.type = TransactionRecord::SendToAddress;
                     sub.address = EncodeDestination(wtx.txout_address[i]);
                 }
@@ -119,7 +131,11 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const interface
                 sub.involvesWatchAddress = mine & ISMINE_WATCH_ONLY;
                 if (wtx.txout_address_is_mine[i])
                 {
+<<<<<<< HEAD
                     // Received by Bitcoin Address
+=======
+                    // Received by BitNova Address
+>>>>>>> 5360f2baff (Initialized BitNova project)
                     sub.type = TransactionRecord::RecvWithAddress;
                     sub.address = EncodeDestination(wtx.txout_address[i]);
                 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Copyright (c) 2009-2022 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -7,6 +8,17 @@
 #include <interfaces/init.h>
 #include <interfaces/node.h>
 #include <qt/bitcoin.h>
+=======
+// Copyright (c) 2009-2022 The BitNova Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#include <bitnova-build-config.h> // IWYU pragma: keep
+
+#include <interfaces/init.h>
+#include <interfaces/node.h>
+#include <qt/bitnova.h>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <qt/guiconstants.h>
 #include <qt/test/apptests.h>
 #include <qt/test/optiontests.h>
@@ -75,7 +87,11 @@ int main(int argc, char* argv[])
     int num_test_failures{0};
 
     {
+<<<<<<< HEAD
         BitcoinApplication app;
+=======
+        BitNovaApplication app;
+>>>>>>> 5360f2baff (Initialized BitNova project)
         app.createNode(*init);
 
         AppTests app_tests(app);

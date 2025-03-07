@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -46,7 +50,11 @@ private:
     Qt::SortOrder order;
 };
 
+<<<<<<< HEAD
 /** Model for list of recently generated payment requests / bitcoin: URIs.
+=======
+/** Model for list of recently generated payment requests / bitnova: URIs.
+>>>>>>> 5360f2baff (Initialized BitNova project)
  * Part of wallet model.
  */
 class RecentRequestsTableModel: public QAbstractTableModel

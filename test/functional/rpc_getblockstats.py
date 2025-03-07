@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2017-2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2017-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +12,11 @@
 #
 
 from test_framework.blocktools import COINBASE_MATURITY
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
@@ -18,7 +26,11 @@ import os
 
 TESTSDIR = os.path.dirname(os.path.realpath(__file__))
 
+<<<<<<< HEAD
 class GetblockstatsTest(BitcoinTestFramework):
+=======
+class GetblockstatsTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     start_height = 101
     max_stat_pos = 2

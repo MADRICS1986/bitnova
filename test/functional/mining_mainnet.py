@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2025 The Bitcoin Core developers
+=======
+# Copyright (c) 2025 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test mining on an alternate mainnet
@@ -14,7 +18,11 @@ order to maximally raise the difficulty. Verify this using the getmininginfo RPC
 
 """
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
 )
@@ -38,7 +46,11 @@ import os
 # See data/README.md
 COINBASE_SCRIPT_PUBKEY="76a914eadbac7f36c37e39361168b7aaee3cb24a25312d88ac"
 
+<<<<<<< HEAD
 class MiningMainnetTest(BitcoinTestFramework):
+=======
+class MiningMainnetTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     def set_test_params(self):
         self.num_nodes = 1

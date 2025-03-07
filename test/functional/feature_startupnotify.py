@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2020-2022 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test -startupnotify."""
 from test_framework.test_framework import BitcoinTestFramework
+=======
+# Copyright (c) 2020-2022 The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+"""Test -startupnotify."""
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
 )
@@ -12,7 +20,11 @@ NODE_DIR = "node0"
 FILE_NAME = "test.txt"
 
 
+<<<<<<< HEAD
 class StartupNotifyTest(BitcoinTestFramework):
+=======
+class StartupNotifyTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
 

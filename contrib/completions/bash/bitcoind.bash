@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # bash programmable completion for bitcoind(1) and bitcoin-qt(1)
 # Copyright (c) 2012-2022 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
@@ -10,6 +11,20 @@ _bitcoind() {
     # save and use original argument to invoke bitcoind for -help
     # it might not be in $PATH
     bitcoind="$1"
+=======
+# bash programmable completion for bitnovad(1) and bitnova-qt(1)
+# Copyright (c) 2012-2022 The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+_bitnovad() {
+    local cur prev words=() cword
+    local bitnovad
+
+    # save and use original argument to invoke bitnovad for -help
+    # it might not be in $PATH
+    bitnovad="$1"
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     COMPREPLY=()
     _get_comp_words_by_ref -n = cur prev words cword
@@ -33,7 +48,11 @@ _bitcoind() {
             # only parse -help if sensible
             if [[ -z "$cur" || "$cur" =~ ^- ]]; then
                 local helpopts
+<<<<<<< HEAD
                 helpopts=$($bitcoind -help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
+=======
+                helpopts=$($bitnovad -help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 COMPREPLY=( $( compgen -W "$helpopts" -- "$cur" ) )
             fi
 
@@ -45,7 +64,11 @@ _bitcoind() {
             ;;
     esac
 } &&
+<<<<<<< HEAD
 complete -F _bitcoind bitcoind bitcoin-qt
+=======
+complete -F _bitnovad bitnovad bitnova-qt
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 # Local variables:
 # mode: shell-script

@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 // Copyright (c) 2023-present The Bitcoin Core developers
+=======
+// Copyright (c) 2023-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or https://www.opensource.org/licenses/mit-license.php.
 
 #include <bench/bench.h>
+<<<<<<< HEAD
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #include <random.h>
 #include <support/allocators/secure.h>
 #include <test/util/setup_common.h>

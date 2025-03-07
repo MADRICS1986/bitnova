@@ -1,25 +1,44 @@
+<<<<<<< HEAD
 Bitcoin Core version *0.15.0* is now available from:
 
   <https://bitcoin.org/bin/bitcoin-core-0.15.0/>
+=======
+BitNova Core version *0.15.0* is now available from:
+
+  <https://bitnova.org/bin/bitnova-core-0.15.0/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a new major version release, including new features, various bugfixes
 and performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 How to Upgrade
 ==============
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the 
+<<<<<<< HEAD
 installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
 or `bitcoind`/`bitcoin-qt` (on Linux).
+=======
+installer (on Windows) or just copy over `/Applications/BitNova-Qt` (on Mac)
+or `bitnovad`/`bitnova-qt` (on Linux).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 The first time you run version 0.15.0, your chainstate database will be converted to a
 new format, which will take anywhere from a few minutes to half an hour,
@@ -48,10 +67,17 @@ processing the entire blockchain.
 Compatibility
 ==============
 
+<<<<<<< HEAD
 Bitcoin Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.8+, and Windows Vista and later. Windows XP is not supported.
 
 Bitcoin Core should also work on most other Unix-like systems but is not
+=======
+BitNova Core is extensively tested on multiple operating systems using
+the Linux kernel, macOS 10.8+, and Windows Vista and later. Windows XP is not supported.
+
+BitNova Core should also work on most other Unix-like systems but is not
+>>>>>>> 5360f2baff (Initialized BitNova project)
 frequently tested on them.
 
 Notes for 0.15.0
@@ -85,7 +111,11 @@ Version 0.15 contains a number of significant performance improvements, which ma
 Initial Block Download, startup, transaction and block validation much faster:
 
 - The chainstate database (which is used for tracking UTXOs) has been changed
+<<<<<<< HEAD
   from a per-transaction model to a per-output model (See [PR 10195](https://github.com/bitcoin/bitcoin/pull/10195)). Advantages of this model
+=======
+  from a per-transaction model to a per-output model (See [PR 10195](https://github.com/bitnova/bitnova/pull/10195)). Advantages of this model
+>>>>>>> 5360f2baff (Initialized BitNova project)
   are that it:
     - avoids the CPU overhead of deserializing and serializing the unused outputs;
     - has more predictable memory usage;
@@ -98,11 +128,16 @@ Initial Block Download, startup, transaction and block validation much faster:
   a few extra gigabytes may be used.
 - Earlier versions experienced a spike in memory usage while flushing UTXO updates to disk.
   As a result, only half of the available memory was actually used as cache, and the other half was
+<<<<<<< HEAD
   reserved to accommodate flushing. This is no longer the case (See [PR 10148](https://github.com/bitcoin/bitcoin/pull/10148)), and the entirety of
+=======
+  reserved to accommodate flushing. This is no longer the case (See [PR 10148](https://github.com/bitnova/bitnova/pull/10148)), and the entirety of
+>>>>>>> 5360f2baff (Initialized BitNova project)
   the available cache (see `-dbcache`) is now actually used as cache. This reduces the flushing
   frequency by a factor 2 or more.
 - In previous versions, signature validation for transactions has been cached when the
   transaction is accepted to the mempool. Version 0.15 extends this to cache the entire script
+<<<<<<< HEAD
   validity (See [PR 10192](https://github.com/bitcoin/bitcoin/pull/10192)). This means that if a transaction in a block has already been accepted to the
   mempool, the scriptSig does not need to be re-evaluated. Empirical tests show that
   this results in new block validation being 40-50% faster.
@@ -113,17 +148,37 @@ Initial Block Download, startup, transaction and block validation much faster:
   validation. In version 0.15, SHA256 hardware optimization is disabled in release builds by
   default, but can be enabled by using `--enable-experimental-asm` when building.
 - Refill of the keypool no longer flushes the wallet between each key which resulted in a ~20x speedup in creating a new wallet. Part of this speedup was used to increase the default keypool to 1000 keys to make recovery more robust. (See [PR 10831](https://github.com/bitcoin/bitcoin/pull/10831)).
+=======
+  validity (See [PR 10192](https://github.com/bitnova/bitnova/pull/10192)). This means that if a transaction in a block has already been accepted to the
+  mempool, the scriptSig does not need to be re-evaluated. Empirical tests show that
+  this results in new block validation being 40-50% faster.
+- LevelDB has been upgraded to version 1.20 (See [PR 10544](https://github.com/bitnova/bitnova/pull/10544)). This version contains hardware acceleration for CRC
+  on architectures supporting SSE 4.2. As a result, synchronization and block validation are now faster.
+- SHA256 hashing has been optimized for architectures supporting SSE 4 (See [PR 10821](https://github.com/bitnova/bitnova/pull/10821)). SHA256 is around
+  50% faster on supported hardware, which results in around 5% faster IBD and block
+  validation. In version 0.15, SHA256 hardware optimization is disabled in release builds by
+  default, but can be enabled by using `--enable-experimental-asm` when building.
+- Refill of the keypool no longer flushes the wallet between each key which resulted in a ~20x speedup in creating a new wallet. Part of this speedup was used to increase the default keypool to 1000 keys to make recovery more robust. (See [PR 10831](https://github.com/bitnova/bitnova/pull/10831)).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Fee Estimation Improvements
 ---------------------------
 
+<<<<<<< HEAD
 Fee estimation has been significantly improved in version 0.15, with more accurate fee estimates used by the wallet and a wider range of options for advanced users of the `estimatesmartfee` and `estimaterawfee` RPCs (See [PR 10199](https://github.com/bitcoin/bitcoin/pull/10199)).
+=======
+Fee estimation has been significantly improved in version 0.15, with more accurate fee estimates used by the wallet and a wider range of options for advanced users of the `estimatesmartfee` and `estimaterawfee` RPCs (See [PR 10199](https://github.com/bitnova/bitnova/pull/10199)).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ### Changes to internal logic and wallet behavior
 
 - Internally, estimates are now tracked on 3 different time horizons. This allows for longer targets and means estimates adjust more quickly to changes in conditions.
 - Estimates can now be *conservative* or *economical*. *Conservative* estimates use longer time horizons to produce an estimate which is less susceptible to rapid changes in fee conditions. *Economical* estimates use shorter time horizons and will be more affected by short-term changes in fee conditions. Economical estimates may be considerably lower during periods of low transaction activity (for example over weekends), but may result in transactions being unconfirmed if prevailing fees increase rapidly.
+<<<<<<< HEAD
 - By default, the wallet will use conservative fee estimates to increase the reliability of transactions being confirmed within the desired target. For transactions that are marked as replaceable, the wallet will use an economical estimate by default, since the fee can be 'bumped' if the fee conditions change rapidly (See [PR 10589](https://github.com/bitcoin/bitcoin/pull/10589)).
+=======
+- By default, the wallet will use conservative fee estimates to increase the reliability of transactions being confirmed within the desired target. For transactions that are marked as replaceable, the wallet will use an economical estimate by default, since the fee can be 'bumped' if the fee conditions change rapidly (See [PR 10589](https://github.com/bitnova/bitnova/pull/10589)).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - Estimates can now be made for confirmation targets up to 1008 blocks (one week).
 - More data on historical fee rates is stored, leading to more precise fee estimates.
 - Transactions which leave the mempool due to eviction or other non-confirmed reasons are now taken into account by the fee estimation logic, leading to more accurate fee estimates.
@@ -132,16 +187,25 @@ Fee estimation has been significantly improved in version 0.15, with more accura
 ### Changes to fee estimate RPCs
 
 - The `estimatefee` RPC is now deprecated in favor of using only `estimatesmartfee` (which is the implementation used by the GUI)
+<<<<<<< HEAD
 - The `estimatesmartfee` RPC interface has been changed (See [PR 10707](https://github.com/bitcoin/bitcoin/pull/10707)):
     - The `nblocks` argument has been renamed to `conf_target` (to be consistent with other RPC methods).
     - An `estimate_mode` argument has been added. This argument takes one of the following strings: `CONSERVATIVE`, `ECONOMICAL` or `UNSET` (which defaults to `CONSERVATIVE`).
     - The RPC return object now contains an `errors` member, which returns errors encountered during processing.
     - If Bitcoin Core has not been running for long enough and has not seen enough blocks or transactions to produce an accurate fee estimation, an error will be returned (previously a value of -1 was used to indicate an error, which could be confused for a feerate).
+=======
+- The `estimatesmartfee` RPC interface has been changed (See [PR 10707](https://github.com/bitnova/bitnova/pull/10707)):
+    - The `nblocks` argument has been renamed to `conf_target` (to be consistent with other RPC methods).
+    - An `estimate_mode` argument has been added. This argument takes one of the following strings: `CONSERVATIVE`, `ECONOMICAL` or `UNSET` (which defaults to `CONSERVATIVE`).
+    - The RPC return object now contains an `errors` member, which returns errors encountered during processing.
+    - If BitNova Core has not been running for long enough and has not seen enough blocks or transactions to produce an accurate fee estimation, an error will be returned (previously a value of -1 was used to indicate an error, which could be confused for a feerate).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - A new `estimaterawfee` RPC is added to provide raw fee data. External clients can query and use this data in their own fee estimation logic.
 
 Multi-wallet support
 --------------------
 
+<<<<<<< HEAD
 Bitcoin Core now supports loading multiple, separate wallets (See [PR 8694](https://github.com/bitcoin/bitcoin/pull/8694), [PR 10849](https://github.com/bitcoin/bitcoin/pull/10849)). The wallets are completely separated, with individual balances, keys and received transactions.
 
 Multi-wallet is enabled by using more than one `-wallet` argument when starting Bitcoin, either on the command line or in the Bitcoin config file.
@@ -153,6 +217,19 @@ Bitcoin Core 0.15.0 contains the following changes to the RPC interface and `bit
 * When running Bitcoin Core with a single wallet, there are **no** changes to the RPC interface or `bitcoin-cli`. All RPC calls and `bitcoin-cli` commands continue to work as before.
 * When running Bitcoin Core with multi-wallet, all *node-level* RPC methods continue to work as before. HTTP RPC requests should be send to the normal `<RPC IP address>:<RPC port>` endpoint, and `bitcoin-cli` commands should be run as before. A *node-level* RPC method is any method which does not require access to the wallet.
 * When running Bitcoin Core with multi-wallet, *wallet-level* RPC methods must specify the wallet for which they're intended in every request. HTTP RPC requests should be send to the `<RPC IP address>:<RPC port>/wallet/<wallet name>` endpoint, for example `127.0.0.1:8332/wallet/wallet1.dat`. `bitcoin-cli` commands should be run with a `-rpcwallet` option, for example `bitcoin-cli -rpcwallet=wallet1.dat getbalance`.
+=======
+BitNova Core now supports loading multiple, separate wallets (See [PR 8694](https://github.com/bitnova/bitnova/pull/8694), [PR 10849](https://github.com/bitnova/bitnova/pull/10849)). The wallets are completely separated, with individual balances, keys and received transactions.
+
+Multi-wallet is enabled by using more than one `-wallet` argument when starting BitNova, either on the command line or in the BitNova config file.
+
+**In BitNova-Qt, only the first wallet will be displayed and accessible for creating and signing transactions.** GUI selectable multiple wallets will be supported in a future version. However, even in 0.15 other loaded wallets will remain synchronized to the node's current tip in the background. This can be useful if running a pruned node, since loading a wallet where the most recent sync is beyond the pruned height results in having to download and revalidate the whole blockchain. Continuing to synchronize all wallets in the background avoids this problem.
+
+BitNova Core 0.15.0 contains the following changes to the RPC interface and `bitnova-cli` for multi-wallet:
+
+* When running BitNova Core with a single wallet, there are **no** changes to the RPC interface or `bitnova-cli`. All RPC calls and `bitnova-cli` commands continue to work as before.
+* When running BitNova Core with multi-wallet, all *node-level* RPC methods continue to work as before. HTTP RPC requests should be send to the normal `<RPC IP address>:<RPC port>` endpoint, and `bitnova-cli` commands should be run as before. A *node-level* RPC method is any method which does not require access to the wallet.
+* When running BitNova Core with multi-wallet, *wallet-level* RPC methods must specify the wallet for which they're intended in every request. HTTP RPC requests should be send to the `<RPC IP address>:<RPC port>/wallet/<wallet name>` endpoint, for example `127.0.0.1:8332/wallet/wallet1.dat`. `bitnova-cli` commands should be run with a `-rpcwallet` option, for example `bitnova-cli -rpcwallet=wallet1.dat getbalance`.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 * A new *node-level* `listwallets` RPC method is added to display which wallets are currently loaded. The names returned by this method are the same as those used in the HTTP endpoint and for the `rpcwallet` argument.
 
 Note that while multi-wallet is now fully supported, the RPC multi-wallet interface should be considered unstable for version 0.15.0, and there may backwards-incompatible changes in future versions.
@@ -160,18 +237,30 @@ Note that while multi-wallet is now fully supported, the RPC multi-wallet interf
 Replace-by-fee control in the GUI
 ---------------------------------
 
+<<<<<<< HEAD
 Bitcoin Core has supported creating opt-in replace-by-fee (RBF) transactions
+=======
+BitNova Core has supported creating opt-in replace-by-fee (RBF) transactions
+>>>>>>> 5360f2baff (Initialized BitNova project)
 since version 0.12.0, and since version 0.14.0 has included a `bumpfee` RPC method to
 replace unconfirmed opt-in RBF transactions with a new transaction that pays
 a higher fee.
 
 In version 0.15, creating an opt-in RBF transaction and replacing the unconfirmed
+<<<<<<< HEAD
 transaction with a higher-fee transaction are both supported in the GUI (See [PR 9592](https://github.com/bitcoin/bitcoin/pull/9592)).
+=======
+transaction with a higher-fee transaction are both supported in the GUI (See [PR 9592](https://github.com/bitnova/bitnova/pull/9592)).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Removal of Coin Age Priority
 ----------------------------
 
+<<<<<<< HEAD
 In previous versions of Bitcoin Core, a portion of each block could be reserved for transactions based on the age and value of UTXOs they spent. This concept (Coin Age Priority) is a policy choice by miners, and there are no consensus rules around the inclusion of Coin Age Priority transactions in blocks. In practice, only a few miners continue to use Coin Age Priority for transaction selection in blocks. Bitcoin Core 0.15 removes all remaining support for Coin Age Priority (See [PR 9602](https://github.com/bitcoin/bitcoin/pull/9602)). This has the following implications:
+=======
+In previous versions of BitNova Core, a portion of each block could be reserved for transactions based on the age and value of UTXOs they spent. This concept (Coin Age Priority) is a policy choice by miners, and there are no consensus rules around the inclusion of Coin Age Priority transactions in blocks. In practice, only a few miners continue to use Coin Age Priority for transaction selection in blocks. BitNova Core 0.15 removes all remaining support for Coin Age Priority (See [PR 9602](https://github.com/bitnova/bitnova/pull/9602)). This has the following implications:
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 - The concept of *free transactions* has been removed. High Coin Age Priority transactions would previously be allowed to be relayed even if they didn't attach a miner fee. This is no longer possible since there is no concept of Coin Age Priority. The `-limitfreerelay` and `-relaypriority` options which controlled relay of free transactions have therefore been removed.
 - The `-sendfreetransactions` option has been removed, since almost all miners do not include transactions which do not attach a transaction fee.
@@ -185,13 +274,18 @@ In previous versions of Bitcoin Core, a portion of each block could be reserved 
 Mempool Persistence Across Restarts
 -----------------------------------
 
+<<<<<<< HEAD
 Version 0.14 introduced mempool persistence across restarts (the mempool is saved to a `mempool.dat` file in the data directory prior to shutdown and restores the mempool when the node is restarted). Version 0.15 allows this feature to be switched on or off using the `-persistmempool` command-line option (See [PR 9966](https://github.com/bitcoin/bitcoin/pull/9966)). By default, the option is set to true, and the mempool is saved on shutdown and reloaded on startup. If set to false, the `mempool.dat` file will not be loaded on startup or saved on shutdown.
+=======
+Version 0.14 introduced mempool persistence across restarts (the mempool is saved to a `mempool.dat` file in the data directory prior to shutdown and restores the mempool when the node is restarted). Version 0.15 allows this feature to be switched on or off using the `-persistmempool` command-line option (See [PR 9966](https://github.com/bitnova/bitnova/pull/9966)). By default, the option is set to true, and the mempool is saved on shutdown and reloaded on startup. If set to false, the `mempool.dat` file will not be loaded on startup or saved on shutdown.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 New RPC methods
 ---------------
 
 Version 0.15 introduces several new RPC methods:
 
+<<<<<<< HEAD
 - `abortrescan` stops current wallet rescan, e.g. when triggered by an `importprivkey` call (See [PR 10208](https://github.com/bitcoin/bitcoin/pull/10208)).
 - `combinerawtransaction` accepts a JSON array of raw transactions and combines them into a single raw transaction (See [PR 10571](https://github.com/bitcoin/bitcoin/pull/10571)).
 - `estimaterawfee` returns raw fee data so that customized logic can be implemented to analyze the data and calculate estimates. See [Fee Estimation Improvements](#fee-estimation-improvements) for full details on changes to the fee estimation logic and interface.
@@ -200,11 +294,25 @@ Version 0.15 introduces several new RPC methods:
 - `listwallets` lists wallets which are currently loaded. See the *Multi-wallet* section
   of these release notes for full details (See [Multi-wallet support](#multi-wallet-support)).
 - `uptime` returns the total runtime of the `bitcoind` server since its last start (See [PR 10400](https://github.com/bitcoin/bitcoin/pull/10400)).
+=======
+- `abortrescan` stops current wallet rescan, e.g. when triggered by an `importprivkey` call (See [PR 10208](https://github.com/bitnova/bitnova/pull/10208)).
+- `combinerawtransaction` accepts a JSON array of raw transactions and combines them into a single raw transaction (See [PR 10571](https://github.com/bitnova/bitnova/pull/10571)).
+- `estimaterawfee` returns raw fee data so that customized logic can be implemented to analyze the data and calculate estimates. See [Fee Estimation Improvements](#fee-estimation-improvements) for full details on changes to the fee estimation logic and interface.
+- `getchaintxstats` returns statistics about the total number and rate of transactions
+  in the chain (See [PR 9733](https://github.com/bitnova/bitnova/pull/9733)).
+- `listwallets` lists wallets which are currently loaded. See the *Multi-wallet* section
+  of these release notes for full details (See [Multi-wallet support](#multi-wallet-support)).
+- `uptime` returns the total runtime of the `bitnovad` server since its last start (See [PR 10400](https://github.com/bitnova/bitnova/pull/10400)).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Low-level RPC changes
 ---------------------
 
+<<<<<<< HEAD
 - When using Bitcoin Core in multi-wallet mode, RPC requests for wallet methods must specify
+=======
+- When using BitNova Core in multi-wallet mode, RPC requests for wallet methods must specify
+>>>>>>> 5360f2baff (Initialized BitNova project)
   the wallet that they're intended for. See [Multi-wallet support](#multi-wallet-support) for full details.
 
 - The new database model no longer stores information about transaction
@@ -222,6 +330,7 @@ Low-level RPC changes
   `bytes_serialized`. The first is a more accurate estimate of actual disk usage, but
   is not deterministic. The second is unrelated to disk usage, but is a
   database-independent metric of UTXO set size: it counts every UTXO entry as 50 + the
+<<<<<<< HEAD
   length of its scriptPubKey (See [PR 10426](https://github.com/bitcoin/bitcoin/pull/10426)).
 
 - `signrawtransaction` can no longer be used to combine multiple transactions into a single transaction. Instead, use the new `combinerawtransaction` RPC (See [PR 10571](https://github.com/bitcoin/bitcoin/pull/10571)).
@@ -231,6 +340,17 @@ Low-level RPC changes
 - `estimatepriority` and `estimatesmartpriority` have been removed. See [Removal of Coin Age Priority](#removal-of-coin-age-priority).
 
 - The `listunspent` RPC now takes a `query_options` argument (see [PR 8952](https://github.com/bitcoin/bitcoin/pull/8952)), which is a JSON object
+=======
+  length of its scriptPubKey (See [PR 10426](https://github.com/bitnova/bitnova/pull/10426)).
+
+- `signrawtransaction` can no longer be used to combine multiple transactions into a single transaction. Instead, use the new `combinerawtransaction` RPC (See [PR 10571](https://github.com/bitnova/bitnova/pull/10571)).
+
+- `fundrawtransaction` no longer accepts a `reserveChangeKey` option. This option used to allow RPC users to fund a raw transaction using an key from the keypool for the change address without removing it from the available keys in the keypool. The key could then be re-used for a `getnewaddress` call, which could potentially result in confusing or dangerous behaviour (See [PR 10784](https://github.com/bitnova/bitnova/pull/10784)).
+
+- `estimatepriority` and `estimatesmartpriority` have been removed. See [Removal of Coin Age Priority](#removal-of-coin-age-priority).
+
+- The `listunspent` RPC now takes a `query_options` argument (see [PR 8952](https://github.com/bitnova/bitnova/pull/8952)), which is a JSON object
+>>>>>>> 5360f2baff (Initialized BitNova project)
   containing one or more of the following members:
   - `minimumAmount` - a number specifying the minimum value of each UTXO
   - `maximumAmount` - a number specifying the maximum value of each UTXO
@@ -240,6 +360,7 @@ Low-level RPC changes
 - The `getmempoolancestors`, `getmempooldescendants`, `getmempoolentry` and `getrawmempool` RPCs no longer return `startingpriority` and `currentpriority`. See [Removal of Coin Age Priority](#removal-of-coin-age-priority).
 
 - The `dumpwallet` RPC now returns the full absolute path to the dumped wallet. It
+<<<<<<< HEAD
   used to return no value, even if successful (See [PR 9740](https://github.com/bitcoin/bitcoin/pull/9740)).
 
 - In the `getpeerinfo` RPC, the return object for each peer now returns an `addrbind` member, which contains the ip address and port of the connection to the peer. This is in addition to the `addrlocal` member which contains the ip address and port of the local node as reported by the peer (See [PR 10478](https://github.com/bitcoin/bitcoin/pull/10478)).
@@ -251,11 +372,28 @@ Low-level RPC changes
 - The `resendwallettransactions` RPC throws an error if the `-walletbroadcast` option is set to false (See [PR 10995](https://github.com/bitcoin/bitcoin/pull/10995)).
 
 - The second argument in the `submitblock` RPC argument has been renamed from `parameters` to `dummy`. This argument never had any effect, and the renaming is simply to communicate this fact to the user (See [PR 10191](https://github.com/bitcoin/bitcoin/pull/10191))
+=======
+  used to return no value, even if successful (See [PR 9740](https://github.com/bitnova/bitnova/pull/9740)).
+
+- In the `getpeerinfo` RPC, the return object for each peer now returns an `addrbind` member, which contains the ip address and port of the connection to the peer. This is in addition to the `addrlocal` member which contains the ip address and port of the local node as reported by the peer (See [PR 10478](https://github.com/bitnova/bitnova/pull/10478)).
+
+- The `disconnectnode` RPC can now disconnect a node specified by node ID (as well as by IP address/port). To disconnect a node based on node ID, call the RPC with the new `nodeid` argument (See [PR 10143](https://github.com/bitnova/bitnova/pull/10143)).
+
+- The second argument in `prioritisetransaction` has been renamed from `priority_delta` to `dummy` since BitNova Core no longer has a concept of coin age priority. The `dummy` argument has no functional effect, but is retained for positional argument compatibility. See [Removal of Coin Age Priority](#removal-of-coin-age-priority).
+
+- The `resendwallettransactions` RPC throws an error if the `-walletbroadcast` option is set to false (See [PR 10995](https://github.com/bitnova/bitnova/pull/10995)).
+
+- The second argument in the `submitblock` RPC argument has been renamed from `parameters` to `dummy`. This argument never had any effect, and the renaming is simply to communicate this fact to the user (See [PR 10191](https://github.com/bitnova/bitnova/pull/10191))
+>>>>>>> 5360f2baff (Initialized BitNova project)
   (Clients should, however, use positional arguments for `submitblock` in order to be compatible with BIP 22.)
 
 - The `verbose` argument of `getblock` has been renamed to `verbosity` and now takes an integer from 0 to 2. Verbose level 0 is equivalent to `verbose=false`. Verbose level 1 is equivalent to `verbose=true`. Verbose level 2 will give the full transaction details of each transaction in the output as given by `getrawtransaction`. The old behavior of using the `verbose` named argument and a boolean value is still maintained for compatibility.
 
+<<<<<<< HEAD
 - Error codes have been updated to be more accurate for the following error cases (See [PR 9853](https://github.com/bitcoin/bitcoin/pull/9853)):
+=======
+- Error codes have been updated to be more accurate for the following error cases (See [PR 9853](https://github.com/bitnova/bitnova/pull/9853)):
+>>>>>>> 5360f2baff (Initialized BitNova project)
   - `getblock` now returns RPC_MISC_ERROR if the block can't be found on disk (for
   example if the block has been pruned). Previously returned RPC_INTERNAL_ERROR.
   - `pruneblockchain` now returns RPC_MISC_ERROR if the blocks cannot be pruned
@@ -268,13 +406,21 @@ Low-level RPC changes
   or subnet is invalid. Previously returned RPC_CLIENT_NODE_ALREADY_ADDED.
   - `setban` now returns RPC_CLIENT_INVALID_IP_OR_SUBNET if the user tries to unban
   a node that has not previously been banned. Previously returned RPC_MISC_ERROR.
+<<<<<<< HEAD
   - `removeprunedfunds` now returns RPC_WALLET_ERROR if `bitcoind` is unable to remove
+=======
+  - `removeprunedfunds` now returns RPC_WALLET_ERROR if `bitnovad` is unable to remove
+>>>>>>> 5360f2baff (Initialized BitNova project)
   the transaction. Previously returned RPC_INTERNAL_ERROR.
   - `removeprunedfunds` now returns RPC_INVALID_PARAMETER if the transaction does not
   exist in the wallet. Previously returned RPC_INTERNAL_ERROR.
   - `fundrawtransaction` now returns RPC_INVALID_ADDRESS_OR_KEY if an invalid change
   address is provided. Previously returned RPC_INVALID_PARAMETER.
+<<<<<<< HEAD
   - `fundrawtransaction` now returns RPC_WALLET_ERROR if `bitcoind` is unable to create
+=======
+  - `fundrawtransaction` now returns RPC_WALLET_ERROR if `bitnovad` is unable to create
+>>>>>>> 5360f2baff (Initialized BitNova project)
   the transaction. The error message provides further details. Previously returned
   RPC_INTERNAL_ERROR.
   - `bumpfee` now returns RPC_INVALID_PARAMETER if the provided transaction has
@@ -331,17 +477,28 @@ Low-level RPC changes
 - #9740 `9fec4da` Add friendly output to dumpwallet (aideca)
 - #10426 `16f6c98` Replace bytes_serialized with bogosize (sipa)
 - #10252 `980deaf` RPC/Mining: Restore API compatibility for prioritisetransaction (luke-jr)
+<<<<<<< HEAD
 - #9672 `46311e7` Opt-into-RBF for RPC & bitcoin-tx (luke-jr)
+=======
+- #9672 `46311e7` Opt-into-RBF for RPC & bitnova-tx (luke-jr)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #10481 `9c248e3` Decodehextx scripts sanity check  (achow101)
 - #10488 `fa1f106` Note that the prioritizetransaction dummy value is deprecated, and has no meaning (TheBlueMatt)
 - #9738 `c94b89e` gettxoutproof() should return consistent result (jnewbery)
 - #10191 `00350bd` [trivial] Rename unused RPC arguments 'dummy' (jnewbery)
 - #10627 `b62b4c8` fixed listunspent rpc convert parameter (tnakagawa)
 - #10412 `bef02fb` Improve wallet rescan API (ryanofsky)
+<<<<<<< HEAD
 - #10400 `1680ee0` [RPC] Add an uptime command that displays the amount of time (in seconds) bitcoind has been running (rvelhote)
 - #10683 `d81bec7` rpc: Move the `generate` RPC call to rpcwallet (laanwj)
 - #10710 `30bc0f6` REST/RPC example update (Mirobit)
 - #10747 `9edda0c` [rpc] fix verbose argument for getblock in bitcoin-cli (jnewbery)
+=======
+- #10400 `1680ee0` [RPC] Add an uptime command that displays the amount of time (in seconds) bitnovad has been running (rvelhote)
+- #10683 `d81bec7` rpc: Move the `generate` RPC call to rpcwallet (laanwj)
+- #10710 `30bc0f6` REST/RPC example update (Mirobit)
+- #10747 `9edda0c` [rpc] fix verbose argument for getblock in bitnova-cli (jnewbery)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #10589 `104f5f2` More economical fee estimates for RBF and RPC options to control (morcos)
 - #10543 `b27b004` Change API to estimaterawfee (morcos)
 - #10807 `afd2fca` getbalance example covers at least 6 confirms (instagibbs)
@@ -450,7 +607,11 @@ Low-level RPC changes
 - #10136 `81da4c7` build: Disable Wshadow warning (laanwj)
 - #10166 `64962ae` Ignore Doxyfile generated from Doxyfile.in template (paveljanik)
 - #10239 `0416ea9` Make Boost use std::atomic internally (sipa)
+<<<<<<< HEAD
 - #10228 `27faa6c` build: regenerate bitcoin-config.h as necessary (theuni)
+=======
+- #10228 `27faa6c` build: regenerate bitnova-config.h as necessary (theuni)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #10273 `8979f45` [scripts] Minor improvements to `macdeployqtplus` script (chrisgavin)
 - #10325 `a26280b` 0.15.0 Depends Updates (fanquake)
 - #10328 `79aeff6` Update contrib/debian to latest Ubuntu PPA upload (TheBlueMatt)
@@ -576,7 +737,11 @@ Low-level RPC changes
 - #9497 `2c781fb` CCheckQueue Unit Tests (JeremyRubin)
 - #10024 `9225de2` [trivial] Use log.info() instead of print() in remaining functional test cases (jnewbery)
 - #9956 `3192e52` Reorganise qa directory (jnewbery)
+<<<<<<< HEAD
 - #10017 `02d64bd` combine_logs.py - aggregates log files from multiple bitcoinds during functional tests (jnewbery)
+=======
+- #10017 `02d64bd` combine_logs.py - aggregates log files from multiple bitnovads during functional tests (jnewbery)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #10047 `dfef6b6` [tests] Remove unused variables and imports (practicalswift)
 - #9701 `a230b05` Make bumpfee tests less fragile (ryanofsky)
 - #10053 `ca20923` [test] Allow functional test cases to be skipped (jnewbery)
@@ -596,7 +761,11 @@ Low-level RPC changes
 - #10152 `080d7c7` [trivial] remove unused line in Travis config (jnewbery)
 - #10159 `df1ca9e` [tests] color test results and sort alphabetically (jnewbery)
 - #10124 `88799ea` [test] Suppress test logging spam (jnewbery)
+<<<<<<< HEAD
 - #10142 `ed09dd3` Run bitcoin_test-qt under minimal QPA platform (ryanofsky)
+=======
+- #10142 `ed09dd3` Run bitnova_test-qt under minimal QPA platform (ryanofsky)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #9949 `a27dbc5` [bench] Avoid function call arguments which are pointers to uninitialized values (practicalswift)
 - #10187 `b44adf9` tests: Fix test_runner return value in case of skipped test (laanwj)
 - #10197 `d86bb07` [tests] Functional test warnings (jnewbery)
@@ -634,7 +803,11 @@ Low-level RPC changes
 - #10415 `217b416` [tests] Speed up fuzzing by ~200x when using afl-fuzz (practicalswift)
 - #10445 `b4b057a` Add test for empty chain and reorg consistency for gettxoutsetinfo (gmaxwell)
 - #10423 `1aefc94` [tests] skipped tests should clean up after themselves (jnewbery)
+<<<<<<< HEAD
 - #10359 `329fc1d` [tests] functional tests should call BitcoinTestFramework start/stop node methods (jnewbery)
+=======
+- #10359 `329fc1d` [tests] functional tests should call BitNovaTestFramework start/stop node methods (jnewbery)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #10514 `e103b3f` Bugfix: missing == 0 after randrange (sipa)
 - #10515 `c871f32` [test] Add test for getchaintxstats (jimmysong)
 - #10509 `bea5b00` Remove xvfb configuration from travis (ryanofsky)
@@ -648,12 +821,20 @@ Low-level RPC changes
 - #10555 `643fa0b` [tests] various improvements to zmq_test.py (jnewbery)
 - #10533 `d083bd9` [tests] Use cookie auth instead of rpcuser and rpcpassword (achow101)
 - #10632 `c68a9a6` qa: Add stopatheight test (MarcoFalke)
+<<<<<<< HEAD
 - #10636 `4bc853b` [qa] util: Check return code after closing bitcoind proc (MarcoFalke)
+=======
+- #10636 `4bc853b` [qa] util: Check return code after closing bitnovad proc (MarcoFalke)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #10662 `e0a7801` Initialize randomness in benchmarks (achow101)
 - #10612 `7c87a9c` The young person's guide to the test_framework (jnewbery)
 - #10659 `acb1153` [qa] blockchain: Pass on closed connection during generate call (MarcoFalke)
 - #10690 `416af3e` [qa] Bugfix: allow overriding extra_args in ComparisonTestFramework (sdaftuar)
+<<<<<<< HEAD
 - #10556 `65cc7aa` Move stop/start functions from utils.py into BitcoinTestFramework (jnewbery)
+=======
+- #10556 `65cc7aa` Move stop/start functions from utils.py into BitNovaTestFramework (jnewbery)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #10704 `dd07f47` [tests] nits in dbcrash.py (jnewbery)
 - #10743 `be82498` [test] don't run dbcrash.py on Travis (jnewbery)
 - #10761 `d3b5870` [tests] fix replace_by_fee.py (jnewbery)
@@ -694,7 +875,11 @@ Low-level RPC changes
 - #9734 `0c17afc` Add updating of chainTxData to release process (sipa)
 - #10063 `530fcbd` add missing spaces so that markdown recognizes headline (flack)
 - #10085 `db1ae54` Docs: remove 'noconnect' option (jlopp)
+<<<<<<< HEAD
 - #10090 `8e4f7e7` Update bitcoin.conf with example for pruning (coinables)
+=======
+- #10090 `8e4f7e7` Update bitnova.conf with example for pruning (coinables)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #9424 `1a5aaab` Change LogAcceptCategory to use uint32_t rather than sets of strings (gmaxwell)
 - #10036 `fbf36ca` Fix init README format to render correctly on github (jlopp)
 - #10058 `a2cd0b0` No need to use OpenSSL malloc/free (tjps)
@@ -718,10 +903,17 @@ Low-level RPC changes
 - #10372 `15254e9` Add perf counter data to GetStrongRandBytes state in scheduler (TheBlueMatt)
 - #10461 `55b72f3` Update style guide (sipa)
 - #10486 `10e8c0a` devtools: Retry after signing fails in github-merge (laanwj)
+<<<<<<< HEAD
 - #10447 `f259263` Make bitcoind invalid argument error message specific (laanwj)
 - #10495 `6a38b79` contrib: Update location of seeds.txt (laanwj)
 - #10469 `b6b150b` Fixing typo in rpcdump.cpp help message (keystrike)
 - #10451 `27b9931` contrib/init/bitcoind.openrcconf: Don't disable wallet by default (luke-jr)
+=======
+- #10447 `f259263` Make bitnovad invalid argument error message specific (laanwj)
+- #10495 `6a38b79` contrib: Update location of seeds.txt (laanwj)
+- #10469 `b6b150b` Fixing typo in rpcdump.cpp help message (keystrike)
+- #10451 `27b9931` contrib/init/bitnovad.openrcconf: Don't disable wallet by default (luke-jr)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #10323 `00d3692` Update to latest libsecp256k1 master (sipa)
 - #10422 `cec9e1e` Fix timestamp in fee estimate debug message (morcos)
 - #10566 `5d034ee` [docs] Use the "domain name setup" image (previously unused) in the gitian docs (practicalswift)
@@ -740,9 +932,15 @@ Low-level RPC changes
 - #10728 `7397af9` fix typo in help text for removeprunedfunds (AkioNak)
 - #10193 `6dbcc74` scripted-diff: Remove #include <boost/foreach.hpp> (jtimon)
 - #10676 `379aed0` document script-based return fields for validateaddress (instagibbs)
+<<<<<<< HEAD
 - #10651 `cef4b5c` Verify binaries from bitcoincore.org and bitcoin.org (TheBlueMatt)
 - #10786 `ca4c545` Add PR description to merge commit in github-merge.py (sipa)
 - #10812 `c5904e8` [utils] Allow bitcoin-cli's -rpcconnect option to be used with square brackets (jnewbery)
+=======
+- #10651 `cef4b5c` Verify binaries from bitnovacore.org and bitnova.org (TheBlueMatt)
+- #10786 `ca4c545` Add PR description to merge commit in github-merge.py (sipa)
+- #10812 `c5904e8` [utils] Allow bitnova-cli's -rpcconnect option to be used with square brackets (jnewbery)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #10842 `3895e25` Fix incorrect Doxygen tag (@ince → @since). Doxygen parameter name matching (practicalswift)
 - #10681 `df0793f` add gdb attach process to test README (instagibbs)
 - #10789 `1124328` Punctuation/grammer fixes in rpcwallet.cpp (stevendlander)
@@ -759,7 +957,11 @@ Low-level RPC changes
 - #9792 `342b9bc` FastRandomContext improvements and switch to ChaCha20 (sipa)
 - #9505 `67ed40e` Prevector Quick Destruct (JeremyRubin)
 - #10820 `ef37f20` Use cpuid intrinsics instead of asm code (sipa)
+<<<<<<< HEAD
 - #9999 `a328904` [LevelDB] Plug leveldb logs to bitcoin logs (NicolasDorier)
+=======
+- #9999 `a328904` [LevelDB] Plug leveldb logs to bitnova logs (NicolasDorier)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #9693 `c5e9e42` Prevent integer overflow in ReadVarInt (gmaxwell)
 - #10129 `351d0ad` scheduler: fix sub-second precision with boost < 1.50 (theuni)
 - #10153 `fade788` logging: Fix off-by-one for shrinkdebugfile default (MarcoFalke)
@@ -771,7 +973,11 @@ Low-level RPC changes
 - #10837 `8bc6d1f` Fix resource leak on error in GetDevURandom (corebob)
 - #10832 `89bb036` init: Factor out AppInitLockDataDirectory and fix startup core dump issue (laanwj)
 - #10914 `b995a37` Add missing lock in CScheduler::AreThreadsServicingQueue() (TheBlueMatt)
+<<<<<<< HEAD
 - #10958 `659c096` Update to latest Bitcoin patches for LevelDB (sipa)
+=======
+- #10958 `659c096` Update to latest BitNova patches for LevelDB (sipa)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #10919 `c1c671f` Fix more init bugs (TheBlueMatt)
 
 Credits
@@ -875,4 +1081,8 @@ Thanks to everyone who directly contributed to this release:
 - Warren Togami
 - Wladimir J. van der Laan
 
+<<<<<<< HEAD
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
+=======
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)

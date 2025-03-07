@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 // Copyright (c) 2009-2022 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <bitcoin-build-config.h> // IWYU pragma: keep
+=======
+// Copyright (c) 2009-2022 The BitNova Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#include <bitnova-build-config.h> // IWYU pragma: keep
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #include <chainparamsbase.h>
 #include <clientversion.h>
@@ -43,7 +51,11 @@ static const int CONTINUE_EXECUTION=-1;
 
 const TranslateFn G_TRANSLATION_FUN{nullptr};
 
+<<<<<<< HEAD
 static void SetupBitcoinTxArgs(ArgsManager &argsman)
+=======
+static void SetupBitNovaTxArgs(ArgsManager &argsman)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 {
     SetupHelpOptions(argsman);
 
@@ -88,7 +100,11 @@ static void SetupBitcoinTxArgs(ArgsManager &argsman)
 //
 static int AppInitRawTx(int argc, char* argv[])
 {
+<<<<<<< HEAD
     SetupBitcoinTxArgs(gArgs);
+=======
+    SetupBitNovaTxArgs(gArgs);
+>>>>>>> 5360f2baff (Initialized BitNova project)
     std::string error;
     if (!gArgs.ParseParameters(argc, argv, error)) {
         tfm::format(std::cerr, "Error parsing command line arguments: %s\n", error);
@@ -107,17 +123,29 @@ static int AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || HelpRequested(gArgs) || gArgs.GetBoolArg("-version", false)) {
         // First part of help message is specific to this utility
+<<<<<<< HEAD
         std::string strUsage = CLIENT_NAME " bitcoin-tx utility version " + FormatFullVersion() + "\n";
+=======
+        std::string strUsage = CLIENT_NAME " bitnova-tx utility version " + FormatFullVersion() + "\n";
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         if (gArgs.GetBoolArg("-version", false)) {
             strUsage += FormatParagraph(LicenseInfo());
         } else {
             strUsage += "\n"
+<<<<<<< HEAD
                 "The bitcoin-tx tool is used for creating and modifying bitcoin transactions.\n\n"
                 "bitcoin-tx can be used with \"<hex-tx> [commands]\" to update a hex-encoded bitcoin transaction, or with \"-create [commands]\" to create a hex-encoded bitcoin transaction.\n"
                 "\n"
                 "Usage: bitcoin-tx [options] <hex-tx> [commands]\n"
                 "or:    bitcoin-tx [options] -create [commands]\n"
+=======
+                "The bitnova-tx tool is used for creating and modifying bitnova transactions.\n\n"
+                "bitnova-tx can be used with \"<hex-tx> [commands]\" to update a hex-encoded bitnova transaction, or with \"-create [commands]\" to create a hex-encoded bitnova transaction.\n"
+                "\n"
+                "Usage: bitnova-tx [options] <hex-tx> [commands]\n"
+                "or:    bitnova-tx [options] -create [commands]\n"
+>>>>>>> 5360f2baff (Initialized BitNova project)
                 "\n";
             strUsage += gArgs.GetHelpMessage();
         }
@@ -819,7 +847,11 @@ static int CommandLineRawTx(int argc, char* argv[])
             if (argc < 2)
                 throw std::runtime_error("too few parameters");
 
+<<<<<<< HEAD
             // param: hex-encoded bitcoin transaction
+=======
+            // param: hex-encoded bitnova transaction
+>>>>>>> 5360f2baff (Initialized BitNova project)
             std::string strHexTx(argv[1]);
             if (strHexTx == "-")                 // "-" implies standard input
                 strHexTx = readStdin();

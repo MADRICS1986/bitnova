@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 Bitcoin Core version 0.9.2 is now available from:
 
   https://bitcoin.org/bin/0.9.2/
+=======
+BitNova Core version 0.9.2 is now available from:
+
+  https://bitnova.org/bin/0.9.2/
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a new minor version release, bringing mostly bug fixes and some minor
 improvements. OpenSSL has been updated because of a security issue (CVE-2014-0224).
@@ -8,15 +14,24 @@ Upgrading to this release is recommended.
 
 Please report bugs using the issue tracker at github:
 
+<<<<<<< HEAD
   https://github.com/bitcoin/bitcoin/issues
+=======
+  https://github.com/bitnova/bitnova/issues
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 How to Upgrade
 --------------
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
+<<<<<<< HEAD
 installer (on Windows) or just copy over /Applications/Bitcoin-Qt (on Mac) or
 bitcoind/bitcoin-qt (on Linux).
+=======
+installer (on Windows) or just copy over /Applications/BitNova-Qt (on Mac) or
+bitnovad/bitnova-qt (on Linux).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 If you are upgrading from version 0.7.2 or earlier, the first time you run
 0.9.2 your blockchain files will be re-indexed, which will take anywhere from 
@@ -130,7 +145,11 @@ GUI:
 - Catch Windows shutdown events while client is running
 - Optionally add third party links to transaction context menu
 - Check for !pixmap() before trying to export QR code (avoids crashes when no QR code could be generated)
+<<<<<<< HEAD
 - Fix "Start bitcoin on system login"
+=======
+- Fix "Start bitnova on system login"
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Miscellaneous:
 

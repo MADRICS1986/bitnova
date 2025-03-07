@@ -1,12 +1,20 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2020-present The Bitcoin Core developers
+=======
+# Copyright (c) 2020-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test generate* RPCs."""
 
 from concurrent.futures import ThreadPoolExecutor
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.wallet import MiniWallet
 from test_framework.util import (
     assert_equal,
@@ -14,7 +22,11 @@ from test_framework.util import (
 )
 
 
+<<<<<<< HEAD
 class RPCGenerateTest(BitcoinTestFramework):
+=======
+class RPCGenerateTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
 

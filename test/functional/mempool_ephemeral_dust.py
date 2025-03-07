@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2024-present The Bitcoin Core developers
+=======
+# Copyright (c) 2024-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +13,11 @@ from test_framework.messages import (
     COIN,
     CTxOut,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.mempool_util import assert_mempool_contents
 from test_framework.util import (
     assert_equal,
@@ -20,7 +28,11 @@ from test_framework.wallet import (
     MiniWallet,
 )
 
+<<<<<<< HEAD
 class EphemeralDustTest(BitcoinTestFramework):
+=======
+class EphemeralDustTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         # Mempools should match via 1P1C p2p relay
         self.num_nodes = 2

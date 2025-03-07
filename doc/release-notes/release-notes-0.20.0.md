@@ -1,36 +1,60 @@
 0.20.0 Release Notes
 ====================
 
+<<<<<<< HEAD
 Bitcoin Core version 0.20.0 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.20.0/>
+=======
+BitNova Core version 0.20.0 is now available from:
+
+  <https://bitnovacore.org/bin/bitnova-core-0.20.0/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This release includes new features, various bug fixes and performance
 improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 How to Upgrade
 ==============
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
+<<<<<<< HEAD
 installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
 or `bitcoind`/`bitcoin-qt` (on Linux).
 
 Upgrading directly from a version of Bitcoin Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
 wallet versions of Bitcoin Core are generally supported.
+=======
+installer (on Windows) or just copy over `/Applications/BitNova-Qt` (on Mac)
+or `bitnovad`/`bitnova-qt` (on Linux).
+
+Upgrading directly from a version of BitNova Core that has reached its EOL is
+possible, but it might take some time if the data directory needs to be migrated. Old
+wallet versions of BitNova Core are generally supported.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Compatibility
 ==============
 
+<<<<<<< HEAD
 Bitcoin Core is supported and extensively tested on operating systems
 using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  Bitcoin
 Core should also work on most other Unix-like systems but is not as
@@ -39,6 +63,16 @@ unsupported systems.
 
 From Bitcoin Core 0.20.0 onwards, macOS versions earlier than 10.12 are no
 longer supported. Additionally, Bitcoin Core does not yet change appearance
+=======
+BitNova Core is supported and extensively tested on operating systems
+using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  BitNova
+Core should also work on most other Unix-like systems but is not as
+frequently tested on them.  It is not recommended to use BitNova Core on
+unsupported systems.
+
+From BitNova Core 0.20.0 onwards, macOS versions earlier than 10.12 are no
+longer supported. Additionally, BitNova Core does not yet change appearance
+>>>>>>> 5360f2baff (Initialized BitNova project)
 when macOS "dark mode" is activated.
 
 Known Bugs
@@ -61,20 +95,34 @@ Notable changes
 P2P and network changes
 -----------------------
 
+<<<<<<< HEAD
 #### Removal of BIP61 reject network messages from Bitcoin Core
+=======
+#### Removal of BIP61 reject network messages from BitNova Core
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 The `-enablebip61` command line option to enable BIP61 has been removed.
 (#17004)
 
+<<<<<<< HEAD
 This feature has been disabled by default since Bitcoin Core version 0.18.0.
+=======
+This feature has been disabled by default since BitNova Core version 0.18.0.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 Nodes on the network can not generally be trusted to send valid messages
 (including reject messages), so this should only ever be used when
 connected to a trusted node.  Please use the alternatives recommended
 below if you rely on this removed feature:
 
+<<<<<<< HEAD
 - Testing or debugging of implementations of the Bitcoin P2P network protocol
   should be done by inspecting the log messages that are produced by a recent
   version of Bitcoin Core. Bitcoin Core logs debug messages
+=======
+- Testing or debugging of implementations of the BitNova P2P network protocol
+  should be done by inspecting the log messages that are produced by a recent
+  version of BitNova Core. BitNova Core logs debug messages
+>>>>>>> 5360f2baff (Initialized BitNova project)
   (`-debug=<category>`) to a stream (`-printtoconsole`) or to a file
   (`-debuglogfile=<debug.log>`).
 
@@ -138,9 +186,15 @@ Updated RPCs
 Build System
 ------------
 
+<<<<<<< HEAD
 - OpenSSL is no longer used by Bitcoin Core.  (#17265)
 
 - BIP70 support has been fully removed from Bitcoin Core. The
+=======
+- OpenSSL is no longer used by BitNova Core.  (#17265)
+
+- BIP70 support has been fully removed from BitNova Core. The
+>>>>>>> 5360f2baff (Initialized BitNova project)
   `--enable-bip70` option remains, but it will throw an error during configure.
   (#17165)
 
@@ -163,16 +217,26 @@ New settings
 - A new `-asmap` configuration option has been added to diversify the
   node's network connections by mapping IP addresses Autonomous System
   Numbers (ASNs) and then limiting the number of connections made to any
+<<<<<<< HEAD
   single ASN.  See [issue #16599](https://github.com/bitcoin/bitcoin/issues/16599),
   [PR #16702](https://github.com/bitcoin/bitcoin/pull/16702), and the
   `bitcoind help` for more information.  This option is experimental and
+=======
+  single ASN.  See [issue #16599](https://github.com/bitnova/bitnova/issues/16599),
+  [PR #16702](https://github.com/bitnova/bitnova/pull/16702), and the
+  `bitnovad help` for more information.  This option is experimental and
+>>>>>>> 5360f2baff (Initialized BitNova project)
   subject to removal or breaking changes in future releases, so the
   legacy /16 prefix mapping of IP addresses remains the default.  (#16702)
 
 Updated settings
 ----------------
 
+<<<<<<< HEAD
 - All custom settings configured when Bitcoin Core starts are now
+=======
+- All custom settings configured when BitNova Core starts are now
+>>>>>>> 5360f2baff (Initialized BitNova project)
   written to the `debug.log` file to assist troubleshooting.  (#16115)
 
 - Importing blocks upon startup via the `bootstrap.dat` file no longer
@@ -198,7 +262,11 @@ Removed settings
 GUI changes
 -----------
 
+<<<<<<< HEAD
 - The "Start Bitcoin Core on system login" option has been removed on macOS.
+=======
+- The "Start BitNova Core on system login" option has been removed on macOS.
+>>>>>>> 5360f2baff (Initialized BitNova project)
   (#17567)
 
 - In the Peers window, the details for a peer now displays a `Mapped AS`
@@ -206,17 +274,30 @@ GUI changes
   peer selection. See the `-asmap` configuration option in _New
   Settings_, above.  (#18402)
 
+<<<<<<< HEAD
 - A "known bug" [announced](https://bitcoincore.org/en/releases/0.18.0/#wallet-gui)
   in the release notes of version 0.18 has been fixed.  The issue
   affected anyone who simultaneously used multiple Bitcoin Core wallets
+=======
+- A "known bug" [announced](https://bitnovacore.org/en/releases/0.18.0/#wallet-gui)
+  in the release notes of version 0.18 has been fixed.  The issue
+  affected anyone who simultaneously used multiple BitNova Core wallets
+>>>>>>> 5360f2baff (Initialized BitNova project)
   and the GUI coin control feature. (#18894)
 
 - For watch-only wallets, creating a new transaction in the Send screen
   or fee bumping an existing transaction in the Transactions screen will
+<<<<<<< HEAD
   automatically copy a Partially-Signed Bitcoin Transaction (PSBT) to
   the system clipboard.  This can then be pasted into an external
   program such as [HWI](https://github.com/bitcoin-core/HWI) for
   signing.  Future versions of Bitcoin Core should support a GUI option
+=======
+  automatically copy a Partially-Signed BitNova Transaction (PSBT) to
+  the system clipboard.  This can then be pasted into an external
+  program such as [HWI](https://github.com/bitnova-core/HWI) for
+  signing.  Future versions of BitNova Core should support a GUI option
+>>>>>>> 5360f2baff (Initialized BitNova project)
   for finalizing and broadcasting PSBTs, but for now the debug console
   may be used with the `finalizepsbt` and `sendrawtransaction` RPCs.
   (#16944, #17492)
@@ -246,8 +327,13 @@ Wallet
 Documentation changes
 ---------------------
 
+<<<<<<< HEAD
 - Bitcoin Core's automatically-generated source code documentation is
   now available at https://doxygen.bitcoincore.org.  (#17596)
+=======
+- BitNova Core's automatically-generated source code documentation is
+  now available at https://doxygen.bitnovacore.org.  (#17596)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Low-level changes
 =================
@@ -255,7 +341,11 @@ Low-level changes
 Utilities
 ---------
 
+<<<<<<< HEAD
 - The `bitcoin-cli` utility used with the `-getinfo` parameter now
+=======
+- The `bitnova-cli` utility used with the `-getinfo` parameter now
+>>>>>>> 5360f2baff (Initialized BitNova project)
   returns a `headers` field with the number of downloaded block headers
   on the best headers chain (similar to the `blocks` field that is also
   returned) and a `verificationprogress` field that estimates how much
@@ -263,7 +353,11 @@ Utilities
   information returned no longer includes the `protocolversion`,
   `walletversion`, and `keypoololdest` fields.  (#17302, #17650)
 
+<<<<<<< HEAD
 - The `bitcoin-cli` utility now accepts a `-stdinwalletpassphrase`
+=======
+- The `bitnova-cli` utility now accepts a `-stdinwalletpassphrase`
+>>>>>>> 5360f2baff (Initialized BitNova project)
   parameter that can be used when calling the `walletpassphrase` and
   `walletpassphrasechange` RPCs to read the passphrase from standard
   input without echoing it to the terminal, improving security against
@@ -450,7 +544,11 @@ Build system
 - #15756 Add shortcuts for tab tools (promag)
 - #16944 create PSBT with watch-only wallet (Sjors)
 - #16964 Change sendcoins dialogue Yes to Send (instagibbs)
+<<<<<<< HEAD
 - #17068 Always generate `bitcoinstrings.cpp` on `make translate` (D4nte)
+=======
+- #17068 Always generate `bitnovastrings.cpp` on `make translate` (D4nte)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #17096 Rename debug window (Zero-1729)
 - #17105 Make RPCConsole::TabTypes an enum class (promag)
 - #17125 Add toolTip and placeholderText to sign message fields (dannmat)
@@ -524,7 +622,11 @@ Build system
 - #17730 Remove Qt networking features (fanquake)
 - #17738 Remove linking librt for backwards compatibility (fanquake)
 - #17740 Remove configure checks for win libraries we don't link against (fanquake)
+<<<<<<< HEAD
 - #17741 Included `test_bitcoin-qt` in msvc build (sipsorcery)
+=======
+- #17741 Included `test_bitnova-qt` in msvc build (sipsorcery)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #17756 Remove `WINDOWS_BITS` from build system (fanquake)
 - #17769 Set `AC_PREREQ` to 2.69 (fanquake)
 - #17880 Add -Wdate-time to Werror flags (fanquake)
@@ -544,7 +646,11 @@ Build system
 - #18290 Set minimum Automake version to 1.13 (hebasto)
 - #18320 guix: Remove now-unnecessary gcc make flag (dongcarl)
 - #18331 Use git archive as source tarball (hebasto)
+<<<<<<< HEAD
 - #18397 Fix libevent linking for `bench_bitcoin` binary (hebasto)
+=======
+- #18397 Fix libevent linking for `bench_bitnova` binary (hebasto)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #18426 scripts: `Previous_release`: improve behaviour on failed download (theStack)
 - #18429 Remove double `LIBBITCOIN_SERVER` from bench-Makefile (brakmic)
 - #18528 Create `test_fuzz` library from src/test/fuzz/fuzz.cpp (brakmic)
@@ -580,7 +686,11 @@ Build system
 - #18395 scripts: Add pe dylib checking to symbol-check.py (fanquake)
 - #18415 scripts: Add macho tests to test-security-check.py (fanquake)
 - #18425 releases: Update with new Windows code signing certificate (achow101)
+<<<<<<< HEAD
 - #18702 Fix ASLR for bitcoin-cli on Windows (fanquake)
+=======
+- #18702 Fix ASLR for bitnova-cli on Windows (fanquake)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 ### Tests and QA
 - #12134 Build previous releases and run functional tests (Sjors)
@@ -608,7 +718,11 @@ Build system
 - #17140 Fix bug in `blockfilter_index_tests` (jimpo)
 - #17199 use default address type (bech32) for `wallet_bumpfee` tests (theStack)
 - #17205 ci: Enable address sanitizer (asan) stack-use-after-return checking (practicalswift)
+<<<<<<< HEAD
 - #17206 Add testcase to simulate bitcoin schema in leveldb (adamjonas)
+=======
+- #17206 Add testcase to simulate bitnova schema in leveldb (adamjonas)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #17209 Remove no longer needed UBSan suppressions (issues fixed). Add documentation (practicalswift)
 - #17220 Add unit testing for the CompressScript function (adamjonas)
 - #17225 Test serialisation as part of deserialisation fuzzing. Test round-trip equality where possible (practicalswift)
@@ -624,7 +738,11 @@ Build system
 - #17299 add reason checks for non-standard txs in `test_IsStandard` (theStack)
 - #17322 Fix input size assertion in `wallet_bumpfee.py` (instagibbs)
 - #17327 Add `rpc_fundrawtransaction` logging (jonatack)
+<<<<<<< HEAD
 - #17330 Add `shrinkdebugfile=0` to regtest bitcoin.conf (sdaftuar)
+=======
+- #17330 Add `shrinkdebugfile=0` to regtest bitnova.conf (sdaftuar)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #17340 Speed up fundrawtransaction test (jnewbery)
 - #17345 Do not instantiate CAddrDB for static call CAddrDB::Read() (hebasto)
 - #17362 Speed up `wallet_avoidreuse`, add logging (jonatack)
@@ -679,7 +797,11 @@ Build system
 - #18008 fix fuzzing using libFuzzer on macOS (fanquake)
 - #18013 bench: Fix benchmarks filters (elichai)
 - #18018 reset fIsBareMultisigStd after bare-multisig tests (fanquake)
+<<<<<<< HEAD
 - #18022 Fix appveyor `test_bitcoin` build of `*.raw` (MarcoFalke)
+=======
+- #18022 Fix appveyor `test_bitnova` build of `*.raw` (MarcoFalke)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #18037 util: Allow scheduler to be mocked (amitiuttarwar)
 - #18056 ci: Check for submodules (emilengler)
 - #18069 Replace 'regtest' leftovers by self.chain (theStack)
@@ -687,7 +809,11 @@ Build system
 - #18109 Avoid hitting some known minor tinyformat issues when fuzzing strprintf(…) (practicalswift)
 - #18155 Add harness which fuzzes EvalScript and VerifyScript using a fuzzed signature checker (practicalswift)
 - #18159 Add --valgrind option to `test/fuzz/test_runner.py` for running fuzzing test cases under valgrind (practicalswift)
+<<<<<<< HEAD
 - #18166 ci: Run fuzz testing test cases (bitcoin-core/qa-assets) under valgrind to catch memory errors (practicalswift)
+=======
+- #18166 ci: Run fuzz testing test cases (bitnova-core/qa-assets) under valgrind to catch memory errors (practicalswift)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #18172 Transaction expiry from mempool (0xB10C)
 - #18181 Remove incorrect assumptions in `validation_flush_tests` (MarcoFalke)
 - #18183 Set `catch_system_errors=no` on boost unit tests (MarcoFalke)
@@ -717,7 +843,11 @@ Build system
 - #18393 Don't assume presence of `__builtin_mul_overflow(…)` in `MultiplicationOverflow(…)` fuzzing harness (practicalswift)
 - #18406 add executable flag for `rpc_estimatefee.py` (theStack)
 - #18420 listsinceblock block height checks (jonatack)
+<<<<<<< HEAD
 - #18430 ci: Only clone bitcoin-core/qa-assets when fuzzing (MarcoFalke)
+=======
+- #18430 ci: Only clone bitnova-core/qa-assets when fuzzing (MarcoFalke)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #18438 ci: Use homebrew addon on native macos (hebasto)
 - #18447 Add coverage for script parse error in ParseScript (pierreN)
 - #18472 Remove unsafe `BOOST_TEST_MESSAGE` (MarcoFalke)
@@ -747,13 +877,21 @@ Build system
 
 ### Documentation
 - #16947 Doxygen-friendly script/descriptor.h comments (ch4ot1c)
+<<<<<<< HEAD
 - #16983 Add detailed info about Bitcoin Core files (hebasto)
+=======
+- #16983 Add detailed info about BitNova Core files (hebasto)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #16986 Doxygen-friendly CuckooCache comments (ch4ot1c)
 - #17022 move-only: Steps for "before major release branch-off" (MarcoFalke)
 - #17026 Update bips.md for default bech32 addresses in 0.20.0 (MarcoFalke)
 - #17081 Fix Makefile target in benchmarking.md (theStack)
 - #17102 Add missing indexes/blockfilter/basic to doc/files.md (MarcoFalke)
+<<<<<<< HEAD
 - #17119 Fix broken bitcoin-cli examples (andrewtoth)
+=======
+- #17119 Fix broken bitnova-cli examples (andrewtoth)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #17134 Add switch on enum example to developer notes (hebasto)
 - #17142 Update macdeploy README to include all files produced by `make deploy` (za-kk)
 - #17146 github: Add warning for bug reports (laanwj)
@@ -772,6 +910,7 @@ Build system
 - #17370 Update doc/bips.md with recent changes in master (MarcoFalke)
 - #17393 Added regtest config for linearize script (gr0kchain)
 - #17411 Add some better examples for scripted diff (laanwj)
+<<<<<<< HEAD
 - #17503 Remove bitness from bitcoin-qt help message and manpage (laanwj)
 - #17539 Update and improve Developer Notes (hebasto)
 - #17561 Changed MiniUPnPc link to https in dependencies.md (sandakersmann)
@@ -780,6 +919,16 @@ Build system
 - #17617 Unify unix epoch time descriptions (jonatack)
 - #17637 script: Add keyserver to verify-commits readme (emilengler)
 - #17648 Rename wallet-tool references to bitcoin-wallet (hel-o)
+=======
+- #17503 Remove bitness from bitnova-qt help message and manpage (laanwj)
+- #17539 Update and improve Developer Notes (hebasto)
+- #17561 Changed MiniUPnPc link to https in dependencies.md (sandakersmann)
+- #17596 Change doxygen URL to doxygen.bitnovacore.org (laanwj)
+- #17598 Update release process with latest changes (MarcoFalke)
+- #17617 Unify unix epoch time descriptions (jonatack)
+- #17637 script: Add keyserver to verify-commits readme (emilengler)
+- #17648 Rename wallet-tool references to bitnova-wallet (hel-o)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #17688 Add "ci" prefix to CONTRIBUTING.md (hebasto)
 - #17751 Use recommended shebang approach in documentation code block (hackerrdave)
 - #17752 Fix directory path for secp256k1 subtree in developer-notes (hackerrdave)
@@ -817,7 +966,11 @@ Build system
 ### Miscellaneous
 - #15600 lockedpool: When possible, use madvise to avoid including sensitive information in core dumps (luke-jr)
 - #15934 Merge settings one place instead of five places (ryanofsky)
+<<<<<<< HEAD
 - #16115 On bitcoind startup, write config args to debug.log (LarryRuane)
+=======
+- #16115 On bitnovad startup, write config args to debug.log (LarryRuane)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #16117 util: Replace boost sleep with std sleep (MarcoFalke)
 - #16161 util: Fix compilation errors in support/lockedpool.cpp (jkczyz)
 - #16802 scripts: In linearize, search for next position of magic bytes rather than fail (takinbo)
@@ -840,7 +993,11 @@ Build system
 - #17507 random: mark RandAddPeriodic and SeedPeriodic as noexcept (fanquake)
 - #17527 Fix CPUID subleaf iteration (sipa)
 - #17604 util: Make schedulebatchpriority advisory only (fanquake)
+<<<<<<< HEAD
 - #17650 util: Remove unwanted fields from bitcoin-cli -getinfo (malevolent)
+=======
+- #17650 util: Remove unwanted fields from bitnova-cli -getinfo (malevolent)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #17671 script: Fixed wget call in gitian-build.py (willyko)
 - #17699 Make env data logging optional (sipa)
 - #17721 util: Don't allow base58 decoding of non-base58 strings. add base58 tests (practicalswift)
@@ -984,4 +1141,8 @@ Thanks to everyone who directly contributed to this release:
 - Zero
 
 As well as to everyone that helped with translations on
+<<<<<<< HEAD
 [Transifex](https://www.transifex.com/bitcoin/bitcoin/).
+=======
+[Transifex](https://www.transifex.com/bitnova/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)

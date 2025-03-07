@@ -3,7 +3,11 @@ export LC_ALL=C
 set -e -o pipefail
 
 # Source the common prelude, which:
+<<<<<<< HEAD
 #   1. Checks if we're at the top directory of the Bitcoin Core repository
+=======
+#   1. Checks if we're at the top directory of the BitNova Core repository
+>>>>>>> 5360f2baff (Initialized BitNova project)
 #   2. Defines a few common functions and variables
 #
 # shellcheck source=libexec/prelude.bash
@@ -28,7 +32,11 @@ cmd_usage() {
     cat <<EOF
 Synopsis:
 
+<<<<<<< HEAD
     env DETACHED_SIGS_REPO=<path/to/bitcoin-detached-sigs> \\
+=======
+    env DETACHED_SIGS_REPO=<path/to/bitnova-detached-sigs> \\
+>>>>>>> 5360f2baff (Initialized BitNova project)
       ./contrib/guix/guix-codesign
 
 EOF
@@ -256,7 +264,11 @@ output directory.
 EOF
 }
 
+<<<<<<< HEAD
 # Deterministically build Bitcoin Core
+=======
+# Deterministically build BitNova Core
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # shellcheck disable=SC2153
 for host in $HOSTS; do
 
@@ -273,7 +285,11 @@ cat << EOF
 INFO: Codesigning ${VERSION:?not set} for platform triple ${HOST:?not set}:
       ...using reference timestamp: ${SOURCE_DATE_EPOCH:?not set}
       ...from worktree directory: '${PWD}'
+<<<<<<< HEAD
           ...bind-mounted in container to: '/bitcoin'
+=======
+          ...bind-mounted in container to: '/bitnova'
+>>>>>>> 5360f2baff (Initialized BitNova project)
       ...in build directory: '$(distsrc_for_host "$HOST")'
           ...bind-mounted in container to: '$(DISTSRC_BASE=/distsrc-base && distsrc_for_host "$HOST")'
       ...outputting in: '$(outdir_for_host "$HOST" codesigned)'
@@ -302,24 +318,39 @@ EOF
         #
         #     When --container is specified, the default behavior is to share
         #     the current working directory with the isolated container at the
+<<<<<<< HEAD
         #     same exact path (e.g. mapping '/home/satoshi/bitcoin/' to
         #     '/home/satoshi/bitcoin/'). This means that the $PWD inside the
+=======
+        #     same exact path (e.g. mapping '/home/satoshi/bitnova/' to
+        #     '/home/satoshi/bitnova/'). This means that the $PWD inside the
+>>>>>>> 5360f2baff (Initialized BitNova project)
         #     container becomes a source of irreproducibility. --no-cwd disables
         #     this behaviour.
         #
         #   --share=SPEC       for containers, share writable host file system
         #                      according to SPEC
         #
+<<<<<<< HEAD
         #   --share="$PWD"=/bitcoin
         #
         #                     maps our current working directory to /bitcoin
+=======
+        #   --share="$PWD"=/bitnova
+        #
+        #                     maps our current working directory to /bitnova
+>>>>>>> 5360f2baff (Initialized BitNova project)
         #                     inside the isolated container, which we later cd
         #                     into.
         #
         #     While we don't want to map our current working directory to the
         #     same exact path (as this introduces irreproducibility), we do want
         #     it to be at a _fixed_ path _somewhere_ inside the isolated
+<<<<<<< HEAD
         #     container so that we have something to build. '/bitcoin' was
+=======
+        #     container so that we have something to build. '/bitnova' was
+>>>>>>> 5360f2baff (Initialized BitNova project)
         #     chosen arbitrarily.
         #
         #   ${SOURCES_PATH:+--share="$SOURCES_PATH"}
@@ -347,7 +378,11 @@ EOF
                                  --container \
                                  --pure \
                                  --no-cwd \
+<<<<<<< HEAD
                                  --share="$PWD"=/bitcoin \
+=======
+                                 --share="$PWD"=/bitnova \
+>>>>>>> 5360f2baff (Initialized BitNova project)
                                  --share="$DISTSRC_BASE"=/distsrc-base \
                                  --share="$OUTDIR_BASE"=/outdir-base \
                                  --share="$DETACHED_SIGS_REPO"=/detached-sigs \
@@ -372,7 +407,11 @@ EOF
                                         DIST_ARCHIVE_BASE=/outdir-base/dist-archive \
                                         DETACHED_SIGS_REPO=/detached-sigs \
                                         CODESIGNING_TARBALL="$(OUTDIR_BASE=/outdir-base && codesigning_tarball_for_host "$HOST")" \
+<<<<<<< HEAD
                                       bash -c "cd /bitcoin && bash contrib/guix/libexec/codesign.sh"
+=======
+                                      bash -c "cd /bitnova && bash contrib/guix/libexec/codesign.sh"
+>>>>>>> 5360f2baff (Initialized BitNova project)
     )
 
 done

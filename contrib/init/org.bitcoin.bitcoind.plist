@@ -3,10 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
+<<<<<<< HEAD
 	<string>org.bitcoin.bitcoind</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/local/bin/bitcoind</string>
+=======
+	<string>org.bitnova.bitnovad</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/local/bin/bitnovad</string>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 	</array>
 	<key>RunAtLoad</key>
 	<true/>

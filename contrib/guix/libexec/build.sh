@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # Copyright (c) 2019-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2019-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 export LC_ALL=C
@@ -244,7 +248,11 @@ mkdir -p "$DISTSRC"
           -DWITH_CCACHE=OFF \
           ${CONFIGFLAGS}
 
+<<<<<<< HEAD
     # Build Bitcoin Core
+=======
+    # Build BitNova Core
+>>>>>>> 5360f2baff (Initialized BitNova project)
     cmake --build build -j "$JOBS" ${V:+--verbose}
 
     # Perform basic security checks on a series of executables.
@@ -258,16 +266,28 @@ mkdir -p "$DISTSRC"
     case "$HOST" in
         *mingw*)
             cmake --build build -j "$JOBS" -t deploy ${V:+--verbose}
+<<<<<<< HEAD
             mv build/bitcoin-win64-setup.exe "${OUTDIR}/${DISTNAME}-win64-setup-unsigned.exe"
             ;;
     esac
 
     # Setup the directory where our Bitcoin Core build for HOST will be
+=======
+            mv build/bitnova-win64-setup.exe "${OUTDIR}/${DISTNAME}-win64-setup-unsigned.exe"
+            ;;
+    esac
+
+    # Setup the directory where our BitNova Core build for HOST will be
+>>>>>>> 5360f2baff (Initialized BitNova project)
     # installed. This directory will also later serve as the input for our
     # binary tarballs.
     INSTALLPATH="${PWD}/installed/${DISTNAME}"
     mkdir -p "${INSTALLPATH}"
+<<<<<<< HEAD
     # Install built Bitcoin Core to $INSTALLPATH
+=======
+    # Install built BitNova Core to $INSTALLPATH
+>>>>>>> 5360f2baff (Initialized BitNova project)
     case "$HOST" in
         *darwin*)
             # This workaround can be dropped for CMake >= 3.27.
@@ -303,9 +323,15 @@ mkdir -p "$DISTSRC"
                 ;;
         esac
 
+<<<<<<< HEAD
         # copy over the example bitcoin.conf file. if contrib/devtools/gen-bitcoin-conf.sh
         # has not been run before buildling, this file will be a stub
         cp "${DISTSRC}/share/examples/bitcoin.conf" "${DISTNAME}/"
+=======
+        # copy over the example bitnova.conf file. if contrib/devtools/gen-bitnova-conf.sh
+        # has not been run before buildling, this file will be a stub
+        cp "${DISTSRC}/share/examples/bitnova.conf" "${DISTNAME}/"
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         cp -r "${DISTSRC}/share/rpcauth" "${DISTNAME}/share/"
 
@@ -368,7 +394,11 @@ mkdir -p "$DISTSRC"
             ;;
         *darwin*)
             cmake --build build --target deploy ${V:+--verbose}
+<<<<<<< HEAD
             mv build/dist/Bitcoin-Core.zip "${OUTDIR}/${DISTNAME}-${HOST}-unsigned.zip"
+=======
+            mv build/dist/BitNova-Core.zip "${OUTDIR}/${DISTNAME}-${HOST}-unsigned.zip"
+>>>>>>> 5360f2baff (Initialized BitNova project)
             mkdir -p "unsigned-app-${HOST}"
             cp  --target-directory="unsigned-app-${HOST}" \
                 contrib/macdeploy/detached-sig-create.sh

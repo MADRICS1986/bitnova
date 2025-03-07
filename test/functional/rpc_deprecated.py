@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2017-2021 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -6,6 +7,15 @@
 from test_framework.test_framework import BitcoinTestFramework
 
 class DeprecatedRpcTest(BitcoinTestFramework):
+=======
+# Copyright (c) 2017-2021 The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+"""Test deprecation of RPC calls."""
+from test_framework.test_framework import BitNovaTestFramework
+
+class DeprecatedRpcTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 2
         self.setup_clean_chain = True

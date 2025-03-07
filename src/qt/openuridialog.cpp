@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -37,7 +41,11 @@ QString OpenURIDialog::getURI()
 void OpenURIDialog::accept()
 {
     SendCoinsRecipient rcp;
+<<<<<<< HEAD
     if (GUIUtil::parseBitcoinURI(getURI(), &rcp)) {
+=======
+    if (GUIUtil::parseBitNovaURI(getURI(), &rcp)) {
+>>>>>>> 5360f2baff (Initialized BitNova project)
         /* Only accept value URIs */
         QDialog::accept();
     } else {

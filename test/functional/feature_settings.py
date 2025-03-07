@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2017-2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2017-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test various command line arguments and configuration file parameters."""
@@ -7,12 +11,20 @@
 import json
 
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.test_node import ErrorMatch
 from test_framework.util import assert_equal
 
 
+<<<<<<< HEAD
 class SettingsTest(BitcoinTestFramework):
+=======
+class SettingsTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def add_options(self, parser):
         self.add_wallet_options(parser)
 
@@ -42,7 +54,11 @@ class SettingsTest(BitcoinTestFramework):
     def run_test(self):
         node, = self.nodes
         settings = node.chain_path / "settings.json"
+<<<<<<< HEAD
         conf = node.datadir_path / "bitcoin.conf"
+=======
+        conf = node.datadir_path / "bitnova.conf"
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
         # Assert default settings file was created
         self.stop_node(0)

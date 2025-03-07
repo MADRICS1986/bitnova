@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2023 Bitcoin Developers
+=======
+// Copyright (c) 2023 BitNova Developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,7 +11,11 @@
 
 #include <clang-tidy/ClangTidyCheck.h>
 
+<<<<<<< HEAD
 namespace bitcoin {
+=======
+namespace bitnova {
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 // Warn about any thread_local variable with a non-trivial destructor.
 class NonTrivialThreadLocal final : public clang::tidy::ClangTidyCheck
@@ -24,6 +32,10 @@ public:
     void check(const clang::ast_matchers::MatchFinder::MatchResult& Result) override;
 };
 
+<<<<<<< HEAD
 } // namespace bitcoin
+=======
+} // namespace bitnova
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 #endif // NONTRIVIAL_THREADLOCAL_CHECK_H

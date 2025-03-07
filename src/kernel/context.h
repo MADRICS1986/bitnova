@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,7 +11,11 @@
 
 namespace kernel {
 //! Context struct holding the kernel library's logically global state, and
+<<<<<<< HEAD
 //! passed to external libbitcoin_kernel functions which need access to this
+=======
+//! passed to external libbitnova_kernel functions which need access to this
+>>>>>>> 5360f2baff (Initialized BitNova project)
 //! state. The kernel library API is a work in progress, so state organization
 //! and member list will evolve over time.
 //!

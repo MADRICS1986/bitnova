@@ -1,5 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
+<<<<<<< HEAD
 // Copyright (c) 2009-present The Bitcoin Core developers
+=======
+// Copyright (c) 2009-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -530,7 +534,11 @@ public:
     }
 
     /**
+<<<<<<< HEAD
      * Pre-version-0.6, Bitcoin always counted CHECKMULTISIGs
+=======
+     * Pre-version-0.6, BitNova always counted CHECKMULTISIGs
+>>>>>>> 5360f2baff (Initialized BitNova project)
      * as 20 sigops. With pay-to-script-hash, that changed:
      * CHECKMULTISIGs serialized in scriptSigs are
      * counted more accurately, assuming they are of the form

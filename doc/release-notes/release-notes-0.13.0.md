@@ -1,28 +1,50 @@
+<<<<<<< HEAD
 Bitcoin Core version 0.13.0 is now available from:
 
   <https://bitcoin.org/bin/bitcoin-core-0.13.0/>
+=======
+BitNova Core version 0.13.0 is now available from:
+
+  <https://bitnova.org/bin/bitnova-core-0.13.0/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a new major version release, including new features, various bugfixes
 and performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Compatibility
 ==============
 
 Microsoft ended support for Windows XP on [April 8th, 2014](https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support),
 an OS initially released in 2001. This means that not even critical security
+<<<<<<< HEAD
 updates will be released anymore. Without security updates, using a bitcoin
 wallet on a XP machine is irresponsible at least.
 
 In addition to that, with 0.12.x there have been varied reports of Bitcoin Core
 randomly crashing on Windows XP. It is [not clear](https://github.com/bitcoin/bitcoin/issues/7681#issuecomment-217439891)
+=======
+updates will be released anymore. Without security updates, using a bitnova
+wallet on a XP machine is irresponsible at least.
+
+In addition to that, with 0.12.x there have been varied reports of BitNova Core
+randomly crashing on Windows XP. It is [not clear](https://github.com/bitnova/bitnova/issues/7681#issuecomment-217439891)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 what the source of these crashes is, but it is likely that upstream
 libraries such as Qt are no longer being tested on XP.
 
@@ -48,21 +70,33 @@ For this reason the default was changed to 300 MiB in this release.
 For nodes on low-memory systems, the database cache can be changed back to
 100 MiB (or to another value) by either:
 
+<<<<<<< HEAD
 - Adding `dbcache=100` in bitcoin.conf
+=======
+- Adding `dbcache=100` in bitnova.conf
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - Changing it in the GUI under `Options → Size of database cache`
 
 Note that the database cache setting has the most performance impact
 during initial sync of a node, and when catching up after downtime.
 
 
+<<<<<<< HEAD
 bitcoin-cli: arguments privacy
+=======
+bitnova-cli: arguments privacy
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ------------------------------
 
 The RPC command line client gained a new argument, `-stdin`
 to read extra arguments from standard input, one per line until EOF/Ctrl-D.
 For example:
 
+<<<<<<< HEAD
     $ src/bitcoin-cli -stdin walletpassphrase
+=======
+    $ src/bitnova-cli -stdin walletpassphrase
+>>>>>>> 5360f2baff (Initialized BitNova project)
     mysecretcode
     120
     ..... press Ctrl-D here to end input
@@ -76,7 +110,11 @@ table by any user on the system.
 C++11 and Python 3
 ------------------
 
+<<<<<<< HEAD
 Various code modernizations have been done. The Bitcoin Core code base has
+=======
+Various code modernizations have been done. The BitNova Core code base has
+>>>>>>> 5360f2baff (Initialized BitNova project)
 started using C++11. This means that a C++11-capable compiler is now needed for
 building. Effectively this means GCC 4.7 or higher, or Clang 3.3 or higher.
 
@@ -95,9 +133,15 @@ executables.
 
 The following extra files can be found in the download directory or torrent:
 
+<<<<<<< HEAD
 - `bitcoin-${VERSION}-arm-linux-gnueabihf.tar.gz`: Linux binaries targeting
   the 32-bit ARMv7-A architecture.
 - `bitcoin-${VERSION}-aarch64-linux-gnu.tar.gz`: Linux binaries targeting
+=======
+- `bitnova-${VERSION}-arm-linux-gnueabihf.tar.gz`: Linux binaries targeting
+  the 32-bit ARMv7-A architecture.
+- `bitnova-${VERSION}-aarch64-linux-gnu.tar.gz`: Linux binaries targeting
+>>>>>>> 5360f2baff (Initialized BitNova project)
   the 64-bit ARMv8-A architecture.
 
 ARM builds are still experimental. If you have problems on a certain device or
@@ -122,7 +166,11 @@ in PR 8068.
 The primary goal is reducing the bandwidth spikes at relay time, though in many
 cases it also reduces propagation delay. It is automatically enabled between
 compatible peers.
+<<<<<<< HEAD
 [BIP 152](https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki)
+=======
+[BIP 152](https://github.com/bitnova/bips/blob/master/bip-0152.mediawiki)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 As a side-effect, ordinary non-mining nodes will download and upload blocks
 faster if those blocks were produced by miners using similar transaction
@@ -156,15 +204,22 @@ You can't disable HD key generation once you have created a HD wallet.
 
 There is no distinction between internal (change) and external keys.
 
+<<<<<<< HEAD
 HD wallets are incompatible with older versions of Bitcoin Core.
 
 [Pull request](https://github.com/bitcoin/bitcoin/pull/8035/files), [BIP 32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)
+=======
+HD wallets are incompatible with older versions of BitNova Core.
+
+[Pull request](https://github.com/bitnova/bitnova/pull/8035/files), [BIP 32](https://github.com/bitnova/bips/blob/master/bip-0032.mediawiki)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 
 Segregated Witness
 ------------------
 
 The code preparations for Segregated Witness ("segwit"), as described in [BIP
+<<<<<<< HEAD
 141](https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki), [BIP
 143](https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki), [BIP
 144](https://github.com/bitcoin/bips/blob/master/bip-0144.mediawiki), and [BIP
@@ -173,6 +228,16 @@ finished and included in this release.  However, BIP 141 does not yet specify
 activation parameters on mainnet, and so this release does not support segwit
 use on mainnet.  Testnet use is supported, and after BIP 141 is updated with
 proposed parameters, a future release of Bitcoin Core is expected that
+=======
+141](https://github.com/bitnova/bips/blob/master/bip-0141.mediawiki), [BIP
+143](https://github.com/bitnova/bips/blob/master/bip-0143.mediawiki), [BIP
+144](https://github.com/bitnova/bips/blob/master/bip-0144.mediawiki), and [BIP
+145](https://github.com/bitnova/bips/blob/master/bip-0145.mediawiki) are
+finished and included in this release.  However, BIP 141 does not yet specify
+activation parameters on mainnet, and so this release does not support segwit
+use on mainnet.  Testnet use is supported, and after BIP 141 is updated with
+proposed parameters, a future release of BitNova Core is expected that
+>>>>>>> 5360f2baff (Initialized BitNova project)
 implements those parameters for mainnet.
 
 Furthermore, because segwit activation is not yet specified for mainnet,
@@ -199,7 +264,11 @@ The command line option `-blockmaxsize` remains an option to specify the
 maximum number of serialized bytes in a generated block.  In addition, the new
 command line option `-blockmaxweight` has been added, which specifies the
 maximum "block weight" of a generated block, as defined by [BIP 141 (Segregated
+<<<<<<< HEAD
 Witness)] (https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki).
+=======
+Witness)] (https://github.com/bitnova/bips/blob/master/bip-0141.mediawiki).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 In preparation for Segregated Witness, the mining algorithm has been modified
 to optimize transaction selection for a given block weight, rather than a given
@@ -216,7 +285,11 @@ support `-blockmaxsize` performs additional computation to ensure that
 constraint is met.  (Note that for mainnet, in this release, the equivalent
 parameter for `-blockmaxweight` would be four times the desired
 `-blockmaxsize`.  See [BIP 141]
+<<<<<<< HEAD
 (https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki) for additional
+=======
+(https://github.com/bitnova/bips/blob/master/bip-0141.mediawiki) for additional
+>>>>>>> 5360f2baff (Initialized BitNova project)
 details.)
 
 In the future, the `-blockmaxsize` option may be removed, as block creation is
@@ -232,7 +305,11 @@ files on disk. These two have now been split up, so that all blocks are known
 before validation starts. This was necessary to make certain optimizations that
 are available during normal synchronizations also available during reindexing.
 
+<<<<<<< HEAD
 The two phases are distinct in the Bitcoin-Qt GUI. During the first one,
+=======
+The two phases are distinct in the BitNova-Qt GUI. During the first one,
+>>>>>>> 5360f2baff (Initialized BitNova project)
 "Reindexing blocks on disk" is shown. During the second (slower) one,
 "Processing blocks on disk" is shown.
 
@@ -277,7 +354,11 @@ Low-level P2P changes
 - The optional new p2p message "feefilter" is implemented and the protocol
   version is bumped to 70013. Upon receiving a feefilter message from a peer,
   a node will not send invs for any transactions which do not meet the filter
+<<<<<<< HEAD
   feerate. [BIP 133](https://github.com/bitcoin/bips/blob/master/bip-0133.mediawiki)
+=======
+  feerate. [BIP 133](https://github.com/bitnova/bips/blob/master/bip-0133.mediawiki)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 - The P2P alert system has been removed in PR #7692 and the `alert` P2P message
   is no longer supported.
@@ -326,10 +407,17 @@ Low-level RPC changes
 - Asm script outputs replacements for OP_NOP2 and OP_NOP3
 
   - OP_NOP2 has been renamed to OP_CHECKLOCKTIMEVERIFY by [BIP 
+<<<<<<< HEAD
 65](https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki)
 
   - OP_NOP3 has been renamed to OP_CHECKSEQUENCEVERIFY by [BIP 
 112](https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki)
+=======
+65](https://github.com/bitnova/bips/blob/master/bip-0065.mediawiki)
+
+  - OP_NOP3 has been renamed to OP_CHECKSEQUENCEVERIFY by [BIP 
+112](https://github.com/bitnova/bips/blob/master/bip-0112.mediawiki)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
   - The following outputs are affected by this change:
 
@@ -338,7 +426,11 @@ Low-level RPC changes
     - RPC `decodescript`
     - REST `/rest/tx/` (JSON format)
     - REST `/rest/block/` (JSON format when including extended tx details)
+<<<<<<< HEAD
     - `bitcoin-tx -json`
+=======
+    - `bitnova-tx -json`
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 - The sorting of the output of the `getrawmempool` output has changed.
 
@@ -358,7 +450,11 @@ Low-level ZMQ changes
   listeners to detect lost notifications.
   The sequence number is always the last element in a multi-part ZMQ notification and
   therefore backward compatible. Each message type has its own counter.
+<<<<<<< HEAD
   PR [#7762](https://github.com/bitcoin/bitcoin/pull/7762).
+=======
+  PR [#7762](https://github.com/bitnova/bitnova/pull/7762).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 
 0.13.0 Change log
@@ -375,7 +471,11 @@ git merge commit are mentioned.
 - #7326 `2cd004b` Fix typo, wrong information in gettxout help text (paveljanik)
 - #7222 `82429d0` Indicate which transactions are signaling opt-in RBF (sdaftuar)
 - #7480 `b49a623` Changed getnetworkhps value to double to avoid overflow (instagibbs)
+<<<<<<< HEAD
 - #7550 `8b958ab` Input-from-stdin mode for bitcoin-cli (laanwj)
+=======
+- #7550 `8b958ab` Input-from-stdin mode for bitnova-cli (laanwj)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #7670 `c9a1265` Use cached block hash in blockToJSON() (rat4)
 - #7726 `9af69fa` Correct importaddress help reference to importpubkey (CypherGrue)
 - #7766 `16555b6` Register calls where they are defined (laanwj)
@@ -540,7 +640,11 @@ git merge commit are mentioned.
 - #7604 `354b03d` build: Remove spurious dollar sign. Fixes #7189 (dooglus)
 - #7605 `7f001bd` Remove openssl info from init/log and from Qt debug window (jonasschnelli)
 - #7628 `87d6562` Add 'copy full transaction details' option (ericshawlinux)
+<<<<<<< HEAD
 - #7613 `3798e5d` Add autocomplete to bitcoin-qt's console window (GamerSg)
+=======
+- #7613 `3798e5d` Add autocomplete to bitnova-qt's console window (GamerSg)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #7668 `b24266c` Fix history deletion bug after font size change (achow101)
 - #7680 `41d2dfa` Remove reflection from `about` icon (laanwj)
 - #7686 `f034bce` Remove 0-fee from send dialog (MarcoFalke)
@@ -557,6 +661,7 @@ git merge commit are mentioned.
 - #8014 `77b49ac` Sort transactions by date (Tyler-Hardin)
 - #8073 `eb2f6f7` askpassphrasedialog: Clear pass fields on accept (rat4)
 - #8129 `ee1533e` Fix RPC console auto completer (UdjinM6)
+<<<<<<< HEAD
 - #7636 `fb0ac48` Add bitcoin address label to request payment QR code (makevoid)
 - #8231 `760a6c7` Fix a bug where the SplashScreen will not be hidden during startup (jonasschnelli)
 - #8256 `af2421c` BUG: bitcoin-qt crash (fsb4000)
@@ -564,6 +669,15 @@ git merge commit are mentioned.
 - #8288 `91abb77` Network-specific example address (laanwj)
 - #7707 `a914968` UI support for abandoned transactions (jonasschnelli)
 - #8207 `f7a403b` Add a link to the Bitcoin-Core repository and website to the About Dialog (MarcoFalke)
+=======
+- #7636 `fb0ac48` Add bitnova address label to request payment QR code (makevoid)
+- #8231 `760a6c7` Fix a bug where the SplashScreen will not be hidden during startup (jonasschnelli)
+- #8256 `af2421c` BUG: bitnova-qt crash (fsb4000)
+- #8257 `ff03c50` Do not ask a UI question from bitnovad (sipa)
+- #8288 `91abb77` Network-specific example address (laanwj)
+- #7707 `a914968` UI support for abandoned transactions (jonasschnelli)
+- #8207 `f7a403b` Add a link to the BitNova-Core repository and website to the About Dialog (MarcoFalke)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #8281 `6a87eb0` Remove client name from debug window (laanwj)
 - #8407 `45eba4b` Add dbcache migration path (jonasschnelli)
 
@@ -650,7 +764,11 @@ git merge commit are mentioned.
 - #8038 `e2bf830` Various minor fixes (MarcoFalke)
 - #8072 `1b87e5b` Travis: 'make check' in parallel and verbose (theuni)
 - #8056 `8844ef1` Remove hardcoded "4 nodes" from test_framework (MarcoFalke)
+<<<<<<< HEAD
 - #8047 `37f9a1f` Test_framework: Set wait-timeout for bitcoind procs (MarcoFalke)
+=======
+- #8047 `37f9a1f` Test_framework: Set wait-timeout for bitnovad procs (MarcoFalke)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #8095 `6700cc9` Test framework: only cleanup on successful test runs (sdaftuar)
 - #8098 `06bd4f6` Test_framework: Append portseed to tmpdir (MarcoFalke)
 - #8104 `6ff2c8d` Add timeout to sync_blocks() and sync_mempools() (sdaftuar)
@@ -660,7 +778,11 @@ git merge commit are mentioned.
 - #8090 `a2df115` Adding P2SH(p2pkh) script test case (Christewart)
 - #7992 `ec45cc5` Extend #7956 with one more test (TheBlueMatt)
 - #8139 `ae5575b` Fix interrupted HTTP RPC connection workaround for Python 3.5+ (sipa)
+<<<<<<< HEAD
 - #8164 `0f24eaf` [Bitcoin-Tx] fix missing test fixtures, fix 32bit atoi issue (jonasschnelli)
+=======
+- #8164 `0f24eaf` [BitNova-Tx] fix missing test fixtures, fix 32bit atoi issue (jonasschnelli)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #8166 `0b5279f` Src/test: Do not shadow local variables (paveljanik)
 - #8141 `44c1b1c` Continuing port of java comparison tool (mrbandrews)
 - #8201 `36b7400` fundrawtransaction: Fix race, assert amounts (MarcoFalke)
@@ -670,7 +792,11 @@ git merge commit are mentioned.
 - #8216 `0d41d70` Assert 'changePosition out of bounds'  (MarcoFalke)
 - #8222 `961893f` Enable mempool consistency checks in unit tests (sipa)
 - #7751 `84370d5` test_framework: python3.4 authproxy compat (laanwj)
+<<<<<<< HEAD
 - #7744 `d8e862a` test_framework: detect failure of bitcoind startup (laanwj)
+=======
+- #7744 `d8e862a` test_framework: detect failure of bitnovad startup (laanwj)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #8280 `115735d` Increase sync_blocks() timeouts in pruning.py (MarcoFalke)
 - #8340 `af9b7a9` Solve trivial merge conflict in p2p-segwit.py (MarcoFalke)
 - #8067 `3e4cf8f` Travis: use slim generic image, and some fixups (theuni)
@@ -707,7 +833,11 @@ git merge commit are mentioned.
 - #7791 `e30a5b0` Change Precise to Trusty in gitian-building.md (JeremyRand)
 - #7838 `8bb5d3d` Update gitian build guide to debian 8.4.0 (fanquake)
 - #7855 `b778e59` Replace precise with trusty (MarcoFalke)
+<<<<<<< HEAD
 - #7975 `fc23fee` Update bitcoin-core GitHub links (MarcoFalke)
+=======
+- #7975 `fc23fee` Update bitnova-core GitHub links (MarcoFalke)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - #8034 `e3a8207` Add basic git squash workflow (fanquake)
 - #7813 `214ec0b` Update port in tor.md (MarcoFalke)
 - #8193 `37c9830` Use Debian 8.5 in the gitian-build guide (fanquake)
@@ -865,4 +995,8 @@ Thanks to everyone who directly contributed to this release:
 - Wladimir J. van der Laan
 - Yuri Zhykin
 
+<<<<<<< HEAD
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
+=======
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)

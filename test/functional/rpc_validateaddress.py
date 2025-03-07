@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2023 The Bitcoin Core developers
+=======
+# Copyright (c) 2023 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test validateaddress for main chain"""
 
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 from test_framework.util import assert_equal
 
@@ -174,7 +182,11 @@ VALID_DATA = [
 ]
 
 
+<<<<<<< HEAD
 class ValidateAddressMainTest(BitcoinTestFramework):
+=======
+class ValidateAddressMainTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.setup_clean_chain = True
         self.chain = ""  # main

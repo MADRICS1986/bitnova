@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2023 The Bitcoin Core developers
+=======
+// Copyright (c) 2023 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -158,12 +162,21 @@ void IpcSocketTest(const fs::path& datadir)
     std::unique_ptr<ipc::Process> process{ipc::MakeProcess()};
 
     std::string invalid_bind{"invalid:"};
+<<<<<<< HEAD
     BOOST_CHECK_THROW(process->bind(datadir, "test_bitcoin", invalid_bind), std::invalid_argument);
     BOOST_CHECK_THROW(process->connect(datadir, "test_bitcoin", invalid_bind), std::invalid_argument);
 
     auto bind_and_listen{[&](const std::string& bind_address) {
         std::string address{bind_address};
         int serve_fd = process->bind(datadir, "test_bitcoin", address);
+=======
+    BOOST_CHECK_THROW(process->bind(datadir, "test_bitnova", invalid_bind), std::invalid_argument);
+    BOOST_CHECK_THROW(process->connect(datadir, "test_bitnova", invalid_bind), std::invalid_argument);
+
+    auto bind_and_listen{[&](const std::string& bind_address) {
+        std::string address{bind_address};
+        int serve_fd = process->bind(datadir, "test_bitnova", address);
+>>>>>>> 5360f2baff (Initialized BitNova project)
         BOOST_CHECK_GE(serve_fd, 0);
         BOOST_CHECK_EQUAL(address, bind_address);
         protocol->listen(serve_fd, "test-serve", *init);
@@ -171,7 +184,11 @@ void IpcSocketTest(const fs::path& datadir)
 
     auto connect_and_test{[&](const std::string& connect_address) {
         std::string address{connect_address};
+<<<<<<< HEAD
         int connect_fd{process->connect(datadir, "test_bitcoin", address)};
+=======
+        int connect_fd{process->connect(datadir, "test_bitnova", address)};
+>>>>>>> 5360f2baff (Initialized BitNova project)
         BOOST_CHECK_EQUAL(address, connect_address);
         std::unique_ptr<interfaces::Init> remote_init{protocol->connect(connect_fd, "test-connect")};
         std::unique_ptr<interfaces::Echo> remote_echo{remote_init->makeEcho()};
@@ -181,10 +198,17 @@ void IpcSocketTest(const fs::path& datadir)
     // Need to specify explicit socket addresses outside the data directory, because the data
     // directory path is so long that the default socket address and any other
     // addresses in the data directory would fail with errors like:
+<<<<<<< HEAD
     //   Address 'unix' path '"/tmp/test_common_Bitcoin Core/ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff/test_bitcoin.sock"' exceeded maximum socket path length
     std::vector<std::string> addresses{
         strprintf("unix:%s", TempPath("bitcoin_sock0_XXXXXX")),
         strprintf("unix:%s", TempPath("bitcoin_sock1_XXXXXX")),
+=======
+    //   Address 'unix' path '"/tmp/test_common_BitNova Core/ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff/test_bitnova.sock"' exceeded maximum socket path length
+    std::vector<std::string> addresses{
+        strprintf("unix:%s", TempPath("bitnova_sock0_XXXXXX")),
+        strprintf("unix:%s", TempPath("bitnova_sock1_XXXXXX")),
+>>>>>>> 5360f2baff (Initialized BitNova project)
     };
 
     // Bind and listen on multiple addresses

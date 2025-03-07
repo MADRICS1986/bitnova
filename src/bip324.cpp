@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2023 The Bitcoin Core developers
+=======
+// Copyright (c) 2023 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -35,7 +39,11 @@ void BIP324Cipher::Initialize(const EllSwiftPubKey& their_pubkey, bool initiator
 {
     // Determine salt (fixed string + network magic bytes)
     const auto& message_header = Params().MessageStart();
+<<<<<<< HEAD
     std::string salt = std::string{"bitcoin_v2_shared_secret"} + std::string(std::begin(message_header), std::end(message_header));
+=======
+    std::string salt = std::string{"bitnova_v2_shared_secret"} + std::string(std::begin(message_header), std::end(message_header));
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     // Perform ECDH to derive shared secret.
     ECDHSecret ecdh_secret = m_key.ComputeBIP324ECDHSecret(their_pubkey, m_our_pubkey, initiator);

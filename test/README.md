@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This directory contains integration tests that test bitcoind and its
+=======
+This directory contains integration tests that test bitnovad and its
+>>>>>>> 5360f2baff (Initialized BitNova project)
 utilities in their entirety. It does not contain unit tests, which
 can be found in [/src/test](/src/test), [/src/wallet/test](/src/wallet/test),
 etc.
@@ -8,9 +12,15 @@ This directory contains the following sets of tests:
 - [fuzz](/test/fuzz) A runner to execute all fuzz targets from
   [/src/test/fuzz](/src/test/fuzz).
 - [functional](/test/functional) which test the functionality of
+<<<<<<< HEAD
 bitcoind and bitcoin-qt by interacting with them through the RPC and P2P
 interfaces.
 - [util](/test/util) which tests the utilities (bitcoin-util, bitcoin-tx, ...).
+=======
+bitnovad and bitnova-qt by interacting with them through the RPC and P2P
+interfaces.
+- [util](/test/util) which tests the utilities (bitnova-util, bitnova-tx, ...).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - [lint](/test/lint/) which perform various static analysis checks.
 
 The util tests are run as part of `ctest` invocation. The fuzz tests, functional
@@ -18,7 +28,11 @@ tests and lint scripts can be run as explained in the sections below.
 
 # Running tests locally
 
+<<<<<<< HEAD
 Before tests can be run locally, Bitcoin Core must be built.  See the [building instructions](/doc#building) for help.
+=======
+Before tests can be run locally, BitNova Core must be built.  See the [building instructions](/doc#building) for help.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 The following examples assume that the build directory is named `build`.
 
@@ -166,6 +180,7 @@ umount /Volumes/ramdisk
 
 ##### Resource contention
 
+<<<<<<< HEAD
 The P2P and RPC ports used by the bitcoind nodes-under-test are chosen to make
 conflicts with other processes unlikely. However, if there is another bitcoind
 process running on the system (perhaps from a previous test which hasn't successfully
@@ -183,12 +198,35 @@ bitcoind processes are being run.**
 
 ```bash
 killall bitcoind
+=======
+The P2P and RPC ports used by the bitnovad nodes-under-test are chosen to make
+conflicts with other processes unlikely. However, if there is another bitnovad
+process running on the system (perhaps from a previous test which hasn't successfully
+killed all its bitnovad nodes), then there may be a port conflict which will
+cause the test to fail. It is recommended that you run the tests on a system
+where no other bitnovad processes are running.
+
+On linux, the test framework will warn if there is another
+bitnovad process running when the tests are started.
+
+If there are zombie bitnovad processes after test failure, you can kill them
+by running the following commands. **Note that these commands will kill all
+bitnovad processes running on the system, so should not be used if any non-test
+bitnovad processes are being run.**
+
+```bash
+killall bitnovad
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 
 or
 
 ```bash
+<<<<<<< HEAD
 pkill -9 bitcoind
+=======
+pkill -9 bitnovad
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 
 
@@ -199,11 +237,19 @@ functional test is run and is stored in build/test/cache. This speeds up
 test startup times since new blockchains don't need to be generated for
 each test. However, the cache may get into a bad state, in which case
 tests will fail. If this happens, remove the cache directory (and make
+<<<<<<< HEAD
 sure bitcoind processes are stopped as above):
 
 ```bash
 rm -rf build/test/cache
 killall bitcoind
+=======
+sure bitnovad processes are stopped as above):
+
+```bash
+rm -rf build/test/cache
+killall bitnovad
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 
 ##### Test logging
@@ -218,7 +264,11 @@ levels using the logger included in the test_framework, e.g.
 - when run directly, *all* logs are written to `test_framework.log` and INFO
   level and above are output to the console.
 - when run by [our CI (Continuous Integration)](/ci/README.md), no logs are output to the console. However, if a test
+<<<<<<< HEAD
   fails, the `test_framework.log` and bitcoind `debug.log`s will all be dumped
+=======
+  fails, the `test_framework.log` and bitnovad `debug.log`s will all be dumped
+>>>>>>> 5360f2baff (Initialized BitNova project)
   to the console to help troubleshooting.
 
 These log files can be located under the test data directory (which is always
@@ -233,7 +283,11 @@ e.g. `self.nodes[0]`.
 To change the level of logs output to the console, use the `-l` command line
 argument.
 
+<<<<<<< HEAD
 `test_framework.log` and bitcoind `debug.log`s can be combined into a single
+=======
+`test_framework.log` and bitnovad `debug.log`s can be combined into a single
+>>>>>>> 5360f2baff (Initialized BitNova project)
 aggregate log by running the `combine_logs.py` script. The output can be plain
 text, colorized text or html. For example:
 
@@ -260,9 +314,15 @@ import pdb; pdb.set_trace()
 ```
 
 anywhere in the test. You will then be able to inspect variables, as well as
+<<<<<<< HEAD
 call methods that interact with the bitcoind nodes-under-test.
 
 If further introspection of the bitcoind instances themselves becomes
+=======
+call methods that interact with the bitnovad nodes-under-test.
+
+If further introspection of the bitnovad instances themselves becomes
+>>>>>>> 5360f2baff (Initialized BitNova project)
 necessary, this can be accomplished by first setting a pdb breakpoint
 at an appropriate location, running the test to that point, then using
 `gdb` (or `lldb` on macOS) to attach to the process and debug.
@@ -285,13 +345,21 @@ test run:
 Use the path to find the pid file in the temp folder:
 
 ```bash
+<<<<<<< HEAD
 cat /tmp/user/1000/testo9vsdjo3/node1/regtest/bitcoind.pid
+=======
+cat /tmp/user/1000/testo9vsdjo3/node1/regtest/bitnovad.pid
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 
 Then you can use the pid to start `gdb`:
 
 ```bash
+<<<<<<< HEAD
 gdb /home/example/bitcoind <pid>
+=======
+gdb /home/example/bitnovad <pid>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 ```
 
 Note: gdb attach step may require ptrace_scope to be modified, or `sudo` preceding the `gdb`.

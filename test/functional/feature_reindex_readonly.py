@@ -1,18 +1,32 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2023-present The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test running bitcoind with -reindex from a read-only blockstore
+=======
+# Copyright (c) 2023-present The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+"""Test running bitnovad with -reindex from a read-only blockstore
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - Start a node, generate blocks, then restart with -reindex after setting blk files to read-only
 """
 
 import os
 import stat
 import subprocess
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
 
 
 class BlockstoreReindexTest(BitcoinTestFramework):
+=======
+from test_framework.test_framework import BitNovaTestFramework
+
+
+class BlockstoreReindexTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

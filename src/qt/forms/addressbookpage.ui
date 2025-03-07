@@ -67,7 +67,11 @@
         <string>&amp;New</string>
        </property>
        <property name="icon">
+<<<<<<< HEAD
         <iconset resource="../bitcoin.qrc">
+=======
+        <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
          <normaloff>:/icons/add</normaloff>:/icons/add</iconset>
        </property>
        <property name="autoDefault">
@@ -84,7 +88,11 @@
         <string>&amp;Copy</string>
        </property>
        <property name="icon">
+<<<<<<< HEAD
         <iconset resource="../bitcoin.qrc">
+=======
+        <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
          <normaloff>:/icons/editcopy</normaloff>:/icons/editcopy</iconset>
        </property>
        <property name="autoDefault">
@@ -101,7 +109,11 @@
         <string>&amp;Delete</string>
        </property>
        <property name="icon">
+<<<<<<< HEAD
         <iconset resource="../bitcoin.qrc">
+=======
+        <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
          <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
        </property>
        <property name="autoDefault">
@@ -131,7 +143,11 @@
         <string>&amp;Export</string>
        </property>
        <property name="icon">
+<<<<<<< HEAD
         <iconset resource="../bitcoin.qrc">
+=======
+        <iconset resource="../bitnova.qrc">
+>>>>>>> 5360f2baff (Initialized BitNova project)
          <normaloff>:/icons/export</normaloff>:/icons/export</iconset>
        </property>
        <property name="autoDefault">
@@ -160,7 +176,11 @@
   </layout>
  </widget>
  <resources>
+<<<<<<< HEAD
   <include location="../bitcoin.qrc"/>
+=======
+  <include location="../bitnova.qrc"/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
  </resources>
  <connections/>
 </ui>

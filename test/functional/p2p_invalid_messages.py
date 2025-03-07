@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2015-2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2015-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test node responses to invalid network messages."""
@@ -26,7 +30,11 @@ from test_framework.p2p import (
     P2PDataStore,
     P2PInterface,
 )
+<<<<<<< HEAD
 from test_framework.test_framework import BitcoinTestFramework
+=======
+from test_framework.test_framework import BitNovaTestFramework
+>>>>>>> 5360f2baff (Initialized BitNova project)
 from test_framework.util import (
     assert_equal,
 )
@@ -54,7 +62,11 @@ class SenderOfAddrV2(P2PInterface):
         self.wait_until(lambda: 'sendaddrv2' in self.last_message)
 
 
+<<<<<<< HEAD
 class InvalidMessagesTest(BitcoinTestFramework):
+=======
+class InvalidMessagesTest(BitNovaTestFramework):
+>>>>>>> 5360f2baff (Initialized BitNova project)
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True
@@ -182,7 +194,11 @@ class InvalidMessagesTest(BitcoinTestFramework):
         node = self.nodes[0]
         conn = node.add_p2p_connection(SenderOfAddrV2())
 
+<<<<<<< HEAD
         # Make sure bitcoind signals support for ADDRv2, otherwise this test
+=======
+        # Make sure bitnovad signals support for ADDRv2, otherwise this test
+>>>>>>> 5360f2baff (Initialized BitNova project)
         # will bombard an old node with messages it does not recognize which
         # will produce unexpected results.
         conn.wait_for_sendaddrv2()

@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 Bitcoin Core version 0.9.3 is now available from:
 
   https://bitcoin.org/bin/0.9.3/
+=======
+BitNova Core version 0.9.3 is now available from:
+
+  https://bitnova.org/bin/0.9.3/
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This is a new minor version release, bringing only bug fixes and updated
 translations. Upgrading to this release is recommended.
 
 Please report bugs using the issue tracker at github:
 
+<<<<<<< HEAD
   https://github.com/bitcoin/bitcoin/issues
+=======
+  https://github.com/bitnova/bitnova/issues
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Upgrading and downgrading
 ==========================
@@ -17,8 +27,13 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
+<<<<<<< HEAD
 installer (on Windows) or just copy over /Applications/Bitcoin-Qt (on Mac) or
 bitcoind/bitcoin-qt (on Linux).
+=======
+installer (on Windows) or just copy over /Applications/BitNova-Qt (on Mac) or
+bitnovad/bitnova-qt (on Linux).
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 If you are upgrading from version 0.7.2 or earlier, the first time you run
 0.9.3 your blockchain files will be re-indexed, which will take anywhere from 
@@ -70,7 +85,11 @@ GUI:
 Miscellaneous:
 - key.cpp: fail with a friendlier message on missing ssl EC support
 - Remove bignum dependency for scripts
+<<<<<<< HEAD
 - Upgrade OpenSSL to 1.0.1i (see https://www.openssl.org/news/secadv_20140806.txt - just to be sure, no critical issues for Bitcoin Core)
+=======
+- Upgrade OpenSSL to 1.0.1i (see https://www.openssl.org/news/secadv_20140806.txt - just to be sure, no critical issues for BitNova Core)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - Upgrade miniupnpc to 1.9.20140701
 - Fix boost detection in build system on some platforms
 
@@ -98,4 +117,8 @@ Thanks to everyone who contributed to this release:
 - Wladimir J. van der Laan
 - Zak Wilcox
 
+<<<<<<< HEAD
 As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
+=======
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2019-present The Bitcoin Core developers
+=======
+// Copyright (c) 2019-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -2246,7 +2250,11 @@ enum class DecodeContext {
     ENDIF_ELSE,
 };
 
+<<<<<<< HEAD
 //! Parse a miniscript from a bitcoin script
+=======
+//! Parse a miniscript from a bitnova script
+>>>>>>> 5360f2baff (Initialized BitNova project)
 template<typename Key, typename Ctx, typename I>
 inline NodeRef<Key> DecodeScript(I& in, I last, const Ctx& ctx)
 {

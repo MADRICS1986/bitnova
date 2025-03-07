@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2023 Bitcoin Developers
+=======
+// Copyright (c) 2023 BitNova Developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -16,7 +20,11 @@ AST_MATCHER(clang::CXXRecordDecl, hasNonTrivialDestructor) {
 }
 } // namespace
 
+<<<<<<< HEAD
 namespace bitcoin {
+=======
+namespace bitnova {
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 void NonTrivialThreadLocal::registerMatchers(clang::ast_matchers::MatchFinder* finder)
 {
@@ -41,4 +49,8 @@ void NonTrivialThreadLocal::check(const clang::ast_matchers::MatchFinder::MatchR
     }
 }
 
+<<<<<<< HEAD
 } // namespace bitcoin
+=======
+} // namespace bitnova
+>>>>>>> 5360f2baff (Initialized BitNova project)

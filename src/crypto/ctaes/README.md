@@ -38,4 +38,8 @@ Benchmark:
 Review
 ------
 
+<<<<<<< HEAD
 Results of a formal review of the code can be found in http://bitcoin.sipa.be/ctaes/review.zip
+=======
+Results of a formal review of the code can be found in http://bitnova.sipa.be/ctaes/review.zip
+>>>>>>> 5360f2baff (Initialized BitNova project)

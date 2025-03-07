@@ -1,9 +1,15 @@
 WINDOWS BUILD NOTES
 ====================
 
+<<<<<<< HEAD
 Below are some notes on how to build Bitcoin Core for Windows.
 
 The options known to work for building Bitcoin Core on Windows are:
+=======
+Below are some notes on how to build BitNova Core for Windows.
+
+The options known to work for building BitNova Core on Windows are:
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 * On Linux, using the [Mingw-w64](https://www.mingw-w64.org/) cross compiler tool chain.
 * On Windows, using [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/about) and Mingw-w64.
@@ -37,11 +43,19 @@ If you want to build the Windows installer using the `deploy` build target, you 
 
 Acquire the source in the usual way:
 
+<<<<<<< HEAD
     git clone https://github.com/bitcoin/bitcoin.git
     cd bitcoin
 
 Note that for WSL the Bitcoin Core source path MUST be somewhere in the default mount file system, for
 example /usr/src/bitcoin, AND not under /mnt/d/. If this is not the case the dependency autoconf scripts will fail.
+=======
+    git clone https://github.com/bitnova/bitnova.git
+    cd bitnova
+
+Note that for WSL the BitNova Core source path MUST be somewhere in the default mount file system, for
+example /usr/src/bitnova, AND not under /mnt/d/. If this is not the case the dependency autoconf scripts will fail.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 This means you cannot use a directory that is located directly on the host Windows file system to perform the build.
 
 Build using:
@@ -60,9 +74,15 @@ Installation
 After building using the Windows subsystem it can be useful to copy the compiled
 executables to a directory on the Windows drive in the same directory structure
 as they appear in the release `.zip` archive. This can be done in the following
+<<<<<<< HEAD
 way. This will install to `c:\workspace\bitcoin`, for example:
 
     cmake --install build --prefix /mnt/c/workspace/bitcoin
+=======
+way. This will install to `c:\workspace\bitnova`, for example:
+
+    cmake --install build --prefix /mnt/c/workspace/bitnova
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 You can also create an installer using:
 

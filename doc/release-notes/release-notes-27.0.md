@@ -1,46 +1,83 @@
+<<<<<<< HEAD
 Bitcoin Core version 27.0 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-27.0/>
+=======
+BitNova Core version 27.0 is now available from:
+
+  <https://bitnovacore.org/bin/bitnova-core-27.0/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 This release includes new features, various bug fixes and performance
 improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
+<<<<<<< HEAD
   <https://github.com/bitcoin/bitcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
   <https://bitcoincore.org/en/list/announcements/join/>
+=======
+  <https://github.com/bitnova/bitnova/issues>
+
+To receive security and update notifications, please subscribe to:
+
+  <https://bitnovacore.org/en/list/announcements/join/>
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 How to Upgrade
 ==============
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
+<<<<<<< HEAD
 installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on macOS)
 or `bitcoind`/`bitcoin-qt` (on Linux).
 
 Upgrading directly from a version of Bitcoin Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
 wallet versions of Bitcoin Core are generally supported.
+=======
+installer (on Windows) or just copy over `/Applications/BitNova-Qt` (on macOS)
+or `bitnovad`/`bitnova-qt` (on Linux).
+
+Upgrading directly from a version of BitNova Core that has reached its EOL is
+possible, but it might take some time if the data directory needs to be migrated. Old
+wallet versions of BitNova Core are generally supported.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
 Compatibility
 ==============
 
+<<<<<<< HEAD
 Bitcoin Core is supported and extensively tested on operating systems
 using the Linux Kernel 3.17+, macOS 11.0+, and Windows 7 and newer. Bitcoin
 Core should also work on most other Unix-like systems but is not as
 frequently tested on them. It is not recommended to use Bitcoin Core on
+=======
+BitNova Core is supported and extensively tested on operating systems
+using the Linux Kernel 3.17+, macOS 11.0+, and Windows 7 and newer. BitNova
+Core should also work on most other Unix-like systems but is not as
+frequently tested on them. It is not recommended to use BitNova Core on
+>>>>>>> 5360f2baff (Initialized BitNova project)
 unsupported systems.
 
 Notable changes
 ===============
 
+<<<<<<< HEAD
 libbitcoinconsensus
 -------------------
 
 - libbitcoinconsensus is deprecated and will be removed for v28. This library has
+=======
+libbitnovaconsensus
+-------------------
+
+- libbitnovaconsensus is deprecated and will be removed for v28. This library has
+>>>>>>> 5360f2baff (Initialized BitNova project)
   existed for nearly 10 years with very little known uptake or impact. It has
   become a maintenance burden.
 
@@ -48,7 +85,11 @@ libbitcoinconsensus
   the library can continue to use the final release indefinitely, with the
   understanding that Taproot is its final consensus update.
 
+<<<<<<< HEAD
   In the future, libbitcoinkernel will provide a much more useful API that is
+=======
+  In the future, libbitnovakernel will provide a much more useful API that is
+>>>>>>> 5360f2baff (Initialized BitNova project)
   aware of the UTXO set, and therefore be able to fully validate transactions and
   blocks. (#29189)
 
@@ -109,7 +150,11 @@ Updated RPCs
 Build System
 ------------
 
+<<<<<<< HEAD
 - A C++20 capable compiler is now required to build Bitcoin Core. (#28349)
+=======
+- A C++20 capable compiler is now required to build BitNova Core. (#28349)
+>>>>>>> 5360f2baff (Initialized BitNova project)
 - MacOS releases are configured to use the hardened runtime libraries (#29127)
 
 Wallet
@@ -137,7 +182,11 @@ Pruning
 Init
 ----
 
+<<<<<<< HEAD
 - Various fixes to prevent issues where subsequent instances of Bitcoin Core would
+=======
+- Various fixes to prevent issues where subsequent instances of BitNova Core would
+>>>>>>> 5360f2baff (Initialized BitNova project)
   result in deletion of files in use by an existing instance. (#28784, #28946)
 - Improved handling of empty `settings.json` files. (#29144)
 
@@ -214,4 +263,8 @@ Thanks to everyone who directly contributed to this release:
 
 
 As well as to everyone that helped with translations on
+<<<<<<< HEAD
 [Transifex](https://www.transifex.com/bitcoin/bitcoin/).
+=======
+[Transifex](https://www.transifex.com/bitnova/bitnova/).
+>>>>>>> 5360f2baff (Initialized BitNova project)

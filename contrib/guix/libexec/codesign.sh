@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # Copyright (c) 2021-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2021-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 export LC_ALL=C
@@ -109,7 +113,11 @@ mkdir -p "$DISTSRC"
             esac
 
             # Apply detached codesignatures (in-place)
+<<<<<<< HEAD
             signapple apply dist/Bitcoin-Qt.app codesignatures/osx/"${HOST}"/dist/Bitcoin-Qt.app
+=======
+            signapple apply dist/BitNova-Qt.app codesignatures/osx/"${HOST}"/dist/BitNova-Qt.app
+>>>>>>> 5360f2baff (Initialized BitNova project)
             find "${DISTNAME}" -wholename "*/bin/*" -type f | while read -r bin
             do
                 signapple apply "${bin}" "codesignatures/osx/${HOST}/${bin}.${ARCH}sign"

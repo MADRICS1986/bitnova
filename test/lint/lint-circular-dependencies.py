@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 #
+<<<<<<< HEAD
 # Copyright (c) 2020-2022 The Bitcoin Core developers
+=======
+# Copyright (c) 2020-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
@@ -22,7 +26,11 @@ EXPECTED_CIRCULAR_DEPENDENCIES = (
     "wallet/wallet -> wallet/walletdb -> wallet/wallet",
     "kernel/coinstats -> validation -> kernel/coinstats",
 
+<<<<<<< HEAD
     # Temporary, removed in followup https://github.com/bitcoin/bitcoin/pull/24230
+=======
+    # Temporary, removed in followup https://github.com/bitnova/bitnova/pull/24230
+>>>>>>> 5360f2baff (Initialized BitNova project)
     "index/base -> node/context -> net_processing -> index/blockfilterindex -> index/base",
 )
 

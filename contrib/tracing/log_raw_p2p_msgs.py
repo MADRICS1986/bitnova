@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2021 The Bitcoin Core developers
+=======
+# Copyright (c) 2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -17,7 +21,11 @@
 
 # eBPF Limitations:
 #
+<<<<<<< HEAD
 # Bitcoin P2P messages can be larger than 32kb (e.g. tx, block, ...). The eBPF
+=======
+# BitNova P2P messages can be larger than 32kb (e.g. tx, block, ...). The eBPF
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # VM's stack is limited to 512 bytes, and we can't allocate more than about 32kb
 # for a P2P message in the eBPF VM. The message data is cut off when the message
 # is larger than MAX_MSG_DATA_LENGTH (see definition below). This can be detected
@@ -145,6 +153,7 @@ def print_message(event, inbound):
 
 
 def main(pid):
+<<<<<<< HEAD
     print(f"Hooking into bitcoind with pid {pid}")
     bitcoind_with_usdts = USDT(pid=int(pid))
 
@@ -154,6 +163,17 @@ def main(pid):
     bitcoind_with_usdts.enable_probe(
         probe="outbound_message", fn_name="trace_outbound_message")
     bpf = BPF(text=program, usdt_contexts=[bitcoind_with_usdts])
+=======
+    print(f"Hooking into bitnovad with pid {pid}")
+    bitnovad_with_usdts = USDT(pid=int(pid))
+
+    # attaching the trace functions defined in the BPF program to the tracepoints
+    bitnovad_with_usdts.enable_probe(
+        probe="inbound_message", fn_name="trace_inbound_message")
+    bitnovad_with_usdts.enable_probe(
+        probe="outbound_message", fn_name="trace_outbound_message")
+    bpf = BPF(text=program, usdt_contexts=[bitnovad_with_usdts])
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     # BCC: perf buffer handle function for inbound_messages
     def handle_inbound(_, data, size):
@@ -190,7 +210,11 @@ def main(pid):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
+<<<<<<< HEAD
         print("USAGE:", sys.argv[0], "<pid of bitcoind>")
+=======
+        print("USAGE:", sys.argv[0], "<pid of bitnovad>")
+>>>>>>> 5360f2baff (Initialized BitNova project)
         exit()
     pid = sys.argv[1]
     main(pid)

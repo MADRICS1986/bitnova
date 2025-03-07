@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Copyright (c) 2023-present The Bitcoin Core developers
+=======
+# Copyright (c) 2023-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
@@ -15,7 +19,11 @@ target_link_libraries(test_fuzz
   PRIVATE
     core_interface
     test_util
+<<<<<<< HEAD
     bitcoin_node
+=======
+    bitnova_node
+>>>>>>> 5360f2baff (Initialized BitNova project)
     Boost::headers
 )
 

@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 # Copyright (c) 2022 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 """ Example logging Bitcoin Core mempool events using the mempool:added,
+=======
+# Copyright (c) 2022 The BitNova Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+""" Example logging BitNova Core mempool events using the mempool:added,
+>>>>>>> 5360f2baff (Initialized BitNova project)
     mempool:removed, mempool:replaced, and mempool:rejected tracepoints. """
 
 import curses
@@ -121,6 +129,7 @@ int trace_replaced(struct pt_regs *ctx) {
 
 
 def main(pid):
+<<<<<<< HEAD
     print(f"Hooking into bitcoind with pid {pid}")
     bitcoind_with_usdts = USDT(pid=int(pid))
 
@@ -131,6 +140,18 @@ def main(pid):
     bitcoind_with_usdts.enable_probe(probe="mempool:replaced", fn_name="trace_replaced")
     bitcoind_with_usdts.enable_probe(probe="mempool:rejected", fn_name="trace_rejected")
     bpf = BPF(text=PROGRAM, usdt_contexts=[bitcoind_with_usdts])
+=======
+    print(f"Hooking into bitnovad with pid {pid}")
+    bitnovad_with_usdts = USDT(pid=int(pid))
+
+    # attaching the trace functions defined in the BPF program
+    # to the tracepoints
+    bitnovad_with_usdts.enable_probe(probe="mempool:added", fn_name="trace_added")
+    bitnovad_with_usdts.enable_probe(probe="mempool:removed", fn_name="trace_removed")
+    bitnovad_with_usdts.enable_probe(probe="mempool:replaced", fn_name="trace_replaced")
+    bitnovad_with_usdts.enable_probe(probe="mempool:rejected", fn_name="trace_rejected")
+    bpf = BPF(text=PROGRAM, usdt_contexts=[bitnovad_with_usdts])
+>>>>>>> 5360f2baff (Initialized BitNova project)
 
     events = []
 
@@ -372,7 +393,11 @@ class Dashboard:
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
+<<<<<<< HEAD
         print("USAGE: ", sys.argv[0], "<pid of bitcoind>")
+=======
+        print("USAGE: ", sys.argv[0], "<pid of bitnovad>")
+>>>>>>> 5360f2baff (Initialized BitNova project)
         exit(1)
 
     pid = sys.argv[1]

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Copyright (c) 2023-present The Bitcoin Core developers
+=======
+# Copyright (c) 2023-present The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
@@ -6,7 +10,11 @@ include(CheckCXXSourceCompiles)
 include(CheckCXXSymbolExists)
 include(CheckIncludeFileCXX)
 
+<<<<<<< HEAD
 # The following HAVE_{HEADER}_H variables go to the bitcoin-build-config.h header.
+=======
+# The following HAVE_{HEADER}_H variables go to the bitnova-build-config.h header.
+>>>>>>> 5360f2baff (Initialized BitNova project)
 check_include_file_cxx(sys/prctl.h HAVE_SYS_PRCTL_H)
 check_include_file_cxx(sys/resources.h HAVE_SYS_RESOURCES_H)
 check_include_file_cxx(sys/vmmeter.h HAVE_SYS_VMMETER_H)

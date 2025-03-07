@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2017-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2017-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -66,7 +70,11 @@ enum WalletFlags : uint64_t {
     //! imported.
     //!
     //! This flag is also a mandatory flag to prevent previous versions of
+<<<<<<< HEAD
     //! bitcoin from opening the wallet, thinking it was newly created, and
+=======
+    //! bitnova from opening the wallet, thinking it was newly created, and
+>>>>>>> 5360f2baff (Initialized BitNova project)
     //! then improperly reinitializing it.
     WALLET_FLAG_BLANK_WALLET = (1ULL << 33),
 

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2011-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2011-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -19,7 +23,11 @@ class Wallet;
 
 /** Class for the splashscreen with information of the running client.
  *
+<<<<<<< HEAD
  * @note this is intentionally not a QSplashScreen. Bitcoin Core initialization
+=======
+ * @note this is intentionally not a QSplashScreen. BitNova Core initialization
+>>>>>>> 5360f2baff (Initialized BitNova project)
  * can take a long time, and in that case a progress window that cannot be
  * moved around and minimized has turned out to be frustrating to the user.
  */

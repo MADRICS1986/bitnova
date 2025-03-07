@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -13,7 +17,11 @@
 namespace ipc {
 class Protocol;
 
+<<<<<<< HEAD
 //! IPC process interface for spawning bitcoin processes and serving requests
+=======
+//! IPC process interface for spawning bitnova processes and serving requests
+>>>>>>> 5360f2baff (Initialized BitNova project)
 //! in processes that have been spawned.
 //!
 //! There will be different implementations of this interface depending on the

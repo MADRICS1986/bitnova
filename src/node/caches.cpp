@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2021-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2021-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,7 +18,11 @@
 #include <string>
 
 // Unlike for the UTXO database, for the txindex scenario the leveldb cache make
+<<<<<<< HEAD
 // a meaningful difference: https://github.com/bitcoin/bitcoin/pull/8273#issuecomment-229601991
+=======
+// a meaningful difference: https://github.com/bitnova/bitnova/pull/8273#issuecomment-229601991
+>>>>>>> 5360f2baff (Initialized BitNova project)
 //! Max memory allocated to tx index DB specific cache in bytes.
 static constexpr size_t MAX_TX_INDEX_CACHE{1024_MiB};
 //! Max memory allocated to all block filter index caches combined in bytes.

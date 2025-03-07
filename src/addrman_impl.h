@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Copyright (c) 2021-2022 The Bitcoin Core developers
+=======
+// Copyright (c) 2021-2022 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -35,7 +39,11 @@ static constexpr int ADDRMAN_BUCKET_SIZE{1 << ADDRMAN_BUCKET_SIZE_LOG2};
 /**
  * User-defined type for the internally used nIds
  * This used to be int, making it feasible for attackers to cause an overflow,
+<<<<<<< HEAD
  * see https://bitcoincore.org/en/2024/07/31/disclose-addrman-int-overflow/
+=======
+ * see https://bitnovacore.org/en/2024/07/31/disclose-addrman-int-overflow/
+>>>>>>> 5360f2baff (Initialized BitNova project)
  */
 using nid_type = int64_t;
 

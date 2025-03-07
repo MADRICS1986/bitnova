@@ -1,5 +1,9 @@
 // Copyright 2014 BitPay Inc.
+<<<<<<< HEAD
 // Copyright 2015 Bitcoin Core Developers
+=======
+// Copyright 2015 BitNova Core Developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or https://opensource.org/licenses/mit-license.php.
 

@@ -1,5 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
+<<<<<<< HEAD
 // Copyright (c) 2009-2021 The Bitcoin Core developers
+=======
+// Copyright (c) 2009-2021 The BitNova Core developers
+>>>>>>> 5360f2baff (Initialized BitNova project)
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,7 +24,11 @@ namespace wallet {
 /**
  * IsMine() return codes, which depend on ScriptPubKeyMan implementation.
  * Not every ScriptPubKeyMan covers all types, please refer to
+<<<<<<< HEAD
  * https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.21.0.md#ismine-semantics
+=======
+ * https://github.com/bitnova/bitnova/blob/master/doc/release-notes/release-notes-0.21.0.md#ismine-semantics
+>>>>>>> 5360f2baff (Initialized BitNova project)
  * for better understanding.
  *
  * For LegacyScriptPubKeyMan,
@@ -53,7 +61,11 @@ using isminefilter = std::underlying_type<isminetype>::type;
 /**
  * Address purpose field that has been been stored with wallet sending and
  * receiving addresses since BIP70 payment protocol support was added in
+<<<<<<< HEAD
  * https://github.com/bitcoin/bitcoin/pull/2539. This field is not currently
+=======
+ * https://github.com/bitnova/bitnova/pull/2539. This field is not currently
+>>>>>>> 5360f2baff (Initialized BitNova project)
  * used for any logic inside the wallet, but it is still shown in RPC and GUI
  * interfaces and saved for new addresses. It is basically redundant with an
  * address's IsMine() result.
